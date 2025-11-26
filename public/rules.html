@@ -3,145 +3,128 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Slovak Cases — Compact Guide</title>
+  <title>Slovak Cases — Compact Guide (with example: médium)</title>
   <style>
-    /* Minimal styling for readability */
+    /* Very light styling for readability */
     body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; color:#111; margin:20px; line-height:1.45; }
-    h1 { font-size:1.25rem; margin-bottom:6px; }
-    h2 { font-size:1.05rem; margin:18px 0 8px; }
-    h3 { font-size:0.98rem; margin:12px 0 6px; }
-    p { margin:6px 0; }
+    h1 { font-size:1.25rem; margin-bottom:8px; }
+    h2 { font-size:1.05rem; margin-top:18px; }
+    h3 { font-size:0.98rem; margin-top:12px; }
     ul { margin:6px 0 12px 20px; }
     code { background:#f3f3f3; padding:2px 6px; border-radius:4px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; }
     .example { background:#f7f7f7; padding:8px; border-left:3px solid #ddd; margin-top:6px; border-radius:4px; }
-    .section { margin-bottom:12px; }
-    .note { font-size:0.95rem; color:#444; }
+    .small { font-size:0.95rem; color:#444; }
   </style>
 </head>
 <body>
   <h1>Slovak cases — compact student guide</h1>
-  <p class="note">For each case below: <strong>Noun</strong> (singular → plural) then <strong>Adjective</strong> (singular → plural). Start from the nominative and apply specific endings first, then general fallbacks.</p>
+  <p class="small">For each case below: <strong>Noun</strong> (singular → plural) then <strong>Adjective</strong> (singular → plural). Check specific endings first, then apply general fallbacks.</p>
 
   <h2>Accusative</h2>
+  <h3>Noun — singular</h3>
+  <ul>
+    <li><strong>Masculine animate:</strong> if nominative ends <code>-a</code> → replace with <code>-u</code>; otherwise add <code>-a</code>.</li>
+    <li><strong>Masculine inanimate:</strong> same as nominative (no change).</li>
+    <li><strong>Feminine:</strong> <code>-a → -u</code>; <code>-ia → -iu</code>; consonant‑ending feminine stays nominative.</li>
+    <li><strong>Neuter:</strong> same as nominative.</li>
+  </ul>
 
-  <div class="section">
-    <h3>Noun — singular</h3>
-    <ul>
-      <li><strong>Masculine animate:</strong> if nominative ends <code>-a</code> → replace with <code>-u</code>; otherwise add <code>-a</code>.</li>
-      <li><strong>Masculine inanimate:</strong> same as nominative (no change).</li>
-      <li><strong>Feminine:</strong> <code>-a → -u</code>; <code>-ia → -iu</code>; consonant‑ending feminine stays nominative.</li>
-      <li><strong>Neuter:</strong> same as nominative.</li>
-    </ul>
-    <div class="example"><strong>Examples:</strong> <code>chlapec</code> → <code>chlapca</code>; <code>žena</code> → <code>ženu</code>; <code>mesto</code> → <code>mesto</code>.</div>
-  </div>
+  <h3>Noun — plural</h3>
+  <ul>
+    <li><strong>Masculine animate:</strong> accusative plural = stem + <code>-ov</code> (verify stem formation separately).</li>
+    <li><strong>Masculine inanimate:</strong> accusative plural = nominative plural.</li>
+    <li><strong>Feminine & Neuter:</strong> accusative plural = nominative plural.</li>
+  </ul>
 
-  <div class="section">
-    <h3>Noun — plural</h3>
-    <ul>
-      <li><strong>Masculine animate:</strong> accusative plural = stem + <code>-ov</code> (check stem formation separately).</li>
-      <li><strong>Masculine inanimate:</strong> accusative plural = nominative plural.</li>
-      <li><strong>Feminine & Neuter:</strong> accusative plural = nominative plural.</li>
-    </ul>
-  </div>
+  <h3>Adjective — singular</h3>
+  <ul>
+    <li>Classify adjective: <strong>HARD</strong> (ends <code>-ý, -á, -é</code>) or <strong>SOFT</strong> (ends <code>-í</code> or forms with <code>-ia/-ie</code>); remove final vowel to get stem.</li>
+    <li><strong>Masculine:</strong> HARD animate → <code>-ého</code>; HARD inanimate → <code>-ý</code>; SOFT animate → <code>-ieho</code>; SOFT inanimate → <code>-ý</code>.</li>
+    <li><strong>Feminine:</strong> HARD → <code>-ú</code>; SOFT → <code>-iu</code>.</li>
+    <li><strong>Neuter:</strong> → <code>-é</code>.</li>
+  </ul>
 
-  <div class="section">
-    <h3>Adjective — singular</h3>
-    <ul>
-      <li>Classify adjective: <strong>HARD</strong> (ends <code>-ý, -á, -é</code>) or <strong>SOFT</strong> (ends <code>-í</code> or forms with <code>-ia/-ie</code>); remove final vowel to get stem.</li>
-      <li><strong>Masculine:</strong> HARD animate → <code>-ého</code>; HARD inanimate → <code>-ý</code>; SOFT animate → <code>-ieho</code>; SOFT inanimate → <code>-ý</code>.</li>
-      <li><strong>Feminine:</strong> HARD → <code>-ú</code>; SOFT → <code>-iu</code>.</li>
-      <li><strong>Neuter:</strong> → <code>-é</code>.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h3>Adjective — plural</h3>
-    <ul>
-      <li><strong>Masculine:</strong> HARD animate → <code>-ých</code>; HARD inanimate → <code>-é</code>; SOFT animate → <code>-ich</code>; SOFT inanimate → <code>-ie</code>.</li>
-      <li><strong>Feminine:</strong> SOFT → <code>-ie</code>; otherwise → <code>-é</code>.</li>
-      <li><strong>Neuter:</strong> SOFT → <code>-ie</code>; otherwise → <code>-é</code>.</li>
-    </ul>
-  </div>
+  <h3>Adjective — plural</h3>
+  <ul>
+    <li><strong>Masculine:</strong> HARD animate → <code>-ých</code>; HARD inanimate → <code>-é</code>; SOFT animate → <code>-ich</code>; SOFT inanimate → <code>-ie</code>.</li>
+    <li><strong>Feminine:</strong> SOFT → <code>-ie</code>; otherwise → <code>-é</code>.</li>
+    <li><strong>Neuter:</strong> SOFT → <code>-ie</code>; otherwise → <code>-é</code>.</li>
+  </ul>
 
   <h2>Instrumental</h2>
+  <h3>Noun — singular</h3>
+  <ul>
+    <li><strong>Masculine:</strong> <code>-ec → -com</code>; otherwise add <code>-om</code>.</li>
+    <li><strong>Feminine:</strong> <code>-a → -ou</code>; <code>-ia → -iou</code>; otherwise add <code>-ou</code>.</li>
+    <li><strong>Neuter:</strong> <code>-ie → -ím</code>; <code>-o → -om</code>; otherwise add <code>-om</code>.</li>
+  </ul>
 
-  <div class="section">
-    <h3>Noun — singular</h3>
-    <ul>
-      <li><strong>Masculine:</strong> <code>-ec → -com</code>; otherwise add <code>-om</code>.</li>
-      <li><strong>Feminine:</strong> <code>-a → -ou</code>; <code>-ia → -iou</code>; otherwise add <code>-ou</code>.</li>
-      <li><strong>Neuter:</strong> <code>-ie → -ím</code>; <code>-o → -om</code>; otherwise add <code>-om</code>.</li>
-    </ul>
-    <div class="example"><strong>Examples:</strong> <code>chlapec</code> → <code>chlapcom</code>; <code>žena</code> → <code>ženou</code>.</div>
-  </div>
+  <h3>Noun — plural</h3>
+  <ul>
+    <li><strong>All genders:</strong> instrumental plural → add <code>-mi</code> to the plural form/stem.</li>
+  </ul>
 
-  <div class="section">
-    <h3>Noun — plural</h3>
-    <ul>
-      <li><strong>All genders:</strong> instrumental plural → add <code>-mi</code> to the plural form/stem.</li>
-    </ul>
-  </div>
+  <h3>Adjective — singular</h3>
+  <ul>
+    <li><strong>Masculine & Neuter:</strong> HARD → <code>-ým</code>; SOFT → <code>-ím</code>.</li>
+    <li><strong>Feminine:</strong> → <code>-ou</code>.</li>
+  </ul>
 
-  <div class="section">
-    <h3>Adjective — singular</h3>
-    <ul>
-      <li><strong>Masculine & Neuter:</strong> HARD → <code>-ým</code>; SOFT → <code>-ím</code>.</li>
-      <li><strong>Feminine:</strong> → <code>-ou</code>.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h3>Adjective — plural</h3>
-    <ul>
-      <li><strong>All genders:</strong> HARD → <code>-ými</code>; SOFT → <code>-imi</code>.</li>
-    </ul>
-  </div>
+  <h3>Adjective — plural</h3>
+  <ul>
+    <li><strong>All genders:</strong> HARD → <code>-ými</code>; SOFT → <code>-imi</code>.</li>
+  </ul>
 
   <h2>Locative</h2>
+  <h3>Noun — singular</h3>
+  <ul>
+    <li><strong>Masculine animate:</strong> add <code>-ovi</code>.</li>
+    <li><strong>Masculine inanimate:</strong> depends on final consonant: <code>k/g/h/ch → -u</code>; <code>d/l/r → -e</code>; otherwise <code>-i</code>.</li>
+    <li><strong>Feminine:</strong> <code>-a → -e</code>; <code>-ia → -ii</code>; consonant‑ending feminine add <code>-i</code>.</li>
+    <li><strong>Neuter:</strong> <code>-o → -e</code>; <code>-ie → -í</code>; otherwise add <code>-e</code>.</li>
+  </ul>
 
-  <div class="section">
-    <h3>Noun — singular</h3>
-    <ul>
-      <li><strong>Masculine animate:</strong> add <code>-ovi</code>.</li>
-      <li><strong>Masculine inanimate:</strong> depends on final consonant: <code>k/g/h/ch → -u</code>; <code>d/l/r → -e</code>; otherwise <code>-i</code>.</li>
-      <li><strong>Feminine:</strong> <code>-a → -e</code>; <code>-ia → -ii</code>; consonant‑ending feminine add <code>-i</code>.</li>
-      <li><strong>Neuter:</strong> <code>-o → -e</code>; <code>-ie → -í</code>; otherwise add <code>-e</code>.</li>
-    </ul>
-    <div class="example"><strong>Examples:</strong> <code>v meste</code> (from <code>mesto</code>); <code>o chlapovi</code>; <code>o žene</code>.</div>
-  </div>
+  <h3>Noun — plural</h3>
+  <ul>
+    <li><strong>Masculine:</strong> hard stems → <code>-och</code>.</li>
+    <li><strong>Feminine:</strong> <code>-a → -ách</code>; <code>-ia → -iách</code>; consonant → <code>-ach</code>.</li>
+    <li><strong>Neuter:</strong> <code>-o → -ách</code>; <code>-ie → -iach</code>; <code>-e → -ách</code>.</li>
+  </ul>
 
-  <div class="section">
-    <h3>Noun — plural</h3>
-    <ul>
-      <li><strong>Masculine:</strong> hard stems → <code>-och</code>.</li>
-      <li><strong>Feminine:</strong> <code>-a → -ách</code>; <code>-ia → -iách</code>; consonant → <code>-ach</code>.</li>
-      <li><strong>Neuter:</strong> <code>-o → -ách</code>; <code>-ie → -iach</code>; <code>-e → -ách</code>.</li>
-    </ul>
-  </div>
+  <h3>Adjective — singular</h3>
+  <ul>
+    <li><strong>Masculine & Neuter:</strong> → <code>-om</code>.</li>
+    <li><strong>Feminine:</strong> → <code>-ej</code>.</li>
+  </ul>
 
-  <div class="section">
-    <h3>Adjective — singular</h3>
-    <ul>
-      <li><strong>Masculine & Neuter:</strong> → <code>-om</code>.</li>
-      <li><strong>Feminine:</strong> → <code>-ej</code>.</li>
-    </ul>
-  </div>
+  <h3>Adjective — plural</h3>
+  <ul>
+    <li><strong>All genders:</strong> HARD → <code>-ých</code>; SOFT → <code>-ich</code>.</li>
+  </ul>
 
-  <div class="section">
-    <h3>Adjective — plural</h3>
+  <h2>Example: <em>médium</em> / <em>média</em></h2>
+  <p class="small">Neuter noun from Latin; singular <code>médium</code>, plural <code>média</code>.</p>
+
+  <div class="example">
+    <strong>Selected forms</strong>
     <ul>
-      <li><strong>All genders:</strong> HARD → <code>-ých</code>; SOFT → <code>-ich</code>.</li>
+      <li><strong>Nominative singular:</strong> <code>médium</code></li>
+      <li><strong>Nominative plural:</strong> <code>média</code></li>
+      <li><strong>Locative singular:</strong> <code>médiu</code> → use: <em>o médiu</em> (about the medium)</li>
+      <li><strong>Locative plural:</strong> <code>médiách</code> → use: <em>o médiách</em> (about the media)</li>
+      <li><strong>Instrumental singular:</strong> <code>médiom</code></li>
+      <li><strong>Instrumental plural:</strong> <code>médiami</code></li>
     </ul>
   </div>
 
   <h2>General checklist</h2>
   <ul>
     <li>Test specific endings first (<code>-ec, -ia, -ie, -a, -o</code>), then apply general suffix rules.</li>
-    <li>Determine masculine animacy — it affects accusative and some plural patterns.</li>
+    <li>Decide masculine animacy — it affects accusative and some plural patterns.</li>
     <li>Adjective workflow: classify HARD vs SOFT, remove final vowel for stem, then add the matching ending.</li>
     <li>Learn nominative plural formation — many plural case forms depend on it.</li>
   </ul>
 
-  <p class="note">This sheet covers common regular patterns. Irregular nouns and exceptions exist; consult a full declension table for specific nouns when needed.</p>
+  <p class="small">This page covers common regular patterns. Irregular nouns and exceptions exist; consult a full declension table for specific nouns when needed.</p>
 </body>
 </html>

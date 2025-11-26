@@ -1167,7 +1167,12 @@
   {
     "sk": "dvere",
     "en": "door",
-    "gender": "F"
+    "gender": "F",
+    "number": {
+      "plural": {
+        "accusative": "dvere"
+      }
+    }
   },
   {
     "sk": "okno",

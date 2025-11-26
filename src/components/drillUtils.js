@@ -13,10 +13,7 @@ const capitalizeFirstOnly = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
 }
 
-export const specialChars = [
-  'á', 'ä', 'č', 'ď', 'é', 'í', 'ĺ', 'ľ', 'ň',
-  'ó', 'ô', 'ŕ', 'š', 'ť', 'ú', 'ý', 'ž'
-]
+
 export const history = ref([])  // Array of { word, answer, correct, expected }
 export const streakCount = ref(0)
 export const totalAttempts = ref(0)
@@ -29,9 +26,6 @@ export const addToHistory = (word, answer, correct, expected) => {
     expected
   })
 }
-
-
-
 
 const shuffleArray = (array) => {
   const a = array.slice()

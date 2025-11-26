@@ -1,0 +1,89 @@
+[
+  { "en": "in", "sk": "v", "case": "localative" },
+  { "en": "into", "sk": "v", "case": "accusative" },
+
+  { "en": "in", "sk": "vo", "case": "localative" },
+  { "en": "into", "sk": "vo", "case": "accusative" },
+
+  { "en": "on", "sk": "na", "case": "localative" },
+  { "en": "onto", "sk": "na", "case": "accusative" },
+  { "en": "at", "sk": "na", "case": "localative" },
+
+  { "en": "from", "sk": "z", "case": "genitive" },
+  { "en": "from", "sk": "zo", "case": "genitive" },
+  { "en": "from", "sk": "od", "case": "genitive" },
+
+  { "en": "to", "sk": "k", "case": "dative" },
+  { "en": "to", "sk": "ku", "case": "dative" },
+
+  { "en": "behind", "sk": "za", "case": "instrumental" },
+  { "en": "behind", "sk": "za", "case": "accusative" },
+
+  { "en": "below", "sk": "pod", "case": "instrumental" },
+  { "en": "below", "sk": "pod", "case": "accusative" },
+
+  { "en": "under", "sk": "pod", "case": "instrumental" },
+  { "en": "under", "sk": "pod", "case": "accusative" },
+
+  { "en": "above", "sk": "nad", "case": "instrumental" },
+  { "en": "above", "sk": "nad", "case": "accusative" },
+
+  { "en": "over", "sk": "nad", "case": "instrumental" },
+  { "en": "over", "sk": "nad", "case": "accusative" },
+
+  { "en": "near", "sk": "pri", "case": "localative" },
+
+  { "en": "between", "sk": "medzi", "case": "instrumental" },
+  { "en": "between", "sk": "medzi", "case": "accusative" },
+
+  { "en": "among", "sk": "medzi", "case": "instrumental" },
+  { "en": "among", "sk": "medzi", "case": "accusative" },
+
+  { "en": "beyond", "sk": "za", "case": "accusative" },
+  { "en": "beyond", "sk": "za", "case": "instrumental" },
+
+  { "en": "by", "sk": "pri", "case": "localative" },
+
+  { "en": "around", "sk": "okolo", "case": "genitive" },
+
+  { "en": "within", "sk": "v rámci", "case": "genitive" },
+
+  { "en": "across", "sk": "cez", "case": "accusative" },
+  { "en": "through", "sk": "cez", "case": "accusative" },
+
+  { "en": "past", "sk": "popri", "case": "localative" },
+  { "en": "past", "sk": "popri", "case": "accusative" },
+
+  { "en": "towards", "sk": "k", "case": "dative" },
+
+  { "en": "off", "sk": "od", "case": "genitive" },
+
+  { "en": "out of", "sk": "z", "case": "genitive" },
+
+  { "en": "opposite to", "sk": "oproti", "case": "dative" },
+
+  { "en": "against", "sk": "proti", "case": "dative" },
+
+  { "en": "after", "sk": "po", "case": "localative" },
+  { "en": "after", "sk": "po", "case": "accusative" },
+
+  { "en": "before", "sk": "pred", "case": "instrumental" },
+  { "en": "before", "sk": "pred", "case": "accusative" },
+
+  { "en": "since", "sk": "od", "case": "genitive" },
+
+  { "en": "for", "sk": "pre", "case": "accusative" },
+
+  { "en": "until", "sk": "do", "case": "genitive" },
+
+  { "en": "across", "sk": "ponad", "case": "accusative" },
+  { "en": "over", "sk": "ponad", "case": "accusative" },
+
+  { "en": "along", "sk": "popri", "case": "localative" },
+  { "en": "along", "sk": "popri", "case": "accusative" },
+
+  { "en": "in front of", "sk": "pred", "case": "instrumental" },
+  { "en": "in front of", "sk": "pred", "case": "accusative" },
+
+  { "en": "beside", "sk": "pri", "case": "localative" }
+]

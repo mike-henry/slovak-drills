@@ -1,0 +1,5579 @@
+[
+  {
+    "sk": "vec",
+    "en": "thing",
+    "gender": "F"
+  },
+  {
+    "sk": "čas",
+    "en": "time",
+    "gender": "M"
+  },
+  {
+    "sk": "človek",
+    "en": "person",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "rok",
+    "en": "year",
+    "gender": "M"
+  },
+  {
+    "sk": "dôvod",
+    "en": "reason",
+    "gender": "M"
+  },
+  {
+    "sk": "prípad",
+    "en": "case",
+    "gender": "M"
+  },
+  {
+    "sk": "život",
+    "en": "life",
+    "gender": "M"
+  },
+  {
+    "sk": "svet",
+    "en": "world",
+    "gender": "M"
+  },
+  {
+    "sk": "strana",
+    "en": "side",
+    "gender": "F"
+  },
+  {
+    "sk": "práca",
+    "en": "work",
+    "gender": "F"
+  },
+  {
+    "sk": "deň",
+    "en": "day",
+    "gender": "M"
+  },
+  {
+    "sk": "systém",
+    "en": "system",
+    "gender": "M"
+  },
+  {
+    "sk": "problém",
+    "en": "problem",
+    "gender": "M"
+  },
+  {
+    "sk": "štát",
+    "en": "state",
+    "gender": "M"
+  },
+  {
+    "sk": "cesta",
+    "en": "road",
+    "gender": "F"
+  },
+  {
+    "sk": "možnosť",
+    "en": "possibility",
+    "gender": "F"
+  },
+  {
+    "sk": "program",
+    "en": "program",
+    "gender": "M"
+  },
+  {
+    "sk": "otázka",
+    "en": "question",
+    "gender": "F"
+  },
+  {
+    "sk": "informácia",
+    "en": "information",
+    "gender": "F"
+  },
+  {
+    "sk": "dokument",
+    "en": "document",
+    "gender": "M"
+  },
+  {
+    "sk": "podmienka",
+    "en": "condition",
+    "gender": "F"
+  },
+  {
+    "sk": "číslo",
+    "en": "number",
+    "gender": "N"
+  },
+  {
+    "sk": "dôkaz",
+    "en": "proof",
+    "gender": "M"
+  },
+  {
+    "sk": "týždeň",
+    "en": "week",
+    "gender": "M"
+  },
+  {
+    "sk": "hodina",
+    "en": "hour",
+    "gender": "F"
+  },
+  {
+    "sk": "minúta",
+    "en": "minute",
+    "gender": "F"
+  },
+  {
+    "sk": "sekunda",
+    "en": "second",
+    "gender": "F"
+  },
+  {
+    "sk": "miesto",
+    "en": "place",
+    "gender": "N"
+  },
+  {
+    "sk": "pravidlo",
+    "en": "rule",
+    "gender": "N"
+  },
+  {
+    "sk": "zákon",
+    "en": "law",
+    "gender": "M"
+  },
+  {
+    "sk": "vláda",
+    "en": "government",
+    "gender": "F"
+  },
+  {
+    "sk": "peniaze",
+    "en": "money",
+    "gender": "F"
+  },
+  {
+    "sk": "služba",
+    "en": "service",
+    "gender": "F"
+  },
+  {
+    "sk": "firma",
+    "en": "company",
+    "gender": "F"
+  },
+  {
+    "sk": "spoločnosť",
+    "en": "corporation",
+    "gender": "F"
+  },
+  {
+    "sk": "produkt",
+    "en": "product",
+    "gender": "M"
+  },
+  {
+    "sk": "slovo",
+    "en": "word",
+    "gender": "N"
+  },
+  {
+    "sk": "jazyk",
+    "en": "language",
+    "gender": "M"
+  },
+  {
+    "sk": "článok",
+    "en": "article",
+    "gender": "M"
+  },
+  {
+    "sk": "správa",
+    "en": "report",
+    "gender": "F"
+  },
+  {
+    "sk": "spravodajstvo",
+    "en": "news",
+    "gender": "N"
+  },
+  {
+    "sk": "noviny",
+    "en": "newspaper",
+    "gender": "F"
+  },
+  {
+    "sk": "televízia",
+    "en": "television",
+    "gender": "F"
+  },
+  {
+    "sk": "rádio",
+    "en": "radio",
+    "gender": "N"
+  },
+  {
+    "sk": "internet",
+    "en": "internet",
+    "gender": "M"
+  },
+  {
+    "sk": "počítač",
+    "en": "computer",
+    "gender": "M"
+  },
+  {
+    "sk": "mobil",
+    "en": "mobile phone",
+    "gender": "M"
+  },
+  {
+    "sk": "aplikácia",
+    "en": "application",
+    "gender": "F"
+  },
+  {
+    "sk": "súbor",
+    "en": "file",
+    "gender": "M"
+  },
+  {
+    "sk": "údaj",
+    "en": "data point",
+    "gender": "M"
+  },
+  {
+    "sk": "sieť",
+    "en": "network",
+    "gender": "F"
+  },
+  {
+    "sk": "server",
+    "en": "server",
+    "gender": "M"
+  },
+  {
+    "sk": "programátor",
+    "en": "programmer",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "technológia",
+    "en": "technology",
+    "gender": "F"
+  },
+  {
+    "sk": "projekt",
+    "en": "project",
+    "gender": "M"
+  },
+  {
+    "sk": "úloha",
+    "en": "task",
+    "gender": "F"
+  },
+  {
+    "sk": "cieľ",
+    "en": "goal",
+    "gender": "M"
+  },
+  {
+    "sk": "plán",
+    "en": "plan",
+    "gender": "M"
+  },
+  {
+    "sk": "stratégia",
+    "en": "strategy",
+    "gender": "F"
+  },
+  {
+    "sk": "tím",
+    "en": "team",
+    "gender": "M"
+  },
+  {
+    "sk": "vedúci",
+    "en": "leader",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "manažér",
+    "en": "manager",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "zamestnanec",
+    "en": "employee",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "kolega",
+    "en": "colleague",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "oddelenie",
+    "en": "department",
+    "gender": "N"
+  },
+  {
+    "sk": "organizácia",
+    "en": "organization",
+    "gender": "F"
+  },
+  {
+    "sk": "zmluva",
+    "en": "contract",
+    "gender": "F"
+  },
+  {
+    "sk": "dohoda",
+    "en": "agreement",
+    "gender": "F"
+  },
+  {
+    "sk": "rozhovor",
+    "en": "conversation",
+    "gender": "M"
+  },
+  {
+    "sk": "stretnutie",
+    "en": "meeting",
+    "gender": "N"
+  },
+  {
+    "sk": "diskusia",
+    "en": "discussion",
+    "gender": "F"
+  },
+  {
+    "sk": "rozhodnutie",
+    "en": "decision",
+    "gender": "N"
+  },
+  {
+    "sk": "názor",
+    "en": "opinion",
+    "gender": "M"
+  },
+  {
+    "sk": "kritika",
+    "en": "criticism",
+    "gender": "F"
+  },
+  {
+    "sk": "pochvala",
+    "en": "praise",
+    "gender": "F"
+  },
+  {
+    "sk": "odpoveď",
+    "en": "answer",
+    "gender": "F"
+  },
+  {
+    "sk": "riešenie",
+    "en": "solution",
+    "gender": "N"
+  },
+  {
+    "sk": "chyba",
+    "en": "mistake",
+    "gender": "F"
+  },
+  {
+    "sk": "oprava",
+    "en": "correction",
+    "gender": "F"
+  },
+  {
+    "sk": "výsledok",
+    "en": "result",
+    "gender": "M"
+  },
+  {
+    "sk": "úspech",
+    "en": "success",
+    "gender": "M"
+  },
+  {
+    "sk": "neúspech",
+    "en": "failure",
+    "gender": "M"
+  },
+  {
+    "sk": "pokrok",
+    "en": "progress",
+    "gender": "M"
+  },
+  {
+    "sk": "zmena",
+    "en": "change",
+    "gender": "F"
+  },
+  {
+    "sk": "vývoj",
+    "en": "development",
+    "gender": "M"
+  },
+  {
+    "sk": "rast",
+    "en": "growth",
+    "gender": "M"
+  },
+  {
+    "sk": "pokles",
+    "en": "decline",
+    "gender": "M"
+  },
+  {
+    "sk": "stav",
+    "en": "state",
+    "gender": "M"
+  },
+  {
+    "sk": "situácia",
+    "en": "situation",
+    "gender": "F"
+  },
+  {
+    "sk": "podpora",
+    "en": "support",
+    "gender": "F"
+  },
+  {
+    "sk": "pomoc",
+    "en": "help",
+    "gender": "F"
+  },
+  {
+    "sk": "rada",
+    "en": "advice",
+    "gender": "F"
+  },
+  {
+    "sk": "návod",
+    "en": "guide",
+    "gender": "M"
+  },
+  {
+    "sk": "príklad",
+    "en": "example",
+    "gender": "M"
+  },
+  {
+    "sk": "definícia",
+    "en": "definition",
+    "gender": "F"
+  },
+  {
+    "sk": "poznámka",
+    "en": "note",
+    "gender": "F"
+  },
+  {
+    "sk": "poznanie",
+    "en": "knowledge",
+    "gender": "N"
+  },
+  {
+    "sk": "skúsenosť",
+    "en": "experience",
+    "gender": "F"
+  },
+  {
+    "sk": "vzdelanie",
+    "en": "education",
+    "gender": "N"
+  },
+  {
+    "sk": "škola",
+    "en": "school",
+    "gender": "F"
+  },
+  {
+    "sk": "univerzita",
+    "en": "university",
+    "gender": "F"
+  },
+  {
+    "sk": "fakulta",
+    "en": "faculty",
+    "gender": "F"
+  },
+  {
+    "sk": "študent",
+    "en": "student",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "učiteľ",
+    "en": "teacher",
+    "gender": "M",
+    "animate": "true",
+    "number": {
+      "singular": {
+        "accusative": "učiteľa",
+        "dative": "učiteľovi"
+      }
+    }
+  },
+  {
+    "sk": "učebnica",
+    "en": "textbook",
+    "gender": "F"
+  },
+  {
+    "sk": "predmet",
+    "en": "subject",
+    "gender": "M"
+  },
+  {
+    "sk": "hodina",
+    "en": "lesson",
+    "gender": "F"
+  },
+  {
+    "sk": "skúška",
+    "en": "exam",
+    "gender": "F"
+  },
+  {
+    "sk": "známka",
+    "en": "grade",
+    "gender": "F"
+  },
+  {
+    "sk": "diplom",
+    "en": "diploma",
+    "gender": "M"
+  },
+  {
+    "sk": "certifikát",
+    "en": "certificate",
+    "gender": "M"
+  },
+  {
+    "sk": "kurz",
+    "en": "course",
+    "gender": "M"
+  },
+  {
+    "sk": "tréning",
+    "en": "training",
+    "gender": "M"
+  },
+  {
+    "sk": "seminár",
+    "en": "seminar",
+    "gender": "M"
+  },
+  {
+    "sk": "prednáška",
+    "en": "lecture",
+    "gender": "F"
+  },
+  {
+    "sk": "učebňa",
+    "en": "classroom",
+    "gender": "F"
+  },
+  {
+    "sk": "knižnica",
+    "en": "library",
+    "gender": "F"
+  },
+  {
+    "sk": "laboratórium",
+    "en": "laboratory",
+    "gender": "N"
+  },
+  {
+    "sk": "výskum",
+    "en": "research",
+    "gender": "M"
+  },
+  {
+    "sk": "analýza",
+    "en": "analysis",
+    "gender": "F"
+  },
+  {
+    "sk": "štúdia",
+    "en": "study",
+    "gender": "F"
+  },
+  {
+    "sk": "publikácia",
+    "en": "publication",
+    "gender": "F"
+  },
+  {
+    "sk": "autor",
+    "en": "author",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "čitateľ",
+    "en": "reader",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "kniha",
+    "en": "book",
+    "gender": "F"
+  },
+  {
+    "sk": "časopis",
+    "en": "magazine",
+    "gender": "M"
+  },
+  {
+    "sk": "stránka",
+    "en": "page",
+    "gender": "F"
+  },
+  {
+    "sk": "kapitola",
+    "en": "chapter",
+    "gender": "F"
+  },
+  {
+    "sk": "text",
+    "en": "text",
+    "gender": "M"
+  },
+  {
+    "sk": "slovník",
+    "en": "dictionary",
+    "gender": "M"
+  },
+  {
+    "sk": "záznam",
+    "en": "record",
+    "gender": "M"
+  },
+  {
+    "sk": "pamäť",
+    "en": "memory",
+    "gender": "F"
+  },
+  {
+    "sk": "myšlienka",
+    "en": "thought",
+    "gender": "F"
+  },
+  {
+    "sk": "idea",
+    "en": "idea",
+    "gender": "F"
+  },
+  {
+    "sk": "koncept",
+    "en": "concept",
+    "gender": "M"
+  },
+  {
+    "sk": "teória",
+    "en": "theory",
+    "gender": "F"
+  },
+  {
+    "sk": "hypotéza",
+    "en": "hypothesis",
+    "gender": "F"
+  },
+  {
+    "sk": "fakt",
+    "en": "fact",
+    "gender": "M"
+  },
+  {
+    "sk": "pravda",
+    "en": "truth",
+    "gender": "F"
+  },
+  {
+    "sk": "lož",
+    "en": "lie",
+    "gender": "F"
+  },
+  {
+    "sk": "dôvera",
+    "en": "trust",
+    "gender": "F"
+  },
+  {
+    "sk": "pochybnosť",
+    "en": "doubt",
+    "gender": "F"
+  },
+  {
+    "sk": "viera",
+    "en": "faith",
+    "gender": "F"
+  },
+  {
+    "sk": "nádej",
+    "en": "hope",
+    "gender": "F"
+  },
+  {
+    "sk": "láska",
+    "en": "love",
+    "gender": "F"
+  },
+  {
+    "sk": "priateľstvo",
+    "en": "friendship",
+    "gender": "N"
+  },
+  {
+    "sk": "nenávisť",
+    "en": "hatred",
+    "gender": "F"
+  },
+  {
+    "sk": "strach",
+    "en": "fear",
+    "gender": "M"
+  },
+  {
+    "sk": "hnev",
+    "en": "anger",
+    "gender": "M"
+  },
+  {
+    "sk": "radosť",
+    "en": "joy",
+    "gender": "F"
+  },
+  {
+    "sk": "smútok",
+    "en": "sadness",
+    "gender": "M"
+  },
+  {
+    "sk": "zábava",
+    "en": "fun",
+    "gender": "F"
+  },
+  {
+    "sk": "humor",
+    "en": "humor",
+    "gender": "M"
+  },
+  {
+    "sk": "vtip",
+    "en": "joke",
+    "gender": "M"
+  },
+  {
+    "sk": "smiech",
+    "en": "laughter",
+    "gender": "M"
+  },
+  {
+    "sk": "plač",
+    "en": "crying",
+    "gender": "M"
+  },
+  {
+    "sk": "pocit",
+    "en": "feeling",
+    "gender": "M"
+  },
+  {
+    "sk": "emócia",
+    "en": "emotion",
+    "gender": "F"
+  },
+  {
+    "sk": "duša",
+    "en": "soul",
+    "gender": "F"
+  },
+  {
+    "sk": "telo",
+    "en": "body",
+    "gender": "N"
+  },
+  {
+    "sk": "hlava",
+    "en": "head",
+    "gender": "F"
+  },
+  {
+    "sk": "tvár",
+    "en": "face",
+    "gender": "F"
+  },
+  {
+    "sk": "oko",
+    "en": "eye",
+    "gender": "N"
+  },
+  {
+    "sk": "ucho",
+    "en": "ear",
+    "gender": "N"
+  },
+  {
+    "sk": "nos",
+    "en": "nose",
+    "gender": "M"
+  },
+  {
+    "sk": "ústa",
+    "en": "mouth",
+    "gender": "N"
+  },
+  {
+    "sk": "jazyk",
+    "en": "tongue",
+    "gender": "M"
+  },
+  {
+    "sk": "zub",
+    "en": "tooth",
+    "gender": "M"
+  },
+  {
+    "sk": "krk",
+    "en": "neck",
+    "gender": "M"
+  },
+  {
+    "sk": "rameno",
+    "en": "shoulder",
+    "gender": "N"
+  },
+  {
+    "sk": "ruka",
+    "en": "arm",
+    "gender": "F"
+  },
+  {
+    "sk": "lakeť",
+    "en": "elbow",
+    "gender": "M"
+  },
+  {
+    "sk": "zápästie",
+    "en": "wrist",
+    "gender": "N"
+  },
+  {
+    "sk": "prst",
+    "en": "finger",
+    "gender": "M"
+  },
+  {
+    "sk": "dlaň",
+    "en": "palm",
+    "gender": "F"
+  },
+  {
+    "sk": "brucho",
+    "en": "belly",
+    "gender": "N"
+  },
+  {
+    "sk": "chrbát",
+    "en": "back",
+    "gender": "M"
+  },
+  {
+    "sk": "stehno",
+    "en": "thigh",
+    "gender": "N"
+  },
+  {
+    "sk": "koleno",
+    "en": "knee",
+    "gender": "N"
+  },
+  {
+    "sk": "noha",
+    "en": "leg",
+    "gender": "F"
+  },
+  {
+    "sk": "členok",
+    "en": "ankle",
+    "gender": "M"
+  },
+  {
+    "sk": "chodidlo",
+    "en": "foot",
+    "gender": "N"
+  },
+  {
+    "sk": "pätka",
+    "en": "heel",
+    "gender": "F"
+  },
+  {
+    "sk": "kostra",
+    "en": "skeleton",
+    "gender": "F"
+  },
+  {
+    "sk": "kosť",
+    "en": "bone",
+    "gender": "F"
+  },
+  {
+    "sk": "sval",
+    "en": "muscle",
+    "gender": "M"
+  },
+  {
+    "sk": "orgán",
+    "en": "organ",
+    "gender": "M"
+  },
+  {
+    "sk": "srdce",
+    "en": "heart",
+    "gender": "N"
+  },
+  {
+    "sk": "mozog",
+    "en": "brain",
+    "gender": "M"
+  },
+  {
+    "sk": "pľúca",
+    "en": "lungs (pl)",
+    "gender": "N",
+    "number": {
+      "singular": {
+        "accusative": "pľúca"
+      }
+    }
+  },
+  {
+    "sk": "žalúdok",
+    "en": "stomach",
+    "gender": "M"
+  },
+  {
+    "sk": "črevo",
+    "en": "intestine",
+    "gender": "N"
+  },
+  {
+    "sk": "pečeň",
+    "en": "liver",
+    "gender": "F"
+  },
+  {
+    "sk": "oblička",
+    "en": "kidney",
+    "gender": "F"
+  },
+  {
+    "sk": "koža",
+    "en": "skin",
+    "gender": "F"
+  },
+  {
+    "sk": "krv",
+    "en": "blood",
+    "gender": "F"
+  },
+  {
+    "sk": "nerv",
+    "en": "nerve",
+    "gender": "M"
+  },
+  {
+    "sk": "žilka",
+    "en": "vein",
+    "gender": "F"
+  },
+  {
+    "sk": "tepna",
+    "en": "artery",
+    "gender": "F"
+  },
+  {
+    "sk": "choroba",
+    "en": "disease",
+    "gender": "F"
+  },
+  {
+    "sk": "zdravie",
+    "en": "health",
+    "gender": "N"
+  },
+  {
+    "sk": "liek",
+    "en": "medicine",
+    "gender": "M"
+  },
+  {
+    "sk": "tabletka",
+    "en": "pill",
+    "gender": "F"
+  },
+  {
+    "sk": "injekcia",
+    "en": "injection",
+    "gender": "F"
+  },
+  {
+    "sk": "operácia",
+    "en": "surgery",
+    "gender": "F"
+  },
+  {
+    "sk": "zranenie",
+    "en": "injury",
+    "gender": "N"
+  },
+  {
+    "sk": "rana",
+    "en": "wound",
+    "gender": "F"
+  },
+  {
+    "sk": "bolesť",
+    "en": "pain",
+    "gender": "F"
+  },
+  {
+    "sk": "kašeľ",
+    "en": "cough",
+    "gender": "M"
+  },
+  {
+    "sk": "nádcha",
+    "en": "cold",
+    "gender": "F"
+  },
+  {
+    "sk": "horúčka",
+    "en": "fever",
+    "gender": "F"
+  },
+  {
+    "sk": "teplomer",
+    "en": "thermometer",
+    "gender": "M"
+  },
+  {
+    "sk": "tlak",
+    "en": "pressure",
+    "gender": "M"
+  },
+  {
+    "sk": "ambulancia",
+    "en": "clinic",
+    "gender": "F"
+  },
+  {
+    "sk": "nemocnica",
+    "en": "hospital",
+    "gender": "F"
+  },
+  {
+    "sk": "lekáreň",
+    "en": "pharmacy",
+    "gender": "F"
+  },
+  {
+    "sk": "lekár",
+    "en": "doctor",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "lekárka",
+    "en": "female doctor",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "sestra",
+    "en": "nurse",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "pacient",
+    "en": "patient",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "poistenie",
+    "en": "insurance",
+    "gender": "N"
+  },
+  {
+    "sk": "formulár",
+    "en": "form",
+    "gender": "M"
+  },
+  {
+    "sk": "dátum",
+    "en": "date",
+    "gender": "M"
+  },
+  {
+    "sk": "kalendár",
+    "en": "calendar",
+    "gender": "M"
+  },
+  {
+    "sk": "hodinky",
+    "en": "watch",
+    "gender": "F"
+  },
+  {
+    "sk": "budík",
+    "en": "alarm clock",
+    "gender": "M"
+  },
+  {
+    "sk": "zvonček",
+    "en": "bell",
+    "gender": "M"
+  },
+  {
+    "sk": "zvon",
+    "en": "bell",
+    "gender": "M"
+  },
+  {
+    "sk": "dvere",
+    "en": "door",
+    "gender": "F"
+  },
+  {
+    "sk": "okno",
+    "en": "window",
+    "gender": "N"
+  },
+  {
+    "sk": "stena",
+    "en": "wall",
+    "gender": "F"
+  },
+  {
+    "sk": "strop",
+    "en": "ceiling",
+    "gender": "M"
+  },
+  {
+    "sk": "podlaha",
+    "en": "floor",
+    "gender": "F"
+  },
+  {
+    "sk": "koberec",
+    "en": "carpet",
+    "gender": "M"
+  },
+  {
+    "sk": "lampa",
+    "en": "lamp",
+    "gender": "F"
+  },
+  {
+    "sk": "svetlo",
+    "en": "light",
+    "gender": "N"
+  },
+  {
+    "sk": "zásuvka",
+    "en": "socket",
+    "gender": "F"
+  },
+  {
+    "sk": "vypínač",
+    "en": "switch",
+    "gender": "M"
+  },
+  {
+    "sk": "stôl",
+    "en": "table",
+    "gender": "M"
+  },
+  {
+    "sk": "stolička",
+    "en": "chair",
+    "gender": "F"
+  },
+  {
+    "sk": "pohovka",
+    "en": "sofa",
+    "gender": "F"
+  },
+  {
+    "sk": "posteľ",
+    "en": "bed",
+    "gender": "F"
+  },
+  {
+    "sk": "vankúš",
+    "en": "pillow",
+    "gender": "M"
+  },
+  {
+    "sk": "paplón",
+    "en": "duvet",
+    "gender": "M"
+  },
+  {
+    "sk": "plachta",
+    "en": "sheet",
+    "gender": "F"
+  },
+  {
+    "sk": "skriňa",
+    "en": "wardrobe",
+    "gender": "F"
+  },
+  {
+    "sk": "zrkadlo",
+    "en": "mirror",
+    "gender": "N"
+  },
+  {
+    "sk": "polica",
+    "en": "shelf",
+    "gender": "F"
+  },
+  {
+    "sk": "zásuvka",
+    "en": "drawer",
+    "gender": "F"
+  },
+  {
+    "sk": "skrinka",
+    "en": "cabinet",
+    "gender": "F"
+  },
+  {
+    "sk": "chladnička",
+    "en": "refrigerator",
+    "gender": "F"
+  },
+  {
+    "sk": "mraznička",
+    "en": "freezer",
+    "gender": "F"
+  },
+  {
+    "sk": "sporák",
+    "en": "stove",
+    "gender": "M"
+  },
+  {
+    "sk": "rúra",
+    "en": "oven",
+    "gender": "F"
+  },
+  {
+    "sk": "mikrovlnka",
+    "en": "microwave",
+    "gender": "F"
+  },
+  {
+    "sk": "umývačka",
+    "en": "dishwasher",
+    "gender": "F"
+  },
+  {
+    "sk": "drez",
+    "en": "sink",
+    "gender": "M"
+  },
+  {
+    "sk": "kuchyňa",
+    "en": "kitchen",
+    "gender": "F"
+  },
+  {
+    "sk": "kúpeľňa",
+    "en": "bathroom",
+    "gender": "F"
+  },
+  {
+    "sk": "toaleta",
+    "en": "toilet",
+    "gender": "F"
+  },
+  {
+    "sk": "záchod",
+    "en": "toilet",
+    "gender": "M"
+  },
+  {
+    "sk": "sprcha",
+    "en": "shower",
+    "gender": "F"
+  },
+  {
+    "sk": "vaňa",
+    "en": "bathtub",
+    "gender": "F"
+  },
+  {
+    "sk": "uterák",
+    "en": "towel",
+    "gender": "M"
+  },
+  {
+    "sk": "mydlo",
+    "en": "soap",
+    "gender": "N"
+  },
+  {
+    "sk": "šampón",
+    "en": "shampoo",
+    "gender": "M"
+  },
+  {
+    "sk": "zubná kefka",
+    "en": "toothbrush",
+    "gender": "F"
+  },
+  {
+    "sk": "pasta",
+    "en": "toothpaste",
+    "gender": "F"
+  },
+  {
+    "sk": "hrebienok",
+    "en": "comb",
+    "gender": "M"
+  },
+  {
+    "sk": "kefka",
+    "en": "brush",
+    "gender": "F"
+  },
+  {
+    "sk": "zrkadielko",
+    "en": "small mirror",
+    "gender": "N"
+  },
+  {
+    "sk": "kozmetika",
+    "en": "cosmetics",
+    "gender": "F"
+  },
+  {
+    "sk": "make-up",
+    "en": "makeup",
+    "gender": "M"
+  },
+  {
+    "sk": "krém",
+    "en": "cream",
+    "gender": "M"
+  },
+  {
+    "sk": "parfum",
+    "en": "perfume",
+    "gender": "M"
+  },
+  {
+    "sk": "deodorant",
+    "en": "deodorant",
+    "gender": "M"
+  },
+  {
+    "sk": "oblečenie",
+    "en": "clothing",
+    "gender": "N"
+  },
+  {
+    "sk": "tričko",
+    "en": "t-shirt",
+    "gender": "N"
+  },
+  {
+    "sk": "košeľa",
+    "en": "shirt",
+    "gender": "F"
+  },
+  {
+    "sk": "blúzka",
+    "en": "blouse",
+    "gender": "F"
+  },
+  {
+    "sk": "sveter",
+    "en": "sweater",
+    "gender": "M"
+  },
+  {
+    "sk": "mikina",
+    "en": "hoodie",
+    "gender": "F"
+  },
+  {
+    "sk": "nohavice",
+    "en": "pants",
+    "gender": "F"
+  },
+  {
+    "sk": "rifle",
+    "en": "jeans",
+    "gender": "F"
+  },
+  {
+    "sk": "šortky",
+    "en": "shorts",
+    "gender": "F"
+  },
+  {
+    "sk": "sukňa",
+    "en": "skirt",
+    "gender": "F"
+  },
+  {
+    "sk": "šaty",
+    "en": "dress",
+    "gender": "F"
+  },
+  {
+    "sk": "kabát",
+    "en": "coat",
+    "gender": "M"
+  },
+  {
+    "sk": "bunda",
+    "en": "jacket",
+    "gender": "F"
+  },
+  {
+    "sk": "plášť",
+    "en": "cloak",
+    "gender": "M"
+  },
+  {
+    "sk": "topánky",
+    "en": "shoes",
+    "gender": "F"
+  },
+  {
+    "sk": "tenisky",
+    "en": "sneakers",
+    "gender": "F"
+  },
+  {
+    "sk": "čižmy",
+    "en": "boots",
+    "gender": "F"
+  },
+  {
+    "sk": "sandále",
+    "en": "sandals",
+    "gender": "F"
+  },
+  {
+    "sk": "ponožky",
+    "en": "socks",
+    "gender": "F"
+  },
+  {
+    "sk": "pančuchy",
+    "en": "tights",
+    "gender": "F"
+  },
+  {
+    "sk": "rukavice",
+    "en": "gloves",
+    "gender": "F"
+  },
+  {
+    "sk": "šál",
+    "en": "scarf",
+    "gender": "M"
+  },
+  {
+    "sk": "čapica",
+    "en": "cap",
+    "gender": "F"
+  },
+  {
+    "sk": "klobúk",
+    "en": "hat",
+    "gender": "M"
+  },
+  {
+    "sk": "opasok",
+    "en": "belt",
+    "gender": "M"
+  },
+  {
+    "sk": "taška",
+    "en": "bag",
+    "gender": "F"
+  },
+  {
+    "sk": "kabelka",
+    "en": "handbag",
+    "gender": "F"
+  },
+  {
+    "sk": "batoh",
+    "en": "backpack",
+    "gender": "M"
+  },
+  {
+    "sk": "peňaženka",
+    "en": "wallet",
+    "gender": "F"
+  },
+  {
+    "sk": "okuliare",
+    "en": "glasses",
+    "gender": "F"
+  },
+  {
+    "sk": "hodinky",
+    "en": "watch",
+    "gender": "F"
+  },
+  {
+    "sk": "prsteň",
+    "en": "ring",
+    "gender": "M"
+  },
+  {
+    "sk": "náhrdelník",
+    "en": "necklace",
+    "gender": "M"
+  },
+  {
+    "sk": "náramok",
+    "en": "bracelet",
+    "gender": "M"
+  },
+  {
+    "sk": "náušnice",
+    "en": "earrings",
+    "gender": "F"
+  },
+  {
+    "sk": "šperky",
+    "en": "jewelry",
+    "gender": "M"
+  },
+  {
+    "sk": "obchod",
+    "en": "shop",
+    "gender": "M"
+  },
+  {
+    "sk": "supermarket",
+    "en": "supermarket",
+    "gender": "M"
+  },
+  {
+    "sk": "trh",
+    "en": "market",
+    "gender": "M"
+  },
+  {
+    "sk": "predajňa",
+    "en": "store",
+    "gender": "F"
+  },
+  {
+    "sk": "pokladňa",
+    "en": "cash register",
+    "gender": "F"
+  },
+  {
+    "sk": "zákazník",
+    "en": "customer",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "predavač",
+    "en": "salesperson",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "cena",
+    "en": "price",
+    "gender": "F"
+  },
+  {
+    "sk": "zľava",
+    "en": "discount",
+    "gender": "F"
+  },
+  {
+    "sk": "akcia",
+    "en": "promotion",
+    "gender": "F"
+  },
+  {
+    "sk": "výpredaj",
+    "en": "sale",
+    "gender": "M"
+  },
+  {
+    "sk": "platba",
+    "en": "payment",
+    "gender": "F"
+  },
+  {
+    "sk": "hotovosť",
+    "en": "cash",
+    "gender": "F"
+  },
+  {
+    "sk": "karta",
+    "en": "card",
+    "gender": "F"
+  },
+  {
+    "sk": "účet",
+    "en": "account",
+    "gender": "M"
+  },
+  {
+    "sk": "faktúra",
+    "en": "invoice",
+    "gender": "F"
+  },
+  {
+    "sk": "pokladničný blok",
+    "en": "receipt",
+    "gender": "M"
+  },
+  {
+    "sk": "nákup",
+    "en": "purchase",
+    "gender": "M"
+  },
+  {
+    "sk": "košík",
+    "en": "basket",
+    "gender": "M"
+  },
+  {
+    "sk": "taška",
+    "en": "bag",
+    "gender": "F"
+  },
+  {
+    "sk": "balík",
+    "en": "package",
+    "gender": "M"
+  },
+  {
+    "sk": "zásielka",
+    "en": "shipment",
+    "gender": "F"
+  },
+  {
+    "sk": "doručenie",
+    "en": "delivery",
+    "gender": "N"
+  },
+  {
+    "sk": "objednávka",
+    "en": "order",
+    "gender": "F"
+  },
+  {
+    "sk": "internetový obchod",
+    "en": "online store",
+    "gender": "M"
+  },
+  {
+    "sk": "webstránka",
+    "en": "website",
+    "gender": "F"
+  },
+  {
+    "sk": "reklama",
+    "en": "advertisement",
+    "gender": "F"
+  },
+  {
+    "sk": "značka",
+    "en": "brand",
+    "gender": "F"
+  },
+  {
+    "sk": "produkt",
+    "en": "product",
+    "gender": "M"
+  },
+  {
+    "sk": "služba",
+    "en": "service",
+    "gender": "F"
+  },
+  {
+    "sk": "kvalita",
+    "en": "quality",
+    "gender": "F"
+  },
+  {
+    "sk": "hodnota",
+    "en": "value",
+    "gender": "F"
+  },
+  {
+    "sk": "recenzia",
+    "en": "review",
+    "gender": "F"
+  },
+  {
+    "sk": "hodnotenie",
+    "en": "rating",
+    "gender": "N"
+  },
+  {
+    "sk": "skúsenosť",
+    "en": "experience",
+    "gender": "F"
+  },
+  {
+    "sk": "spokojnosť",
+    "en": "satisfaction",
+    "gender": "F"
+  },
+  {
+    "sk": "raňajky",
+    "en": "breakfast",
+    "gender": "F"
+  },
+  {
+    "sk": "obed",
+    "en": "lunch",
+    "gender": "M"
+  },
+  {
+    "sk": "večera",
+    "en": "dinner",
+    "gender": "F"
+  },
+  {
+    "sk": "jedlo",
+    "en": "meal",
+    "gender": "N"
+  },
+  {
+    "sk": "nápoj",
+    "en": "drink",
+    "gender": "M"
+  },
+  {
+    "sk": "voda",
+    "en": "water",
+    "gender": "F"
+  },
+  {
+    "sk": "čaj",
+    "en": "tea",
+    "gender": "M"
+  },
+  {
+    "sk": "káva",
+    "en": "coffee",
+    "gender": "F"
+  },
+  {
+    "sk": "džús",
+    "en": "juice",
+    "gender": "M"
+  },
+  {
+    "sk": "mlieko",
+    "en": "milk",
+    "gender": "N"
+  },
+  {
+    "sk": "víno",
+    "en": "wine",
+    "gender": "N"
+  },
+  {
+    "sk": "pivo",
+    "en": "beer",
+    "gender": "N"
+  },
+  {
+    "sk": "alkohol",
+    "en": "alcohol",
+    "gender": "M"
+  },
+  {
+    "sk": "reštaurácia",
+    "en": "restaurant",
+    "gender": "F"
+  },
+  {
+    "sk": "kaviareň",
+    "en": "café",
+    "gender": "F"
+  },
+  {
+    "sk": "bar",
+    "en": "bar",
+    "gender": "M"
+  },
+  {
+    "sk": "hotel",
+    "en": "hotel",
+    "gender": "M"
+  },
+  {
+    "sk": "izba",
+    "en": "room",
+    "gender": "F"
+  },
+  {
+    "sk": "rezervácia",
+    "en": "reservation",
+    "gender": "F"
+  },
+  {
+    "sk": "lístok",
+    "en": "ticket",
+    "gender": "M"
+  },
+  {
+    "sk": "vlak",
+    "en": "train",
+    "gender": "M"
+  },
+  {
+    "sk": "autobus",
+    "en": "bus",
+    "gender": "M"
+  },
+  {
+    "sk": "električka",
+    "en": "tram",
+    "gender": "F"
+  },
+  {
+    "sk": "metro",
+    "en": "subway",
+    "gender": "N"
+  },
+  {
+    "sk": "taxík",
+    "en": "taxi",
+    "gender": "M"
+  },
+  {
+    "sk": "auto",
+    "en": "car",
+    "gender": "N"
+  },
+  {
+    "sk": "bicykel",
+    "en": "bicycle",
+    "gender": "M"
+  },
+  {
+    "sk": "motorka",
+    "en": "motorcycle",
+    "gender": "F"
+  },
+  {
+    "sk": "lietadlo",
+    "en": "airplane",
+    "gender": "N"
+  },
+  {
+    "sk": "letisko",
+    "en": "airport",
+    "gender": "N"
+  },
+  {
+    "sk": "stanica",
+    "en": "station",
+    "gender": "F"
+  },
+  {
+    "sk": "zastávka",
+    "en": "stop",
+    "gender": "F"
+  },
+  {
+    "sk": "cesta",
+    "en": "road",
+    "gender": "F"
+  },
+  {
+    "sk": "ulica",
+    "en": "street",
+    "gender": "F"
+  },
+  {
+    "sk": "chodník",
+    "en": "sidewalk",
+    "gender": "M"
+  },
+  {
+    "sk": "križovatka",
+    "en": "intersection",
+    "gender": "F"
+  },
+  {
+    "sk": "semafor",
+    "en": "traffic light",
+    "gender": "M"
+  },
+  {
+    "sk": "značka",
+    "en": "sign",
+    "gender": "F"
+  },
+  {
+    "sk": "mapa",
+    "en": "map",
+    "gender": "F"
+  },
+  {
+    "sk": "smer",
+    "en": "direction",
+    "gender": "M"
+  },
+  {
+    "sk": "východ",
+    "en": "exit",
+    "gender": "M"
+  },
+  {
+    "sk": "vchod",
+    "en": "entrance",
+    "gender": "M"
+  },
+  {
+    "sk": "budova",
+    "en": "building",
+    "gender": "F"
+  },
+  {
+    "sk": "dom",
+    "en": "house",
+    "gender": "M"
+  },
+  {
+    "sk": "byt",
+    "en": "apartment",
+    "gender": "M"
+  },
+  {
+    "sk": "poschodie",
+    "en": "floor (level)",
+    "gender": "N"
+  },
+  {
+    "sk": "výťah",
+    "en": "elevator",
+    "gender": "M"
+  },
+  {
+    "sk": "schody",
+    "en": "stairs",
+    "gender": "F"
+  },
+  {
+    "sk": "chodba",
+    "en": "hallway",
+    "gender": "F"
+  },
+  {
+    "sk": "dvor",
+    "en": "courtyard",
+    "gender": "M"
+  },
+  {
+    "sk": "záhrada",
+    "en": "garden",
+    "gender": "F"
+  },
+  {
+    "sk": "balkón",
+    "en": "balcony",
+    "gender": "M"
+  },
+  {
+    "sk": "terasa",
+    "en": "terrace",
+    "gender": "F"
+  },
+  {
+    "sk": "strecha",
+    "en": "roof",
+    "gender": "F"
+  },
+  {
+    "sk": "komín",
+    "en": "chimney",
+    "gender": "M"
+  },
+  {
+    "sk": "okolie",
+    "en": "surroundings",
+    "gender": "N"
+  },
+  {
+    "sk": "mesto",
+    "en": "city",
+    "gender": "N"
+  },
+  {
+    "sk": "dedina",
+    "en": "village",
+    "gender": "F"
+  },
+  {
+    "sk": "obec",
+    "en": "municipality",
+    "gender": "F"
+  },
+  {
+    "sk": "kraj",
+    "en": "region",
+    "gender": "M"
+  },
+  {
+    "sk": "okres",
+    "en": "district",
+    "gender": "M"
+  },
+  {
+    "sk": "ulica",
+    "en": "street",
+    "gender": "F"
+  },
+  {
+    "sk": "námestie",
+    "en": "square",
+    "gender": "N"
+  },
+  {
+    "sk": "park",
+    "en": "park",
+    "gender": "M"
+  },
+  {
+    "sk": "rieka",
+    "en": "river",
+    "gender": "F"
+  },
+  {
+    "sk": "jazero",
+    "en": "lake",
+    "gender": "N"
+  },
+  {
+    "sk": "les",
+    "en": "forest",
+    "gender": "M"
+  },
+  {
+    "sk": "hora",
+    "en": "mountain",
+    "gender": "F"
+  },
+  {
+    "sk": "kopec",
+    "en": "hill",
+    "gender": "M"
+  },
+  {
+    "sk": "údolie",
+    "en": "valley",
+    "gender": "N"
+  },
+  {
+    "sk": "pláž",
+    "en": "beach",
+    "gender": "F"
+  },
+  {
+    "sk": "more",
+    "en": "sea",
+    "gender": "N"
+  },
+  {
+    "sk": "oceán",
+    "en": "ocean",
+    "gender": "M"
+  },
+  {
+    "sk": "pobrežie",
+    "en": "coast",
+    "gender": "N"
+  },
+  {
+    "sk": "ostrov",
+    "en": "island",
+    "gender": "M"
+  },
+  {
+    "sk": "púšť",
+    "en": "desert",
+    "gender": "F"
+  },
+  {
+    "sk": "príroda",
+    "en": "nature",
+    "gender": "F"
+  },
+  {
+    "sk": "krajina",
+    "en": "landscape",
+    "gender": "F"
+  },
+  {
+    "sk": "počasie",
+    "en": "weather",
+    "gender": "N"
+  },
+  {
+    "sk": "dážď",
+    "en": "rain",
+    "gender": "M"
+  },
+  {
+    "sk": "sneh",
+    "en": "snow",
+    "gender": "M"
+  },
+  {
+    "sk": "vietor",
+    "en": "wind",
+    "gender": "M"
+  },
+  {
+    "sk": "slnečno",
+    "en": "sunshine",
+    "gender": "N"
+  },
+  {
+    "sk": "oblak",
+    "en": "cloud",
+    "gender": "M"
+  },
+  {
+    "sk": "búrka",
+    "en": "storm",
+    "gender": "F"
+  },
+  {
+    "sk": "hmla",
+    "en": "fog",
+    "gender": "F"
+  },
+  {
+    "sk": "ľad",
+    "en": "ice",
+    "gender": "M"
+  },
+  {
+    "sk": "mráz",
+    "en": "frost",
+    "gender": "M"
+  },
+  {
+    "sk": "teplota",
+    "en": "temperature",
+    "gender": "F"
+  },
+  {
+    "sk": "klíma",
+    "en": "climate",
+    "gender": "F"
+  },
+  {
+    "sk": "sezóna",
+    "en": "season",
+    "gender": "F"
+  },
+  {
+    "sk": "jar",
+    "en": "spring",
+    "gender": "F"
+  },
+  {
+    "sk": "leto",
+    "en": "summer",
+    "gender": "N"
+  },
+  {
+    "sk": "jeseň",
+    "en": "autumn",
+    "gender": "F"
+  },
+  {
+    "sk": "zima",
+    "en": "winter",
+    "gender": "F"
+  },
+  {
+    "sk": "deň",
+    "en": "day",
+    "gender": "M"
+  },
+  {
+    "sk": "noc",
+    "en": "night",
+    "gender": "F"
+  },
+  {
+    "sk": "ráno",
+    "en": "morning",
+    "gender": "N"
+  },
+  {
+    "sk": "poludnie",
+    "en": "noon",
+    "gender": "N"
+  },
+  {
+    "sk": "večer",
+    "en": "evening",
+    "gender": "M"
+  },
+  {
+    "sk": "polnoc",
+    "en": "midnight",
+    "gender": "F"
+  },
+  {
+    "sk": "týždeň",
+    "en": "week",
+    "gender": "M"
+  },
+  {
+    "sk": "mesiac",
+    "en": "month",
+    "gender": "M"
+  },
+  {
+    "sk": "rok",
+    "en": "year",
+    "gender": "M"
+  },
+  {
+    "sk": "storočie",
+    "en": "century",
+    "gender": "N"
+  },
+  {
+    "sk": "minúta",
+    "en": "minute",
+    "gender": "F"
+  },
+  {
+    "sk": "sekunda",
+    "en": "second",
+    "gender": "F"
+  },
+  {
+    "sk": "kalendár",
+    "en": "calendar",
+    "gender": "M"
+  },
+  {
+    "sk": "hodiny",
+    "en": "clock",
+    "gender": "F"
+  },
+  {
+    "sk": "budík",
+    "en": "alarm clock",
+    "gender": "M"
+  },
+  {
+    "sk": "čas",
+    "en": "time",
+    "gender": "M"
+  },
+  {
+    "sk": "dátum",
+    "en": "date",
+    "gender": "M"
+  },
+  {
+    "sk": "sviatok",
+    "en": "holiday",
+    "gender": "M"
+  },
+  {
+    "sk": "víkend",
+    "en": "weekend",
+    "gender": "M"
+  },
+  {
+    "sk": "pondelok",
+    "en": "Monday",
+    "gender": "M"
+  },
+  {
+    "sk": "utorok",
+    "en": "Tuesday",
+    "gender": "M"
+  },
+  {
+    "sk": "streda",
+    "en": "Wednesday",
+    "gender": "F"
+  },
+  {
+    "sk": "štvrtok",
+    "en": "Thursday",
+    "gender": "M"
+  },
+  {
+    "sk": "piatok",
+    "en": "Friday",
+    "gender": "M"
+  },
+  {
+    "sk": "sobota",
+    "en": "Saturday",
+    "gender": "F"
+  },
+  {
+    "sk": "nedeľa",
+    "en": "Sunday",
+    "gender": "F"
+  },
+  {
+    "sk": "január",
+    "en": "January",
+    "gender": "M"
+  },
+  {
+    "sk": "február",
+    "en": "February",
+    "gender": "M"
+  },
+  {
+    "sk": "marec",
+    "en": "March",
+    "gender": "M"
+  },
+  {
+    "sk": "apríl",
+    "en": "April",
+    "gender": "M"
+  },
+  {
+    "sk": "máj",
+    "en": "May",
+    "gender": "M"
+  },
+  {
+    "sk": "jún",
+    "en": "June",
+    "gender": "M"
+  },
+  {
+    "sk": "júl",
+    "en": "July",
+    "gender": "M"
+  },
+  {
+    "sk": "august",
+    "en": "August",
+    "gender": "M"
+  },
+  {
+    "sk": "september",
+    "en": "September",
+    "gender": "M"
+  },
+  {
+    "sk": "október",
+    "en": "October",
+    "gender": "M"
+  },
+  {
+    "sk": "november",
+    "en": "November",
+    "gender": "M"
+  },
+  {
+    "sk": "december",
+    "en": "December",
+    "gender": "M"
+  },
+  {
+    "sk": "časť",
+    "en": "part",
+    "gender": "F"
+  },
+  {
+    "sk": "celok",
+    "en": "whole",
+    "gender": "M"
+  },
+  {
+    "sk": "polovica",
+    "en": "half",
+    "gender": "F"
+  },
+  {
+    "sk": "štvrtina",
+    "en": "quarter",
+    "gender": "F"
+  },
+  {
+    "sk": "tretina",
+    "en": "third",
+    "gender": "F"
+  },
+  {
+    "sk": "časť",
+    "en": "section",
+    "gender": "F"
+  },
+  {
+    "sk": "kus",
+    "en": "piece",
+    "gender": "M"
+  },
+  {
+    "sk": "kúsok",
+    "en": "bit",
+    "gender": "M"
+  },
+  {
+    "sk": "balík",
+    "en": "package",
+    "gender": "M"
+  },
+  {
+    "sk": "krabica",
+    "en": "box",
+    "gender": "F"
+  },
+  {
+    "sk": "taška",
+    "en": "bag",
+    "gender": "F"
+  },
+  {
+    "sk": "vrecko",
+    "en": "pouch",
+    "gender": "N"
+  },
+  {
+    "sk": "fľaša",
+    "en": "bottle",
+    "gender": "F"
+  },
+  {
+    "sk": "pohár",
+    "en": "glass",
+    "gender": "M"
+  },
+  {
+    "sk": "šálka",
+    "en": "cup",
+    "gender": "F"
+  },
+  {
+    "sk": "tanier",
+    "en": "plate",
+    "gender": "M"
+  },
+  {
+    "sk": "príbor",
+    "en": "cutlery",
+    "gender": "M"
+  },
+  {
+    "sk": "vidlička",
+    "en": "fork",
+    "gender": "F"
+  },
+  {
+    "sk": "nôž",
+    "en": "knife",
+    "gender": "M"
+  },
+  {
+    "sk": "lyžica",
+    "en": "spoon",
+    "gender": "F"
+  },
+  {
+    "sk": "lyžička",
+    "en": "teaspoon",
+    "gender": "F"
+  },
+  {
+    "sk": "servítka",
+    "en": "napkin",
+    "gender": "F"
+  },
+  {
+    "sk": "obrúsok",
+    "en": "tissue",
+    "gender": "M"
+  },
+  {
+    "sk": "stôl",
+    "en": "table",
+    "gender": "M"
+  },
+  {
+    "sk": "stolička",
+    "en": "chair",
+    "gender": "F"
+  },
+  {
+    "sk": "lavica",
+    "en": "bench",
+    "gender": "F"
+  },
+  {
+    "sk": "pult",
+    "en": "counter",
+    "gender": "M"
+  },
+  {
+    "sk": "bar",
+    "en": "bar",
+    "gender": "M"
+  },
+  {
+    "sk": "menu",
+    "en": "menu",
+    "gender": "N"
+  },
+  {
+    "sk": "jedálny lístok",
+    "en": "menu",
+    "gender": "M"
+  },
+  {
+    "sk": "ponuka",
+    "en": "offer",
+    "gender": "F"
+  },
+  {
+    "sk": "objednávka",
+    "en": "order",
+    "gender": "F"
+  },
+  {
+    "sk": "účtenka",
+    "en": "receipt",
+    "gender": "F"
+  },
+  {
+    "sk": "účet",
+    "en": "bill",
+    "gender": "M"
+  },
+  {
+    "sk": "platba",
+    "en": "payment",
+    "gender": "F"
+  },
+  {
+    "sk": "hotovosť",
+    "en": "cash",
+    "gender": "F"
+  },
+  {
+    "sk": "karta",
+    "en": "card",
+    "gender": "F"
+  },
+  {
+    "sk": "terminál",
+    "en": "terminal",
+    "gender": "M"
+  },
+  {
+    "sk": "obsluha",
+    "en": "service",
+    "gender": "F"
+  },
+  {
+    "sk": "čašník",
+    "en": "waiter",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "čašníčka",
+    "en": "waitress",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "kuchár",
+    "en": "cook",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "kuchárka",
+    "en": "female cook",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "recept",
+    "en": "recipe",
+    "gender": "M"
+  },
+  {
+    "sk": "ingrediencia",
+    "en": "ingredient",
+    "gender": "F"
+  },
+  {
+    "sk": "soľ",
+    "en": "salt",
+    "gender": "F"
+  },
+  {
+    "sk": "korenie",
+    "en": "spice",
+    "gender": "N"
+  },
+  {
+    "sk": "cukor",
+    "en": "sugar",
+    "gender": "M"
+  },
+  {
+    "sk": "olej",
+    "en": "oil",
+    "gender": "M"
+  },
+  {
+    "sk": "ocot",
+    "en": "vinegar",
+    "gender": "M"
+  },
+  {
+    "sk": "maslo",
+    "en": "butter",
+    "gender": "N"
+  },
+  {
+    "sk": "chlieb",
+    "en": "bread",
+    "gender": "M"
+  },
+  {
+    "sk": "pečivo",
+    "en": "pastry",
+    "gender": "N"
+  },
+  {
+    "sk": "rožok",
+    "en": "roll",
+    "gender": "M"
+  },
+  {
+    "sk": "žemľa",
+    "en": "bun",
+    "gender": "F"
+  },
+  {
+    "sk": "bageta",
+    "en": "baguette",
+    "gender": "F"
+  },
+  {
+    "sk": "koláč",
+    "en": "cake",
+    "gender": "M"
+  },
+  {
+    "sk": "torta",
+    "en": "torte",
+    "gender": "F"
+  },
+  {
+    "sk": "sušienka",
+    "en": "biscuit",
+    "gender": "F"
+  },
+  {
+    "sk": "čokoláda",
+    "en": "chocolate",
+    "gender": "F"
+  },
+  {
+    "sk": "cukrík",
+    "en": "candy",
+    "gender": "M"
+  },
+  {
+    "sk": "zmrzlina",
+    "en": "ice cream",
+    "gender": "F"
+  },
+  {
+    "sk": "ovocie",
+    "en": "fruit",
+    "gender": "N"
+  },
+  {
+    "sk": "jablko",
+    "en": "apple",
+    "gender": "N"
+  },
+  {
+    "sk": "hruška",
+    "en": "pear",
+    "gender": "F"
+  },
+  {
+    "sk": "banán",
+    "en": "banana",
+    "gender": "M"
+  },
+  {
+    "sk": "pomaranč",
+    "en": "orange",
+    "gender": "M"
+  },
+  {
+    "sk": "citrón",
+    "en": "lemon",
+    "gender": "M"
+  },
+  {
+    "sk": "jahoda",
+    "en": "strawberry",
+    "gender": "F"
+  },
+  {
+    "sk": "malina",
+    "en": "raspberry",
+    "gender": "F"
+  },
+  {
+    "sk": "čučoriedka",
+    "en": "blueberry",
+    "gender": "F"
+  },
+  {
+    "sk": "hrozno",
+    "en": "grapes",
+    "gender": "N"
+  },
+  {
+    "sk": "slivka",
+    "en": "plum",
+    "gender": "F"
+  },
+  {
+    "sk": "broskyňa",
+    "en": "peach",
+    "gender": "F"
+  },
+  {
+    "sk": "marhuľa",
+    "en": "apricot",
+    "gender": "F"
+  },
+  {
+    "sk": "ananás",
+    "en": "pineapple",
+    "gender": "M"
+  },
+  {
+    "sk": "kiwi",
+    "en": "kiwi",
+    "gender": "N"
+  },
+  {
+    "sk": "melón",
+    "en": "melon",
+    "gender": "M"
+  },
+  {
+    "sk": "zelenina",
+    "en": "vegetable",
+    "gender": "F"
+  },
+  {
+    "sk": "zemiak",
+    "en": "potato",
+    "gender": "M"
+  },
+  {
+    "sk": "mrkva",
+    "en": "carrot",
+    "gender": "F"
+  },
+  {
+    "sk": "cibuľa",
+    "en": "onion",
+    "gender": "F"
+  },
+  {
+    "sk": "cesnak",
+    "en": "garlic",
+    "gender": "M"
+  },
+  {
+    "sk": "paradajka",
+    "en": "tomato",
+    "gender": "F"
+  },
+  {
+    "sk": "uhorka",
+    "en": "cucumber",
+    "gender": "F"
+  },
+  {
+    "sk": "paprika",
+    "en": "pepper",
+    "gender": "F"
+  },
+  {
+    "sk": "kapusta",
+    "en": "cabbage",
+    "gender": "F"
+  },
+  {
+    "sk": "karfiol",
+    "en": "cauliflower",
+    "gender": "M"
+  },
+  {
+    "sk": "brokolica",
+    "en": "broccoli",
+    "gender": "F"
+  },
+  {
+    "sk": "špenát",
+    "en": "spinach",
+    "gender": "M"
+  },
+  {
+    "sk": "hrášok",
+    "en": "peas",
+    "gender": "M"
+  },
+  {
+    "sk": "fazuľa",
+    "en": "beans",
+    "gender": "F"
+  },
+  {
+    "sk": "šošovica",
+    "en": "lentils",
+    "gender": "F"
+  },
+  {
+    "sk": "ryža",
+    "en": "rice",
+    "gender": "F"
+  },
+  {
+    "sk": "cestoviny",
+    "en": "pasta",
+    "gender": "F"
+  },
+  {
+    "sk": "mäso",
+    "en": "meat",
+    "gender": "N"
+  },
+  {
+    "sk": "kurča",
+    "en": "chicken",
+    "gender": "N"
+  },
+  {
+    "sk": "hovädzina",
+    "en": "beef",
+    "gender": "F"
+  },
+  {
+    "sk": "bravčovina",
+    "en": "pork",
+    "gender": "F"
+  },
+  {
+    "sk": "ryba",
+    "en": "fish",
+    "gender": "F"
+  },
+  {
+    "sk": "šunka",
+    "en": "ham",
+    "gender": "F"
+  },
+  {
+    "sk": "klobása",
+    "en": "sausage",
+    "gender": "F"
+  },
+  {
+    "sk": "slanina",
+    "en": "bacon",
+    "gender": "F"
+  },
+  {
+    "sk": "vajce",
+    "en": "egg",
+    "gender": "N"
+  },
+  {
+    "sk": "syr",
+    "en": "cheese",
+    "gender": "M"
+  },
+  {
+    "sk": "tvaroh",
+    "en": "curd",
+    "gender": "M"
+  },
+  {
+    "sk": "jogurt",
+    "en": "yogurt",
+    "gender": "M"
+  },
+  {
+    "sk": "smotana",
+    "en": "cream",
+    "gender": "F"
+  },
+  {
+    "sk": "masť",
+    "en": "lard",
+    "gender": "F"
+  },
+  {
+    "sk": "obed",
+    "en": "lunch",
+    "gender": "M"
+  },
+  {
+    "sk": "večera",
+    "en": "dinner",
+    "gender": "F"
+  },
+  {
+    "sk": "raňajky",
+    "en": "breakfast",
+    "gender": "F"
+  },
+  {
+    "sk": "desiata",
+    "en": "snack",
+    "gender": "F"
+  },
+  {
+    "sk": "olovrant",
+    "en": "afternoon snack",
+    "gender": "M"
+  },
+  {
+    "sk": "chuť",
+    "en": "taste",
+    "gender": "F"
+  },
+  {
+    "sk": "hlad",
+    "en": "hunger",
+    "gender": "M"
+  },
+  {
+    "sk": "smäd",
+    "en": "thirst",
+    "gender": "M"
+  },
+  {
+    "sk": "recept",
+    "en": "recipe",
+    "gender": "M"
+  },
+  {
+    "sk": "varenie",
+    "en": "cooking",
+    "gender": "N"
+  },
+  {
+    "sk": "pečenie",
+    "en": "baking",
+    "gender": "N"
+  },
+  {
+    "sk": "grilovanie",
+    "en": "grilling",
+    "gender": "N"
+  },
+  {
+    "sk": "panvica",
+    "en": "pan",
+    "gender": "F"
+  },
+  {
+    "sk": "hrniec",
+    "en": "pot",
+    "gender": "M"
+  },
+  {
+    "sk": "pokrievka",
+    "en": "lid",
+    "gender": "F"
+  },
+  {
+    "sk": "sporák",
+    "en": "stove",
+    "gender": "M"
+  },
+  {
+    "sk": "rúra",
+    "en": "oven",
+    "gender": "F"
+  },
+  {
+    "sk": "mikrovlnka",
+    "en": "microwave",
+    "gender": "F"
+  },
+  {
+    "sk": "mixér",
+    "en": "blender",
+    "gender": "M"
+  },
+  {
+    "sk": "kuchynský robot",
+    "en": "food processor",
+    "gender": "M"
+  },
+  {
+    "sk": "strúhadlo",
+    "en": "grater",
+    "gender": "N"
+  },
+  {
+    "sk": "sitko",
+    "en": "sieve",
+    "gender": "N"
+  },
+  {
+    "sk": "naberačka",
+    "en": "ladle",
+    "gender": "F"
+  },
+  {
+    "sk": "metlička",
+    "en": "whisk",
+    "gender": "F"
+  },
+  {
+    "sk": "otvárač",
+    "en": "opener",
+    "gender": "M"
+  },
+  {
+    "sk": "kuchyňa",
+    "en": "kitchen",
+    "gender": "F"
+  },
+  {
+    "sk": "jedáleň",
+    "en": "dining room",
+    "gender": "F",
+    "number": {
+      "singular": {
+        "localative": "jedálňach"
+      }
+    }
+  },
+  {
+    "sk": "stôl",
+    "en": "table",
+    "gender": "M"
+  },
+  {
+    "sk": "stolička",
+    "en": "chair",
+    "gender": "F"
+  },
+  {
+    "sk": "obrus",
+    "en": "tablecloth",
+    "gender": "M"
+  },
+  {
+    "sk": "prestieranie",
+    "en": "placemat",
+    "gender": "N"
+  },
+  {
+    "sk": "sviečka",
+    "en": "candle",
+    "gender": "F"
+  },
+  {
+    "sk": "svietnik",
+    "en": "candlestick",
+    "gender": "M"
+  },
+  {
+    "sk": "váza",
+    "en": "vase",
+    "gender": "F"
+  },
+  {
+    "sk": "kvety",
+    "en": "flowers",
+    "gender": "M"
+  },
+  {
+    "sk": "dekorácia",
+    "en": "decoration",
+    "gender": "F"
+  },
+  {
+    "sk": "oslava",
+    "en": "celebration",
+    "gender": "F"
+  },
+  {
+    "sk": "narodeniny",
+    "en": "birthday",
+    "gender": "F"
+  },
+  {
+    "sk": "meniny",
+    "en": "name day",
+    "gender": "F"
+  },
+  {
+    "sk": "svadba",
+    "en": "wedding",
+    "gender": "F"
+  },
+  {
+    "sk": "výročie",
+    "en": "anniversary",
+    "gender": "N"
+  },
+  {
+    "sk": "hostina",
+    "en": "feast",
+    "gender": "F"
+  },
+  {
+    "sk": "hostia",
+    "en": "guests",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "pozvánka",
+    "en": "invitation",
+    "gender": "F"
+  },
+  {
+    "sk": "darček",
+    "en": "gift",
+    "gender": "M"
+  },
+  {
+    "sk": "balenie",
+    "en": "wrapping",
+    "gender": "N"
+  },
+  {
+    "sk": "papier",
+    "en": "paper",
+    "gender": "M"
+  },
+  {
+    "sk": "mašľa",
+    "en": "ribbon",
+    "gender": "F"
+  },
+  {
+    "sk": "prekvapenie",
+    "en": "surprise",
+    "gender": "N"
+  },
+  {
+    "sk": "zábava",
+    "en": "entertainment",
+    "gender": "F"
+  },
+  {
+    "sk": "hudba",
+    "en": "music",
+    "gender": "F"
+  },
+  {
+    "sk": "pesnička",
+    "en": "song",
+    "gender": "F"
+  },
+  {
+    "sk": "tanečník",
+    "en": "dancer",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "tanec",
+    "en": "dance",
+    "gender": "M"
+  },
+  {
+    "sk": "diskotéka",
+    "en": "disco",
+    "gender": "F"
+  },
+  {
+    "sk": "koncert",
+    "en": "concert",
+    "gender": "M"
+  },
+  {
+    "sk": "spevák",
+    "en": "singer",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "speváčka",
+    "en": "female singer",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "kapela",
+    "en": "band",
+    "gender": "F"
+  },
+  {
+    "sk": "orchester",
+    "en": "orchestra",
+    "gender": "M"
+  },
+  {
+    "sk": "nástroj",
+    "en": "instrument",
+    "gender": "M"
+  },
+  {
+    "sk": "gitara",
+    "en": "guitar",
+    "gender": "F"
+  },
+  {
+    "sk": "klavír",
+    "en": "piano",
+    "gender": "M"
+  },
+  {
+    "sk": "husle",
+    "en": "violin",
+    "gender": "F"
+  },
+  {
+    "sk": "bicie",
+    "en": "drums",
+    "gender": "F"
+  },
+  {
+    "sk": "flauta",
+    "en": "flute",
+    "gender": "F"
+  },
+  {
+    "sk": "trúbka",
+    "en": "trumpet",
+    "gender": "F"
+  },
+  {
+    "sk": "zvuk",
+    "en": "sound",
+    "gender": "M"
+  },
+  {
+    "sk": "melódia",
+    "en": "melody",
+    "gender": "F"
+  },
+  {
+    "sk": "rytmus",
+    "en": "rhythm",
+    "gender": "M"
+  },
+  {
+    "sk": "hlas",
+    "en": "voice",
+    "gender": "M"
+  },
+  {
+    "sk": "mikrofón",
+    "en": "microphone",
+    "gender": "M"
+  },
+  {
+    "sk": "reproduktor",
+    "en": "speaker",
+    "gender": "M"
+  },
+  {
+    "sk": "slúchadlá",
+    "en": "headphones",
+    "gender": "F"
+  },
+  {
+    "sk": "záznam",
+    "en": "recording",
+    "gender": "M"
+  },
+  {
+    "sk": "album",
+    "en": "album",
+    "gender": "M"
+  },
+  {
+    "sk": "hit",
+    "en": "hit",
+    "gender": "M"
+  },
+  {
+    "sk": "rebríček",
+    "en": "chart",
+    "gender": "M"
+  },
+  {
+    "sk": "fanúšik",
+    "en": "fan",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "publikum",
+    "en": "audience",
+    "gender": "N"
+  },
+  {
+    "sk": "potlesk",
+    "en": "applause",
+    "gender": "M"
+  },
+  {
+    "sk": "predstavenie",
+    "en": "performance",
+    "gender": "N"
+  },
+  {
+    "sk": "divadlo",
+    "en": "theatre",
+    "gender": "N"
+  },
+  {
+    "sk": "herec",
+    "en": "actor",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "herečka",
+    "en": "actress",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "scéna",
+    "en": "scene",
+    "gender": "F"
+  },
+  {
+    "sk": "dej",
+    "en": "plot",
+    "gender": "M"
+  },
+  {
+    "sk": "postava",
+    "en": "character",
+    "gender": "F"
+  },
+  {
+    "sk": "kostým",
+    "en": "costume",
+    "gender": "M"
+  },
+  {
+    "sk": "maskér",
+    "en": "makeup artist",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "režisér",
+    "en": "director",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "film",
+    "en": "movie",
+    "gender": "M"
+  },
+  {
+    "sk": "kino",
+    "en": "cinema",
+    "gender": "N"
+  },
+  {
+    "sk": "plátno",
+    "en": "screen",
+    "gender": "N"
+  },
+  {
+    "sk": "premiéra",
+    "en": "premiere",
+    "gender": "F"
+  },
+  {
+    "sk": "trailer",
+    "en": "trailer",
+    "gender": "M"
+  },
+  {
+    "sk": "recenzia",
+    "en": "review",
+    "gender": "F"
+  },
+  {
+    "sk": "kritik",
+    "en": "critic",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "festival",
+    "en": "festival",
+    "gender": "M"
+  },
+  {
+    "sk": "ocenenie",
+    "en": "award",
+    "gender": "N"
+  },
+  {
+    "sk": "soška",
+    "en": "statuette",
+    "gender": "F"
+  },
+  {
+    "sk": "Oscar",
+    "en": "Oscar",
+    "gender": "M"
+  },
+  {
+    "sk": "kamera",
+    "en": "camera",
+    "gender": "F"
+  },
+  {
+    "sk": "scenár",
+    "en": "script",
+    "gender": "M"
+  },
+  {
+    "sk": "dialóg",
+    "en": "dialogue",
+    "gender": "M"
+  },
+  {
+    "sk": "monológ",
+    "en": "monologue",
+    "gender": "M"
+  },
+  {
+    "sk": "replika",
+    "en": "line",
+    "gender": "F"
+  },
+  {
+    "sk": "jazyk",
+    "en": "language",
+    "gender": "M"
+  },
+  {
+    "sk": "titulky",
+    "en": "subtitles",
+    "gender": "F"
+  },
+  {
+    "sk": "dabing",
+    "en": "dubbing",
+    "gender": "M"
+  },
+  {
+    "sk": "žáner",
+    "en": "genre",
+    "gender": "M"
+  },
+  {
+    "sk": "komédia",
+    "en": "comedy",
+    "gender": "F"
+  },
+  {
+    "sk": "drama",
+    "en": "drama",
+    "gender": "F"
+  },
+  {
+    "sk": "thriller",
+    "en": "thriller",
+    "gender": "M"
+  },
+  {
+    "sk": "horor",
+    "en": "horror",
+    "gender": "M"
+  },
+  {
+    "sk": "romanca",
+    "en": "romance",
+    "gender": "F"
+  },
+  {
+    "sk": "dobrodružstvo",
+    "en": "adventure",
+    "gender": "N"
+  },
+  {
+    "sk": "sci-fi",
+    "en": "sci-fi",
+    "gender": "N"
+  },
+  {
+    "sk": "fantasy",
+    "en": "fantasy",
+    "gender": "N"
+  },
+  {
+    "sk": "animácia",
+    "en": "animation",
+    "gender": "F"
+  },
+  {
+    "sk": "dokument",
+    "en": "documentary",
+    "gender": "M"
+  },
+  {
+    "sk": "učiteľ",
+    "en": "teacher",
+    "gender": "M",
+    "animate": "true",
+    "number": {
+      "singular": {
+        "accusative": "učiteľa",
+        "dative": "učiteľovi"
+      }
+    }
+  },
+  {
+    "sk": "žiak",
+    "en": "pupil",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "rodič",
+    "en": "parent",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "matka",
+    "en": "mother",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "otec",
+    "en": "father",
+    "gender": "M",
+    "animate": "true",
+    "number": {
+      "singular": {
+        "accusative": "otca"
+      }
+    }
+  },
+  {
+    "sk": "syn",
+    "en": "son",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "dcéra",
+    "en": "daughter",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "brat",
+    "en": "brother",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "sestra",
+    "en": "sister",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "babička",
+    "en": "grandmother",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "dedko",
+    "en": "grandfather",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "vnuk",
+    "en": "grandson",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "vnučka",
+    "en": "granddaughter",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "teta",
+    "en": "aunt",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "strýko",
+    "en": "uncle",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "sesternica",
+    "en": "female cousin",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "bratranec",
+    "en": "male cousin",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "manžel",
+    "en": "husband",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "manželka",
+    "en": "wife",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "partner",
+    "en": "partner",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "partnerka",
+    "en": "female partner",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "priateľ",
+    "en": "friend",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "priateľka",
+    "en": "female friend",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "známy",
+    "en": "acquaintance",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "kolega",
+    "en": "colleague",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "kolegyňa",
+    "en": "female colleague",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "spolužiak",
+    "en": "classmate",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "spolužiačka",
+    "en": "female classmate",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "sused",
+    "en": "neighbor",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "susedka",
+    "en": "female neighbor",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "domácnosť",
+    "en": "household",
+    "gender": "F"
+  },
+  {
+    "sk": "rodina",
+    "en": "family",
+    "gender": "F"
+  },
+  {
+    "sk": "vzťah",
+    "en": "relationship",
+    "gender": "M"
+  },
+  {
+    "sk": "láska",
+    "en": "love",
+    "gender": "F"
+  },
+  {
+    "sk": "priateľstvo",
+    "en": "friendship",
+    "gender": "N"
+  },
+  {
+    "sk": "manželstvo",
+    "en": "marriage",
+    "gender": "N"
+  },
+  {
+    "sk": "rozvod",
+    "en": "divorce",
+    "gender": "M"
+  },
+  {
+    "sk": "svadba",
+    "en": "wedding",
+    "gender": "F"
+  },
+  {
+    "sk": "zásnuby",
+    "en": "engagement",
+    "gender": "F"
+  },
+  {
+    "sk": "snúbenec",
+    "en": "fiancé",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "snúbenica",
+    "en": "fiancée",
+    "gender": "F",
+    "animate": "true"
+  },
+  {
+    "sk": "mladomanželia",
+    "en": "newlyweds",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "rodičovstvo",
+    "en": "parenthood",
+    "gender": "N"
+  },
+  {
+    "sk": "tehotenstvo",
+    "en": "pregnancy",
+    "gender": "N"
+  },
+  {
+    "sk": "pôrod",
+    "en": "birth",
+    "gender": "M"
+  },
+  {
+    "sk": "dieťa",
+    "en": "child",
+    "gender": "N",
+    "animate": "true"
+  },
+  {
+    "sk": "bábätko",
+    "en": "baby",
+    "gender": "N"
+  },
+  {
+    "sk": "novorodenec",
+    "en": "newborn",
+    "gender": "M",
+    "animate": "true",
+    "number": {
+      "singular": {
+        "accusative": "novorodenca"
+      }
+    }
+  },
+  {
+    "sk": "kočík",
+    "en": "stroller",
+    "gender": "M"
+  },
+  {
+    "sk": "plienka",
+    "en": "diaper",
+    "gender": "F"
+  },
+  {
+    "sk": "fľaša",
+    "en": "bottle",
+    "gender": "F"
+  },
+  {
+    "sk": "cumlík",
+    "en": "pacifier",
+    "gender": "M"
+  },
+  {
+    "sk": "hračka",
+    "en": "toy",
+    "gender": "F"
+  },
+  {
+    "sk": "hra",
+    "en": "game",
+    "gender": "F"
+  },
+  {
+    "sk": "stavebnica",
+    "en": "building set",
+    "gender": "F"
+  },
+  {
+    "sk": "bábika",
+    "en": "doll",
+    "gender": "F"
+  },
+  {
+    "sk": "autíčko",
+    "en": "toy car",
+    "gender": "N"
+  },
+  {
+    "sk": "lopta",
+    "en": "ball",
+    "gender": "F"
+  },
+  {
+    "sk": "kocka",
+    "en": "block",
+    "gender": "F"
+  },
+  {
+    "sk": "puzzle",
+    "en": "puzzle",
+    "gender": "N"
+  },
+  {
+    "sk": "kniha",
+    "en": "book",
+    "gender": "F"
+  },
+  {
+    "sk": "rozprávka",
+    "en": "fairy tale",
+    "gender": "F"
+  },
+  {
+    "sk": "príbeh",
+    "en": "story",
+    "gender": "M"
+  },
+  {
+    "sk": "postavička",
+    "en": "character",
+    "gender": "F"
+  },
+  {
+    "sk": "dobrodružstvo",
+    "en": "adventure",
+    "gender": "N"
+  },
+  {
+    "sk": "fantázia",
+    "en": "imagination",
+    "gender": "F"
+  },
+  {
+    "sk": "zábava",
+    "en": "fun",
+    "gender": "F"
+  },
+  {
+    "sk": "smiech",
+    "en": "laughter",
+    "gender": "M"
+  },
+  {
+    "sk": "plač",
+    "en": "crying",
+    "gender": "M"
+  },
+  {
+    "sk": "pocit",
+    "en": "feeling",
+    "gender": "M"
+  },
+  {
+    "sk": "emócia",
+    "en": "emotion",
+    "gender": "F"
+  },
+  {
+    "sk": "radosť",
+    "en": "joy",
+    "gender": "F"
+  },
+  {
+    "sk": "smútok",
+    "en": "sadness",
+    "gender": "M"
+  },
+  {
+    "sk": "strach",
+    "en": "fear",
+    "gender": "M"
+  },
+  {
+    "sk": "hnev",
+    "en": "anger",
+    "gender": "M"
+  },
+  {
+    "sk": "prekvapenie",
+    "en": "surprise",
+    "gender": "N"
+  },
+  {
+    "sk": "nuda",
+    "en": "boredom",
+    "gender": "F"
+  },
+  {
+    "sk": "záujem",
+    "en": "interest",
+    "gender": "M"
+  },
+  {
+    "sk": "pozornosť",
+    "en": "attention",
+    "gender": "F"
+  },
+  {
+    "sk": "myšlienka",
+    "en": "thought",
+    "gender": "F"
+  },
+  {
+    "sk": "idea",
+    "en": "idea",
+    "gender": "F"
+  },
+  {
+    "sk": "snívanie",
+    "en": "dreaming",
+    "gender": "N"
+  },
+  {
+    "sk": "sen",
+    "en": "dream",
+    "gender": "M"
+  },
+  {
+    "sk": "cieľ",
+    "en": "goal",
+    "gender": "M"
+  },
+  {
+    "sk": "plán",
+    "en": "plan",
+    "gender": "M"
+  },
+  {
+    "sk": "rozhodnutie",
+    "en": "decision",
+    "gender": "N"
+  },
+  {
+    "sk": "riešenie",
+    "en": "solution",
+    "gender": "N"
+  },
+  {
+    "sk": "problém",
+    "en": "problem",
+    "gender": "M"
+  },
+  {
+    "sk": "chyba",
+    "en": "mistake",
+    "gender": "F"
+  },
+  {
+    "sk": "úspech",
+    "en": "success",
+    "gender": "M"
+  },
+  {
+    "sk": "neúspech",
+    "en": "failure",
+    "gender": "M"
+  },
+  {
+    "sk": "pokrok",
+    "en": "progress",
+    "gender": "M"
+  },
+  {
+    "sk": "zmena",
+    "en": "change",
+    "gender": "F"
+  },
+  {
+    "sk": "vývoj",
+    "en": "development",
+    "gender": "M"
+  },
+  {
+    "sk": "rast",
+    "en": "growth",
+    "gender": "M"
+  },
+  {
+    "sk": "pokles",
+    "en": "decline",
+    "gender": "M"
+  },
+  {
+    "sk": "stav",
+    "en": "state",
+    "gender": "M"
+  },
+  {
+    "sk": "situácia",
+    "en": "situation",
+    "gender": "F"
+  },
+  {
+    "sk": "možnosť",
+    "en": "possibility",
+    "gender": "F"
+  },
+  {
+    "sk": "podmienka",
+    "en": "condition",
+    "gender": "F"
+  },
+  {
+    "sk": "výsledok",
+    "en": "result",
+    "gender": "M"
+  },
+  {
+    "sk": "hodnotenie",
+    "en": "evaluation",
+    "gender": "N"
+  },
+  {
+    "sk": "kritika",
+    "en": "criticism",
+    "gender": "F"
+  },
+  {
+    "sk": "pochvala",
+    "en": "praise",
+    "gender": "F"
+  },
+  {
+    "sk": "názor",
+    "en": "opinion",
+    "gender": "M"
+  },
+  {
+    "sk": "rada",
+    "en": "advice",
+    "gender": "F"
+  },
+  {
+    "sk": "pomoc",
+    "en": "help",
+    "gender": "F"
+  },
+  {
+    "sk": "podpora",
+    "en": "support",
+    "gender": "F"
+  },
+  {
+    "sk": "spolupráca",
+    "en": "cooperation",
+    "gender": "F"
+  },
+  {
+    "sk": "tím",
+    "en": "team",
+    "gender": "M"
+  },
+  {
+    "sk": "vedúci",
+    "en": "leader",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "manažér",
+    "en": "manager",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "zamestnanec",
+    "en": "employee",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "pracovník",
+    "en": "worker",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "kolega",
+    "en": "colleague",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "oddelenie",
+    "en": "department",
+    "gender": "N"
+  },
+  {
+    "sk": "organizácia",
+    "en": "organization",
+    "gender": "F"
+  },
+  {
+    "sk": "firma",
+    "en": "company",
+    "gender": "F"
+  },
+  {
+    "sk": "spoločnosť",
+    "en": "corporation",
+    "gender": "F"
+  },
+  {
+    "sk": "projekt",
+    "en": "project",
+    "gender": "M"
+  },
+  {
+    "sk": "úloha",
+    "en": "task",
+    "gender": "F"
+  },
+  {
+    "sk": "cieľ",
+    "en": "goal",
+    "gender": "M"
+  },
+  {
+    "sk": "stratégia",
+    "en": "strategy",
+    "gender": "F"
+  },
+  {
+    "sk": "stratégia",
+    "en": "strategy",
+    "gender": "F"
+  },
+  {
+    "sk": "rozhovor",
+    "en": "conversation",
+    "gender": "M"
+  },
+  {
+    "sk": "stretnutie",
+    "en": "meeting",
+    "gender": "N"
+  },
+  {
+    "sk": "diskusia",
+    "en": "discussion",
+    "gender": "F"
+  },
+  {
+    "sk": "konflikt",
+    "en": "conflict",
+    "gender": "M"
+  },
+  {
+    "sk": "kompromis",
+    "en": "compromise",
+    "gender": "M"
+  },
+  {
+    "sk": "dohoda",
+    "en": "agreement",
+    "gender": "F"
+  },
+  {
+    "sk": "zmluva",
+    "en": "contract",
+    "gender": "F"
+  },
+  {
+    "sk": "pravidlo",
+    "en": "rule",
+    "gender": "N"
+  },
+  {
+    "sk": "zákon",
+    "en": "law",
+    "gender": "M"
+  },
+  {
+    "sk": "nariadenie",
+    "en": "regulation",
+    "gender": "N"
+  },
+  {
+    "sk": "vyhláška",
+    "en": "decree",
+    "gender": "F"
+  },
+  {
+    "sk": "predpis",
+    "en": "prescription",
+    "gender": "M"
+  },
+  {
+    "sk": "norma",
+    "en": "standard",
+    "gender": "F"
+  },
+  {
+    "sk": "smernica",
+    "en": "directive",
+    "gender": "F"
+  },
+  {
+    "sk": "politika",
+    "en": "policy",
+    "gender": "F"
+  },
+  {
+    "sk": "vláda",
+    "en": "government",
+    "gender": "F"
+  },
+  {
+    "sk": "minister",
+    "en": "minister",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "ministerstvo",
+    "en": "ministry",
+    "gender": "N"
+  },
+  {
+    "sk": "parlament",
+    "en": "parliament",
+    "gender": "M"
+  },
+  {
+    "sk": "poslanec",
+    "en": "member of parliament",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "zástupca",
+    "en": "representative",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "prezident",
+    "en": "president",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "premiér",
+    "en": "prime minister",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "kandidát",
+    "en": "candidate",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "voľby",
+    "en": "elections",
+    "gender": "F"
+  },
+  {
+    "sk": "hlas",
+    "en": "vote",
+    "gender": "M"
+  },
+  {
+    "sk": "hlasovanie",
+    "en": "voting",
+    "gender": "N"
+  },
+  {
+    "sk": "strana",
+    "en": "party",
+    "gender": "F"
+  },
+  {
+    "sk": "koalícia",
+    "en": "coalition",
+    "gender": "F"
+  },
+  {
+    "sk": "opozícia",
+    "en": "opposition",
+    "gender": "F"
+  },
+  {
+    "sk": "program",
+    "en": "program",
+    "gender": "M"
+  },
+  {
+    "sk": "plán",
+    "en": "plan",
+    "gender": "M"
+  },
+  {
+    "sk": "cieľ",
+    "en": "goal",
+    "gender": "M"
+  },
+  {
+    "sk": "reforma",
+    "en": "reform",
+    "gender": "F"
+  },
+  {
+    "sk": "zmena",
+    "en": "change",
+    "gender": "F"
+  },
+  {
+    "sk": "rozhodnutie",
+    "en": "decision",
+    "gender": "N"
+  },
+  {
+    "sk": "opatrenie",
+    "en": "measure",
+    "gender": "N"
+  },
+  {
+    "sk": "výsledok",
+    "en": "result",
+    "gender": "M"
+  },
+  {
+    "sk": "úspech",
+    "en": "success",
+    "gender": "M"
+  },
+  {
+    "sk": "neúspech",
+    "en": "failure",
+    "gender": "M"
+  },
+  {
+    "sk": "kritika",
+    "en": "criticism",
+    "gender": "F"
+  },
+  {
+    "sk": "pochvala",
+    "en": "praise",
+    "gender": "F"
+  },
+  {
+    "sk": "názor",
+    "en": "opinion",
+    "gender": "M"
+  },
+  {
+    "sk": "diskusia",
+    "en": "discussion",
+    "gender": "F"
+  },
+  {
+    "sk": "debata",
+    "en": "debate",
+    "gender": "F"
+  },
+  {
+    "sk": "argument",
+    "en": "argument",
+    "gender": "M"
+  },
+  {
+    "sk": "dôkaz",
+    "en": "proof",
+    "gender": "M"
+  },
+  {
+    "sk": "fakt",
+    "en": "fact",
+    "gender": "M"
+  },
+  {
+    "sk": "pravda",
+    "en": "truth",
+    "gender": "F"
+  },
+  {
+    "sk": "lož",
+    "en": "lie",
+    "gender": "F"
+  },
+  {
+    "sk": "informácia",
+    "en": "information",
+    "gender": "F"
+  },
+  {
+    "sk": "správa",
+    "en": "report",
+    "gender": "F"
+  },
+  {
+    "sk": "oznámenie",
+    "en": "announcement",
+    "gender": "N"
+  },
+  {
+    "sk": "vyhlásenie",
+    "en": "statement",
+    "gender": "N"
+  },
+  {
+    "sk": "komunikácia",
+    "en": "communication",
+    "gender": "F"
+  },
+  {
+    "sk": "médiá",
+    "en": "media",
+    "gender": "N"
+  },
+  {
+    "sk": "noviny",
+    "en": "newspaper",
+    "gender": "F"
+  },
+  {
+    "sk": "časopis",
+    "en": "magazine",
+    "gender": "M"
+  },
+  {
+    "sk": "televízia",
+    "en": "television",
+    "gender": "F"
+  },
+  {
+    "sk": "rádio",
+    "en": "radio",
+    "gender": "N"
+  },
+  {
+    "sk": "internet",
+    "en": "internet",
+    "gender": "M"
+  },
+  {
+    "sk": "webstránka",
+    "en": "website",
+    "gender": "F"
+  },
+  {
+    "sk": "profil",
+    "en": "profile",
+    "gender": "M"
+  },
+  {
+    "sk": "status",
+    "en": "status",
+    "gender": "M"
+  },
+  {
+    "sk": "komentár",
+    "en": "comment",
+    "gender": "M"
+  },
+  {
+    "sk": "zdieľanie",
+    "en": "sharing",
+    "gender": "N"
+  },
+  {
+    "sk": "fotka",
+    "en": "photo",
+    "gender": "F"
+  },
+  {
+    "sk": "obrázok",
+    "en": "image",
+    "gender": "M"
+  },
+  {
+    "sk": "video",
+    "en": "video",
+    "gender": "N"
+  },
+  {
+    "sk": "záznam",
+    "en": "record",
+    "gender": "M"
+  },
+  {
+    "sk": "stream",
+    "en": "stream",
+    "gender": "M"
+  },
+  {
+    "sk": "kanál",
+    "en": "channel",
+    "gender": "M"
+  },
+  {
+    "sk": "sledovateľ",
+    "en": "follower",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "odberateľ",
+    "en": "subscriber",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "tvorca",
+    "en": "creator",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "influencer",
+    "en": "influencer",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "obsah",
+    "en": "content",
+    "gender": "M"
+  },
+  {
+    "sk": "príspevok",
+    "en": "post",
+    "gender": "M"
+  },
+  {
+    "sk": "reklama",
+    "en": "advertisement",
+    "gender": "F"
+  },
+  {
+    "sk": "propagácia",
+    "en": "promotion",
+    "gender": "F"
+  },
+  {
+    "sk": "značka",
+    "en": "brand",
+    "gender": "F"
+  },
+  {
+    "sk": "produkt",
+    "en": "product",
+    "gender": "M"
+  },
+  {
+    "sk": "služba",
+    "en": "service",
+    "gender": "F"
+  },
+  {
+    "sk": "kampaň",
+    "en": "campaign",
+    "gender": "F"
+  },
+  {
+    "sk": "trh",
+    "en": "market",
+    "gender": "M"
+  },
+  {
+    "sk": "obchod",
+    "en": "shop",
+    "gender": "M"
+  },
+  {
+    "sk": "predaj",
+    "en": "sale",
+    "gender": "M"
+  },
+  {
+    "sk": "nákup",
+    "en": "purchase",
+    "gender": "M"
+  },
+  {
+    "sk": "zákazník",
+    "en": "customer",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "klient",
+    "en": "client",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "dodávateľ",
+    "en": "supplier",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "partner",
+    "en": "partner",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "konkurencia",
+    "en": "competition",
+    "gender": "F"
+  },
+  {
+    "sk": "konkurent",
+    "en": "competitor",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "výrobca",
+    "en": "manufacturer",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "dodanie",
+    "en": "delivery",
+    "gender": "N"
+  },
+  {
+    "sk": "zásielka",
+    "en": "shipment",
+    "gender": "F"
+  },
+  {
+    "sk": "balík",
+    "en": "package",
+    "gender": "M"
+  },
+  {
+    "sk": "objednávka",
+    "en": "order",
+    "gender": "F"
+  },
+  {
+    "sk": "faktúra",
+    "en": "invoice",
+    "gender": "F"
+  },
+  {
+    "sk": "platba",
+    "en": "payment",
+    "gender": "F"
+  },
+  {
+    "sk": "hotovosť",
+    "en": "cash",
+    "gender": "F"
+  },
+  {
+    "sk": "karta",
+    "en": "card",
+    "gender": "F"
+  },
+  {
+    "sk": "účet",
+    "en": "account",
+    "gender": "M"
+  },
+  {
+    "sk": "pokladňa",
+    "en": "cash register",
+    "gender": "F"
+  },
+  {
+    "sk": "pokladník",
+    "en": "cashier",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "blok",
+    "en": "receipt",
+    "gender": "M"
+  },
+  {
+    "sk": "zľava",
+    "en": "discount",
+    "gender": "F"
+  },
+  {
+    "sk": "akcia",
+    "en": "promotion",
+    "gender": "F"
+  },
+  {
+    "sk": "výpredaj",
+    "en": "sale",
+    "gender": "M"
+  },
+  {
+    "sk": "cenovka",
+    "en": "price tag",
+    "gender": "F"
+  },
+  {
+    "sk": "hodnota",
+    "en": "value",
+    "gender": "F"
+  },
+  {
+    "sk": "kvalita",
+    "en": "quality",
+    "gender": "F"
+  },
+  {
+    "sk": "recenzia",
+    "en": "review",
+    "gender": "F"
+  },
+  {
+    "sk": "hodnotenie",
+    "en": "rating",
+    "gender": "N"
+  },
+  {
+    "sk": "spokojnosť",
+    "en": "satisfaction",
+    "gender": "F"
+  },
+  {
+    "sk": "skúsenosť",
+    "en": "experience",
+    "gender": "F"
+  },
+  {
+    "sk": "reputácia",
+    "en": "reputation",
+    "gender": "F"
+  },
+  {
+    "sk": "dôvera",
+    "en": "trust",
+    "gender": "F"
+  },
+  {
+    "sk": "pochybnosť",
+    "en": "doubt",
+    "gender": "F"
+  },
+  {
+    "sk": "sťažnosť",
+    "en": "complaint",
+    "gender": "F"
+  },
+  {
+    "sk": "reklamácia",
+    "en": "claim",
+    "gender": "F"
+  },
+  {
+    "sk": "záruka",
+    "en": "warranty",
+    "gender": "F"
+  },
+  {
+    "sk": "servis",
+    "en": "service",
+    "gender": "M"
+  },
+  {
+    "sk": "oprava",
+    "en": "repair",
+    "gender": "F"
+  },
+  {
+    "sk": "údržba",
+    "en": "maintenance",
+    "gender": "F"
+  },
+  {
+    "sk": "technika",
+    "en": "technique",
+    "gender": "F"
+  },
+  {
+    "sk": "technológia",
+    "en": "technology",
+    "gender": "F"
+  },
+  {
+    "sk": "stroj",
+    "en": "machine",
+    "gender": "M"
+  },
+  {
+    "sk": "zariadenie",
+    "en": "device",
+    "gender": "N"
+  },
+  {
+    "sk": "nástroj",
+    "en": "tool",
+    "gender": "M"
+  },
+  {
+    "sk": "prístroj",
+    "en": "instrument",
+    "gender": "M"
+  },
+  {
+    "sk": "mechanizmus",
+    "en": "mechanism",
+    "gender": "M"
+  },
+  {
+    "sk": "motor",
+    "en": "engine",
+    "gender": "M"
+  },
+  {
+    "sk": "batéria",
+    "en": "battery",
+    "gender": "F"
+  },
+  {
+    "sk": "kábel",
+    "en": "cable",
+    "gender": "M"
+  },
+  {
+    "sk": "zásuvka",
+    "en": "socket",
+    "gender": "F"
+  },
+  {
+    "sk": "vypínač",
+    "en": "switch",
+    "gender": "M"
+  },
+  {
+    "sk": "obvod",
+    "en": "circuit",
+    "gender": "M"
+  },
+  {
+    "sk": "čip",
+    "en": "chip",
+    "gender": "M"
+  },
+  {
+    "sk": "procesor",
+    "en": "processor",
+    "gender": "M"
+  },
+  {
+    "sk": "pamäť",
+    "en": "memory",
+    "gender": "F"
+  },
+  {
+    "sk": "disk",
+    "en": "disk",
+    "gender": "M"
+  },
+  {
+    "sk": "monitor",
+    "en": "monitor",
+    "gender": "M"
+  },
+  {
+    "sk": "klávesnica",
+    "en": "keyboard",
+    "gender": "F"
+  },
+  {
+    "sk": "myš",
+    "en": "mouse",
+    "gender": "F"
+  },
+  {
+    "sk": "obrazovka",
+    "en": "screen",
+    "gender": "F"
+  },
+  {
+    "sk": "tlačiareň",
+    "en": "printer",
+    "gender": "F"
+  },
+  {
+    "sk": "skener",
+    "en": "scanner",
+    "gender": "M"
+  },
+  {
+    "sk": "projektor",
+    "en": "projector",
+    "gender": "M"
+  },
+  {
+    "sk": "kamera",
+    "en": "camera",
+    "gender": "F"
+  },
+  {
+    "sk": "mikrofón",
+    "en": "microphone",
+    "gender": "M"
+  },
+  {
+    "sk": "reproduktor",
+    "en": "speaker",
+    "gender": "M"
+  },
+  {
+    "sk": "slúchadlá",
+    "en": "headphones",
+    "gender": "F"
+  },
+  {
+    "sk": "internet",
+    "en": "internet",
+    "gender": "M"
+  },
+  {
+    "sk": "web",
+    "en": "web",
+    "gender": "M"
+  },
+  {
+    "sk": "stránka",
+    "en": "page",
+    "gender": "F"
+  },
+  {
+    "sk": "prehliadač",
+    "en": "browser",
+    "gender": "M"
+  },
+  {
+    "sk": "server",
+    "en": "server",
+    "gender": "M"
+  },
+  {
+    "sk": "sieť",
+    "en": "network",
+    "gender": "F"
+  },
+  {
+    "sk": "pripojenie",
+    "en": "connection",
+    "gender": "N"
+  },
+  {
+    "sk": "signál",
+    "en": "signal",
+    "gender": "M"
+  },
+  {
+    "sk": "wifi",
+    "en": "wifi",
+    "gender": "N"
+  },
+  {
+    "sk": "mobil",
+    "en": "mobile",
+    "gender": "M"
+  },
+  {
+    "sk": "smartfón",
+    "en": "smartphone",
+    "gender": "M"
+  },
+  {
+    "sk": "tablet",
+    "en": "tablet",
+    "gender": "M"
+  },
+  {
+    "sk": "notebook",
+    "en": "laptop",
+    "gender": "M"
+  },
+  {
+    "sk": "počítač",
+    "en": "computer",
+    "gender": "M"
+  },
+  {
+    "sk": "aplikácia",
+    "en": "application",
+    "gender": "F"
+  },
+  {
+    "sk": "program",
+    "en": "program",
+    "gender": "M"
+  },
+  {
+    "sk": "softvér",
+    "en": "software",
+    "gender": "M"
+  },
+  {
+    "sk": "systém",
+    "en": "system",
+    "gender": "M"
+  },
+  {
+    "sk": "platforma",
+    "en": "platform",
+    "gender": "F"
+  },
+  {
+    "sk": "rozhranie",
+    "en": "interface",
+    "gender": "N"
+  },
+  {
+    "sk": "nastavenie",
+    "en": "setting",
+    "gender": "N"
+  },
+  {
+    "sk": "funkcia",
+    "en": "function",
+    "gender": "F"
+  },
+  {
+    "sk": "možnosť",
+    "en": "option",
+    "gender": "F"
+  },
+  {
+    "sk": "menu",
+    "en": "menu",
+    "gender": "N"
+  },
+  {
+    "sk": "ikona",
+    "en": "icon",
+    "gender": "F"
+  },
+  {
+    "sk": "súbor",
+    "en": "file",
+    "gender": "M"
+  },
+  {
+    "sk": "dokument",
+    "en": "document",
+    "gender": "M"
+  },
+  {
+    "sk": "obrázok",
+    "en": "image",
+    "gender": "M"
+  },
+  {
+    "sk": "video",
+    "en": "video",
+    "gender": "N"
+  },
+  {
+    "sk": "hudba",
+    "en": "music",
+    "gender": "F"
+  },
+  {
+    "sk": "zvuk",
+    "en": "sound",
+    "gender": "M"
+  },
+  {
+    "sk": "text",
+    "en": "text",
+    "gender": "M"
+  },
+  {
+    "sk": "poznámka",
+    "en": "note",
+    "gender": "F"
+  },
+  {
+    "sk": "správa",
+    "en": "message",
+    "gender": "F"
+  },
+  {
+    "sk": "email",
+    "en": "email",
+    "gender": "M"
+  },
+  {
+    "sk": "kontakt",
+    "en": "contact",
+    "gender": "M"
+  },
+  {
+    "sk": "adresár",
+    "en": "directory",
+    "gender": "M"
+  },
+  {
+    "sk": "heslo",
+    "en": "password",
+    "gender": "N"
+  },
+  {
+    "sk": "prihlásenie",
+    "en": "login",
+    "gender": "N"
+  },
+  {
+    "sk": "odhlásenie",
+    "en": "logout",
+    "gender": "N"
+  },
+  {
+    "sk": "profil",
+    "en": "profile",
+    "gender": "M"
+  },
+  {
+    "sk": "nastavenie",
+    "en": "setting",
+    "gender": "N"
+  },
+  {
+    "sk": "ochrana",
+    "en": "protection",
+    "gender": "F"
+  },
+  {
+    "sk": "súkromie",
+    "en": "privacy",
+    "gender": "N"
+  },
+  {
+    "sk": "bezpečnosť",
+    "en": "security",
+    "gender": "F"
+  },
+  {
+    "sk": "prístup",
+    "en": "access",
+    "gender": "M"
+  },
+  {
+    "sk": "autorizácia",
+    "en": "authorization",
+    "gender": "F"
+  },
+  {
+    "sk": "overenie",
+    "en": "verification",
+    "gender": "N"
+  },
+  {
+    "sk": "údaj",
+    "en": "data",
+    "gender": "M"
+  },
+  {
+    "sk": "informácia",
+    "en": "information",
+    "gender": "F"
+  },
+  {
+    "sk": "dátum",
+    "en": "date",
+    "gender": "M"
+  },
+  {
+    "sk": "čas",
+    "en": "time",
+    "gender": "M"
+  },
+  {
+    "sk": "formát",
+    "en": "format",
+    "gender": "M"
+  },
+  {
+    "sk": "verzia",
+    "en": "version",
+    "gender": "F"
+  },
+  {
+    "sk": "aktualizácia",
+    "en": "update",
+    "gender": "F"
+  },
+  {
+    "sk": "inštalácia",
+    "en": "installation",
+    "gender": "F"
+  },
+  {
+    "sk": "odstránenie",
+    "en": "removal",
+    "gender": "N"
+  },
+  {
+    "sk": "chyba",
+    "en": "error",
+    "gender": "F"
+  },
+  {
+    "sk": "oprava",
+    "en": "fix",
+    "gender": "F"
+  },
+  {
+    "sk": "riešenie",
+    "en": "solution",
+    "gender": "N"
+  },
+  {
+    "sk": "návod",
+    "en": "guide",
+    "gender": "M"
+  },
+  {
+    "sk": "podpora",
+    "en": "support",
+    "gender": "F"
+  },
+  {
+    "sk": "pomoc",
+    "en": "help",
+    "gender": "F"
+  },
+  {
+    "sk": "služba",
+    "en": "service",
+    "gender": "F"
+  },
+  {
+    "sk": "zákazník",
+    "en": "customer",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "užívateľ",
+    "en": "user",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "správca",
+    "en": "administrator",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "vývojár",
+    "en": "developer",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "programátor",
+    "en": "programmer",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "tester",
+    "en": "tester",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "projekt",
+    "en": "project",
+    "gender": "M"
+  },
+  {
+    "sk": "úloha",
+    "en": "task",
+    "gender": "F"
+  },
+  {
+    "sk": "cieľ",
+    "en": "goal",
+    "gender": "M"
+  },
+  {
+    "sk": "rozpočet",
+    "en": "budget",
+    "gender": "M"
+  },
+  {
+    "sk": "zdroj",
+    "en": "resource",
+    "gender": "M"
+  },
+  {
+    "sk": "výsledok",
+    "en": "result",
+    "gender": "M"
+  },
+  {
+    "sk": "úspech",
+    "en": "success",
+    "gender": "M"
+  },
+  {
+    "sk": "neúspech",
+    "en": "failure",
+    "gender": "M"
+  },
+  {
+    "sk": "hodnotenie",
+    "en": "evaluation",
+    "gender": "N"
+  },
+  {
+    "sk": "záver",
+    "en": "conclusion",
+    "gender": "M"
+  },
+  {
+    "sk": "člen",
+    "en": "member",
+    "gender": "M",
+    "animate": "true"
+  },
+  {
+    "sk": "príbeh",
+    "en": "story",
+    "gender": "M"
+  },
+  {
+    "sk": "skupina",
+    "en": "group",
+    "gender": "F"
+  },
+  {
+    "sk": "priestor",
+    "en": "space",
+    "gender": "M"
+  },
+  {
+    "sk": "služba",
+    "en": "service",
+    "gender": "F"
+  },
+  {
+    "sk": "počet",
+    "en": "number",
+    "gender": "M"
+  },
+  {
+    "sk": "časť",
+    "en": "part",
+    "gender": "F"
+  },
+  {
+    "sk": "domov",
+    "en": "home",
+    "gender": "M"
+  },
+  {
+    "sk": "správnosť",
+    "en": "correctness",
+    "gender": "F"
+  },
+  {
+    "sk": "vozidlo",
+    "en": "vehicle",
+    "gender": "N"
+  },
+  {
+    "sk": "krajina",
+    "en": "country",
+    "gender": "F"
+  },
+  {
+    "sk": "rodina",
+    "en": "family",
+    "gender": "F"
+  },
+  {
+    "sk": "peniaze",
+    "en": "money",
+    "gender": "F"
+  },
+  {
+    "sk": "obchod",
+    "en": "shop",
+    "gender": "M"
+  },
+  {
+    "sk": "otázka",
+    "en": "question",
+    "gender": "F"
+  },
+  {
+    "sk": "prípad",
+    "en": "case",
+    "gender": "M"
+  },
+  {
+    "sk": "vláda",
+    "en": "government",
+    "gender": "F"
+  },
+  {
+    "sk": "svet",
+    "en": "world",
+    "gender": "M"
+  },
+  {
+    "sk": "dieťa",
+    "en": "child",
+    "gender": "N",
+    "animate": "true"
+  },
+  {
+    "sk": "skúsenosť",
+    "en": "experience",
+    "gender": "F"
+  },
+  {
+    "sk": "štúdium",
+    "en": "study",
+    "gender": "N"
+  }
+]

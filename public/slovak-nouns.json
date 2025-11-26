@@ -1,0 +1,9969 @@
+[
+  {
+    "e": "teacher",
+    "w": "učiteľ",
+    "g": "M",
+    "animate": "true",
+    "number": {
+      "singular": {
+        "accusative": "učiteľa",
+        "dative": "učiteľovi"
+      }
+    }
+  },
+  {
+    "e": "person",
+    "w": "človek",
+    "g": "M",
+    "animate": "true",
+    "number": {
+      "singular": {
+        "accusative": "človeka"
+      }
+    }
+  },
+  {
+    "e": "father",
+    "w": "otec",
+    "g": "M",
+    "animate": "true",
+    "number": {
+      "singular": {
+        "accusative": "otca"
+      }
+    }
+  },
+  {
+    "e": "language",
+    "w": "jazyk",
+    "g": "M",
+    "number": {
+      "singular": {
+        "locative": "jazyku"
+      }
+    }
+  },
+  {
+    "e": "car",
+    "w": "auto",
+    "g": "N"
+  },
+  {
+    "e": "life",
+    "w": "život",
+    "g": "M"
+  },
+  {
+    "e": "document",
+    "w": "dokument",
+    "g": "M"
+  },
+  {
+    "e": "university",
+    "w": "univerzita",
+    "g": "F"
+  },
+  {
+    "e": "student",
+    "w": "študent",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "textbook",
+    "w": "učebnica",
+    "g": "F"
+  },
+  {
+    "e": "year",
+    "w": "rok",
+    "g": "M"
+  },
+  {
+    "e": "reason",
+    "w": "dôvod",
+    "g": "M"
+  },
+  {
+    "e": "case",
+    "w": "prípad",
+    "g": "M"
+  },
+  {
+    "e": "world",
+    "w": "svet",
+    "g": "M"
+  },
+  {
+    "e": "side",
+    "w": "strana",
+    "g": "F"
+  },
+  {
+    "e": "work",
+    "w": "práca",
+    "g": "F"
+  },
+  {
+    "e": "day",
+    "w": "deň",
+    "g": "M"
+  },
+  {
+    "e": "system",
+    "w": "systém",
+    "g": "M"
+  },
+  {
+    "e": "problem",
+    "w": "problém",
+    "g": "M"
+  },
+  {
+    "e": "state",
+    "w": "štát",
+    "g": "M"
+  },
+  {
+    "e": "road",
+    "w": "cesta",
+    "g": "F"
+  },
+  {
+    "e": "possibility",
+    "w": "možnosť",
+    "g": "F"
+  },
+  {
+    "e": "program",
+    "w": "program",
+    "g": "M"
+  },
+  {
+    "e": "question",
+    "w": "otázka",
+    "g": "F"
+  },
+  {
+    "e": "information",
+    "w": "informácia",
+    "g": "F"
+  },
+  {
+    "e": "condition",
+    "w": "podmienka",
+    "g": "F"
+  },
+  {
+    "e": "number",
+    "w": "číslo",
+    "g": "N"
+  },
+  {
+    "e": "proof",
+    "w": "dôkaz",
+    "g": "M"
+  },
+  {
+    "e": "week",
+    "w": "týždeň",
+    "g": "M"
+  },
+  {
+    "e": "hour",
+    "w": "hodina",
+    "g": "F"
+  },
+  {
+    "e": "minute",
+    "w": "minúta",
+    "g": "F"
+  },
+  {
+    "e": "second",
+    "w": "sekunda",
+    "g": "F"
+  },
+  {
+    "e": "place",
+    "w": "miesto",
+    "g": "N"
+  },
+  {
+    "e": "rule",
+    "w": "pravidlo",
+    "g": "N"
+  },
+  {
+    "e": "law",
+    "w": "zákon",
+    "g": "M"
+  },
+  {
+    "e": "government",
+    "w": "vláda",
+    "g": "F"
+  },
+  {
+    "e": "money",
+    "w": "peniaze",
+    "g": "F"
+  },
+  {
+    "e": "service",
+    "w": "služba",
+    "g": "F"
+  },
+  {
+    "e": "company",
+    "w": "firma",
+    "g": "F"
+  },
+  {
+    "e": "corporation",
+    "w": "spoločnosť",
+    "g": "F"
+  },
+  {
+    "e": "product",
+    "w": "produkt",
+    "g": "M"
+  },
+  {
+    "e": "word",
+    "w": "slovo",
+    "g": "N"
+  },
+  {
+    "e": "article",
+    "w": "článok",
+    "g": "M"
+  },
+  {
+    "e": "report",
+    "w": "správa",
+    "g": "F"
+  },
+  {
+    "e": "news",
+    "w": "spravodajstvo",
+    "g": "N"
+  },
+  {
+    "e": "newspaper",
+    "w": "noviny",
+    "g": "F"
+  },
+  {
+    "e": "television",
+    "w": "televízia",
+    "g": "F"
+  },
+  {
+    "e": "radio",
+    "w": "rádio",
+    "g": "N"
+  },
+  {
+    "e": "internet",
+    "w": "internet",
+    "g": "M"
+  },
+  {
+    "e": "computer",
+    "w": "počítač",
+    "g": "M"
+  },
+  {
+    "e": "mobile phone",
+    "w": "mobil",
+    "g": "M"
+  },
+  {
+    "e": "application",
+    "w": "aplikácia",
+    "g": "F"
+  },
+  {
+    "e": "file",
+    "w": "súbor",
+    "g": "M"
+  },
+  {
+    "e": "data point",
+    "w": "údaj",
+    "g": "M"
+  },
+  {
+    "e": "network",
+    "w": "sieť",
+    "g": "F"
+  },
+  {
+    "e": "server",
+    "w": "server",
+    "g": "M"
+  },
+  {
+    "e": "programmer",
+    "w": "programátor",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "technology",
+    "w": "technológia",
+    "g": "F"
+  },
+  {
+    "e": "project",
+    "w": "projekt",
+    "g": "M"
+  },
+  {
+    "e": "task",
+    "w": "úloha",
+    "g": "F"
+  },
+  {
+    "e": "goal",
+    "w": "cieľ",
+    "g": "M"
+  },
+  {
+    "e": "plan",
+    "w": "plán",
+    "g": "M"
+  },
+  {
+    "e": "strategy",
+    "w": "stratégia",
+    "g": "F"
+  },
+  {
+    "e": "team",
+    "w": "tím",
+    "g": "M"
+  },
+  {
+    "e": "leader",
+    "w": "vedúci",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "manager",
+    "w": "manažér",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "employee",
+    "w": "zamestnanec",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "colleague",
+    "w": "kolega",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "department",
+    "w": "oddelenie",
+    "g": "N"
+  },
+  {
+    "e": "organization",
+    "w": "organizácia",
+    "g": "F"
+  },
+  {
+    "e": "contract",
+    "w": "zmluva",
+    "g": "F"
+  },
+  {
+    "e": "agreement",
+    "w": "dohoda",
+    "g": "F"
+  },
+  {
+    "e": "conversation",
+    "w": "rozhovor",
+    "g": "M"
+  },
+  {
+    "e": "meeting",
+    "w": "stretnutie",
+    "g": "N"
+  },
+  {
+    "e": "discussion",
+    "w": "diskusia",
+    "g": "F"
+  },
+  {
+    "e": "decision",
+    "w": "rozhodnutie",
+    "g": "N"
+  },
+  {
+    "e": "opinion",
+    "w": "názor",
+    "g": "M"
+  },
+  {
+    "e": "criticism",
+    "w": "kritika",
+    "g": "F"
+  },
+  {
+    "e": "praise",
+    "w": "pochvala",
+    "g": "F"
+  },
+  {
+    "e": "answer",
+    "w": "odpoveď",
+    "g": "F"
+  },
+  {
+    "e": "solution",
+    "w": "riešenie",
+    "g": "N"
+  },
+  {
+    "e": "mistake",
+    "w": "chyba",
+    "g": "F"
+  },
+  {
+    "e": "correction",
+    "w": "oprava",
+    "g": "F"
+  },
+  {
+    "e": "result",
+    "w": "výsledok",
+    "g": "M"
+  },
+  {
+    "e": "success",
+    "w": "úspech",
+    "g": "M"
+  },
+  {
+    "e": "failure",
+    "w": "neúspech",
+    "g": "M"
+  },
+  {
+    "e": "progress",
+    "w": "pokrok",
+    "g": "M"
+  },
+  {
+    "e": "change",
+    "w": "zmena",
+    "g": "F"
+  },
+  {
+    "e": "development",
+    "w": "vývoj",
+    "g": "M"
+  },
+  {
+    "e": "growth",
+    "w": "rast",
+    "g": "M"
+  },
+  {
+    "e": "decline",
+    "w": "pokles",
+    "g": "M"
+  },
+  {
+    "e": "situation",
+    "w": "situácia",
+    "g": "F"
+  },
+  {
+    "e": "support",
+    "w": "podpora",
+    "g": "F"
+  },
+  {
+    "e": "help",
+    "w": "pomoc",
+    "g": "F"
+  },
+  {
+    "e": "advice",
+    "w": "rada",
+    "g": "F"
+  },
+  {
+    "e": "guide",
+    "w": "návod",
+    "g": "M"
+  },
+  {
+    "e": "example",
+    "w": "príklad",
+    "g": "M"
+  },
+  {
+    "e": "definition",
+    "w": "definícia",
+    "g": "F"
+  },
+  {
+    "e": "note",
+    "w": "poznámka",
+    "g": "F"
+  },
+  {
+    "e": "knowledge",
+    "w": "poznanie",
+    "g": "N"
+  },
+  {
+    "e": "experience",
+    "w": "skúsenosť",
+    "g": "F"
+  },
+  {
+    "e": "education",
+    "w": "vzdelanie",
+    "g": "N"
+  },
+  {
+    "e": "school",
+    "w": "škola",
+    "g": "F"
+  },
+  {
+    "e": "faculty",
+    "w": "fakulta",
+    "g": "F"
+  },
+  {
+    "e": "lecture",
+    "w": "prednáška",
+    "g": "F"
+  },
+  {
+    "e": "classroom",
+    "w": "učebňa",
+    "g": "F"
+  },
+  {
+    "e": "library",
+    "w": "knižnica",
+    "g": "F"
+  },
+  {
+    "e": "laboratory",
+    "w": "laboratórium",
+    "g": "N"
+  },
+  {
+    "e": "research",
+    "w": "výskum",
+    "g": "M"
+  },
+  {
+    "e": "analysis",
+    "w": "analýza",
+    "g": "F"
+  },
+  {
+    "e": "study",
+    "w": "štúdia",
+    "g": "F"
+  },
+  {
+    "e": "publication",
+    "w": "publikácia",
+    "g": "F"
+  },
+  {
+    "e": "author",
+    "w": "autor",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "reader",
+    "w": "čitateľ",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "book",
+    "w": "kniha",
+    "g": "F"
+  },
+  {
+    "e": "magazine",
+    "w": "časopis",
+    "g": "M"
+  },
+  {
+    "e": "page",
+    "w": "stránka",
+    "g": "F"
+  },
+  {
+    "e": "chapter",
+    "w": "kapitola",
+    "g": "F"
+  },
+  {
+    "e": "text",
+    "w": "text",
+    "g": "M"
+  },
+  {
+    "e": "dictionary",
+    "w": "slovník",
+    "g": "M"
+  },
+  {
+    "e": "record",
+    "w": "záznam",
+    "g": "M"
+  },
+  {
+    "e": "memory",
+    "w": "pamäť",
+    "g": "F"
+  },
+  {
+    "e": "thought",
+    "w": "myšlienka",
+    "g": "F"
+  },
+  {
+    "e": "idea",
+    "w": "idea",
+    "g": "F"
+  },
+  {
+    "e": "concept",
+    "w": "koncept",
+    "g": "M"
+  },
+  {
+    "e": "theory",
+    "w": "teória",
+    "g": "F"
+  },
+  {
+    "e": "hypothesis",
+    "w": "hypotéza",
+    "g": "F"
+  },
+  {
+    "e": "fact",
+    "w": "fakt",
+    "g": "M"
+  },
+  {
+    "e": "truth",
+    "w": "pravda",
+    "g": "F"
+  },
+  {
+    "e": "lie",
+    "w": "lož",
+    "g": "F"
+  },
+  {
+    "e": "trust",
+    "w": "dôvera",
+    "g": "F"
+  },
+  {
+    "e": "doubt",
+    "w": "pochybnosť",
+    "g": "F"
+  },
+  {
+    "e": "faith",
+    "w": "viera",
+    "g": "F"
+  },
+  {
+    "e": "hope",
+    "w": "nádej",
+    "g": "F"
+  },
+  {
+    "e": "love",
+    "w": "láska",
+    "g": "F"
+  },
+  {
+    "e": "friendship",
+    "w": "priateľstvo",
+    "g": "N"
+  },
+  {
+    "e": "hatred",
+    "w": "nenávisť",
+    "g": "F"
+  },
+  {
+    "e": "fear",
+    "w": "strach",
+    "g": "M"
+  },
+  {
+    "e": "anger",
+    "w": "hnev",
+    "g": "M"
+  },
+  {
+    "e": "joy",
+    "w": "radosť",
+    "g": "F"
+  },
+  {
+    "e": "sadness",
+    "w": "smútok",
+    "g": "M"
+  },
+  {
+    "e": "fun",
+    "w": "zábava",
+    "g": "F"
+  },
+  {
+    "e": "joke",
+    "w": "vtip",
+    "g": "M"
+  },
+  {
+    "e": "laughter",
+    "w": "smiech",
+    "g": "M"
+  },
+  {
+    "e": "crying",
+    "w": "plač",
+    "g": "M"
+  },
+  {
+    "e": "feeling",
+    "w": "pocit",
+    "g": "M"
+  },
+  {
+    "e": "emotion",
+    "w": "emócia",
+    "g": "F"
+  },
+  {
+    "e": "soul",
+    "w": "duša",
+    "g": "F"
+  },
+  {
+    "e": "body",
+    "w": "telo",
+    "g": "N"
+  },
+  {
+    "e": "head",
+    "w": "hlava",
+    "g": "F"
+  },
+  {
+    "e": "face",
+    "w": "tvár",
+    "g": "F"
+  },
+  {
+    "e": "eye",
+    "w": "oko",
+    "g": "N"
+  },
+  {
+    "e": "ear",
+    "w": "ucho",
+    "g": "N"
+  },
+  {
+    "e": "nose",
+    "w": "nos",
+    "g": "M"
+  },
+  {
+    "e": "mouth",
+    "w": "ústa",
+    "g": "N"
+  },
+  {
+    "e": "tooth",
+    "w": "zub",
+    "g": "M"
+  },
+  {
+    "e": "neck",
+    "w": "krk",
+    "g": "M"
+  },
+  {
+    "e": "shoulder",
+    "w": "rameno",
+    "g": "N"
+  },
+  {
+    "e": "arm",
+    "w": "ruka",
+    "g": "F"
+  },
+  {
+    "e": "finger",
+    "w": "prst",
+    "g": "M"
+  },
+  {
+    "e": "leg",
+    "w": "noha",
+    "g": "F"
+  },
+  {
+    "e": "knee",
+    "w": "koleno",
+    "g": "N"
+  },
+  {
+    "e": "foot",
+    "w": "chodidlo",
+    "g": "N"
+  },
+  {
+    "e": "heart",
+    "w": "srdce",
+    "g": "N"
+  },
+  {
+    "e": "brain",
+    "w": "mozog",
+    "g": "M"
+  },
+  {
+    "e": "lungs",
+    "w": "pľúca",
+    "g": "N",
+    "number": {
+      "singular": {
+        "accusative": "pľúca"
+      }
+    }
+  },
+  {
+    "e": "stomach",
+    "w": "žalúdok",
+    "g": "M"
+  },
+  {
+    "e": "liver",
+    "w": "pečeň",
+    "g": "F"
+  },
+  {
+    "e": "kidney",
+    "w": "oblička",
+    "g": "F"
+  },
+  {
+    "e": "skin",
+    "w": "koža",
+    "g": "F"
+  },
+  {
+    "e": "blood",
+    "w": "krv",
+    "g": "F"
+  },
+  {
+    "e": "disease",
+    "w": "choroba",
+    "g": "F"
+  },
+  {
+    "e": "health",
+    "w": "zdravie",
+    "g": "N"
+  },
+  {
+    "e": "medicine",
+    "w": "liek",
+    "g": "M"
+  },
+  {
+    "e": "pill",
+    "w": "tabletka",
+    "g": "F"
+  },
+  {
+    "e": "injection",
+    "w": "injekcia",
+    "g": "F"
+  },
+  {
+    "e": "surgery",
+    "w": "operácia",
+    "g": "F"
+  },
+  {
+    "e": "injury",
+    "w": "zranenie",
+    "g": "N"
+  },
+  {
+    "e": "wound",
+    "w": "rana",
+    "g": "F"
+  },
+  {
+    "e": "pain",
+    "w": "bolesť",
+    "g": "F"
+  },
+  {
+    "e": "clinic",
+    "w": "ambulancia",
+    "g": "F"
+  },
+  {
+    "e": "hospital",
+    "w": "nemocnica",
+    "g": "F"
+  },
+  {
+    "e": "pharmacy",
+    "w": "lekáreň",
+    "g": "F"
+  },
+  {
+    "e": "doctor",
+    "w": "lekár",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "nurse",
+    "w": "sestra",
+    "g": "F",
+    "animate": "true"
+  },
+  {
+    "e": "patient",
+    "w": "pacient",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "insurance",
+    "w": "poistenie",
+    "g": "N"
+  },
+  {
+    "e": "form",
+    "w": "formulár",
+    "g": "M"
+  },
+  {
+    "e": "date",
+    "w": "dátum",
+    "g": "M"
+  },
+  {
+    "e": "calendar",
+    "w": "kalendár",
+    "g": "M"
+  },
+  {
+    "e": "alarm clock",
+    "w": "budík",
+    "g": "M"
+  },
+  {
+    "e": "bell",
+    "w": "zvonček",
+    "g": "M"
+  },
+  {
+    "e": "door",
+    "w": "dvere",
+    "g": "F"
+  },
+  {
+    "e": "window",
+    "w": "okno",
+    "g": "N"
+  },
+  {
+    "e": "wall",
+    "w": "stena",
+    "g": "F"
+  },
+  {
+    "e": "ceiling",
+    "w": "strop",
+    "g": "M"
+  },
+  {
+    "e": "floor",
+    "w": "podlaha",
+    "g": "F"
+  },
+  {
+    "e": "carpet",
+    "w": "koberec",
+    "g": "M"
+  },
+  {
+    "e": "lamp",
+    "w": "lampa",
+    "g": "F"
+  },
+  {
+    "e": "light",
+    "w": "svetlo",
+    "g": "N"
+  },
+  {
+    "e": "socket",
+    "w": "zásuvka",
+    "g": "F"
+  },
+  {
+    "e": "switch",
+    "w": "vypínač",
+    "g": "M"
+  },
+  {
+    "e": "table",
+    "w": "stôl",
+    "g": "M"
+  },
+  {
+    "e": "chair",
+    "w": "stolička",
+    "g": "F"
+  },
+  {
+    "e": "sofa",
+    "w": "pohovka",
+    "g": "F"
+  },
+  {
+    "e": "bed",
+    "w": "posteľ",
+    "g": "F"
+  },
+  {
+    "e": "pillow",
+    "w": "vankúš",
+    "g": "M"
+  },
+  {
+    "e": "duvet",
+    "w": "paplón",
+    "g": "M"
+  },
+  {
+    "e": "sheet",
+    "w": "plachta",
+    "g": "F"
+  },
+  {
+    "e": "wardrobe",
+    "w": "skriňa",
+    "g": "F"
+  },
+  {
+    "e": "mirror",
+    "w": "zrkadlo",
+    "g": "N"
+  },
+  {
+    "e": "shelf",
+    "w": "polica",
+    "g": "F"
+  },
+  {
+    "e": "drawer",
+    "w": "zásuvka",
+    "g": "F"
+  },
+  {
+    "e": "cabinet",
+    "w": "skrinka",
+    "g": "F"
+  },
+  {
+    "e": "refrigerator",
+    "w": "chladnička",
+    "g": "F"
+  },
+  {
+    "e": "freezer",
+    "w": "mraznička",
+    "g": "F"
+  },
+  {
+    "e": "stove",
+    "w": "sporák",
+    "g": "M"
+  },
+  {
+    "e": "oven",
+    "w": "rúra",
+    "g": "F"
+  },
+  {
+    "e": "microwave",
+    "w": "mikrovlnka",
+    "g": "F"
+  },
+  {
+    "e": "dishwasher",
+    "w": "umývačka",
+    "g": "F"
+  },
+  {
+    "e": "sink",
+    "w": "drez",
+    "g": "M"
+  },
+  {
+    "e": "kitchen",
+    "w": "kuchyňa",
+    "g": "F"
+  },
+  {
+    "e": "bathroom",
+    "w": "kúpeľňa",
+    "g": "F"
+  },
+  {
+    "e": "toilet",
+    "w": "toaleta",
+    "g": "F"
+  },
+  {
+    "e": "shower",
+    "w": "sprcha",
+    "g": "F"
+  },
+  {
+    "e": "bathtub",
+    "w": "vaňa",
+    "g": "F"
+  },
+  {
+    "e": "towel",
+    "w": "uterák",
+    "g": "M"
+  },
+  {
+    "e": "soap",
+    "w": "mydlo",
+    "g": "N"
+  },
+  {
+    "e": "shampoo",
+    "w": "šampón",
+    "g": "M"
+  },
+  {
+    "e": "toothbrush",
+    "w": "zubná kefka",
+    "g": "F"
+  },
+  {
+    "e": "toothpaste",
+    "w": "pasta",
+    "g": "F"
+  },
+  {
+    "e": "comb",
+    "w": "hrebienok",
+    "g": "M"
+  },
+  {
+    "e": "brush",
+    "w": "kefka",
+    "g": "F"
+  },
+  {
+    "e": "cosmetics",
+    "w": "kozmetika",
+    "g": "F"
+  },
+  {
+    "e": "makeup",
+    "w": "make-up",
+    "g": "M"
+  },
+  {
+    "e": "cream",
+    "w": "krém",
+    "g": "M"
+  },
+  {
+    "e": "perfume",
+    "w": "parfum",
+    "g": "M"
+  },
+  {
+    "e": "deodorant",
+    "w": "deodorant",
+    "g": "M"
+  },
+  {
+    "e": "clothing",
+    "w": "oblečenie",
+    "g": "N"
+  },
+  {
+    "e": "t-shirt",
+    "w": "tričko",
+    "g": "N"
+  },
+  {
+    "e": "shirt",
+    "w": "košeľa",
+    "g": "F"
+  },
+  {
+    "e": "blouse",
+    "w": "blúzka",
+    "g": "F"
+  },
+  {
+    "e": "sweater",
+    "w": "sveter",
+    "g": "M"
+  },
+  {
+    "e": "hoodie",
+    "w": "mikina",
+    "g": "F"
+  },
+  {
+    "e": "pants",
+    "w": "nohavice",
+    "g": "F"
+  },
+  {
+    "e": "jeans",
+    "w": "rifle",
+    "g": "F"
+  },
+  {
+    "e": "shorts",
+    "w": "šortky",
+    "g": "F"
+  },
+  {
+    "e": "skirt",
+    "w": "sukňa",
+    "g": "F"
+  },
+  {
+    "e": "dress",
+    "w": "šaty",
+    "g": "F"
+  },
+  {
+    "e": "coat",
+    "w": "kabát",
+    "g": "M"
+  },
+  {
+    "e": "jacket",
+    "w": "bunda",
+    "g": "F"
+  },
+  {
+    "e": "shoes",
+    "w": "topánky",
+    "g": "F"
+  },
+  {
+    "e": "sneakers",
+    "w": "tenisky",
+    "g": "F"
+  },
+  {
+    "e": "boots",
+    "w": "čižmy",
+    "g": "F"
+  },
+  {
+    "e": "sandals",
+    "w": "sandále",
+    "g": "F"
+  },
+  {
+    "e": "socks",
+    "w": "ponožky",
+    "g": "F"
+  },
+  {
+    "e": "hat",
+    "w": "klobúk",
+    "g": "M"
+  },
+  {
+    "e": "cap",
+    "w": "čapica",
+    "g": "F"
+  },
+  {
+    "e": "scarf",
+    "w": "šál",
+    "g": "M"
+  },
+  {
+    "e": "gloves",
+    "w": "rukavice",
+    "g": "F"
+  },
+  {
+    "e": "bag",
+    "w": "taška",
+    "g": "F"
+  },
+  {
+    "e": "handbag",
+    "w": "kabelka",
+    "g": "F"
+  },
+  {
+    "e": "backpack",
+    "w": "batoh",
+    "g": "M"
+  },
+  {
+    "e": "wallet",
+    "w": "peňaženka",
+    "g": "F"
+  },
+  {
+    "e": "watch",
+    "w": "hodinky",
+    "g": "F"
+  },
+  {
+    "e": "glasses",
+    "w": "okuliare",
+    "g": "F"
+  },
+  {
+    "e": "sunglasses",
+    "w": "slnečné okuliare",
+    "g": "F"
+  },
+  {
+    "e": "ring",
+    "w": "prsteň",
+    "g": "M"
+  },
+  {
+    "e": "necklace",
+    "w": "náhrdelník",
+    "g": "M"
+  },
+  {
+    "e": "bracelet",
+    "w": "náramok",
+    "g": "M"
+  },
+  {
+    "e": "earrings",
+    "w": "náušnice",
+    "g": "F"
+  },
+  {
+    "e": "jewelry",
+    "w": "šperky",
+    "g": "M"
+  },
+  {
+    "e": "shop",
+    "w": "obchod",
+    "g": "M"
+  },
+  {
+    "e": "market",
+    "w": "trh",
+    "g": "M"
+  },
+  {
+    "e": "supermarket",
+    "w": "supermarket",
+    "g": "M"
+  },
+  {
+    "e": "store",
+    "w": "predajňa",
+    "g": "F"
+  },
+  {
+    "e": "customer",
+    "w": "zákazník",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "salesperson",
+    "w": "predavač",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "price",
+    "w": "cena",
+    "g": "F"
+  },
+  {
+    "e": "discount",
+    "w": "zľava",
+    "g": "F"
+  },
+  {
+    "e": "payment",
+    "w": "platba",
+    "g": "F"
+  },
+  {
+    "e": "cash",
+    "w": "hotovosť",
+    "g": "F"
+  },
+  {
+    "e": "card",
+    "w": "karta",
+    "g": "F"
+  },
+  {
+    "e": "invoice",
+    "w": "faktúra",
+    "g": "F"
+  },
+  {
+    "e": "receipt",
+    "w": "pokladničný blok",
+    "g": "M"
+  },
+  {
+    "e": "order",
+    "w": "objednávka",
+    "g": "F"
+  },
+  {
+    "e": "package",
+    "w": "balík",
+    "g": "M"
+  },
+  {
+    "e": "shipment",
+    "w": "zásielka",
+    "g": "F"
+  },
+  {
+    "e": "delivery",
+    "w": "doručenie",
+    "g": "N"
+  },
+  {
+    "e": "basket",
+    "w": "košík",
+    "g": "M"
+  },
+  {
+    "e": "warehouse",
+    "w": "sklad",
+    "g": "M"
+  },
+  {
+    "e": "inventory",
+    "w": "inventár",
+    "g": "M"
+  },
+  {
+    "e": "product",
+    "w": "produkt",
+    "g": "M"
+  },
+  {
+    "e": "brand",
+    "w": "značka",
+    "g": "F"
+  },
+  {
+    "e": "quality",
+    "w": "kvalita",
+    "g": "F"
+  },
+  {
+    "e": "review",
+    "w": "recenzia",
+    "g": "F"
+  },
+  {
+    "e": "rating",
+    "w": "hodnotenie",
+    "g": "N"
+  },
+  {
+    "e": "restaurant",
+    "w": "reštaurácia",
+    "g": "F"
+  },
+  {
+    "e": "menu",
+    "w": "menu",
+    "g": "N"
+  },
+  {
+    "e": "chef",
+    "w": "šéfkuchár",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "waiter",
+    "w": "číšnik",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "waitress",
+    "w": "servírka",
+    "g": "F",
+    "animate": "true"
+  },
+  {
+    "e": "bill",
+    "w": "účet",
+    "g": "M"
+  },
+  {
+    "e": "tip",
+    "w": "sprepitné",
+    "g": "N"
+  },
+  {
+    "e": "kitchen",
+    "w": "kuchyňa",
+    "g": "F"
+  },
+  {
+    "e": "pan",
+    "w": "panvica",
+    "g": "F"
+  },
+  {
+    "e": "pot",
+    "w": "hrniec",
+    "g": "M"
+  },
+  {
+    "e": "knife",
+    "w": "nôž",
+    "g": "M"
+  },
+  {
+    "e": "fork",
+    "w": "vidlička",
+    "g": "F"
+  },
+  {
+    "e": "spoon",
+    "w": "lyžica",
+    "g": "F"
+  },
+  {
+    "e": "plate",
+    "w": "tanier",
+    "g": "M"
+  },
+  {
+    "e": "glass",
+    "w": "pohár",
+    "g": "M"
+  },
+  {
+    "e": "bottle",
+    "w": "fľaša",
+    "g": "F"
+  },
+  {
+    "e": "cup",
+    "w": "šálka",
+    "g": "F"
+  },
+  {
+    "e": "napkin",
+    "w": "servítka",
+    "g": "F"
+  },
+  {
+    "e": "breakfast",
+    "w": "raňajky",
+    "g": "F"
+  },
+  {
+    "e": "lunch",
+    "w": "obed",
+    "g": "M"
+  },
+  {
+    "e": "dinner",
+    "w": "večera",
+    "g": "F"
+  },
+  {
+    "e": "snack",
+    "w": "desiata",
+    "g": "F"
+  },
+  {
+    "e": "salad",
+    "w": "šalát",
+    "g": "M"
+  },
+  {
+    "e": "soup",
+    "w": "polievka",
+    "g": "F"
+  },
+  {
+    "e": "bread",
+    "w": "chlieb",
+    "g": "M"
+  },
+  {
+    "e": "butter",
+    "w": "maslo",
+    "g": "N"
+  },
+  {
+    "e": "cheese",
+    "w": "syr",
+    "g": "M"
+  },
+  {
+    "e": "egg",
+    "w": "vajce",
+    "g": "N"
+  },
+  {
+    "e": "meat",
+    "w": "mäso",
+    "g": "N"
+  },
+  {
+    "e": "fish",
+    "w": "ryba",
+    "g": "F"
+  },
+  {
+    "e": "fruit",
+    "w": "ovocie",
+    "g": "N"
+  },
+  {
+    "e": "vegetable",
+    "w": "zelenina",
+    "g": "F"
+  },
+  {
+    "e": "apple",
+    "w": "jablko",
+    "g": "N"
+  },
+  {
+    "e": "banana",
+    "w": "banán",
+    "g": "M"
+  },
+  {
+    "e": "orange",
+    "w": "pomaranč",
+    "g": "M"
+  },
+  {
+    "e": "grape",
+    "w": "hrozno",
+    "g": "N"
+  },
+  {
+    "e": "potato",
+    "w": "zemiak",
+    "g": "M"
+  },
+  {
+    "e": "tomato",
+    "w": "paradajka",
+    "g": "F"
+  },
+  {
+    "e": "onion",
+    "w": "cibuľa",
+    "g": "F"
+  },
+  {
+    "e": "garlic",
+    "w": "cesnak",
+    "g": "M"
+  },
+  {
+    "e": "salt",
+    "w": "soľ",
+    "g": "F"
+  },
+  {
+    "e": "sugar",
+    "w": "cukor",
+    "g": "M"
+  },
+  {
+    "e": "oil",
+    "w": "olej",
+    "g": "M"
+  },
+  {
+    "e": "vinegar",
+    "w": "ocot",
+    "g": "M"
+  },
+  {
+    "e": "pepper",
+    "w": "paprika",
+    "g": "F"
+  },
+  {
+    "e": "carrot",
+    "w": "mrkva",
+    "g": "F"
+  },
+  {
+    "e": "cucumber",
+    "w": "uhorka",
+    "g": "F"
+  },
+  {
+    "e": "lettuce",
+    "w": "hlávkový šalát",
+    "g": "M"
+  },
+  {
+    "e": "mushroom",
+    "w": "hríb",
+    "g": "M"
+  },
+  {
+    "e": "cereal",
+    "w": "cereálie",
+    "g": "F"
+  },
+  {
+    "e": "rice",
+    "w": "ryža",
+    "g": "F"
+  },
+  {
+    "e": "pasta",
+    "w": "cestoviny",
+    "g": "F"
+  },
+  {
+    "e": "sauce",
+    "w": "omáčka",
+    "g": "F"
+  },
+  {
+    "e": "saucepan",
+    "w": "hrnček",
+    "g": "M"
+  },
+  {
+    "e": "cookie",
+    "w": "sušienka",
+    "g": "F"
+  },
+  {
+    "e": "cake",
+    "w": "koláč",
+    "g": "M"
+  },
+  {
+    "e": "pie",
+    "w": "torta",
+    "g": "F"
+  },
+  {
+    "e": "ice cream",
+    "w": "zmrzlina",
+    "g": "F"
+  },
+  {
+    "e": "chocolate",
+    "w": "čokoláda",
+    "g": "F"
+  },
+  {
+    "e": "candy",
+    "w": "bonbón",
+    "g": "M"
+  },
+  {
+    "e": "juice",
+    "w": "džús",
+    "g": "M"
+  },
+  {
+    "e": "beer",
+    "w": "pivo",
+    "g": "N"
+  },
+  {
+    "e": "wine",
+    "w": "víno",
+    "g": "N"
+  },
+  {
+    "e": "vodka",
+    "w": "vodka",
+    "g": "F"
+  },
+  {
+    "e": "whisky",
+    "w": "whisky",
+    "g": "F"
+  },
+  {
+    "e": "cocktail",
+    "w": "koktail",
+    "g": "M"
+  },
+  {
+    "e": "bar",
+    "w": "bar",
+    "g": "M"
+  },
+  {
+    "e": "restaurant chain",
+    "w": "reťazec reštaurácií",
+    "g": "M"
+  },
+  {
+    "e": "bakery",
+    "w": "pekáreň",
+    "g": "F"
+  },
+  {
+    "e": "butcher",
+    "w": "mäsiareň",
+    "g": "F"
+  },
+  {
+    "e": "fishmonger",
+    "w": "rybárstvo",
+    "g": "N"
+  },
+  {
+    "e": "farm",
+    "w": "farma",
+    "g": "F"
+  },
+  {
+    "e": "farmer",
+    "w": "farmár",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "crop",
+    "w": "úroda",
+    "g": "F"
+  },
+  {
+    "e": "harvest",
+    "w": "žatva",
+    "g": "F"
+  },
+  {
+    "e": "tractor",
+    "w": "traktor",
+    "g": "M"
+  },
+  {
+    "e": "barn",
+    "w": "stajňa",
+    "g": "F"
+  },
+  {
+    "e": "stable",
+    "w": "stajňa",
+    "g": "F"
+  },
+  {
+    "e": "horse",
+    "w": "kôň",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "cow",
+    "w": "krava",
+    "g": "F",
+    "animate": "true"
+  },
+  {
+    "e": "pig",
+    "w": "prasa",
+    "g": "N",
+    "animate": "true"
+  },
+  {
+    "e": "sheep",
+    "w": "ovca",
+    "g": "F",
+    "animate": "true"
+  },
+  {
+    "e": "goat",
+    "w": "koza",
+    "g": "F",
+    "animate": "true"
+  },
+  {
+    "e": "chicken (animal)",
+    "w": "sliepka",
+    "g": "F",
+    "animate": "true"
+  },
+  {
+    "e": "egg",
+    "w": "vajce",
+    "g": "N"
+  },
+  {
+    "e": "milk",
+    "w": "mlieko",
+    "g": "N"
+  },
+  {
+    "e": "cheese shop",
+    "w": "syreň",
+    "g": "M"
+  },
+  {
+    "e": "dairy",
+    "w": "mliekareň",
+    "g": "F"
+  },
+  {
+    "e": "butter churn",
+    "w": "maselnica",
+    "g": "F"
+  },
+  {
+    "e": "beehive",
+    "w": "úľ",
+    "g": "M"
+  },
+  {
+    "e": "honey",
+    "w": "med",
+    "g": "M"
+  },
+  {
+    "e": "florist",
+    "w": "kvetinár",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "bouquet",
+    "w": "kytica",
+    "g": "F"
+  },
+  {
+    "e": "wreath",
+    "w": "veniec",
+    "g": "M"
+  },
+  {
+    "e": "present",
+    "w": "darček",
+    "g": "M"
+  },
+  {
+    "e": "wrapping",
+    "w": "balenie",
+    "g": "N"
+  },
+  {
+    "e": "gift shop",
+    "w": "darčeková predajňa",
+    "g": "F"
+  },
+  {
+    "e": "festival",
+    "w": "festival",
+    "g": "M"
+  },
+  {
+    "e": "concert",
+    "w": "koncert",
+    "g": "M"
+  },
+  {
+    "e": "stage",
+    "w": "pódium",
+    "g": "N"
+  },
+  {
+    "e": "auditorium",
+    "w": "auditorium",
+    "g": "N"
+  },
+  {
+    "e": "lighting",
+    "w": "osvetlenie",
+    "g": "N"
+  },
+  {
+    "e": "performer",
+    "w": "vystupujúci",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "audience",
+    "w": "publikum",
+    "g": "N"
+  },
+  {
+    "e": "fan",
+    "w": "fanúšik",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "poster",
+    "w": "plagát",
+    "g": "M"
+  },
+  {
+    "e": "advert",
+    "w": "inzerát",
+    "g": "M"
+  },
+  {
+    "e": "sponsor",
+    "w": "sponzor",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "volunteer",
+    "w": "dobrovoľník",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "charity",
+    "w": "charita",
+    "g": "F"
+  },
+  {
+    "e": "donation",
+    "w": "dar",
+    "g": "M"
+  },
+  {
+    "e": "fundraiser",
+    "w": "zbierka",
+    "g": "F"
+  },
+  {
+    "e": "politician",
+    "w": "politik",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "election",
+    "w": "voľby",
+    "g": "F"
+  },
+  {
+    "e": "campaign",
+    "w": "kampaň",
+    "g": "F"
+  },
+  {
+    "e": "debate",
+    "w": "debata",
+    "g": "F"
+  },
+  {
+    "e": "parliament",
+    "w": "parlament",
+    "g": "M"
+  },
+  {
+    "e": "lawyer",
+    "w": "právnik",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "judge",
+    "w": "súdca",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "court",
+    "w": "súd",
+    "g": "M"
+  },
+  {
+    "e": "trial",
+    "w": "proces",
+    "g": "M"
+  },
+  {
+    "e": "verdict",
+    "w": "verdikt",
+    "g": "M"
+  },
+  {
+    "e": "sentence",
+    "w": "trest",
+    "g": "M"
+  },
+  {
+    "e": "prison",
+    "w": "väznica",
+    "g": "F"
+  },
+  {
+    "e": "police",
+    "w": "polícia",
+    "g": "F"
+  },
+  {
+    "e": "officer",
+    "w": "dôstojník",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "detective",
+    "w": "detektív",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "ambulance",
+    "w": "ambulancia",
+    "g": "F"
+  },
+  {
+    "e": "paramedic",
+    "w": "záchranár",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "firefighter",
+    "w": "hasiteľ",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "helmet",
+    "w": "prilba",
+    "g": "F"
+  },
+  {
+    "e": "response",
+    "w": "reakcia",
+    "g": "F"
+  },
+  {
+    "e": "safety",
+    "w": "bezpečnosť",
+    "g": "F"
+  },
+  {
+    "e": "risk",
+    "w": "riziko",
+    "g": "N"
+  },
+  {
+    "e": "bail",
+    "w": "kaucia",
+    "g": "F"
+  },
+  {
+    "e": "appeal",
+    "w": "odvolanie",
+    "g": "N"
+  },
+  {
+    "e": "convict",
+    "w": "odsúdený",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "prosecutor",
+    "w": "prokurátor",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "jury",
+    "w": "porota",
+    "g": "F"
+  },
+  {
+    "e": "witness",
+    "w": "svedok",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "testimony",
+    "w": "svedectvo",
+    "g": "N"
+  },
+  {
+    "e": "affidavit",
+    "w": "prísaha",
+    "g": "F"
+  },
+  {
+    "e": "tax",
+    "w": "daň",
+    "g": "F"
+  },
+  {
+    "e": "audit",
+    "w": "audit",
+    "g": "M"
+  },
+  {
+    "e": "accountant",
+    "w": "účtovník",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "finance",
+    "w": "financie",
+    "g": "F"
+  },
+  {
+    "e": "bank",
+    "w": "banka",
+    "g": "F"
+  },
+  {
+    "e": "loan",
+    "w": "pôžička",
+    "g": "F"
+  },
+  {
+    "e": "mortgage",
+    "w": "hypotéka",
+    "g": "F"
+  },
+  {
+    "e": "investment",
+    "w": "investícia",
+    "g": "F"
+  },
+  {
+    "e": "stock market",
+    "w": "burza",
+    "g": "F"
+  },
+  {
+    "e": "share",
+    "w": "akcia",
+    "g": "F"
+  },
+  {
+    "e": "dividend",
+    "w": "dividenda",
+    "g": "F"
+  },
+  {
+    "e": "broker",
+    "w": "maklér",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "portfolio",
+    "w": "portfólio",
+    "g": "N"
+  },
+  {
+    "e": "budget",
+    "w": "rozpočet",
+    "g": "M"
+  },
+  {
+    "e": "expense",
+    "w": "výdavok",
+    "g": "M"
+  },
+  {
+    "e": "revenue",
+    "w": "príjem",
+    "g": "M"
+  },
+  {
+    "e": "profit",
+    "w": "zisk",
+    "g": "M"
+  },
+  {
+    "e": "loss",
+    "w": "strata",
+    "g": "F"
+  },
+  {
+    "e": "auditor",
+    "w": "audítor",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "salary",
+    "w": "plat",
+    "g": "M"
+  },
+  {
+    "e": "pension",
+    "w": "dôchodok",
+    "g": "M"
+  },
+  {
+    "e": "benefit",
+    "w": "prínos",
+    "g": "M"
+  },
+  {
+    "e": "strike",
+    "w": "štrajk",
+    "g": "M"
+  },
+  {
+    "e": "employment",
+    "w": "zamestnanie",
+    "g": "N"
+  },
+  {
+    "e": "employer",
+    "w": "zamestnávateľ",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "hire",
+    "w": "najať",
+    "g": "M"
+  },
+  {
+    "e": "interview",
+    "w": "pohovor",
+    "g": "M"
+  },
+  {
+    "e": "resume",
+    "w": "životopis",
+    "g": "M"
+  },
+  {
+    "e": "reference",
+    "w": "referencia",
+    "g": "F"
+  },
+  {
+    "e": "mentor",
+    "w": "mentor",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "intern",
+    "w": "stážista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "probation",
+    "w": "skúšobná doba",
+    "g": "F"
+  },
+  {
+    "e": "keyboard",
+    "w": "klávesnica",
+    "g": "F"
+  },
+  {
+    "e": "mouse",
+    "w": "myš",
+    "g": "F"
+  },
+  {
+    "e": "monitor",
+    "w": "monitor",
+    "g": "M"
+  },
+  {
+    "e": "printer",
+    "w": "tlačiareň",
+    "g": "F"
+  },
+  {
+    "e": "scanner",
+    "w": "skener",
+    "g": "M"
+  },
+  {
+    "e": "fax",
+    "w": "fax",
+    "g": "M"
+  },
+  {
+    "e": "projector",
+    "w": "projektor",
+    "g": "M"
+  },
+  {
+    "e": "whiteboard",
+    "w": "biela tabuľa",
+    "g": "F"
+  },
+  {
+    "e": "marker",
+    "w": "fixka",
+    "g": "F"
+  },
+  {
+    "e": "notebook",
+    "w": "zápisník",
+    "g": "M"
+  },
+  {
+    "e": "pen",
+    "w": "pero",
+    "g": "N"
+  },
+  {
+    "e": "pencil",
+    "w": "ceruzka",
+    "g": "F"
+  },
+  {
+    "e": "eraser",
+    "w": "guma",
+    "g": "F"
+  },
+  {
+    "e": "stapler",
+    "w": "zvrtkovač",
+    "g": "M"
+  },
+  {
+    "e": "paper",
+    "w": "papier",
+    "g": "M"
+  },
+  {
+    "e": "envelope",
+    "w": "obálka",
+    "g": "F"
+  },
+  {
+    "e": "stamp",
+    "w": "známka",
+    "g": "F"
+  },
+  {
+    "e": "file folder",
+    "w": "zložka",
+    "g": "F"
+  },
+  {
+    "e": "binder",
+    "w": "zväzok",
+    "g": "M"
+  },
+  {
+    "e": "clipboard",
+    "w": "podložka",
+    "g": "F"
+  },
+  {
+    "e": "calendar (desk)",
+    "w": "stolový kalendár",
+    "g": "M"
+  },
+  {
+    "e": "appointment",
+    "w": "schôdzka",
+    "g": "F"
+  },
+  {
+    "e": "deadline",
+    "w": "termín",
+    "g": "M"
+  },
+  {
+    "e": "reporting",
+    "w": "spravodajstvo",
+    "g": "N"
+  },
+  {
+    "e": "presentation",
+    "w": "prezentácia",
+    "g": "F"
+  },
+  {
+    "e": "meeting room",
+    "w": "zasadačka",
+    "g": "F"
+  },
+  {
+    "e": "conference",
+    "w": "konferencia",
+    "g": "F"
+  },
+  {
+    "e": "minutes",
+    "w": "zápisnica",
+    "g": "F"
+  },
+  {
+    "e": "shareholder",
+    "w": "akcionár",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "sponsor (org)",
+    "w": "sponzor",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "consultant",
+    "w": "konzultant",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "contractor",
+    "w": "dodávateľ",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "vendor",
+    "w": "predajca",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "client",
+    "w": "klient",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "policy",
+    "w": "politika",
+    "g": "F"
+  },
+  {
+    "e": "procedure",
+    "w": "postup",
+    "g": "M"
+  },
+  {
+    "e": "compliance",
+    "w": "súlad",
+    "g": "M"
+  },
+  {
+    "e": "incident",
+    "w": "incident",
+    "g": "M"
+  },
+  {
+    "e": "escalation",
+    "w": "eskalácia",
+    "g": "F"
+  },
+  {
+    "e": "mitigation",
+    "w": "zmiernenie",
+    "g": "N"
+  },
+  {
+    "e": "remediation",
+    "w": "náprava",
+    "g": "F"
+  },
+  {
+    "e": "build",
+    "w": "build",
+    "g": "M"
+  },
+  {
+    "e": "branch",
+    "w": "vetva",
+    "g": "F"
+  },
+  {
+    "e": "merge request",
+    "w": "merge request",
+    "g": "M"
+  },
+  {
+    "e": "pull request",
+    "w": "pull request",
+    "g": "M"
+  },
+  {
+    "e": "commit",
+    "w": "commit",
+    "g": "M"
+  },
+  {
+    "e": "version control",
+    "w": "verzovanie",
+    "g": "N"
+  },
+  {
+    "e": "repository",
+    "w": "repozitár",
+    "g": "M"
+  },
+  {
+    "e": "ci pipeline",
+    "w": "CI pipeline",
+    "g": "F"
+  },
+  {
+    "e": "rollback",
+    "w": "vrátenie zmien",
+    "g": "N"
+  },
+  {
+    "e": "hotfix",
+    "w": "hotfix",
+    "g": "M"
+  },
+  {
+    "e": "retrospective",
+    "w": "retrospektíva",
+    "g": "F"
+  },
+  {
+    "e": "demo",
+    "w": "demo",
+    "g": "N"
+  },
+  {
+    "e": "release candidate",
+    "w": "release candidate",
+    "g": "M"
+  },
+  {
+    "e": "sunset (feature)",
+    "w": "ukončenie funkcie",
+    "g": "N"
+  },
+  {
+    "e": "deprecation",
+    "w": "deprecated (označenie)",
+    "g": "F"
+  },
+  {
+    "e": "sla monitoring",
+    "w": "monitorovanie SLA",
+    "g": "N"
+  },
+  {
+    "e": "uptime",
+    "w": "dostupnosť",
+    "g": "F"
+  },
+  {
+    "e": "latency",
+    "w": "latencia",
+    "g": "F"
+  },
+  {
+    "e": "throughput",
+    "w": "priepustnosť",
+    "g": "F"
+  },
+  {
+    "e": "session",
+    "w": "relácia",
+    "g": "F"
+  },
+  {
+    "e": "permission",
+    "w": "povolenie",
+    "g": "N"
+  },
+  {
+    "e": "privilege",
+    "w": "privilegium",
+    "g": "N"
+  },
+  {
+    "e": "malware",
+    "w": "malvér",
+    "g": "M"
+  },
+  {
+    "e": "ransomware",
+    "w": "ransomvér",
+    "g": "M"
+  },
+  {
+    "e": "vulnerability",
+    "w": "zraniteľnosť",
+    "g": "F"
+  },
+  {
+    "e": "patch",
+    "w": "záplata",
+    "g": "F"
+  },
+  {
+    "e": "exploit",
+    "w": "exploity",
+    "g": "M"
+  },
+  {
+    "e": "forensics",
+    "w": "forenzika",
+    "g": "F"
+  },
+  {
+    "e": "debt",
+    "w": "dlh",
+    "g": "M"
+  },
+  {
+    "e": "renewal",
+    "w": "obnovenie",
+    "g": "N"
+  },
+  {
+    "e": "upsell",
+    "w": "upsell",
+    "g": "M"
+  },
+  {
+    "e": "cross-sell",
+    "w": "cross-sell",
+    "g": "M"
+  },
+  {
+    "e": "account manager",
+    "w": "account manager",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "customer retention",
+    "w": "udržanie zákazníkov",
+    "g": "F"
+  },
+  {
+    "e": "thread",
+    "w": "vlákno",
+    "g": "N"
+  },
+  {
+    "e": "process",
+    "w": "proces",
+    "g": "M"
+  },
+  {
+    "e": "concurrency",
+    "w": "paralelizmus",
+    "g": "M"
+  },
+  {
+    "e": "parallelism",
+    "w": "paralelizmus",
+    "g": "M"
+  },
+  {
+    "e": "synchronization",
+    "w": "synchronizácia",
+    "g": "F"
+  },
+  {
+    "e": "deadlock",
+    "w": "zablokovanie",
+    "g": "N"
+  },
+  {
+    "e": "race condition",
+    "w": "preteková podmienka",
+    "g": "F"
+  },
+  {
+    "e": "mutex",
+    "w": "mutex",
+    "g": "M"
+  },
+  {
+    "e": "semaphore",
+    "w": "semafor",
+    "g": "M"
+  },
+  {
+    "e": "queue",
+    "w": "fronta",
+    "g": "F"
+  },
+  {
+    "e": "stack",
+    "w": "zásobník",
+    "g": "M"
+  },
+  {
+    "e": "heap",
+    "w": "halda",
+    "g": "F"
+  },
+  {
+    "e": "garbage collector",
+    "w": "garbage collector",
+    "g": "M"
+  },
+  {
+    "e": "virtual machine",
+    "w": "virtuálny stroj",
+    "g": "M"
+  },
+  {
+    "e": "container",
+    "w": "kontajner",
+    "g": "M"
+  },
+  {
+    "e": "orchestration",
+    "w": "orchestrace",
+    "g": "F"
+  },
+  {
+    "e": "kubernetes",
+    "w": "Kubernetes",
+    "g": "M"
+  },
+  {
+    "e": "pod",
+    "w": "pod",
+    "g": "M"
+  },
+  {
+    "e": "node",
+    "w": "uzol",
+    "g": "M"
+  },
+  {
+    "e": "cluster",
+    "w": "klaster",
+    "g": "M"
+  },
+  {
+    "e": "service mesh",
+    "w": "service mesh",
+    "g": "M"
+  },
+  {
+    "e": "ingress",
+    "w": "ingress",
+    "g": "M"
+  },
+  {
+    "e": "sidecar",
+    "w": "sidecar",
+    "g": "M"
+  },
+  {
+    "e": "daemon",
+    "w": "démon",
+    "g": "M"
+  },
+  {
+    "e": "cron job",
+    "w": "cron job",
+    "g": "M"
+  },
+  {
+    "e": "scheduler",
+    "w": "plánovač",
+    "g": "M"
+  },
+  {
+    "e": "job queue",
+    "w": "fronta úloh",
+    "g": "F"
+  },
+  {
+    "e": "etl job",
+    "w": "ETL úloha",
+    "g": "F"
+  },
+  {
+    "e": "batch processing",
+    "w": "spracovanie v dávkach",
+    "g": "N"
+  },
+  {
+    "e": "stream processing",
+    "w": "spracovanie streamingových dát",
+    "g": "N"
+  },
+  {
+    "e": "kafka topic",
+    "w": "Kafka topic",
+    "g": "M"
+  },
+  {
+    "e": "consumer group",
+    "w": "consumer group",
+    "g": "F"
+  },
+  {
+    "e": "producer",
+    "w": "producer",
+    "g": "M"
+  },
+  {
+    "e": "broker (mq)",
+    "w": "broker",
+    "g": "M"
+  },
+  {
+    "e": "message",
+    "w": "správa",
+    "g": "F"
+  },
+  {
+    "e": "message id",
+    "w": "ID správy",
+    "g": "N"
+  },
+  {
+    "e": "offset commit",
+    "w": "commit offsetu",
+    "g": "M"
+  },
+  {
+    "e": "checkpoint",
+    "w": "checkpoint",
+    "g": "M"
+  },
+  {
+    "e": "stream window",
+    "w": "okno streamu",
+    "g": "N"
+  },
+  {
+    "e": "latency metric",
+    "w": "metrika latencie",
+    "g": "F"
+  },
+  {
+    "e": "sla alert",
+    "w": "SLA alert",
+    "g": "M"
+  },
+  {
+    "e": "observability",
+    "w": "pozorovateľnosť",
+    "g": "F"
+  },
+  {
+    "e": "tracing",
+    "w": "tracing",
+    "g": "M"
+  },
+  {
+    "e": "distributed tracing",
+    "w": "distribuované tracing",
+    "g": "N"
+  },
+  {
+    "e": "open telemetry",
+    "w": "OpenTelemetry",
+    "g": "F"
+  },
+  {
+    "e": "metric exporter",
+    "w": "exportér metrík",
+    "g": "M"
+  },
+  {
+    "e": "prometheus",
+    "w": "Prometheus",
+    "g": "M"
+  },
+  {
+    "e": "grafana",
+    "w": "Grafana",
+    "g": "F"
+  },
+  {
+    "e": "alertmanager",
+    "w": "Alertmanager",
+    "g": "M"
+  },
+  {
+    "e": "slo",
+    "w": "SLO",
+    "g": "M"
+  },
+  {
+    "e": "sli",
+    "w": "SLI",
+    "g": "M"
+  },
+  {
+    "e": "incident ticket",
+    "w": "incident ticket",
+    "g": "M"
+  },
+  {
+    "e": "runbook",
+    "w": "runbook",
+    "g": "M"
+  },
+  {
+    "e": "on-call",
+    "w": "on-call",
+    "g": "N"
+  },
+  {
+    "e": "pager",
+    "w": "pager",
+    "g": "M"
+  },
+  {
+    "e": "rotation",
+    "w": "rotácia",
+    "g": "F"
+  },
+  {
+    "e": "postmortem",
+    "w": "postmortem",
+    "g": "M"
+  },
+  {
+    "e": "root cause analysis",
+    "w": "analýza základnej príčiny",
+    "g": "F"
+  },
+  {
+    "e": "sla report",
+    "w": "SLA report",
+    "g": "M"
+  },
+  {
+    "e": "uptime report",
+    "w": "report dostupnosti",
+    "g": "M"
+  },
+  {
+    "e": "cost optimization",
+    "w": "optimalizácia nákladov",
+    "g": "F"
+  },
+  {
+    "e": "cloud provider",
+    "w": "cloud poskytovateľ",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "aws",
+    "w": "AWS",
+    "g": "M"
+  },
+  {
+    "e": "azure",
+    "w": "Azure",
+    "g": "M"
+  },
+  {
+    "e": "gcp",
+    "w": "GCP",
+    "g": "M"
+  },
+  {
+    "e": "billing",
+    "w": "fakturácia",
+    "g": "F"
+  },
+  {
+    "e": "tagging",
+    "w": "tagovanie",
+    "g": "N"
+  },
+  {
+    "e": "resource group",
+    "w": "skupina zdrojov",
+    "g": "F"
+  },
+  {
+    "e": "iam",
+    "w": "IAM",
+    "g": "M"
+  },
+  {
+    "e": "service account",
+    "w": "service account",
+    "g": "M"
+  },
+  {
+    "e": "role binding",
+    "w": "priradenie roly",
+    "g": "N"
+  },
+  {
+    "e": "cost center",
+    "w": "nákladové stredisko",
+    "g": "N"
+  },
+  {
+    "e": "reserved instance",
+    "w": "reserved instance",
+    "g": "F"
+  },
+  {
+    "e": "spot instance",
+    "w": "spot instance",
+    "g": "F"
+  },
+  {
+    "e": "scaling policy",
+    "w": "politika škálovania",
+    "g": "F"
+  },
+  {
+    "e": "autoscaling",
+    "w": "autoscaling",
+    "g": "N"
+  },
+  {
+    "e": "horizontal scaling",
+    "w": "horizontálne škálovanie",
+    "g": "N"
+  },
+  {
+    "e": "vertical scaling",
+    "w": "vertikálne škálovanie",
+    "g": "N"
+  },
+  {
+    "e": "elasticity",
+    "w": "elasticita",
+    "g": "F"
+  },
+  {
+    "e": "cost alert",
+    "w": "alert nákladov",
+    "g": "M"
+  },
+  {
+    "e": "quota",
+    "w": "kvóta",
+    "g": "F"
+  },
+  {
+    "e": "resource limit",
+    "w": "limit zdrojov",
+    "g": "M"
+  },
+  {
+    "e": "service tier",
+    "w": "úroveň služby",
+    "g": "F"
+  },
+  {
+    "e": "sla contract",
+    "w": "SLA zmluva",
+    "g": "F"
+  },
+  {
+    "e": "compliance audit",
+    "w": "audit súladu",
+    "g": "M"
+  },
+  {
+    "e": "gdpr",
+    "w": "GDPR",
+    "g": "M"
+  },
+  {
+    "e": "privacy policy",
+    "w": "zásady ochrany osobných údajov",
+    "g": "F"
+  },
+  {
+    "e": "data retention",
+    "w": "uchovávanie dát",
+    "g": "N"
+  },
+  {
+    "e": "pseudonymization",
+    "w": "pseudonymizácia",
+    "g": "F"
+  },
+  {
+    "e": "anonymization",
+    "w": "anonymizácia",
+    "g": "F"
+  },
+  {
+    "e": "data subject",
+    "w": "dotknutá osoba",
+    "g": "F"
+  },
+  {
+    "e": "data controller",
+    "w": "správca údajov",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "data processor",
+    "w": "spracovateľ údajov",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "consent",
+    "w": "súhlas",
+    "g": "M"
+  },
+  {
+    "e": "breach notification",
+    "w": "oznámenie o úniku",
+    "g": "F"
+  },
+  {
+    "e": "privacy impact assessment",
+    "w": "posúdenie vplyvu na ochranu súkromia",
+    "g": "N"
+  },
+  {
+    "e": "data portability",
+    "w": "prenositeľnosť údajov",
+    "g": "F"
+  },
+  {
+    "e": "right to be forgotten",
+    "w": "právo byť zabudnutý",
+    "g": "N"
+  },
+  {
+    "e": "legal hold",
+    "w": "právne zadržanie",
+    "g": "N"
+  },
+  {
+    "e": "e-discovery",
+    "w": "e-discovery",
+    "g": "F"
+  },
+  {
+    "e": "litigation",
+    "w": "súdne konanie",
+    "g": "N"
+  },
+  {
+    "e": "subpoena",
+    "w": "predvolanie",
+    "g": "F"
+  },
+  {
+    "e": "compliance officer",
+    "w": "úradník pre súlad",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "privacy officer",
+    "w": "úradník pre súkromie",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "data governance",
+    "w": "správa údajov",
+    "g": "F"
+  },
+  {
+    "e": "data catalog",
+    "w": "katalóg údajov",
+    "g": "M"
+  },
+  {
+    "e": "metadata",
+    "w": "metadáta",
+    "g": "N"
+  },
+  {
+    "e": "data lineage",
+    "w": "pôvod údajov",
+    "g": "M"
+  },
+  {
+    "e": "data steward",
+    "w": "správca údajov",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "master data",
+    "w": "hlavné údaje",
+    "g": "N"
+  },
+  {
+    "e": "reference data",
+    "w": "referenčné údaje",
+    "g": "N"
+  },
+  {
+    "e": "data quality",
+    "w": "kvalita údajov",
+    "g": "F"
+  },
+  {
+    "e": "data profiling",
+    "w": "profilovanie údajov",
+    "g": "N"
+  },
+  {
+    "e": "data cleansing",
+    "w": "čistenie údajov",
+    "g": "N"
+  },
+  {
+    "e": "data enrichment",
+    "w": "obohacovanie údajov",
+    "g": "N"
+  },
+  {
+    "e": "data validation",
+    "w": "validácia údajov",
+    "g": "F"
+  },
+  {
+    "e": "data standard",
+    "w": "štandard údajov",
+    "g": "M"
+  },
+  {
+    "e": "data policy",
+    "w": "politika údajov",
+    "g": "F"
+  },
+  {
+    "e": "data owner",
+    "w": "vlastník údajov",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "data consumer",
+    "w": "spotrebiteľ údajov",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "data producer",
+    "w": "producent údajov",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "data architect",
+    "w": "architekt údajov",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "data model",
+    "w": "model údajov",
+    "g": "M"
+  },
+  {
+    "e": "entity",
+    "w": "entita",
+    "g": "F"
+  },
+  {
+    "e": "attribute",
+    "w": "atribút",
+    "g": "M"
+  },
+  {
+    "e": "relationship",
+    "w": "vzťah",
+    "g": "M"
+  },
+  {
+    "e": "cardinality",
+    "w": "kardinalita",
+    "g": "F"
+  },
+  {
+    "e": "normalization",
+    "w": "normalizácia",
+    "g": "F"
+  },
+  {
+    "e": "denormalization",
+    "w": "denormalizácia",
+    "g": "F"
+  },
+  {
+    "e": "data mart",
+    "w": "data mart",
+    "g": "M"
+  },
+  {
+    "e": "star schema",
+    "w": "hviezdna schéma",
+    "g": "F"
+  },
+  {
+    "e": "snowflake schema",
+    "w": "snehová schéma",
+    "g": "F"
+  },
+  {
+    "e": "fact table",
+    "w": "faktová tabuľka",
+    "g": "F"
+  },
+  {
+    "e": "dimension table",
+    "w": "dimenzná tabuľka",
+    "g": "F"
+  },
+  {
+    "e": "bi tool",
+    "w": "BI nástroj",
+    "g": "M"
+  },
+  {
+    "e": "dashboard view",
+    "w": "pohľad na dashboard",
+    "g": "M"
+  },
+  {
+    "e": "kpi dashboard",
+    "w": "dashboard KPI",
+    "g": "M"
+  },
+  {
+    "e": "report template",
+    "w": "šablóna správy",
+    "g": "F"
+  },
+  {
+    "e": "data visualization",
+    "w": "vizualizácia údajov",
+    "g": "F"
+  },
+  {
+    "e": "bar chart",
+    "w": "stĺpcový graf",
+    "g": "M"
+  },
+  {
+    "e": "line chart",
+    "w": "čiarový graf",
+    "g": "M"
+  },
+  {
+    "e": "pie chart",
+    "w": "koláčový graf",
+    "g": "M"
+  },
+  {
+    "e": "scatter plot",
+    "w": "bodový graf",
+    "g": "M"
+  },
+  {
+    "e": "heatmap",
+    "w": "teplotná mapa",
+    "g": "F"
+  },
+  {
+    "e": "treemap",
+    "w": "stromová mapa",
+    "g": "F"
+  },
+  {
+    "e": "bubble chart",
+    "w": "bublinový graf",
+    "g": "M"
+  },
+  {
+    "e": "histogram",
+    "w": "histogram",
+    "g": "M"
+  },
+  {
+    "e": "box plot",
+    "w": "krabicový graf",
+    "g": "M"
+  },
+  {
+    "e": "violin plot",
+    "w": "husľový graf",
+    "g": "M"
+  },
+  {
+    "e": "area chart",
+    "w": "plošný graf",
+    "g": "M"
+  },
+  {
+    "e": "gauge",
+    "w": "merač",
+    "g": "M"
+  },
+  {
+    "e": "dashboard filter",
+    "w": "filter dashboardu",
+    "g": "M"
+  },
+  {
+    "e": "drilldown",
+    "w": "drilldown",
+    "g": "M"
+  },
+  {
+    "e": "slice",
+    "w": "rez",
+    "g": "M"
+  },
+  {
+    "e": "dice",
+    "w": "kocka",
+    "g": "F"
+  },
+  {
+    "e": "pivot table",
+    "w": "kontingenčná tabuľka",
+    "g": "F"
+  },
+  {
+    "e": "excel sheet",
+    "w": "excelový hárok",
+    "g": "M"
+  },
+  {
+    "e": "spreadsheet",
+    "w": "tabuľkový dokument",
+    "g": "M"
+  },
+  {
+    "e": "csv file",
+    "w": "súbor CSV",
+    "g": "M"
+  },
+  {
+    "e": "json file",
+    "w": "súbor JSON",
+    "g": "M"
+  },
+  {
+    "e": "xml file",
+    "w": "súbor XML",
+    "g": "M"
+  },
+  {
+    "e": "yaml file",
+    "w": "súbor YAML",
+    "g": "M"
+  },
+  {
+    "e": "parquet file",
+    "w": "súbor Parquet",
+    "g": "M"
+  },
+  {
+    "e": "avro file",
+    "w": "súbor Avro",
+    "g": "M"
+  },
+  {
+    "e": "orc file",
+    "w": "súbor ORC",
+    "g": "M"
+  },
+  {
+    "e": "data export",
+    "w": "export údajov",
+    "g": "M"
+  },
+  {
+    "e": "data import",
+    "w": "import údajov",
+    "g": "M"
+  },
+  {
+    "e": "data sync",
+    "w": "synchronizácia údajov",
+    "g": "F"
+  },
+  {
+    "e": "data migration",
+    "w": "migrácia údajov",
+    "g": "F"
+  },
+  {
+    "e": "data backup",
+    "w": "záloha údajov",
+    "g": "F"
+  },
+  {
+    "e": "data restore",
+    "w": "obnovenie údajov",
+    "g": "N"
+  },
+  {
+    "e": "data archive",
+    "w": "archív údajov",
+    "g": "M"
+  },
+  {
+    "e": "data purge",
+    "w": "vymazanie údajov",
+    "g": "N"
+  },
+  {
+    "e": "data retention policy",
+    "w": "politika uchovávania údajov",
+    "g": "F"
+  },
+  {
+    "e": "data access",
+    "w": "prístup k údajom",
+    "g": "M"
+  },
+  {
+    "e": "data sharing",
+    "w": "zdieľanie údajov",
+    "g": "N"
+  },
+  {
+    "e": "data request",
+    "w": "žiadosť o údaje",
+    "g": "F"
+  },
+  {
+    "e": "data breach",
+    "w": "únik údajov",
+    "g": "M"
+  },
+  {
+    "e": "data protection",
+    "w": "ochrana údajov",
+    "g": "F"
+  },
+  {
+    "e": "data privacy",
+    "w": "súkromie údajov",
+    "g": "N"
+  },
+  {
+    "e": "data ethics",
+    "w": "etika údajov",
+    "g": "F"
+  },
+  {
+    "e": "data literacy",
+    "w": "gramotnosť v oblasti údajov",
+    "g": "F"
+  },
+  {
+    "e": "data democratization",
+    "w": "demokratizácia údajov",
+    "g": "F"
+  },
+  {
+    "e": "data monetization",
+    "w": "monetizácia údajov",
+    "g": "F"
+  },
+  {
+    "e": "data-driven decision",
+    "w": "rozhodnutie založené na údajoch",
+    "g": "N"
+  },
+  {
+    "e": "data strategy",
+    "w": "stratégia údajov",
+    "g": "F"
+  },
+  {
+    "e": "data roadmap",
+    "w": "cestovná mapa údajov",
+    "g": "F"
+  },
+  {
+    "e": "data initiative",
+    "w": "iniciatíva údajov",
+    "g": "F"
+  },
+  {
+    "e": "data program",
+    "w": "program údajov",
+    "g": "M"
+  },
+  {
+    "e": "data project",
+    "w": "projekt údajov",
+    "g": "M"
+  },
+  {
+    "e": "data team",
+    "w": "tím údajov",
+    "g": "M"
+  },
+  {
+    "e": "data analyst",
+    "w": "analytik údajov",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "data engineer",
+    "w": "inžinier údajov",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "data scientist",
+    "w": "dátový vedec",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "ml engineer",
+    "w": "inžinier strojového učenia",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "ai researcher",
+    "w": "výskumník AI",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "model",
+    "w": "model",
+    "g": "M"
+  },
+  {
+    "e": "training data",
+    "w": "trénovacie údaje",
+    "g": "F"
+  },
+  {
+    "e": "test data",
+    "w": "testovacie údaje",
+    "g": "F"
+  },
+  {
+    "e": "validation data",
+    "w": "validačné údaje",
+    "g": "F"
+  },
+  {
+    "e": "feature",
+    "w": "príznak",
+    "g": "M"
+  },
+  {
+    "e": "label",
+    "w": "označenie",
+    "g": "N"
+  },
+  {
+    "e": "target",
+    "w": "cieľ",
+    "g": "M"
+  },
+  {
+    "e": "loss function",
+    "w": "funkcia straty",
+    "g": "F"
+  },
+  {
+    "e": "optimizer",
+    "w": "optimalizátor",
+    "g": "M"
+  },
+  {
+    "e": "gradient",
+    "w": "gradient",
+    "g": "M"
+  },
+  {
+    "e": "epoch",
+    "w": "epocha",
+    "g": "F"
+  },
+  {
+    "e": "batch",
+    "w": "dávka",
+    "g": "F"
+  },
+  {
+    "e": "learning rate",
+    "w": "rýchlosť učenia",
+    "g": "F"
+  },
+  {
+    "e": "regularization",
+    "w": "regularizácia",
+    "g": "F"
+  },
+  {
+    "e": "dropout",
+    "w": "dropout",
+    "g": "M"
+  },
+  {
+    "e": "activation function",
+    "w": "aktivačná funkcia",
+    "g": "F"
+  },
+  {
+    "e": "sigmoid",
+    "w": "sigmoid",
+    "g": "M"
+  },
+  {
+    "e": "softmax",
+    "w": "softmax",
+    "g": "M"
+  },
+  {
+    "e": "gradient",
+    "w": "gradient",
+    "g": "M"
+  },
+  {
+    "e": "epoch",
+    "w": "epocha",
+    "g": "F"
+  },
+  {
+    "e": "batch",
+    "w": "dávka",
+    "g": "F"
+  },
+  {
+    "e": "dropout",
+    "w": "dropout",
+    "g": "M"
+  },
+  {
+    "e": "optimizer",
+    "w": "optimalizátor",
+    "g": "M"
+  },
+  {
+    "e": "tensor",
+    "w": "tenzor",
+    "g": "M"
+  },
+  {
+    "e": "vector",
+    "w": "vektor",
+    "g": "M"
+  },
+  {
+    "e": "matrix",
+    "w": "matica",
+    "g": "F"
+  },
+  {
+    "e": "scalar",
+    "w": "skalár",
+    "g": "M"
+  },
+  {
+    "e": "array",
+    "w": "pole",
+    "g": "N"
+  },
+  {
+    "e": "index",
+    "w": "index",
+    "g": "M"
+  },
+  {
+    "e": "slice",
+    "w": "rez",
+    "g": "M"
+  },
+  {
+    "e": "shape",
+    "w": "tvar",
+    "g": "M"
+  },
+  {
+    "e": "dtype",
+    "w": "dtype",
+    "g": "M"
+  },
+  {
+    "e": "float",
+    "w": "float",
+    "g": "M"
+  },
+  {
+    "e": "int",
+    "w": "int",
+    "g": "M"
+  },
+  {
+    "e": "bool",
+    "w": "bool",
+    "g": "M"
+  },
+  {
+    "e": "string",
+    "w": "reťazec",
+    "g": "M"
+  },
+  {
+    "e": "object",
+    "w": "objekt",
+    "g": "M"
+  },
+  {
+    "e": "function",
+    "w": "funkcia",
+    "g": "F"
+  },
+  {
+    "e": "method",
+    "w": "metóda",
+    "g": "F"
+  },
+  {
+    "e": "class",
+    "w": "trieda",
+    "g": "F"
+  },
+  {
+    "e": "module",
+    "w": "modul",
+    "g": "M"
+  },
+  {
+    "e": "package",
+    "w": "balík",
+    "g": "M"
+  },
+  {
+    "e": "library",
+    "w": "knižnica",
+    "g": "F"
+  },
+  {
+    "e": "framework",
+    "w": "framework",
+    "g": "M"
+  },
+  {
+    "e": "script",
+    "w": "skript",
+    "g": "M"
+  },
+  {
+    "e": "program",
+    "w": "program",
+    "g": "M"
+  },
+  {
+    "e": "code",
+    "w": "kód",
+    "g": "M"
+  },
+  {
+    "e": "syntax",
+    "w": "syntaxa",
+    "g": "F"
+  },
+  {
+    "e": "error",
+    "w": "chyba",
+    "g": "F"
+  },
+  {
+    "e": "exception",
+    "w": "výnimka",
+    "g": "F"
+  },
+  {
+    "e": "debugger",
+    "w": "debugger",
+    "g": "M"
+  },
+  {
+    "e": "compiler",
+    "w": "kompilátor",
+    "g": "M"
+  },
+  {
+    "e": "interpreter",
+    "w": "interpret",
+    "g": "M"
+  },
+  {
+    "e": "runtime",
+    "w": "runtime",
+    "g": "M"
+  },
+  {
+    "e": "thread",
+    "w": "vlákno",
+    "g": "N"
+  },
+  {
+    "e": "process",
+    "w": "proces",
+    "g": "M"
+  },
+  {
+    "e": "queue",
+    "w": "fronta",
+    "g": "F"
+  },
+  {
+    "e": "stack",
+    "w": "zásobník",
+    "g": "M"
+  },
+  {
+    "e": "heap",
+    "w": "halda",
+    "g": "F"
+  },
+  {
+    "e": "mutex",
+    "w": "mutex",
+    "g": "M"
+  },
+  {
+    "e": "semaphore",
+    "w": "semafor",
+    "g": "M"
+  },
+  {
+    "e": "lock",
+    "w": "zámok",
+    "g": "M"
+  },
+  {
+    "e": "token",
+    "w": "token",
+    "g": "M"
+  },
+  {
+    "e": "session",
+    "w": "relácia",
+    "g": "F"
+  },
+  {
+    "e": "cookie",
+    "w": "cookie",
+    "g": "F"
+  },
+  {
+    "e": "cache",
+    "w": "cache",
+    "g": "F"
+  },
+  {
+    "e": "request",
+    "w": "požiadavka",
+    "g": "F"
+  },
+  {
+    "e": "response",
+    "w": "odpoveď",
+    "g": "F"
+  },
+  {
+    "e": "header",
+    "w": "hlavička",
+    "g": "F"
+  },
+  {
+    "e": "payload",
+    "w": "náklad",
+    "g": "M"
+  },
+  {
+    "e": "endpoint",
+    "w": "endpoint",
+    "g": "M"
+  },
+  {
+    "e": "route",
+    "w": "trasa",
+    "g": "F"
+  },
+  {
+    "e": "path",
+    "w": "cesta",
+    "g": "F"
+  },
+  {
+    "e": "url",
+    "w": "URL",
+    "g": "F"
+  },
+  {
+    "e": "domain",
+    "w": "doména",
+    "g": "F"
+  },
+  {
+    "e": "host",
+    "w": "hostiteľ",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "port",
+    "w": "port",
+    "g": "M"
+  },
+  {
+    "e": "protocol",
+    "w": "protokol",
+    "g": "M"
+  },
+  {
+    "e": "http",
+    "w": "HTTP",
+    "g": "M"
+  },
+  {
+    "e": "https",
+    "w": "HTTPS",
+    "g": "M"
+  },
+  {
+    "e": "ftp",
+    "w": "FTP",
+    "g": "M"
+  },
+  {
+    "e": "ssh",
+    "w": "SSH",
+    "g": "M"
+  },
+  {
+    "e": "tls",
+    "w": "TLS",
+    "g": "M"
+  },
+  {
+    "e": "ssl",
+    "w": "SSL",
+    "g": "M"
+  },
+  {
+    "e": "firewall",
+    "w": "firewall",
+    "g": "M"
+  },
+  {
+    "e": "router",
+    "w": "router",
+    "g": "M"
+  },
+  {
+    "e": "switch",
+    "w": "switch",
+    "g": "M"
+  },
+  {
+    "e": "gateway",
+    "w": "brána",
+    "g": "F"
+  },
+  {
+    "e": "proxy",
+    "w": "proxy",
+    "g": "M"
+  },
+  {
+    "e": "vpn",
+    "w": "VPN",
+    "g": "F"
+  },
+  {
+    "e": "cloud",
+    "w": "cloud",
+    "g": "M"
+  },
+  {
+    "e": "server",
+    "w": "server",
+    "g": "M"
+  },
+  {
+    "e": "client",
+    "w": "klient",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "host",
+    "w": "hostiteľ",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "node",
+    "w": "uzol",
+    "g": "M"
+  },
+  {
+    "e": "cluster",
+    "w": "klaster",
+    "g": "M"
+  },
+  {
+    "e": "container",
+    "w": "kontajner",
+    "g": "M"
+  },
+  {
+    "e": "image",
+    "w": "obraz",
+    "g": "M"
+  },
+  {
+    "e": "volume",
+    "w": "objem",
+    "g": "M"
+  },
+  {
+    "e": "network",
+    "w": "sieť",
+    "g": "F"
+  },
+  {
+    "e": "storage",
+    "w": "úložisko",
+    "g": "N"
+  },
+  {
+    "e": "backup",
+    "w": "záloha",
+    "g": "F"
+  },
+  {
+    "e": "restore",
+    "w": "obnovenie",
+    "g": "N"
+  },
+  {
+    "e": "snapshot",
+    "w": "snímka",
+    "g": "F"
+  },
+  {
+    "e": "log",
+    "w": "záznam",
+    "g": "M"
+  },
+  {
+    "e": "event",
+    "w": "udalosť",
+    "g": "F"
+  },
+  {
+    "e": "alert",
+    "w": "upozornenie",
+    "g": "N"
+  },
+  {
+    "e": "incident",
+    "w": "incident",
+    "g": "M"
+  },
+  {
+    "e": "error",
+    "w": "chyba",
+    "g": "F"
+  },
+  {
+    "e": "warning",
+    "w": "varovanie",
+    "g": "N"
+  },
+  {
+    "e": "info",
+    "w": "informácia",
+    "g": "F"
+  },
+  {
+    "e": "debug",
+    "w": "ladenie",
+    "g": "N"
+  },
+  {
+    "e": "trace",
+    "w": "stopa",
+    "g": "F"
+  },
+  {
+    "e": "metric",
+    "w": "metrika",
+    "g": "F"
+  },
+  {
+    "e": "log",
+    "w": "záznam",
+    "g": "M"
+  },
+  {
+    "e": "dashboard",
+    "w": "dashboard",
+    "g": "M"
+  },
+  {
+    "e": "panel",
+    "w": "panel",
+    "g": "M"
+  },
+  {
+    "e": "chart",
+    "w": "graf",
+    "g": "M"
+  },
+  {
+    "e": "graph",
+    "w": "graf",
+    "g": "M"
+  },
+  {
+    "e": "table",
+    "w": "tabuľka",
+    "g": "F"
+  },
+  {
+    "e": "row",
+    "w": "riadok",
+    "g": "M"
+  },
+  {
+    "e": "column",
+    "w": "stĺpec",
+    "g": "M"
+  },
+  {
+    "e": "cell",
+    "w": "bunka",
+    "g": "F"
+  },
+  {
+    "e": "value",
+    "w": "hodnota",
+    "g": "F"
+  },
+  {
+    "e": "key",
+    "w": "kľúč",
+    "g": "M"
+  },
+  {
+    "e": "index",
+    "w": "index",
+    "g": "M"
+  },
+  {
+    "e": "id",
+    "w": "ID",
+    "g": "N"
+  },
+  {
+    "e": "name",
+    "w": "meno",
+    "g": "N"
+  },
+  {
+    "e": "type",
+    "w": "typ",
+    "g": "M"
+  },
+  {
+    "e": "status",
+    "w": "stav",
+    "g": "M"
+  },
+  {
+    "e": "level",
+    "w": "úroveň",
+    "g": "F"
+  },
+  {
+    "e": "priority",
+    "w": "priorita",
+    "g": "F"
+  },
+  {
+    "e": "severity",
+    "w": "závažnosť",
+    "g": "F"
+  },
+  {
+    "e": "category",
+    "w": "kategória",
+    "g": "F"
+  },
+  {
+    "e": "tag",
+    "w": "značka",
+    "g": "F"
+  },
+  {
+    "e": "label",
+    "w": "označenie",
+    "g": "N"
+  },
+  {
+    "e": "field",
+    "w": "pole",
+    "g": "N"
+  },
+  {
+    "e": "form",
+    "w": "formulár",
+    "g": "M"
+  },
+  {
+    "e": "input",
+    "w": "vstup",
+    "g": "M"
+  },
+  {
+    "e": "output",
+    "w": "výstup",
+    "g": "M"
+  },
+  {
+    "e": "button",
+    "w": "tlačidlo",
+    "g": "N"
+  },
+  {
+    "e": "link",
+    "w": "odkaz",
+    "g": "M"
+  },
+  {
+    "e": "menu",
+    "w": "menu",
+    "g": "N"
+  },
+  {
+    "e": "item",
+    "w": "položka",
+    "g": "F"
+  },
+  {
+    "e": "list",
+    "w": "zoznam",
+    "g": "M"
+  },
+  {
+    "e": "option",
+    "w": "možnosť",
+    "g": "F"
+  },
+  {
+    "e": "select",
+    "w": "výber",
+    "g": "M"
+  },
+  {
+    "e": "dropdown",
+    "w": "rozbaľovací",
+    "g": "M"
+  },
+  {
+    "e": "dropdown",
+    "w": "rozbaľovač",
+    "g": "M"
+  },
+  {
+    "e": "checkbox",
+    "w": "zaškrtávacie políčko",
+    "g": "N"
+  },
+  {
+    "e": "radio",
+    "w": "rádio",
+    "g": "N"
+  },
+  {
+    "e": "slider",
+    "w": "posuvník",
+    "g": "M"
+  },
+  {
+    "e": "spinner",
+    "w": "otáčač",
+    "g": "M"
+  },
+  {
+    "e": "tooltip",
+    "w": "nápoveda",
+    "g": "F"
+  },
+  {
+    "e": "modal",
+    "w": "modálne okno",
+    "g": "N"
+  },
+  {
+    "e": "popup",
+    "w": "vyskakovacie okno",
+    "g": "N"
+  },
+  {
+    "e": "dialog",
+    "w": "dialóg",
+    "g": "M"
+  },
+  {
+    "e": "overlay",
+    "w": "prekrytie",
+    "g": "N"
+  },
+  {
+    "e": "theme",
+    "w": "téma",
+    "g": "F"
+  },
+  {
+    "e": "style",
+    "w": "štýl",
+    "g": "M"
+  },
+  {
+    "e": "layout",
+    "w": "rozloženie",
+    "g": "N"
+  },
+  {
+    "e": "grid",
+    "w": "mriežka",
+    "g": "F"
+  },
+  {
+    "e": "flex",
+    "w": "flex",
+    "g": "M"
+  },
+  {
+    "e": "margin",
+    "w": "okraj",
+    "g": "M"
+  },
+  {
+    "e": "padding",
+    "w": "výplň",
+    "g": "F"
+  },
+  {
+    "e": "border",
+    "w": "okraj",
+    "g": "M"
+  },
+  {
+    "e": "radius",
+    "w": "polomer",
+    "g": "M"
+  },
+  {
+    "e": "shadow",
+    "w": "tieň",
+    "g": "M"
+  },
+  {
+    "e": "opacity",
+    "w": "nepriehľadnosť",
+    "g": "F"
+  },
+  {
+    "e": "transition",
+    "w": "prechod",
+    "g": "M"
+  },
+  {
+    "e": "animation",
+    "w": "animácia",
+    "g": "F"
+  },
+  {
+    "e": "keyframe",
+    "w": "kľúčový snímok",
+    "g": "M"
+  },
+  {
+    "e": "duration",
+    "w": "trvanie",
+    "g": "N"
+  },
+  {
+    "e": "delay",
+    "w": "oneskorenie",
+    "g": "N"
+  },
+  {
+    "e": "iteration",
+    "w": "iterácia",
+    "g": "F"
+  },
+  {
+    "e": "direction",
+    "w": "smer",
+    "g": "M"
+  },
+  {
+    "e": "timing",
+    "w": "časovanie",
+    "g": "N"
+  },
+  {
+    "e": "ease",
+    "w": "uvoľnenie",
+    "g": "N"
+  },
+  {
+    "e": "bounce",
+    "w": "odraz",
+    "g": "M"
+  },
+  {
+    "e": "zoom",
+    "w": "priblíženie",
+    "g": "N"
+  },
+  {
+    "e": "fade",
+    "w": "miznutie",
+    "g": "N"
+  },
+  {
+    "e": "slide",
+    "w": "posun",
+    "g": "M"
+  },
+  {
+    "e": "scale",
+    "w": "škála",
+    "g": "F"
+  },
+  {
+    "e": "rotate",
+    "w": "otáčanie",
+    "g": "N"
+  },
+  {
+    "e": "flip",
+    "w": "otočenie",
+    "g": "N"
+  },
+  {
+    "e": "drag",
+    "w": "ťahanie",
+    "g": "N"
+  },
+  {
+    "e": "drop",
+    "w": "pád",
+    "g": "M"
+  },
+  {
+    "e": "click",
+    "w": "klik",
+    "g": "M"
+  },
+  {
+    "e": "hover",
+    "w": "prelet",
+    "g": "M"
+  },
+  {
+    "e": "focus",
+    "w": "zameranie",
+    "g": "N"
+  },
+  {
+    "e": "blur",
+    "w": "rozmazanie",
+    "g": "N"
+  },
+  {
+    "e": "scroll",
+    "w": "posun",
+    "g": "M"
+  },
+  {
+    "e": "resize",
+    "w": "zmena veľkosti",
+    "g": "F"
+  },
+  {
+    "e": "load",
+    "w": "načítanie",
+    "g": "N"
+  },
+  {
+    "e": "submit",
+    "w": "odoslanie",
+    "g": "N"
+  },
+  {
+    "e": "reset",
+    "w": "obnovenie",
+    "g": "N"
+  },
+  {
+    "e": "validate",
+    "w": "overenie",
+    "g": "N"
+  },
+  {
+    "e": "error",
+    "w": "chyba",
+    "g": "F"
+  },
+  {
+    "e": "warning",
+    "w": "varovanie",
+    "g": "N"
+  },
+  {
+    "e": "success",
+    "w": "úspech",
+    "g": "M"
+  },
+  {
+    "e": "info",
+    "w": "informácia",
+    "g": "F"
+  },
+  {
+    "e": "message",
+    "w": "správa",
+    "g": "F"
+  },
+  {
+    "e": "status",
+    "w": "stav",
+    "g": "M"
+  },
+  {
+    "e": "code",
+    "w": "kód",
+    "g": "M"
+  },
+  {
+    "e": "token",
+    "w": "token",
+    "g": "M"
+  },
+  {
+    "e": "key",
+    "w": "kľúč",
+    "g": "M"
+  },
+  {
+    "e": "value",
+    "w": "hodnota",
+    "g": "F"
+  },
+  {
+    "e": "type",
+    "w": "typ",
+    "g": "M"
+  },
+  {
+    "e": "string",
+    "w": "reťazec",
+    "g": "M"
+  },
+  {
+    "e": "number",
+    "w": "číslo",
+    "g": "N"
+  },
+  {
+    "e": "boolean",
+    "w": "boolean",
+    "g": "M"
+  },
+  {
+    "e": "array",
+    "w": "pole",
+    "g": "N"
+  },
+  {
+    "e": "object",
+    "w": "objekt",
+    "g": "M"
+  },
+  {
+    "e": "null",
+    "w": "null",
+    "g": "M"
+  },
+  {
+    "e": "undefined",
+    "w": "undefined",
+    "g": "M"
+  },
+  {
+    "e": "nan",
+    "w": "NaN",
+    "g": "M"
+  },
+  {
+    "e": "infinity",
+    "w": "nekonečno",
+    "g": "N"
+  },
+  {
+    "e": "math",
+    "w": "matematika",
+    "g": "F"
+  },
+  {
+    "e": "logic",
+    "w": "logika",
+    "g": "F"
+  },
+  {
+    "e": "truth",
+    "w": "pravda",
+    "g": "F"
+  },
+  {
+    "e": "falsehood",
+    "w": "lož",
+    "g": "F"
+  },
+  {
+    "e": "proof",
+    "w": "dôkaz",
+    "g": "M"
+  },
+  {
+    "e": "theorem",
+    "w": "veta",
+    "g": "F"
+  },
+  {
+    "e": "lemma",
+    "w": "lema",
+    "g": "F"
+  },
+  {
+    "e": "axiom",
+    "w": "axioma",
+    "g": "F"
+  },
+  {
+    "e": "rule",
+    "w": "pravidlo",
+    "g": "N"
+  },
+  {
+    "e": "law",
+    "w": "zákon",
+    "g": "M"
+  },
+  {
+    "e": "model",
+    "w": "model",
+    "g": "M"
+  },
+  {
+    "e": "system",
+    "w": "systém",
+    "g": "M"
+  },
+  {
+    "e": "structure",
+    "w": "štruktúra",
+    "g": "F"
+  },
+  {
+    "e": "pattern",
+    "w": "vzorec",
+    "g": "M"
+  },
+  {
+    "e": "sequence",
+    "w": "sekvencia",
+    "g": "F"
+  },
+  {
+    "e": "series",
+    "w": "séria",
+    "g": "F"
+  },
+  {
+    "e": "set",
+    "w": "množina",
+    "g": "F"
+  },
+  {
+    "e": "group",
+    "w": "skupina",
+    "g": "F"
+  },
+  {
+    "e": "ring",
+    "w": "prsteň",
+    "g": "M"
+  },
+  {
+    "e": "field",
+    "w": "pole",
+    "g": "N"
+  },
+  {
+    "e": "vector",
+    "w": "vektor",
+    "g": "M"
+  },
+  {
+    "e": "space",
+    "w": "priestor",
+    "g": "M"
+  },
+  {
+    "e": "plane",
+    "w": "rovina",
+    "g": "F"
+  },
+  {
+    "e": "line",
+    "w": "čiara",
+    "g": "F"
+  },
+  {
+    "e": "point",
+    "w": "bod",
+    "g": "M"
+  },
+  {
+    "e": "angle",
+    "w": "uhol",
+    "g": "M"
+  },
+  {
+    "e": "circle",
+    "w": "kruh",
+    "g": "M"
+  },
+  {
+    "e": "arc",
+    "w": "oblúk",
+    "g": "M"
+  },
+  {
+    "e": "radius",
+    "w": "polomer",
+    "g": "M"
+  },
+  {
+    "e": "diameter",
+    "w": "priemer",
+    "g": "M"
+  },
+  {
+    "e": "area",
+    "w": "plocha",
+    "g": "F"
+  },
+  {
+    "e": "volume",
+    "w": "objem",
+    "g": "M"
+  },
+  {
+    "e": "length",
+    "w": "dĺžka",
+    "g": "F"
+  },
+  {
+    "e": "width",
+    "w": "šírka",
+    "g": "F"
+  },
+  {
+    "e": "height",
+    "w": "výška",
+    "g": "F"
+  },
+  {
+    "e": "depth",
+    "w": "hĺbka",
+    "g": "F"
+  },
+  {
+    "e": "unit",
+    "w": "jednotka",
+    "g": "F"
+  },
+  {
+    "e": "scale",
+    "w": "škála",
+    "g": "F"
+  },
+  {
+    "e": "ratio",
+    "w": "pomer",
+    "g": "M"
+  },
+  {
+    "e": "rate",
+    "w": "sadzba",
+    "g": "F"
+  },
+  {
+    "e": "speed",
+    "w": "rýchlosť",
+    "g": "F"
+  },
+  {
+    "e": "velocity",
+    "w": "rýchlosť",
+    "g": "F"
+  },
+  {
+    "e": "acceleration",
+    "w": "zrýchlenie",
+    "g": "N"
+  },
+  {
+    "e": "force",
+    "w": "sila",
+    "g": "F"
+  },
+  {
+    "e": "mass",
+    "w": "hmotnosť",
+    "g": "F"
+  },
+  {
+    "e": "weight",
+    "w": "váha",
+    "g": "F"
+  },
+  {
+    "e": "energy",
+    "w": "energia",
+    "g": "F"
+  },
+  {
+    "e": "power",
+    "w": "výkon",
+    "g": "M"
+  },
+  {
+    "e": "work",
+    "w": "práca",
+    "g": "F"
+  },
+  {
+    "e": "heat",
+    "w": "teplo",
+    "g": "N"
+  },
+  {
+    "e": "temperature",
+    "w": "teplota",
+    "g": "F"
+  },
+  {
+    "e": "pressure",
+    "w": "tlak",
+    "g": "M"
+  },
+  {
+    "e": "density",
+    "w": "hustota",
+    "g": "F"
+  },
+  {
+    "e": "volume",
+    "w": "objem",
+    "g": "M"
+  },
+  {
+    "e": "current",
+    "w": "prúd",
+    "g": "M"
+  },
+  {
+    "e": "voltage",
+    "w": "napätie",
+    "g": "N"
+  },
+  {
+    "e": "resistance",
+    "w": "odpor",
+    "g": "M"
+  },
+  {
+    "e": "capacitance",
+    "w": "kapacita",
+    "g": "F"
+  },
+  {
+    "e": "inductance",
+    "w": "indukčnosť",
+    "g": "F"
+  },
+  {
+    "e": "charge",
+    "w": "náboj"
+  },
+  {
+    "e": "charge",
+    "w": "náboj",
+    "g": "M"
+  },
+  {
+    "e": "current",
+    "w": "prúd",
+    "g": "M"
+  },
+  {
+    "e": "voltage",
+    "w": "napätie",
+    "g": "N"
+  },
+  {
+    "e": "resistance",
+    "w": "odpor",
+    "g": "M"
+  },
+  {
+    "e": "capacitance",
+    "w": "kapacita",
+    "g": "F"
+  },
+  {
+    "e": "inductance",
+    "w": "indukčnosť",
+    "g": "F"
+  },
+  {
+    "e": "impedance",
+    "w": "impedancia",
+    "g": "F"
+  },
+  {
+    "e": "conductance",
+    "w": "vodivosť",
+    "g": "F"
+  },
+  {
+    "e": "watt",
+    "w": "watt",
+    "g": "M"
+  },
+  {
+    "e": "ampere",
+    "w": "ampér",
+    "g": "M"
+  },
+  {
+    "e": "ohm",
+    "w": "ohm",
+    "g": "M"
+  },
+  {
+    "e": "volt",
+    "w": "volt",
+    "g": "M"
+  },
+  {
+    "e": "joule",
+    "w": "joule",
+    "g": "M"
+  },
+  {
+    "e": "hertz",
+    "w": "hertz",
+    "g": "M"
+  },
+  {
+    "e": "circuit",
+    "w": "obvod",
+    "g": "M"
+  },
+  {
+    "e": "resistor",
+    "w": "rezistor",
+    "g": "M"
+  },
+  {
+    "e": "capacitor",
+    "w": "kondenzátor",
+    "g": "M"
+  },
+  {
+    "e": "inductor",
+    "w": "induktor",
+    "g": "M"
+  },
+  {
+    "e": "diode",
+    "w": "dióda",
+    "g": "F"
+  },
+  {
+    "e": "transistor",
+    "w": "tranzistor",
+    "g": "M"
+  },
+  {
+    "e": "relay",
+    "w": "relé",
+    "g": "N"
+  },
+  {
+    "e": "fuse",
+    "w": "poistka",
+    "g": "F"
+  },
+  {
+    "e": "switch",
+    "w": "spínač",
+    "g": "M"
+  },
+  {
+    "e": "connector",
+    "w": "konektor",
+    "g": "M"
+  },
+  {
+    "e": "wire",
+    "w": "drôt",
+    "g": "M"
+  },
+  {
+    "e": "cable",
+    "w": "kábel",
+    "g": "M"
+  },
+  {
+    "e": "battery",
+    "w": "batéria",
+    "g": "F"
+  },
+  {
+    "e": "cell",
+    "w": "článok",
+    "g": "M"
+  },
+  {
+    "e": "charger",
+    "w": "nabíjačka",
+    "g": "F"
+  },
+  {
+    "e": "inverter",
+    "w": "menič",
+    "g": "M"
+  },
+  {
+    "e": "converter",
+    "w": "prevodník",
+    "g": "M"
+  },
+  {
+    "e": "transformer",
+    "w": "transformátor",
+    "g": "M"
+  },
+  {
+    "e": "generator",
+    "w": "generátor",
+    "g": "M"
+  },
+  {
+    "e": "motor",
+    "w": "motor",
+    "g": "M"
+  },
+  {
+    "e": "sensor",
+    "w": "senzor",
+    "g": "M"
+  },
+  {
+    "e": "actuator",
+    "w": "aktuátor",
+    "g": "M"
+  },
+  {
+    "e": "controller",
+    "w": "regulátor",
+    "g": "M"
+  },
+  {
+    "e": "amplifier",
+    "w": "zosilňovač",
+    "g": "M"
+  },
+  {
+    "e": "oscillator",
+    "w": "oscilátor",
+    "g": "M"
+  },
+  {
+    "e": "filter",
+    "w": "filter",
+    "g": "M"
+  },
+  {
+    "e": "modulator",
+    "w": "modulátor",
+    "g": "M"
+  },
+  {
+    "e": "demodulator",
+    "w": "demodulátor",
+    "g": "M"
+  },
+  {
+    "e": "antenna",
+    "w": "anténa",
+    "g": "F"
+  },
+  {
+    "e": "receiver",
+    "w": "prijímač",
+    "g": "M"
+  },
+  {
+    "e": "transmitter",
+    "w": "vysielač",
+    "g": "M"
+  },
+  {
+    "e": "signal",
+    "w": "signál",
+    "g": "M"
+  },
+  {
+    "e": "noise",
+    "w": "šum",
+    "g": "M"
+  },
+  {
+    "e": "gain",
+    "w": "zosilnenie",
+    "g": "N"
+  },
+  {
+    "e": "loss",
+    "w": "strata",
+    "g": "F"
+  },
+  {
+    "e": "phase",
+    "w": "fáza",
+    "g": "F"
+  },
+  {
+    "e": "frequency",
+    "w": "frekvencia",
+    "g": "F"
+  },
+  {
+    "e": "wavelength",
+    "w": "vlnová dĺžka",
+    "g": "F"
+  },
+  {
+    "e": "bandwidth",
+    "w": "šírka pásma",
+    "g": "F"
+  },
+  {
+    "e": "modulation",
+    "w": "modulácia",
+    "g": "F"
+  },
+  {
+    "e": "amplitude",
+    "w": "amplitúda",
+    "g": "F"
+  },
+  {
+    "e": "carrier",
+    "w": "nosič",
+    "g": "M"
+  },
+  {
+    "e": "bit",
+    "w": "bit",
+    "g": "M"
+  },
+  {
+    "e": "byte",
+    "w": "bajt",
+    "g": "M"
+  },
+  {
+    "e": "word",
+    "w": "slovo",
+    "g": "N"
+  },
+  {
+    "e": "bus",
+    "w": "zbernica",
+    "g": "F"
+  },
+  {
+    "e": "clock",
+    "w": "hodiny",
+    "g": "F"
+  },
+  {
+    "e": "timer",
+    "w": "časovač",
+    "g": "M"
+  },
+  {
+    "e": "counter",
+    "w": "čítač",
+    "g": "M"
+  },
+  {
+    "e": "register",
+    "w": "register",
+    "g": "M"
+  },
+  {
+    "e": "memory",
+    "w": "pamäť",
+    "g": "F"
+  },
+  {
+    "e": "cache",
+    "w": "cache",
+    "g": "F"
+  },
+  {
+    "e": "stack",
+    "w": "zásobník",
+    "g": "M"
+  },
+  {
+    "e": "heap",
+    "w": "halda",
+    "g": "F"
+  },
+  {
+    "e": "instruction",
+    "w": "inštrukcia",
+    "g": "F"
+  },
+  {
+    "e": "opcode",
+    "w": "operačný kód",
+    "g": "M"
+  },
+  {
+    "e": "operand",
+    "w": "operand",
+    "g": "M"
+  },
+  {
+    "e": "address",
+    "w": "adresa",
+    "g": "F"
+  },
+  {
+    "e": "pointer",
+    "w": "ukazovateľ",
+    "g": "M"
+  },
+  {
+    "e": "reference",
+    "w": "referencia",
+    "g": "F"
+  },
+  {
+    "e": "value",
+    "w": "hodnota",
+    "g": "F"
+  },
+  {
+    "e": "constant",
+    "w": "konštanta",
+    "g": "F"
+  },
+  {
+    "e": "variable",
+    "w": "premenná",
+    "g": "F"
+  },
+  {
+    "e": "expression",
+    "w": "výraz",
+    "g": "M"
+  },
+  {
+    "e": "statement",
+    "w": "príkaz",
+    "g": "M"
+  },
+  {
+    "e": "block",
+    "w": "blok",
+    "g": "M"
+  },
+  {
+    "e": "scope",
+    "w": "rozsah",
+    "g": "M"
+  },
+  {
+    "e": "context",
+    "w": "kontext",
+    "g": "M"
+  },
+  {
+    "e": "closure",
+    "w": "uzávierka",
+    "g": "F"
+  },
+  {
+    "e": "loop",
+    "w": "smyčka",
+    "g": "F"
+  },
+  {
+    "e": "condition",
+    "w": "podmienka",
+    "g": "F"
+  },
+  {
+    "e": "branch",
+    "w": "vetva",
+    "g": "F"
+  },
+  {
+    "e": "jump",
+    "w": "skok",
+    "g": "M"
+  },
+  {
+    "e": "call",
+    "w": "volanie",
+    "g": "N"
+  },
+  {
+    "e": "return",
+    "w": "návrat",
+    "g": "M"
+  },
+  {
+    "e": "stackframe",
+    "w": "zásobníkový rámec",
+    "g": "M"
+  },
+  {
+    "e": "exception",
+    "w": "výnimka",
+    "g": "F"
+  },
+  {
+    "e": "handler",
+    "w": "obslužná rutina",
+    "g": "F"
+  },
+  {
+    "e": "signal",
+    "w": "signál",
+    "g": "M"
+  },
+  {
+    "e": "interrupt",
+    "w": "prerušenie",
+    "g": "N"
+  },
+  {
+    "e": "trap",
+    "w": "pasca",
+    "g": "F"
+  },
+  {
+    "e": "fault",
+    "w": "chyba",
+    "g": "F"
+  },
+  {
+    "e": "crash",
+    "w": "pád",
+    "g": "M"
+  },
+  {
+    "e": "bug",
+    "w": "chyba",
+    "g": "F"
+  },
+  {
+    "e": "fix",
+    "w": "oprava",
+    "g": "F"
+  },
+  {
+    "e": "patch",
+    "w": "záplata",
+    "g": "F"
+  },
+  {
+    "e": "update",
+    "w": "aktualizácia",
+    "g": "F"
+  },
+  {
+    "e": "upgrade",
+    "w": "vylepšenie",
+    "g": "N"
+  },
+  {
+    "e": "release",
+    "w": "vydanie",
+    "g": "N"
+  },
+  {
+    "e": "build",
+    "w": "build",
+    "g": "M"
+  },
+  {
+    "e": "version",
+    "w": "verzia",
+    "g": "F"
+  },
+  {
+    "e": "tag",
+    "w": "značka",
+    "g": "F"
+  },
+  {
+    "e": "commit",
+    "w": "commit",
+    "g": "M"
+  },
+  {
+    "e": "branch",
+    "w": "vetva",
+    "g": "F"
+  },
+  {
+    "e": "merge",
+    "w": "zlúčenie",
+    "g": "N"
+  },
+  {
+    "e": "conflict",
+    "w": "konflikt",
+    "g": "M"
+  },
+  {
+    "e": "rebase",
+    "w": "rebase",
+    "g": "M"
+  },
+  {
+    "e": "stash",
+    "w": "stash",
+    "g": "M"
+  },
+  {
+    "e": "diff",
+    "w": "rozdiel",
+    "g": "M"
+  },
+  {
+    "e": "log",
+    "w": "záznam",
+    "g": "M"
+  },
+  {
+    "e": "history",
+    "w": "história",
+    "g": "F"
+  },
+  {
+    "e": "blame",
+    "w": "vina",
+    "g": "F"
+  },
+  {
+    "e": "status",
+    "w": "stav",
+    "g": "M"
+  },
+  {
+    "e": "index",
+    "w": "index",
+    "g": "M"
+  },
+  {
+    "e": "tree",
+    "w": "strom",
+    "g": "M"
+  },
+  {
+    "e": "blob",
+    "w": "blob",
+    "g": "M"
+  },
+  {
+    "e": "hook",
+    "w": "háčik",
+    "g": "M"
+  },
+  {
+    "e": "alias",
+    "w": "alias",
+    "g": "M"
+  },
+  {
+    "e": "remote",
+    "w": "vzdialený",
+    "g": "M"
+  },
+  {
+    "e": "origin",
+    "w": "pôvod",
+    "g": "M"
+  },
+  {
+    "e": "fetch",
+    "w": "načítanie",
+    "g": "N"
+  },
+  {
+    "e": "pull",
+    "w": "stiahnutie",
+    "g": "N"
+  },
+  {
+    "e": "push",
+    "w": "odoslanie",
+    "g": "N"
+  },
+  {
+    "e": "pull",
+    "w": "stiahnutie",
+    "g": "N"
+  },
+  {
+    "e": "clone",
+    "w": "klon",
+    "g": "M"
+  },
+  {
+    "e": "fork",
+    "w": "fork",
+    "g": "M"
+  },
+  {
+    "e": "origin",
+    "w": "pôvod",
+    "g": "M"
+  },
+  {
+    "e": "remote",
+    "w": "vzdialený",
+    "g": "M"
+  },
+  {
+    "e": "head",
+    "w": "hlava",
+    "g": "F"
+  },
+  {
+    "e": "tree",
+    "w": "strom",
+    "g": "M"
+  },
+  {
+    "e": "blob",
+    "w": "blob",
+    "g": "M"
+  },
+  {
+    "e": "tag",
+    "w": "značka",
+    "g": "F"
+  },
+  {
+    "e": "diff",
+    "w": "rozdiel",
+    "g": "M"
+  },
+  {
+    "e": "patch",
+    "w": "záplata",
+    "g": "F"
+  },
+  {
+    "e": "stash",
+    "w": "stash",
+    "g": "M"
+  },
+  {
+    "e": "merge",
+    "w": "zlúčenie",
+    "g": "N"
+  },
+  {
+    "e": "rebase",
+    "w": "rebase",
+    "g": "M"
+  },
+  {
+    "e": "commit",
+    "w": "commit",
+    "g": "M"
+  },
+  {
+    "e": "log",
+    "w": "záznam",
+    "g": "M"
+  },
+  {
+    "e": "status",
+    "w": "stav",
+    "g": "M"
+  },
+  {
+    "e": "index",
+    "w": "index",
+    "g": "M"
+  },
+  {
+    "e": "hook",
+    "w": "háčik",
+    "g": "M"
+  },
+  {
+    "e": "alias",
+    "w": "alias",
+    "g": "M"
+  },
+  {
+    "e": "branch",
+    "w": "vetva",
+    "g": "F"
+  },
+  {
+    "e": "release",
+    "w": "vydanie",
+    "g": "N"
+  },
+  {
+    "e": "build",
+    "w": "build",
+    "g": "M"
+  },
+  {
+    "e": "version",
+    "w": "verzia",
+    "g": "F"
+  },
+  {
+    "e": "update",
+    "w": "aktualizácia",
+    "g": "F"
+  },
+  {
+    "e": "upgrade",
+    "w": "vylepšenie",
+    "g": "N"
+  },
+  {
+    "e": "rollback",
+    "w": "vrátenie",
+    "g": "N"
+  },
+  {
+    "e": "crash",
+    "w": "pád",
+    "g": "M"
+  },
+  {
+    "e": "freeze",
+    "w": "zamrznutie",
+    "g": "N"
+  },
+  {
+    "e": "bug",
+    "w": "chyba",
+    "g": "F"
+  },
+  {
+    "e": "fix",
+    "w": "oprava",
+    "g": "F"
+  },
+  {
+    "e": "issue",
+    "w": "problém",
+    "g": "M"
+  },
+  {
+    "e": "ticket",
+    "w": "lístok",
+    "g": "M"
+  },
+  {
+    "e": "task",
+    "w": "úloha",
+    "g": "F"
+  },
+  {
+    "e": "story",
+    "w": "príbeh",
+    "g": "M"
+  },
+  {
+    "e": "epic",
+    "w": "epos",
+    "g": "M"
+  },
+  {
+    "e": "sprint",
+    "w": "sprint",
+    "g": "M"
+  },
+  {
+    "e": "board",
+    "w": "tabuľa",
+    "g": "F"
+  },
+  {
+    "e": "backlog",
+    "w": "backlog",
+    "g": "M"
+  },
+  {
+    "e": "workflow",
+    "w": "pracovný tok",
+    "g": "M"
+  },
+  {
+    "e": "status",
+    "w": "stav",
+    "g": "M"
+  },
+  {
+    "e": "label",
+    "w": "označenie",
+    "g": "N"
+  },
+  {
+    "e": "priority",
+    "w": "priorita",
+    "g": "F"
+  },
+  {
+    "e": "estimate",
+    "w": "odhad",
+    "g": "M"
+  },
+  {
+    "e": "velocity",
+    "w": "rýchlosť",
+    "g": "F"
+  },
+  {
+    "e": "burndown",
+    "w": "burndown",
+    "g": "M"
+  },
+  {
+    "e": "chart",
+    "w": "graf",
+    "g": "M"
+  },
+  {
+    "e": "cycle",
+    "w": "cyklus",
+    "g": "M"
+  },
+  {
+    "e": "release",
+    "w": "vydanie",
+    "g": "N"
+  },
+  {
+    "e": "plan",
+    "w": "plán",
+    "g": "M"
+  },
+  {
+    "e": "goal",
+    "w": "cieľ",
+    "g": "M"
+  },
+  {
+    "e": "scope",
+    "w": "rozsah",
+    "g": "M"
+  },
+  {
+    "e": "risk",
+    "w": "riziko",
+    "g": "N"
+  },
+  {
+    "e": "blocker",
+    "w": "prekážka",
+    "g": "F"
+  },
+  {
+    "e": "dependency",
+    "w": "závislosť",
+    "g": "F"
+  },
+  {
+    "e": "review",
+    "w": "kontrola",
+    "g": "F"
+  },
+  {
+    "e": "approval",
+    "w": "schválenie",
+    "g": "N"
+  },
+  {
+    "e": "comment",
+    "w": "komentár",
+    "g": "M"
+  },
+  {
+    "e": "feedback",
+    "w": "spätná väzba",
+    "g": "F"
+  },
+  {
+    "e": "rating",
+    "w": "hodnotenie",
+    "g": "N"
+  },
+  {
+    "e": "score",
+    "w": "skóre",
+    "g": "N"
+  },
+  {
+    "e": "vote",
+    "w": "hlas",
+    "g": "M"
+  },
+  {
+    "e": "poll",
+    "w": "anketa",
+    "g": "F"
+  },
+  {
+    "e": "survey",
+    "w": "prieskum",
+    "g": "M"
+  },
+  {
+    "e": "form",
+    "w": "formulár",
+    "g": "M"
+  },
+  {
+    "e": "field",
+    "w": "pole",
+    "g": "N"
+  },
+  {
+    "e": "input",
+    "w": "vstup",
+    "g": "M"
+  },
+  {
+    "e": "output",
+    "w": "výstup",
+    "g": "M"
+  },
+  {
+    "e": "option",
+    "w": "možnosť",
+    "g": "F"
+  },
+  {
+    "e": "choice",
+    "w": "výber",
+    "g": "M"
+  },
+  {
+    "e": "answer",
+    "w": "odpoveď",
+    "g": "F"
+  },
+  {
+    "e": "question",
+    "w": "otázka",
+    "g": "F"
+  },
+  {
+    "e": "quiz",
+    "w": "kvíz",
+    "g": "M"
+  },
+  {
+    "e": "test",
+    "w": "test",
+    "g": "M"
+  },
+  {
+    "e": "exam",
+    "w": "skúška",
+    "g": "F"
+  },
+  {
+    "e": "grade",
+    "w": "známka",
+    "g": "F"
+  },
+  {
+    "e": "score",
+    "w": "skóre",
+    "g": "N"
+  },
+  {
+    "e": "mark",
+    "w": "známka",
+    "g": "F"
+  },
+  {
+    "e": "pass",
+    "w": "úspech",
+    "g": "M"
+  },
+  {
+    "e": "fail",
+    "w": "neúspech",
+    "g": "M"
+  },
+  {
+    "e": "result",
+    "w": "výsledok",
+    "g": "M"
+  },
+  {
+    "e": "record",
+    "w": "záznam",
+    "g": "M"
+  },
+  {
+    "e": "entry",
+    "w": "záznam",
+    "g": "M"
+  },
+  {
+    "e": "log",
+    "w": "záznam",
+    "g": "M"
+  },
+  {
+    "e": "note",
+    "w": "poznámka",
+    "g": "F"
+  },
+  {
+    "e": "memo",
+    "w": "poznámka",
+    "g": "F"
+  },
+  {
+    "e": "message",
+    "w": "správa",
+    "g": "F"
+  },
+  {
+    "e": "alert",
+    "w": "upozornenie",
+    "g": "N"
+  },
+  {
+    "e": "notification",
+    "w": "oznámenie",
+    "g": "N"
+  },
+  {
+    "e": "reminder",
+    "w": "pripomienka",
+    "g": "F"
+  },
+  {
+    "e": "alarm",
+    "w": "budík",
+    "g": "M"
+  },
+  {
+    "e": "timer",
+    "w": "časovač",
+    "g": "M"
+  },
+  {
+    "e": "clock",
+    "w": "hodiny",
+    "g": "F"
+  },
+  {
+    "e": "watch",
+    "w": "hodinky",
+    "g": "F"
+  },
+  {
+    "e": "calendar",
+    "w": "kalendár",
+    "g": "M"
+  },
+  {
+    "e": "event",
+    "w": "udalosť",
+    "g": "F"
+  },
+  {
+    "e": "task",
+    "w": "úloha",
+    "g": "F"
+  },
+  {
+    "e": "deadline",
+    "w": "termín",
+    "g": "M"
+  },
+  {
+    "e": "milestone",
+    "w": "míľnik",
+    "g": "M"
+  },
+  {
+    "e": "schedule",
+    "w": "rozvrh",
+    "g": "M"
+  },
+  {
+    "e": "plan",
+    "w": "plán",
+    "g": "M"
+  },
+  {
+    "e": "agenda",
+    "w": "program",
+    "g": "M"
+  },
+  {
+    "e": "meeting",
+    "w": "stretnutie",
+    "g": "N"
+  },
+  {
+    "e": "call",
+    "w": "hovor",
+    "g": "M"
+  },
+  {
+    "e": "chat",
+    "w": "chat",
+    "g": "M"
+  },
+  {
+    "e": "message",
+    "w": "správa",
+    "g": "F"
+  },
+  {
+    "e": "email",
+    "w": "email",
+    "g": "M"
+  },
+  {
+    "e": "thread",
+    "w": "vlákno",
+    "g": "N"
+  },
+  {
+    "e": "reply",
+    "w": "odpoveď",
+    "g": "F"
+  },
+  {
+    "e": "forward",
+    "w": "preposlanie",
+    "g": "N"
+  },
+  {
+    "e": "attachment",
+    "w": "príloha",
+    "g": "F"
+  },
+  {
+    "e": "file",
+    "w": "súbor",
+    "g": "M"
+  },
+  {
+    "e": "document",
+    "w": "dokument",
+    "g": "M"
+  },
+  {
+    "e": "image",
+    "w": "obrázok",
+    "g": "M"
+  },
+  {
+    "e": "photo",
+    "w": "fotka",
+    "g": "F"
+  },
+  {
+    "e": "video",
+    "w": "video",
+    "g": "N"
+  },
+  {
+    "e": "audio",
+    "w": "audio",
+    "g": "N"
+  },
+  {
+    "e": "recording",
+    "w": "nahrávka",
+    "g": "F"
+  },
+  {
+    "e": "clip",
+    "w": "klip",
+    "g": "M"
+  },
+  {
+    "e": "track",
+    "w": "stopa",
+    "g": "F"
+  },
+  {
+    "e": "album",
+    "w": "album",
+    "g": "M"
+  },
+  {
+    "e": "playlist",
+    "w": "playlist",
+    "g": "M"
+  },
+  {
+    "e": "song",
+    "w": "pieseň",
+    "g": "F"
+  },
+  {
+    "e": "tune",
+    "w": "melódia",
+    "g": "F"
+  },
+  {
+    "e": "beat",
+    "w": "rytmus",
+    "g": "M"
+  },
+  {
+    "e": "rhythm",
+    "w": "rytmus",
+    "g": "M"
+  },
+  {
+    "e": "melody",
+    "w": "melódia",
+    "g": "F"
+  },
+  {
+    "e": "harmony",
+    "w": "harmónia",
+    "g": "F"
+  },
+  {
+    "e": "chord",
+    "w": "akord",
+    "g": "M"
+  },
+  {
+    "e": "scale",
+    "w": "škála",
+    "g": "F"
+  },
+  {
+    "e": "note",
+    "w": "nota",
+    "g": "F"
+  },
+  {
+    "e": "interval",
+    "w": "interval",
+    "g": "M"
+  },
+  {
+    "e": "octave",
+    "w": "oktáva",
+    "g": "F"
+  },
+  {
+    "e": "tempo",
+    "w": "tempo",
+    "g": "N"
+  },
+  {
+    "e": "beat",
+    "w": "rytmus",
+    "g": "M"
+  },
+  {
+    "e": "meter",
+    "w": "takt",
+    "g": "M"
+  },
+  {
+    "e": "rhythm",
+    "w": "rytmus",
+    "g": "M"
+  },
+  {
+    "e": "melody",
+    "w": "melódia",
+    "g": "F"
+  },
+  {
+    "e": "phrase",
+    "w": "fráza",
+    "g": "F"
+  },
+  {
+    "e": "theme",
+    "w": "téma",
+    "g": "F"
+  },
+  {
+    "e": "variation",
+    "w": "variácia",
+    "g": "F"
+  },
+  {
+    "e": "motif",
+    "w": "motív",
+    "g": "M"
+  },
+  {
+    "e": "movement",
+    "w": "časť",
+    "g": "F"
+  },
+  {
+    "e": "symphony",
+    "w": "symfónia",
+    "g": "F"
+  },
+  {
+    "e": "concerto",
+    "w": "koncert",
+    "g": "M"
+  },
+  {
+    "e": "sonata",
+    "w": "sonáta",
+    "g": "F"
+  },
+  {
+    "e": "suite",
+    "w": "suita",
+    "g": "F"
+  },
+  {
+    "e": "prelude",
+    "w": "predohra",
+    "g": "F"
+  },
+  {
+    "e": "fugue",
+    "w": "fúga",
+    "g": "F"
+  },
+  {
+    "e": "aria",
+    "w": "ária",
+    "g": "F"
+  },
+  {
+    "e": "opera",
+    "w": "opera",
+    "g": "F"
+  },
+  {
+    "e": "ballet",
+    "w": "balet",
+    "g": "M"
+  },
+  {
+    "e": "orchestra",
+    "w": "orchester",
+    "g": "M"
+  },
+  {
+    "e": "ensemble",
+    "w": "ansámbel",
+    "g": "M"
+  },
+  {
+    "e": "choir",
+    "w": "zbor",
+    "g": "M"
+  },
+  {
+    "e": "quartet",
+    "w": "kvarteto",
+    "g": "N"
+  },
+  {
+    "e": "trio",
+    "w": "trio",
+    "g": "N"
+  },
+  {
+    "e": "duet",
+    "w": "duet",
+    "g": "M"
+  },
+  {
+    "e": "solo",
+    "w": "sólo",
+    "g": "N"
+  },
+  {
+    "e": "conductor",
+    "w": "dirigent",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "composer",
+    "w": "skladateľ",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "musician",
+    "w": "hudobník",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "singer",
+    "w": "spevák",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "pianist",
+    "w": "klavirista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "violinist",
+    "w": "huslista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "guitarist",
+    "w": "gitarista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "drummer",
+    "w": "bubeník",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "bassist",
+    "w": "basgitarista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "flutist",
+    "w": "flautista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "clarinet",
+    "w": "klarinet",
+    "g": "M"
+  },
+  {
+    "e": "saxophone",
+    "w": "saxofón",
+    "g": "M"
+  },
+  {
+    "e": "trumpet",
+    "w": "trúbka",
+    "g": "F"
+  },
+  {
+    "e": "trombone",
+    "w": "trombón",
+    "g": "M"
+  },
+  {
+    "e": "tuba",
+    "w": "tuba",
+    "g": "F"
+  },
+  {
+    "e": "horn",
+    "w": "lesný roh",
+    "g": "M"
+  },
+  {
+    "e": "oboe",
+    "w": "hoboj",
+    "g": "M"
+  },
+  {
+    "e": "bassoon",
+    "w": "fagot",
+    "g": "M"
+  },
+  {
+    "e": "violin",
+    "w": "husle",
+    "g": "F"
+  },
+  {
+    "e": "viola",
+    "w": "viola",
+    "g": "F"
+  },
+  {
+    "e": "cello",
+    "w": "violončelo",
+    "g": "N"
+  },
+  {
+    "e": "bass",
+    "w": "kontrabas",
+    "g": "M"
+  },
+  {
+    "e": "harp",
+    "w": "harfa",
+    "g": "F"
+  },
+  {
+    "e": "piano",
+    "w": "klavír",
+    "g": "M"
+  },
+  {
+    "e": "organ",
+    "w": "organ",
+    "g": "M"
+  },
+  {
+    "e": "keyboard",
+    "w": "klávesnica",
+    "g": "F"
+  },
+  {
+    "e": "synthesizer",
+    "w": "syntetizátor",
+    "g": "M"
+  },
+  {
+    "e": "accordion",
+    "w": "akordeón",
+    "g": "M"
+  },
+  {
+    "e": "guitar",
+    "w": "gitara",
+    "g": "F"
+  },
+  {
+    "e": "banjo",
+    "w": "banjo",
+    "g": "N"
+  },
+  {
+    "e": "mandolin",
+    "w": "mandolína",
+    "g": "F"
+  },
+  {
+    "e": "ukulele",
+    "w": "ukulele",
+    "g": "N"
+  },
+  {
+    "e": "drum",
+    "w": "bubon",
+    "g": "M"
+  },
+  {
+    "e": "cymbal",
+    "w": "činel",
+    "g": "M"
+  },
+  {
+    "e": "triangle",
+    "w": "triangel",
+    "g": "M"
+  },
+  {
+    "e": "tambourine",
+    "w": "tamburína",
+    "g": "F"
+  },
+  {
+    "e": "xylophone",
+    "w": "xylofón",
+    "g": "M"
+  },
+  {
+    "e": "marimba",
+    "w": "marimba",
+    "g": "F"
+  },
+  {
+    "e": "vibraphone",
+    "w": "vibrafón",
+    "g": "M"
+  },
+  {
+    "e": "bell",
+    "w": "zvon",
+    "g": "M"
+  },
+  {
+    "e": "gong",
+    "w": "gong",
+    "g": "M"
+  },
+  {
+    "e": "tone",
+    "w": "tón",
+    "g": "M"
+  },
+  {
+    "e": "pitch",
+    "w": "výška",
+    "g": "F"
+  },
+  {
+    "e": "timbre",
+    "w": "farba tónu",
+    "g": "F"
+  },
+  {
+    "e": "volume",
+    "w": "hlasitost",
+    "g": "F"
+  },
+  {
+    "e": "dynamics",
+    "w": "dynamika",
+    "g": "F"
+  },
+  {
+    "e": "crescendo",
+    "w": "crescendo",
+    "g": "N"
+  },
+  {
+    "e": "diminuendo",
+    "w": "diminuendo",
+    "g": "N"
+  },
+  {
+    "e": "accent",
+    "w": "prízvuk",
+    "g": "M"
+  },
+  {
+    "e": "rest",
+    "w": "pauza",
+    "g": "F"
+  },
+  {
+    "e": "bar",
+    "w": "takt",
+    "g": "M"
+  },
+  {
+    "e": "measure",
+    "w": "takt",
+    "g": "M"
+  },
+  {
+    "e": "staff",
+    "w": "notová osnova",
+    "g": "F"
+  },
+  {
+    "e": "clef",
+    "w": "kľúč",
+    "g": "M"
+  },
+  {
+    "e": "sharp",
+    "w": "krížik",
+    "g": "M"
+  },
+  {
+    "e": "flat",
+    "w": "béčko",
+    "g": "N"
+  },
+  {
+    "e": "natural",
+    "w": "prirodzený tón",
+    "g": "M"
+  },
+  {
+    "e": "key",
+    "w": "tónina",
+    "g": "F"
+  },
+  {
+    "e": "mode",
+    "w": "modus",
+    "g": "M"
+  },
+  {
+    "e": "major",
+    "w": "durový",
+    "g": "M"
+  },
+  {
+    "e": "minor",
+    "w": "molový",
+    "g": "M"
+  },
+  {
+    "e": "interval",
+    "w": "interval",
+    "g": "M"
+  },
+  {
+    "e": "unison",
+    "w": "unisono",
+    "g": "N"
+  },
+  {
+    "e": "second",
+    "w": "sekunda",
+    "g": "F"
+  },
+  {
+    "e": "third",
+    "w": "tercia",
+    "g": "F"
+  },
+  {
+    "e": "fourth",
+    "w": "kvarta",
+    "g": "F"
+  },
+  {
+    "e": "fifth",
+    "w": "kvinta",
+    "g": "F"
+  },
+  {
+    "e": "sixth",
+    "w": "sexta",
+    "g": "F"
+  },
+  {
+    "e": "seventh",
+    "w": "septima",
+    "g": "F"
+  },
+  {
+    "e": "octave",
+    "w": "oktáva",
+    "g": "F"
+  },
+  {
+    "e": "harmony",
+    "w": "harmónia",
+    "g": "F"
+  },
+  {
+    "e": "chord",
+    "w": "akord",
+    "g": "M"
+  },
+  {
+    "e": "scale",
+    "w": "škála",
+    "g": "F"
+  },
+  {
+    "e": "note",
+    "w": "nota",
+    "g": "F"
+  },
+  {
+    "e": "interval",
+    "w": "interval",
+    "g": "M"
+  },
+  {
+    "e": "octave",
+    "w": "oktáva",
+    "g": "F"
+  },
+  {
+    "e": "tempo",
+    "w": "tempo",
+    "g": "N"
+  },
+  {
+    "e": "beat",
+    "w": "rytmus",
+    "g": "M"
+  },
+  {
+    "e": "meter",
+    "w": "takt",
+    "g": "M"
+  },
+  {
+    "e": "phrase",
+    "w": "fráza",
+    "g": "F"
+  },
+  {
+    "e": "theme",
+    "w": "téma",
+    "g": "F"
+  },
+  {
+    "e": "motif",
+    "w": "motív",
+    "g": "M"
+  },
+  {
+    "e": "movement",
+    "w": "časť",
+    "g": "F"
+  },
+  {
+    "e": "symphony",
+    "w": "symfónia",
+    "g": "F"
+  },
+  {
+    "e": "concerto",
+    "w": "koncert",
+    "g": "M"
+  },
+  {
+    "e": "sonata",
+    "w": "sonáta",
+    "g": "F"
+  },
+  {
+    "e": "suite",
+    "w": "suita",
+    "g": "F"
+  },
+  {
+    "e": "prelude",
+    "w": "predohra",
+    "g": "F"
+  },
+  {
+    "e": "fugue",
+    "w": "fúga",
+    "g": "F"
+  },
+  {
+    "e": "aria",
+    "w": "ária",
+    "g": "F"
+  },
+  {
+    "e": "opera",
+    "w": "opera",
+    "g": "F"
+  },
+  {
+    "e": "ballet",
+    "w": "balet",
+    "g": "M"
+  },
+  {
+    "e": "orchestra",
+    "w": "orchester",
+    "g": "M"
+  },
+  {
+    "e": "ensemble",
+    "w": "ansámbel",
+    "g": "M"
+  },
+  {
+    "e": "choir",
+    "w": "zbor",
+    "g": "M"
+  },
+  {
+    "e": "quartet",
+    "w": "kvarteto",
+    "g": "N"
+  },
+  {
+    "e": "trio",
+    "w": "trio",
+    "g": "N"
+  },
+  {
+    "e": "duet",
+    "w": "duet",
+    "g": "M"
+  },
+  {
+    "e": "solo",
+    "w": "sólo",
+    "g": "N"
+  },
+  {
+    "e": "conductor",
+    "w": "dirigent",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "composer",
+    "w": "skladateľ",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "musician",
+    "w": "hudobník",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "singer",
+    "w": "spevák",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "pianist",
+    "w": "klavirista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "violinist",
+    "w": "huslista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "guitarist",
+    "w": "gitarista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "drummer",
+    "w": "bubeník",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "bassist",
+    "w": "basgitarista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "flutist",
+    "w": "flautista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "clarinet",
+    "w": "klarinet",
+    "g": "M"
+  },
+  {
+    "e": "saxophone",
+    "w": "saxofón",
+    "g": "M"
+  },
+  {
+    "e": "trumpet",
+    "w": "trúbka",
+    "g": "F"
+  },
+  {
+    "e": "trombone",
+    "w": "trombón",
+    "g": "M"
+  },
+  {
+    "e": "tuba",
+    "w": "tuba",
+    "g": "F"
+  },
+  {
+    "e": "horn",
+    "w": "roh",
+    "g": "M"
+  },
+  {
+    "e": "oboe",
+    "w": "hoboj",
+    "g": "M"
+  },
+  {
+    "e": "bassoon",
+    "w": "fagot",
+    "g": "M"
+  },
+  {
+    "e": "violin",
+    "w": "husle",
+    "g": "F"
+  },
+  {
+    "e": "viola",
+    "w": "viola",
+    "g": "F"
+  },
+  {
+    "e": "cello",
+    "w": "violončelo",
+    "g": "N"
+  },
+  {
+    "e": "bass",
+    "w": "kontrabas",
+    "g": "M"
+  },
+  {
+    "e": "harp",
+    "w": "harfa",
+    "g": "F"
+  },
+  {
+    "e": "piano",
+    "w": "klavír",
+    "g": "M"
+  },
+  {
+    "e": "organ",
+    "w": "organ",
+    "g": "M"
+  },
+  {
+    "e": "keyboard",
+    "w": "klávesnica",
+    "g": "F"
+  },
+  {
+    "e": "synthesizer",
+    "w": "syntetizátor",
+    "g": "M"
+  },
+  {
+    "e": "accordion",
+    "w": "akordeón",
+    "g": "M"
+  },
+  {
+    "e": "guitar",
+    "w": "gitara",
+    "g": "F"
+  },
+  {
+    "e": "banjo",
+    "w": "banjo",
+    "g": "N"
+  },
+  {
+    "e": "mandolin",
+    "w": "mandolína",
+    "g": "F"
+  },
+  {
+    "e": "ukulele",
+    "w": "ukulele",
+    "g": "N"
+  },
+  {
+    "e": "drum",
+    "w": "bubon",
+    "g": "M"
+  },
+  {
+    "e": "cymbal",
+    "w": "činel",
+    "g": "M"
+  },
+  {
+    "e": "triangle",
+    "w": "triangel",
+    "g": "M"
+  },
+  {
+    "e": "tambourine",
+    "w": "tamburína",
+    "g": "F"
+  },
+  {
+    "e": "xylophone",
+    "w": "xylofón",
+    "g": "M"
+  },
+  {
+    "e": "marimba",
+    "w": "marimba",
+    "g": "F"
+  },
+  {
+    "e": "vibraphone",
+    "w": "vibrafón",
+    "g": "M"
+  },
+  {
+    "e": "bell",
+    "w": "zvon",
+    "g": "M"
+  },
+  {
+    "e": "gong",
+    "w": "gong",
+    "g": "M"
+  },
+  {
+    "e": "tone",
+    "w": "tón",
+    "g": "M"
+  },
+  {
+    "e": "pitch",
+    "w": "výška",
+    "g": "F"
+  },
+  {
+    "e": "timbre",
+    "w": "farba",
+    "g": "F"
+  },
+  {
+    "e": "volume",
+    "w": "hlasitost",
+    "g": "F"
+  },
+  {
+    "e": "dynamics",
+    "w": "dynamika",
+    "g": "F"
+  },
+  {
+    "e": "accent",
+    "w": "prízvuk",
+    "g": "M"
+  },
+  {
+    "e": "rest",
+    "w": "pauza",
+    "g": "F"
+  },
+  {
+    "e": "bar",
+    "w": "takt",
+    "g": "M"
+  },
+  {
+    "e": "staff",
+    "w": "osnova",
+    "g": "F"
+  },
+  {
+    "e": "clef",
+    "w": "kľúč",
+    "g": "M"
+  },
+  {
+    "e": "sharp",
+    "w": "krížik",
+    "g": "M"
+  },
+  {
+    "e": "flat",
+    "w": "béčko",
+    "g": "N"
+  },
+  {
+    "e": "natural",
+    "w": "prirodzený",
+    "g": "M"
+  },
+  {
+    "e": "key",
+    "w": "tónina",
+    "g": "F"
+  },
+  {
+    "e": "mode",
+    "w": "modus",
+    "g": "M"
+  },
+  {
+    "e": "major",
+    "w": "durový",
+    "g": "M"
+  },
+  {
+    "e": "minor",
+    "w": "molový",
+    "g": "M"
+  },
+  {
+    "e": "unison",
+    "w": "unisono",
+    "g": "N"
+  },
+  {
+    "e": "second",
+    "w": "sekunda",
+    "g": "F"
+  },
+  {
+    "e": "third",
+    "w": "tercia",
+    "g": "F"
+  },
+  {
+    "e": "fourth",
+    "w": "kvarta",
+    "g": "F"
+  },
+  {
+    "e": "fifth",
+    "w": "kvinta",
+    "g": "F"
+  },
+  {
+    "e": "sixth",
+    "w": "sexta",
+    "g": "F"
+  },
+  {
+    "e": "seventh",
+    "w": "septima",
+    "g": "F"
+  },
+  {
+    "e": "octave",
+    "w": "oktáva",
+    "g": "F"
+  },
+  {
+    "e": "tone",
+    "w": "tón",
+    "g": "M"
+  },
+  {
+    "e": "pitch",
+    "w": "výška",
+    "g": "F"
+  },
+  {
+    "e": "timbre",
+    "w": "farba",
+    "g": "F"
+  },
+  {
+    "e": "volume",
+    "w": "hlasitost",
+    "g": "F"
+  },
+  {
+    "e": "dynamics",
+    "w": "dynamika",
+    "g": "F"
+  },
+  {
+    "e": "accent",
+    "w": "prízvuk",
+    "g": "M"
+  },
+  {
+    "e": "rest",
+    "w": "pauza",
+    "g": "F"
+  },
+  {
+    "e": "bar",
+    "w": "takt",
+    "g": "M"
+  },
+  {
+    "e": "staff",
+    "w": "osnova",
+    "g": "F"
+  },
+  {
+    "e": "clef",
+    "w": "kľúč",
+    "g": "M"
+  },
+  {
+    "e": "sharp",
+    "w": "krížik",
+    "g": "M"
+  },
+  {
+    "e": "flat",
+    "w": "béčko",
+    "g": "N"
+  },
+  {
+    "e": "natural",
+    "w": "prirodzený",
+    "g": "M"
+  },
+  {
+    "e": "key",
+    "w": "tónina",
+    "g": "F"
+  },
+  {
+    "e": "mode",
+    "w": "modus",
+    "g": "M"
+  },
+  {
+    "e": "major",
+    "w": "durový",
+    "g": "M"
+  },
+  {
+    "e": "minor",
+    "w": "molový",
+    "g": "M"
+  },
+  {
+    "e": "unison",
+    "w": "unisono",
+    "g": "N"
+  },
+  {
+    "e": "second",
+    "w": "sekunda",
+    "g": "F"
+  },
+  {
+    "e": "third",
+    "w": "tercia",
+    "g": "F"
+  },
+  {
+    "e": "fourth",
+    "w": "kvarta",
+    "g": "F"
+  },
+  {
+    "e": "fifth",
+    "w": "kvinta",
+    "g": "F"
+  },
+  {
+    "e": "sixth",
+    "w": "sexta",
+    "g": "F"
+  },
+  {
+    "e": "seventh",
+    "w": "septima",
+    "g": "F"
+  },
+  {
+    "e": "octave",
+    "w": "oktáva",
+    "g": "F"
+  },
+  {
+    "e": "scale",
+    "w": "škála",
+    "g": "F"
+  },
+  {
+    "e": "interval",
+    "w": "interval",
+    "g": "M"
+  },
+  {
+    "e": "note",
+    "w": "nota",
+    "g": "F"
+  },
+  {
+    "e": "chord",
+    "w": "akord",
+    "g": "M"
+  },
+  {
+    "e": "melody",
+    "w": "melódia",
+    "g": "F"
+  },
+  {
+    "e": "rhythm",
+    "w": "rytmus",
+    "g": "M"
+  },
+  {
+    "e": "beat",
+    "w": "rytmus",
+    "g": "M"
+  },
+  {
+    "e": "tempo",
+    "w": "tempo",
+    "g": "N"
+  },
+  {
+    "e": "meter",
+    "w": "takt",
+    "g": "M"
+  },
+  {
+    "e": "phrase",
+    "w": "fráza",
+    "g": "F"
+  },
+  {
+    "e": "theme",
+    "w": "téma",
+    "g": "F"
+  },
+  {
+    "e": "motif",
+    "w": "motív",
+    "g": "M"
+  },
+  {
+    "e": "movement",
+    "w": "časť",
+    "g": "F"
+  },
+  {
+    "e": "symphony",
+    "w": "symfónia",
+    "g": "F"
+  },
+  {
+    "e": "concerto",
+    "w": "koncert",
+    "g": "M"
+  },
+  {
+    "e": "sonata",
+    "w": "sonáta",
+    "g": "F"
+  },
+  {
+    "e": "suite",
+    "w": "suita",
+    "g": "F"
+  },
+  {
+    "e": "prelude",
+    "w": "predohra",
+    "g": "F"
+  },
+  {
+    "e": "fugue",
+    "w": "fúga",
+    "g": "F"
+  },
+  {
+    "e": "aria",
+    "w": "ária",
+    "g": "F"
+  },
+  {
+    "e": "opera",
+    "w": "opera",
+    "g": "F"
+  },
+  {
+    "e": "ballet",
+    "w": "balet",
+    "g": "M"
+  },
+  {
+    "e": "orchestra",
+    "w": "orchester",
+    "g": "M"
+  },
+  {
+    "e": "ensemble",
+    "w": "ansámbel",
+    "g": "M"
+  },
+  {
+    "e": "choir",
+    "w": "zbor",
+    "g": "M"
+  },
+  {
+    "e": "quartet",
+    "w": "kvarteto",
+    "g": "N"
+  },
+  {
+    "e": "trio",
+    "w": "trio",
+    "g": "N"
+  },
+  {
+    "e": "duet",
+    "w": "duet",
+    "g": "M"
+  },
+  {
+    "e": "solo",
+    "w": "sólo",
+    "g": "N"
+  },
+  {
+    "e": "conductor",
+    "w": "dirigent",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "composer",
+    "w": "skladateľ",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "musician",
+    "w": "hudobník",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "singer",
+    "w": "spevák",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "pianist",
+    "w": "klavirista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "violinist",
+    "w": "huslista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "guitarist",
+    "w": "gitarista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "drummer",
+    "w": "bubeník",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "bassist",
+    "w": "basgitarista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "flutist",
+    "w": "flautista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "clarinet",
+    "w": "klarinet",
+    "g": "M"
+  },
+  {
+    "e": "saxophone",
+    "w": "saxofón",
+    "g": "M"
+  },
+  {
+    "e": "trumpet",
+    "w": "trúbka",
+    "g": "F"
+  },
+  {
+    "e": "trombone",
+    "w": "trombón",
+    "g": "M"
+  },
+  {
+    "e": "tuba",
+    "w": "tuba",
+    "g": "F"
+  },
+  {
+    "e": "horn",
+    "w": "roh",
+    "g": "M"
+  },
+  {
+    "e": "oboe",
+    "w": "hoboj",
+    "g": "M"
+  },
+  {
+    "e": "bassoon",
+    "w": "fagot",
+    "g": "M"
+  },
+  {
+    "e": "violin",
+    "w": "husle",
+    "g": "F"
+  },
+  {
+    "e": "viola",
+    "w": "viola",
+    "g": "F"
+  },
+  {
+    "e": "cello",
+    "w": "violončelo",
+    "g": "N"
+  },
+  {
+    "e": "bass",
+    "w": "kontrabas",
+    "g": "M"
+  },
+  {
+    "e": "harp",
+    "w": "harfa",
+    "g": "F"
+  },
+  {
+    "e": "piano",
+    "w": "klavír",
+    "g": "M"
+  },
+  {
+    "e": "organ",
+    "w": "organ",
+    "g": "M"
+  },
+  {
+    "e": "keyboard",
+    "w": "klávesnica",
+    "g": "F"
+  },
+  {
+    "e": "synthesizer",
+    "w": "syntetizátor",
+    "g": "M"
+  },
+  {
+    "e": "accordion",
+    "w": "akordeón",
+    "g": "M"
+  },
+  {
+    "e": "guitar",
+    "w": "gitara",
+    "g": "F"
+  },
+  {
+    "e": "banjo",
+    "w": "banjo",
+    "g": "N"
+  },
+  {
+    "e": "mandolin",
+    "w": "mandolína",
+    "g": "F"
+  },
+  {
+    "e": "ukulele",
+    "w": "ukulele",
+    "g": "N"
+  },
+  {
+    "e": "drum",
+    "w": "bubon",
+    "g": "M"
+  },
+  {
+    "e": "cymbal",
+    "w": "činel",
+    "g": "M"
+  },
+  {
+    "e": "triangle",
+    "w": "triangel",
+    "g": "M"
+  },
+  {
+    "e": "tambourine",
+    "w": "tamburína",
+    "g": "F"
+  },
+  {
+    "e": "xylophone",
+    "w": "xylofón",
+    "g": "M"
+  },
+  {
+    "e": "marimba",
+    "w": "marimba",
+    "g": "F"
+  },
+  {
+    "e": "vibraphone",
+    "w": "vibrafón",
+    "g": "M"
+  },
+  {
+    "e": "bell",
+    "w": "zvon",
+    "g": "M"
+  },
+  {
+    "e": "gong",
+    "w": "gong",
+    "g": "M"
+  },
+  {
+    "e": "reed",
+    "w": "plátok",
+    "g": "M"
+  },
+  {
+    "e": "mouthpiece",
+    "w": "náustok",
+    "g": "M"
+  },
+  {
+    "e": "valve",
+    "w": "ventil",
+    "g": "M"
+  },
+  {
+    "e": "slide",
+    "w": "posúvač",
+    "g": "M"
+  },
+  {
+    "e": "bell",
+    "w": "zvonec",
+    "g": "M"
+  },
+  {
+    "e": "mute",
+    "w": "tlmič",
+    "g": "M"
+  },
+  {
+    "e": "bow",
+    "w": "smyčec",
+    "g": "M"
+  },
+  {
+    "e": "string",
+    "w": "struna",
+    "g": "F"
+  },
+  {
+    "e": "peg",
+    "w": "kolík",
+    "g": "M"
+  },
+  {
+    "e": "bridge",
+    "w": "kobylka",
+    "g": "F"
+  },
+  {
+    "e": "tailpiece",
+    "w": "strunník",
+    "g": "M"
+  },
+  {
+    "e": "soundpost",
+    "w": "duša",
+    "g": "F"
+  },
+  {
+    "e": "fingerboard",
+    "w": "hmatník",
+    "g": "M"
+  },
+  {
+    "e": "nut",
+    "w": "nultý pražec",
+    "g": "M"
+  },
+  {
+    "e": "fret",
+    "w": "pražec",
+    "g": "M"
+  },
+  {
+    "e": "pickup",
+    "w": "snímač",
+    "g": "M"
+  },
+  {
+    "e": "amplifier",
+    "w": "zosilňovač",
+    "g": "M"
+  },
+  {
+    "e": "speaker",
+    "w": "reproduktor",
+    "g": "M"
+  },
+  {
+    "e": "cabinet",
+    "w": "ozvučnica",
+    "g": "F"
+  },
+  {
+    "e": "pedal",
+    "w": "pedál",
+    "g": "M"
+  },
+  {
+    "e": "tuner",
+    "w": "ladička",
+    "g": "F"
+  },
+  {
+    "e": "metronome",
+    "w": "metronóm",
+    "g": "M"
+  },
+  {
+    "e": "stand",
+    "w": "stojan",
+    "g": "M"
+  },
+  {
+    "e": "case",
+    "w": "puzdro",
+    "g": "N"
+  },
+  {
+    "e": "strap",
+    "w": "popruh",
+    "g": "M"
+  },
+  {
+    "e": "rosin",
+    "w": "kalafúna",
+    "g": "F"
+  },
+  {
+    "e": "score",
+    "w": "partitúra",
+    "g": "F"
+  },
+  {
+    "e": "sheet",
+    "w": "notový list",
+    "g": "M"
+  },
+  {
+    "e": "notation",
+    "w": "notácia",
+    "g": "F"
+  },
+  {
+    "e": "symbol",
+    "w": "symbol",
+    "g": "M"
+  },
+  {
+    "e": "marking",
+    "w": "značenie",
+    "g": "N"
+  },
+  {
+    "e": "instruction",
+    "w": "pokyn",
+    "g": "M"
+  },
+  {
+    "e": "tempo",
+    "w": "tempo",
+    "g": "N"
+  },
+  {
+    "e": "dynamics",
+    "w": "dynamika",
+    "g": "F"
+  },
+  {
+    "e": "expression",
+    "w": "výraz",
+    "g": "M"
+  },
+  {
+    "e": "style",
+    "w": "štýl",
+    "g": "M"
+  },
+  {
+    "e": "genre",
+    "w": "žáner",
+    "g": "M"
+  },
+  {
+    "e": "form",
+    "w": "forma",
+    "g": "F"
+  },
+  {
+    "e": "structure",
+    "w": "štruktúra",
+    "g": "F"
+  },
+  {
+    "e": "section",
+    "w": "časť",
+    "g": "F"
+  },
+  {
+    "e": "repetition",
+    "w": "opakovanie",
+    "g": "N"
+  },
+  {
+    "e": "variation",
+    "w": "variácia",
+    "g": "F"
+  },
+  {
+    "e": "contrast",
+    "w": "kontrast",
+    "g": "M"
+  },
+  {
+    "e": "development",
+    "w": "vývoj",
+    "g": "M"
+  },
+  {
+    "e": "climax",
+    "w": "vyvrcholenie",
+    "g": "N"
+  },
+  {
+    "e": "resolution",
+    "w": "rozuzlenie",
+    "g": "N"
+  },
+  {
+    "e": "cadence",
+    "w": "kadencia",
+    "g": "F"
+  },
+  {
+    "e": "phrase",
+    "w": "fráza",
+    "g": "F"
+  },
+  {
+    "e": "motif",
+    "w": "motív",
+    "g": "M"
+  },
+  {
+    "e": "theme",
+    "w": "téma",
+    "g": "F"
+  },
+  {
+    "e": "melody",
+    "w": "melódia",
+    "g": "F"
+  },
+  {
+    "e": "harmony",
+    "w": "harmónia",
+    "g": "F"
+  },
+  {
+    "e": "rhythm",
+    "w": "rytmus",
+    "g": "M"
+  },
+  {
+    "e": "texture",
+    "w": "textúra",
+    "g": "F"
+  },
+  {
+    "e": "timbre",
+    "w": "farba",
+    "g": "F"
+  },
+  {
+    "e": "tone",
+    "w": "tón",
+    "g": "M"
+  },
+  {
+    "e": "pitch",
+    "w": "výška",
+    "g": "F"
+  },
+  {
+    "e": "interval",
+    "w": "interval",
+    "g": "M"
+  },
+  {
+    "e": "scale",
+    "w": "škála",
+    "g": "F"
+  },
+  {
+    "e": "mode",
+    "w": "modus",
+    "g": "M"
+  },
+  {
+    "e": "key",
+    "w": "tónina",
+    "g": "F"
+  },
+  {
+    "e": "modulation",
+    "w": "modulácia",
+    "g": "F"
+  },
+  {
+    "e": "transposition",
+    "w": "transpozícia",
+    "g": "F"
+  },
+  {
+    "e": "improvisation",
+    "w": "improvizácia",
+    "g": "F"
+  },
+  {
+    "e": "composition",
+    "w": "kompozícia",
+    "g": "F"
+  },
+  {
+    "e": "arrangement",
+    "w": "aranžmán",
+    "g": "M"
+  },
+  {
+    "e": "orchestration",
+    "w": "orchestrácia",
+    "g": "F"
+  },
+  {
+    "e": "performance",
+    "w": "výkon",
+    "g": "M"
+  },
+  {
+    "e": "interpretation",
+    "w": "interpretácia",
+    "g": "F"
+  },
+  {
+    "e": "practice",
+    "w": "cvičenie",
+    "g": "N"
+  },
+  {
+    "e": "rehearsal",
+    "w": "skúška",
+    "g": "F"
+  },
+  {
+    "e": "concert",
+    "w": "koncert",
+    "g": "M"
+  },
+  {
+    "e": "recital",
+    "w": "recitál",
+    "g": "M"
+  },
+  {
+    "e": "festival",
+    "w": "festival",
+    "g": "M"
+  },
+  {
+    "e": "competition",
+    "w": "súťaž",
+    "g": "F"
+  },
+  {
+    "e": "audition",
+    "w": "konkurz",
+    "g": "M"
+  },
+  {
+    "e": "recording",
+    "w": "nahrávka",
+    "g": "F"
+  },
+  {
+    "e": "album",
+    "w": "album",
+    "g": "M"
+  },
+  {
+    "e": "track",
+    "w": "stopa",
+    "g": "F"
+  },
+  {
+    "e": "single",
+    "w": "singel",
+    "g": "M"
+  },
+  {
+    "e": "release",
+    "w": "vydanie",
+    "g": "N"
+  },
+  {
+    "e": "label",
+    "w": "vydavateľstvo",
+    "g": "N"
+  },
+  {
+    "e": "studio",
+    "w": "štúdio",
+    "g": "N"
+  },
+  {
+    "e": "producer",
+    "w": "producent",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "engineer",
+    "w": "zvukár",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "mixer",
+    "w": "mixážny pult",
+    "g": "M"
+  },
+  {
+    "e": "microphone",
+    "w": "mikrofón",
+    "g": "M"
+  },
+  {
+    "e": "headphones",
+    "w": "slúchadlá",
+    "g": "F"
+  },
+  {
+    "e": "monitor",
+    "w": "monitor",
+    "g": "M"
+  },
+  {
+    "e": "interface",
+    "w": "rozhranie",
+    "g": "N"
+  },
+  {
+    "e": "plugin",
+    "w": "zásuvný modul",
+    "g": "M"
+  },
+  {
+    "e": "equalizer",
+    "w": "ekvalizér",
+    "g": "M"
+  },
+  {
+    "e": "compressor",
+    "w": "kompresor",
+    "g": "M"
+  },
+  {
+    "e": "limiter",
+    "w": "limiter",
+    "g": "M"
+  },
+  {
+    "e": "reverb",
+    "w": "reverb",
+    "g": "M"
+  },
+  {
+    "e": "delay",
+    "w": "delay",
+    "g": "M"
+  },
+  {
+    "e": "chorus",
+    "w": "chorus",
+    "g": "M"
+  },
+  {
+    "e": "flanger",
+    "w": "flanger",
+    "g": "M"
+  },
+  {
+    "e": "phaser",
+    "w": "phaser",
+    "g": "M"
+  },
+  {
+    "e": "distortion",
+    "w": "distortion",
+    "g": "F"
+  },
+  {
+    "e": "overdrive",
+    "w": "overdrive",
+    "g": "M"
+  },
+  {
+    "e": "saturation",
+    "w": "saturácia",
+    "g": "F"
+  },
+  {
+    "e": "filter",
+    "w": "filter",
+    "g": "M"
+  },
+  {
+    "e": "modulator",
+    "w": "modulátor",
+    "g": "M"
+  },
+  {
+    "e": "synth",
+    "w": "synth",
+    "g": "M"
+  },
+  {
+    "e": "sampler",
+    "w": "sampler",
+    "g": "M"
+  },
+  {
+    "e": "sequencer",
+    "w": "sekvencer",
+    "g": "M"
+  },
+  {
+    "e": "loop",
+    "w": "smyčka",
+    "g": "F"
+  },
+  {
+    "e": "track",
+    "w": "stopa",
+    "g": "F"
+  },
+  {
+    "e": "clip",
+    "w": "klip",
+    "g": "M"
+  },
+  {
+    "e": "take",
+    "w": "záznam",
+    "g": "M"
+  },
+  {
+    "e": "session",
+    "w": "relácia",
+    "g": "F"
+  },
+  {
+    "e": "project",
+    "w": "projekt",
+    "g": "M"
+  },
+  {
+    "e": "template",
+    "w": "šablóna",
+    "g": "F"
+  },
+  {
+    "e": "preset",
+    "w": "predvoľba",
+    "g": "F"
+  },
+  {
+    "e": "automation",
+    "w": "automatizácia",
+    "g": "F"
+  },
+  {
+    "e": "render",
+    "w": "render",
+    "g": "M"
+  },
+  {
+    "e": "bounce",
+    "w": "export",
+    "g": "M"
+  },
+  {
+    "e": "export",
+    "w": "export",
+    "g": "M"
+  },
+  {
+    "e": "import",
+    "w": "import",
+    "g": "M"
+  },
+  {
+    "e": "session",
+    "w": "relácia",
+    "g": "F"
+  },
+  {
+    "e": "tone",
+    "w": "tón",
+    "g": "M"
+  },
+  {
+    "e": "pitch",
+    "w": "výška",
+    "g": "F"
+  },
+  {
+    "e": "timbre",
+    "w": "farba",
+    "g": "F"
+  },
+  {
+    "e": "volume",
+    "w": "hlasitost",
+    "g": "F"
+  },
+  {
+    "e": "accent",
+    "w": "prízvuk",
+    "g": "M"
+  },
+  {
+    "e": "rest",
+    "w": "pauza",
+    "g": "F"
+  },
+  {
+    "e": "bar",
+    "w": "takt",
+    "g": "M"
+  },
+  {
+    "e": "staff",
+    "w": "osnova",
+    "g": "F"
+  },
+  {
+    "e": "clef",
+    "w": "kľúč",
+    "g": "M"
+  },
+  {
+    "e": "sharp",
+    "w": "krížik",
+    "g": "M"
+  },
+  {
+    "e": "flat",
+    "w": "béčko",
+    "g": "N"
+  },
+  {
+    "e": "natural",
+    "w": "prirodzený",
+    "g": "M"
+  },
+  {
+    "e": "key",
+    "w": "tónina",
+    "g": "F"
+  },
+  {
+    "e": "mode",
+    "w": "modus",
+    "g": "M"
+  },
+  {
+    "e": "major",
+    "w": "durový",
+    "g": "M"
+  },
+  {
+    "e": "minor",
+    "w": "molový",
+    "g": "M"
+  },
+  {
+    "e": "unison",
+    "w": "unisono",
+    "g": "N"
+  },
+  {
+    "e": "second",
+    "w": "sekunda",
+    "g": "F"
+  },
+  {
+    "e": "third",
+    "w": "tercia",
+    "g": "F"
+  },
+  {
+    "e": "fourth",
+    "w": "kvarta",
+    "g": "F"
+  },
+  {
+    "e": "fifth",
+    "w": "kvinta",
+    "g": "F"
+  },
+  {
+    "e": "sixth",
+    "w": "sexta",
+    "g": "F"
+  },
+  {
+    "e": "seventh",
+    "w": "septima",
+    "g": "F"
+  },
+  {
+    "e": "octave",
+    "w": "oktáva",
+    "g": "F"
+  },
+  {
+    "e": "scale",
+    "w": "škála",
+    "g": "F"
+  },
+  {
+    "e": "interval",
+    "w": "interval",
+    "g": "M"
+  },
+  {
+    "e": "note",
+    "w": "nota",
+    "g": "F"
+  },
+  {
+    "e": "chord",
+    "w": "akord",
+    "g": "M"
+  },
+  {
+    "e": "melody",
+    "w": "melódia",
+    "g": "F"
+  },
+  {
+    "e": "rhythm",
+    "w": "rytmus",
+    "g": "M"
+  },
+  {
+    "e": "beat",
+    "w": "rytmus",
+    "g": "M"
+  },
+  {
+    "e": "tempo",
+    "w": "tempo",
+    "g": "N"
+  },
+  {
+    "e": "meter",
+    "w": "takt",
+    "g": "M"
+  },
+  {
+    "e": "phrase",
+    "w": "fráza",
+    "g": "F"
+  },
+  {
+    "e": "theme",
+    "w": "téma",
+    "g": "F"
+  },
+  {
+    "e": "motif",
+    "w": "motív",
+    "g": "M"
+  },
+  {
+    "e": "movement",
+    "w": "časť",
+    "g": "F"
+  },
+  {
+    "e": "symphony",
+    "w": "symfónia",
+    "g": "F"
+  },
+  {
+    "e": "concerto",
+    "w": "koncert",
+    "g": "M"
+  },
+  {
+    "e": "sonata",
+    "w": "sonáta",
+    "g": "F"
+  },
+  {
+    "e": "suite",
+    "w": "suita",
+    "g": "F"
+  },
+  {
+    "e": "prelude",
+    "w": "predohra",
+    "g": "F"
+  },
+  {
+    "e": "fugue",
+    "w": "fúga",
+    "g": "F"
+  },
+  {
+    "e": "aria",
+    "w": "ária",
+    "g": "F"
+  },
+  {
+    "e": "opera",
+    "w": "opera",
+    "g": "F"
+  },
+  {
+    "e": "ballet",
+    "w": "balet",
+    "g": "M"
+  },
+  {
+    "e": "orchestra",
+    "w": "orchester",
+    "g": "M"
+  },
+  {
+    "e": "ensemble",
+    "w": "ansámbel",
+    "g": "M"
+  },
+  {
+    "e": "choir",
+    "w": "zbor",
+    "g": "M"
+  },
+  {
+    "e": "quartet",
+    "w": "kvarteto",
+    "g": "N"
+  },
+  {
+    "e": "trio",
+    "w": "trio",
+    "g": "N"
+  },
+  {
+    "e": "duet",
+    "w": "duet",
+    "g": "M"
+  },
+  {
+    "e": "solo",
+    "w": "sólo",
+    "g": "N"
+  },
+  {
+    "e": "conductor",
+    "w": "dirigent",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "composer",
+    "w": "skladateľ",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "musician",
+    "w": "hudobník",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "singer",
+    "w": "spevák",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "pianist",
+    "w": "klavirista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "violinist",
+    "w": "huslista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "guitarist",
+    "w": "gitarista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "drummer",
+    "w": "bubeník",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "bassist",
+    "w": "basgitarista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "flutist",
+    "w": "flautista",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "clarinet",
+    "w": "klarinet",
+    "g": "M"
+  },
+  {
+    "e": "saxophone",
+    "w": "saxofón",
+    "g": "M"
+  },
+  {
+    "e": "trumpet",
+    "w": "trúbka",
+    "g": "F"
+  },
+  {
+    "e": "trombone",
+    "w": "trombón",
+    "g": "M"
+  },
+  {
+    "e": "tuba",
+    "w": "tuba",
+    "g": "F"
+  },
+  {
+    "e": "horn",
+    "w": "roh",
+    "g": "M"
+  },
+  {
+    "e": "oboe",
+    "w": "hoboj",
+    "g": "M"
+  },
+  {
+    "e": "bassoon",
+    "w": "fagot",
+    "g": "M"
+  },
+  {
+    "e": "violin",
+    "w": "husle",
+    "g": "F"
+  },
+  {
+    "e": "viola",
+    "w": "viola",
+    "g": "F"
+  },
+  {
+    "e": "cello",
+    "w": "violončelo",
+    "g": "N"
+  },
+  {
+    "e": "bass",
+    "w": "kontrabas",
+    "g": "M"
+  },
+  {
+    "e": "harp",
+    "w": "harfa",
+    "g": "F"
+  },
+  {
+    "e": "piano",
+    "w": "klavír",
+    "g": "M"
+  },
+  {
+    "e": "organ",
+    "w": "organ",
+    "g": "M"
+  },
+  {
+    "e": "keyboard",
+    "w": "klávesnica",
+    "g": "F"
+  },
+  {
+    "e": "synthesizer",
+    "w": "syntetizátor",
+    "g": "M"
+  },
+  {
+    "e": "accordion",
+    "w": "akordeón",
+    "g": "M"
+  },
+  {
+    "e": "guitar",
+    "w": "gitara",
+    "g": "F"
+  },
+  {
+    "e": "banjo",
+    "w": "banjo",
+    "g": "N"
+  },
+  {
+    "e": "mandolin",
+    "w": "mandolína",
+    "g": "F"
+  },
+  {
+    "e": "ukulele",
+    "w": "ukulele",
+    "g": "N"
+  },
+  {
+    "e": "drum",
+    "w": "bubon",
+    "g": "M"
+  },
+  {
+    "e": "cymbal",
+    "w": "činel",
+    "g": "M"
+  },
+  {
+    "e": "triangle",
+    "w": "triangel",
+    "g": "M"
+  },
+  {
+    "e": "tambourine",
+    "w": "tamburína",
+    "g": "F"
+  },
+  {
+    "e": "xylophone",
+    "w": "xylofón",
+    "g": "M"
+  },
+  {
+    "e": "marimba",
+    "w": "marimba",
+    "g": "F"
+  },
+  {
+    "e": "vibraphone",
+    "w": "vibrafón",
+    "g": "M"
+  },
+  {
+    "e": "bell",
+    "w": "zvon",
+    "g": "M"
+  },
+  {
+    "e": "gong",
+    "w": "gong",
+    "g": "M"
+  },
+  {
+    "e": "reed",
+    "w": "plátok",
+    "g": "M"
+  },
+  {
+    "e": "valve",
+    "w": "ventil",
+    "g": "M"
+  },
+  {
+    "e": "slide",
+    "w": "posúvač",
+    "g": "M"
+  },
+  {
+    "e": "mute",
+    "w": "tlmič",
+    "g": "M"
+  },
+  {
+    "e": "bow",
+    "w": "smyčec",
+    "g": "M"
+  },
+  {
+    "e": "string",
+    "w": "struna",
+    "g": "F"
+  },
+  {
+    "e": "peg",
+    "w": "kolík",
+    "g": "M"
+  },
+  {
+    "e": "bridge",
+    "w": "kobylka",
+    "g": "F"
+  },
+  {
+    "e": "tailpiece",
+    "w": "strunník",
+    "g": "M"
+  },
+  {
+    "e": "soundpost",
+    "w": "duša",
+    "g": "F"
+  },
+  {
+    "e": "fingerboard",
+    "w": "hmatník",
+    "g": "M"
+  },
+  {
+    "e": "nut",
+    "w": "pražec",
+    "g": "M"
+  },
+  {
+    "e": "fret",
+    "w": "pražec",
+    "g": "M"
+  },
+  {
+    "e": "pickup",
+    "w": "snímač",
+    "g": "M"
+  },
+  {
+    "e": "amplifier",
+    "w": "zosilňovač",
+    "g": "M"
+  },
+  {
+    "e": "speaker",
+    "w": "reproduktor",
+    "g": "M"
+  },
+  {
+    "e": "cabinet",
+    "w": "ozvučnica",
+    "g": "F"
+  },
+  {
+    "e": "pedal",
+    "w": "pedál",
+    "g": "M"
+  },
+  {
+    "e": "tuner",
+    "w": "ladička",
+    "g": "F"
+  },
+  {
+    "e": "metronome",
+    "w": "metronóm",
+    "g": "M"
+  },
+  {
+    "e": "stand",
+    "w": "stojan",
+    "g": "M"
+  },
+  {
+    "e": "case",
+    "w": "puzdro",
+    "g": "N"
+  },
+  {
+    "e": "strap",
+    "w": "popruh",
+    "g": "M"
+  },
+  {
+    "e": "rosin",
+    "w": "kalafúna",
+    "g": "F"
+  },
+  {
+    "e": "score",
+    "w": "partitúra",
+    "g": "F"
+  },
+  {
+    "e": "sheet",
+    "w": "list",
+    "g": "M"
+  },
+  {
+    "e": "notation",
+    "w": "notácia",
+    "g": "F"
+  },
+  {
+    "e": "symbol",
+    "w": "symbol",
+    "g": "M"
+  },
+  {
+    "e": "marking",
+    "w": "značenie",
+    "g": "N"
+  },
+  {
+    "e": "instruction",
+    "w": "pokyn",
+    "g": "M"
+  },
+  {
+    "e": "expression",
+    "w": "výraz",
+    "g": "M"
+  },
+  {
+    "e": "style",
+    "w": "štýl",
+    "g": "M"
+  },
+  {
+    "e": "genre",
+    "w": "žáner",
+    "g": "M"
+  },
+  {
+    "e": "form",
+    "w": "forma",
+    "g": "F"
+  },
+  {
+    "e": "structure",
+    "w": "štruktúra",
+    "g": "F"
+  },
+  {
+    "e": "section",
+    "w": "časť",
+    "g": "F"
+  },
+  {
+    "e": "contrast",
+    "w": "kontrast",
+    "g": "M"
+  },
+  {
+    "e": "development",
+    "w": "vývoj",
+    "g": "M"
+  },
+  {
+    "e": "climax",
+    "w": "vyvrcholenie",
+    "g": "N"
+  },
+  {
+    "e": "resolution",
+    "w": "rozuzlenie",
+    "g": "N"
+  },
+  {
+    "e": "cadence",
+    "w": "kadencia",
+    "g": "F"
+  },
+  {
+    "e": "texture",
+    "w": "textúra",
+    "g": "F"
+  },
+  {
+    "e": "transposition",
+    "w": "transpozícia",
+    "g": "F"
+  },
+  {
+    "e": "improvisation",
+    "w": "improvizácia",
+    "g": "F"
+  },
+  {
+    "e": "composition",
+    "w": "kompozícia",
+    "g": "F"
+  },
+  {
+    "e": "arrangement",
+    "w": "aranžmán",
+    "g": "M"
+  },
+  {
+    "e": "orchestration",
+    "w": "orchestrácia",
+    "g": "F"
+  },
+  {
+    "e": "performance",
+    "w": "výkon",
+    "g": "M"
+  },
+  {
+    "e": "interpretation",
+    "w": "interpretácia",
+    "g": "F"
+  },
+  {
+    "e": "practice",
+    "w": "cvičenie",
+    "g": "N"
+  },
+  {
+    "e": "rehearsal",
+    "w": "skúška",
+    "g": "F"
+  },
+  {
+    "e": "concert",
+    "w": "koncert",
+    "g": "M"
+  },
+  {
+    "e": "recital",
+    "w": "recitál",
+    "g": "M"
+  },
+  {
+    "e": "festival",
+    "w": "festival",
+    "g": "M"
+  },
+  {
+    "e": "competition",
+    "w": "súťaž",
+    "g": "F"
+  },
+  {
+    "e": "audition",
+    "w": "konkurz",
+    "g": "M"
+  },
+  {
+    "e": "recording",
+    "w": "nahrávka",
+    "g": "F"
+  },
+  {
+    "e": "album",
+    "w": "album",
+    "g": "M"
+  },
+  {
+    "e": "track",
+    "w": "stopa",
+    "g": "F"
+  },
+  {
+    "e": "single",
+    "w": "singel",
+    "g": "M"
+  },
+  {
+    "e": "label",
+    "w": "vydavateľstvo",
+    "g": "N"
+  },
+  {
+    "e": "studio",
+    "w": "štúdio",
+    "g": "N"
+  },
+  {
+    "e": "producer",
+    "w": "producent",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "engineer",
+    "w": "zvukár",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "mixer",
+    "w": "mixážny pult",
+    "g": "M"
+  },
+  {
+    "e": "microphone",
+    "w": "mikrofón",
+    "g": "M"
+  },
+  {
+    "e": "monitor",
+    "w": "monitor",
+    "g": "M"
+  },
+  {
+    "e": "interface",
+    "w": "rozhranie",
+    "g": "N"
+  },
+  {
+    "e": "plugin",
+    "w": "zásuvný modul",
+    "g": "M"
+  },
+  {
+    "e": "equalizer",
+    "w": "ekvalizér",
+    "g": "M"
+  },
+  {
+    "e": "compressor",
+    "w": "kompresor",
+    "g": "M"
+  },
+  {
+    "e": "limiter",
+    "w": "limiter",
+    "g": "M"
+  },
+  {
+    "e": "reverb",
+    "w": "reverb",
+    "g": "M"
+  },
+  {
+    "e": "delay",
+    "w": "delay",
+    "g": "M"
+  },
+  {
+    "e": "chorus",
+    "w": "chorus",
+    "g": "M"
+  },
+  {
+    "e": "flanger",
+    "w": "flanger",
+    "g": "M"
+  },
+  {
+    "e": "phaser",
+    "w": "phaser",
+    "g": "M"
+  },
+  {
+    "e": "distortion",
+    "w": "distortion",
+    "g": "F"
+  },
+  {
+    "e": "overdrive",
+    "w": "overdrive",
+    "g": "M"
+  },
+  {
+    "e": "saturation",
+    "w": "saturácia",
+    "g": "F"
+  },
+  {
+    "e": "filter",
+    "w": "filter",
+    "g": "M"
+  },
+  {
+    "e": "modulator",
+    "w": "modulátor",
+    "g": "M"
+  },
+  {
+    "e": "synth",
+    "w": "synth",
+    "g": "M"
+  },
+  {
+    "e": "sampler",
+    "w": "sampler",
+    "g": "M"
+  },
+  {
+    "e": "sequencer",
+    "w": "sekvencer",
+    "g": "M"
+  },
+  {
+    "e": "loop",
+    "w": "smyčka",
+    "g": "F"
+  },
+  {
+    "e": "clip",
+    "w": "klip",
+    "g": "M"
+  },
+  {
+    "e": "take",
+    "w": "záznam",
+    "g": "M"
+  },
+  {
+    "e": "session",
+    "w": "relácia",
+    "g": "F"
+  },
+  {
+    "e": "project",
+    "w": "projekt",
+    "g": "M"
+  },
+  {
+    "e": "template",
+    "w": "šablóna",
+    "g": "F"
+  },
+  {
+    "e": "preset",
+    "w": "predvoľba",
+    "g": "F"
+  },
+  {
+    "e": "automation",
+    "w": "automatizácia",
+    "g": "F"
+  },
+  {
+    "e": "agent",
+    "w": "agent",
+    "g": "M",
+    "animate": "true"
+  },
+  {
+    "e": "scanner",
+    "w": "skenovač",
+    "g": "M"
+  },
+  {
+    "e": "monitor",
+    "w": "monitor",
+    "g": "M"
+  },
+  {
+    "e": "sensor",
+    "w": "senzor",
+    "g": "M"
+  },
+  {
+    "e": "probe",
+    "w": "sonda",
+    "g": "F"
+  },
+  {
+    "e": "alarm",
+    "w": "alarm",
+    "g": "M"
+  },
+  {
+    "e": "beacon",
+    "w": "maják",
+    "g": "M"
+  },
+  {
+    "e": "signal",
+    "w": "signál",
+    "g": "M"
+  },
+  {
+    "e": "ping",
+    "w": "ping",
+    "g": "M"
+  },
+  {
+    "e": "trace",
+    "w": "stopa",
+    "g": "F"
+  },
+  {
+    "e": "log",
+    "w": "záznam",
+    "g": "M"
+  },
+  {
+    "e": "report",
+    "w": "správa",
+    "g": "F"
+  },
+  {
+    "e": "summary",
+    "w": "zhrnutie",
+    "g": "N"
+  },
+  {
+    "e": "overview",
+    "w": "prehľad",
+    "g": "M"
+  },
+  {
+    "e": "detail",
+    "w": "detail",
+    "g": "M"
+  },
+  {
+    "e": "record",
+    "w": "záznam",
+    "g": "M"
+  },
+  {
+    "e": "entry",
+    "w": "položka",
+    "g": "F"
+  },
+  {
+    "e": "field",
+    "w": "pole",
+    "g": "N"
+  },
+  {
+    "e": "value",
+    "w": "hodnota",
+    "g": "F"
+  },
+  {
+    "e": "type",
+    "w": "typ",
+    "g": "M"
+  },
+  {
+    "e": "status",
+    "w": "stav",
+    "g": "M"
+  },
+  {
+    "e": "level",
+    "w": "úroveň",
+    "g": "F"
+  },
+  {
+    "e": "priority",
+    "w": "priorita",
+    "g": "F"
+  },
+  {
+    "e": "category",
+    "w": "kategória",
+    "g": "F"
+  },
+  {
+    "e": "tag",
+    "w": "značka",
+    "g": "F"
+  },
+  {
+    "e": "label",
+    "w": "označenie",
+    "g": "N"
+  },
+  {
+    "e": "code",
+    "w": "kód",
+    "g": "M"
+  },
+  {
+    "e": "key",
+    "w": "kľúč",
+    "g": "M"
+  },
+  {
+    "e": "index",
+    "w": "index",
+    "g": "M"
+  },
+  {
+    "e": "range",
+    "w": "rozsah",
+    "g": "M"
+  },
+  {
+    "e": "limit",
+    "w": "limit",
+    "g": "M"
+  },
+  {
+    "e": "threshold",
+    "w": "prahová hodnota",
+    "g": "F"
+  },
+  {
+    "e": "boundary",
+    "w": "hranica",
+    "g": "F"
+  },
+  {
+    "e": "margin",
+    "w": "okraj",
+    "g": "M"
+  },
+  {
+    "e": "gap",
+    "w": "medzera",
+    "g": "F"
+  },
+  {
+    "e": "offset",
+    "w": "posun",
+    "g": "M"
+  },
+  {
+    "e": "scale",
+    "w": "škála",
+    "g": "F"
+  },
+  {
+    "e": "unit",
+    "w": "jednotka",
+    "g": "F"
+  },
+  {
+    "e": "step",
+    "w": "krok",
+    "g": "M"
+  },
+  {
+    "e": "phase",
+    "w": "fáza",
+    "g": "F"
+  },
+  {
+    "e": "stage",
+    "w": "etapa",
+    "g": "F"
+  },
+  {
+    "e": "cycle",
+    "w": "cyklus",
+    "g": "M"
+  },
+  {
+    "e": "loop",
+    "w": "smyčka",
+    "g": "F"
+  },
+  {
+    "e": "sequence",
+    "w": "sekvencia",
+    "g": "F"
+  },
+  {
+    "e": "series",
+    "w": "séria",
+    "g": "F"
+  },
+  {
+    "e": "order",
+    "w": "poradie",
+    "g": "N"
+  },
+  {
+    "e": "pattern",
+    "w": "vzorec",
+    "g": "M"
+  },
+  {
+    "e": "structure",
+    "w": "štruktúra",
+    "g": "F"
+  },
+  {
+    "e": "form",
+    "w": "forma",
+    "g": "F"
+  },
+  {
+    "e": "shape",
+    "w": "tvar",
+    "g": "M"
+  },
+  {
+    "e": "size",
+    "w": "veľkosť",
+    "g": "F"
+  },
+  {
+    "e": "length",
+    "w": "dĺžka",
+    "g": "F"
+  },
+  {
+    "e": "width",
+    "w": "šírka",
+    "g": "F"
+  },
+  {
+    "e": "height",
+    "w": "výška",
+    "g": "F"
+  },
+  {
+    "e": "depth",
+    "w": "hĺbka",
+    "g": "F"
+  },
+  {
+    "e": "area",
+    "w": "plocha",
+    "g": "F"
+  },
+  {
+    "e": "volume",
+    "w": "objem",
+    "g": "M"
+  },
+  {
+    "e": "mass",
+    "w": "hmotnosť",
+    "g": "F"
+  },
+  {
+    "e": "weight",
+    "w": "váha",
+    "g": "F"
+  },
+  {
+    "e": "density",
+    "w": "hustota",
+    "g": "F"
+  },
+  {
+    "e": "pressure",
+    "w": "tlak",
+    "g": "M"
+  },
+  {
+    "e": "temperature",
+    "w": "teplota",
+    "g": "F"
+  },
+  {
+    "e": "humidity",
+    "w": "vlhkosť",
+    "g": "F"
+  },
+  {
+    "e": "speed",
+    "w": "rýchlosť",
+    "g": "F"
+  },
+  {
+    "e": "velocity",
+    "w": "rýchlosť",
+    "g": "F"
+  },
+  {
+    "e": "acceleration",
+    "w": "zrýchlenie",
+    "g": "N"
+  },
+  {
+    "e": "force",
+    "w": "sila",
+    "g": "F"
+  },
+  {
+    "e": "energy",
+    "w": "energia",
+    "g": "F"
+  },
+  {
+    "e": "power",
+    "w": "výkon",
+    "g": "M"
+  },
+  {
+    "e": "work",
+    "w": "práca",
+    "g": "F"
+  },
+  {
+    "e": "heat",
+    "w": "teplo",
+    "g": "N"
+  },
+  {
+    "e": "light",
+    "w": "svetlo",
+    "g": "N"
+  },
+  {
+    "e": "sound",
+    "w": "zvuk",
+    "g": "M"
+  },
+  {
+    "e": "wave",
+    "w": "vlna",
+    "g": "F"
+  },
+  {
+    "e": "signal",
+    "w": "signál",
+    "g": "M"
+  },
+  {
+    "e": "field",
+    "w": "pole",
+    "g": "N"
+  },
+  {
+    "e": "charge",
+    "w": "náboj",
+    "g": "M"
+  },
+  {
+    "e": "current",
+    "w": "prúd",
+    "g": "M"
+  },
+  {
+    "e": "voltage",
+    "w": "napätie",
+    "g": "N"
+  },
+  {
+    "e": "resistance",
+    "w": "odpor",
+    "g": "M"
+  },
+  {
+    "e": "capacitance",
+    "w": "kapacita",
+    "g": "F"
+  },
+  {
+    "e": "inductance",
+    "w": "indukčnosť",
+    "g": "F"
+  },
+  {
+    "e": "impedance",
+    "w": "impedancia",
+    "g": "F"
+  },
+  {
+    "e": "conductance",
+    "w": "vodivosť",
+    "g": "F"
+  },
+  {
+    "e": "reactance",
+    "w": "reaktancia",
+    "g": "F"
+  },
+  {
+    "e": "frequency",
+    "w": "frekvencia",
+    "g": "F"
+  },
+  {
+    "e": "period",
+    "w": "perióda",
+    "g": "F"
+  },
+  {
+    "e": "amplitude",
+    "w": "amplitúda",
+    "g": "F"
+  },
+  {
+    "e": "phase",
+    "w": "fáza",
+    "g": "F"
+  },
+  {
+    "e": "wavelength",
+    "w": "vlnová dĺžka",
+    "g": "F"
+  },
+  {
+    "e": "word",
+    "w": "slovo",
+    "g": "N"
+  },
+  {
+    "e": "frame",
+    "w": "rámec",
+    "g": "M"
+  }
+]

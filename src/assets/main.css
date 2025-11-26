@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =====================
+   Custom Dark Theme
+   ===================== */
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #10b981;
+  --muted: #9ca3af;
+  --danger: #ef4444;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', ui-sans-serif, system-ui, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg, #071025 0%, #07192a 100%);
+  color: #e6eef6;
+}
+
+/* Utility overrides */
+button {
+  transition: all 0.2s ease;
+}
+
+/* =====================
+   Layout Containers
+   ===================== */
+.wrap {
+  @apply max-w-[980px] mx-auto p-7 rounded-xl shadow-2xl;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+}
+
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+header {
+  @apply flex items-center justify-between gap-3 mb-4;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+p.lead {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* =====================
+   Word Display
+   ===================== */
+.word {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.english {
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+
+/* =====================
+   Buttons
+   ===================== */
+.controls {
+  @apply flex gap-2 mt-3;
+}
+
+button.choice {
+  @apply flex-1 rounded-lg font-bold text-base py-3;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.03);
+  color: inherit;
+}
+
+button.choice:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.start-btn {
+  background: var(--danger);
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 16px;
+  display: block;
+  width: 100%;
+}
+.start-btn:hover {
+  opacity: 0.9;
+}
+
+/* =====================
+   Stats + Progress
+   ===================== */
+.statrow {
+  @apply flex gap-2 mt-3;
+}
+
+.stat {
+  @apply min-w-[84px] text-center rounded-md px-2 py-1;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.progress {
+  height: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+.progress > i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #06b6d4);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* =====================
+   Feedback
+   ===================== */
+.feedback {
+  @apply flex items-center gap-3 mt-3 h-16;
+}
+.tick {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  @apply flex items-center justify-center text-3xl;
+}
+.tick.ok {
+  background: linear-gradient(180deg, rgba(16,185,129,0.12), rgba(16,185,129,0.06));
+  color: var(--accent);
+}
+.tick.bad {
+  background: linear-gradient(180deg, rgba(239,68,68,0.12), rgba(239,68,68,0.06));
+  color: var(--danger);
+}
+
+/* =====================
+   History + Misc
+   ===================== */
+.history {
+  margin-top: 12px;
+  max-height: 380px;
+  overflow: auto;
+}
+.hist-row {
+  @apply flex items-center gap-2 px-2 py-1 rounded-md;
+}
+.hist-row:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.small {
+  font-size: 13px;
+  color: var(--muted);
+}
+.big {
+  font-size: 14px;
+}
+
+/* =====================
+   Footer
+   ===================== */
+.footer {
+  @apply flex justify-between items-center mt-3 text-sm text-gray-400;
+}
+.reset {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.reset:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+/* =====================
+   Congrats Modal
+   ===================== */
+.congrats {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(180deg, #062629, #04202a);
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 18px 60px rgba(2, 10, 20, 0.7);
+  display: none;
+  z-index: 999;
+  text-align: center;
+}
+.congrats h2 {
+  margin: 0 0 6px;
+}

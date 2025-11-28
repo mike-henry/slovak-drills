@@ -1,5 +1,24 @@
 
 
+
+//TODO: refine hard/soft consonant handling and definitions
+// Hard consonants in Slovak
+const hardConsonants = [
+  'b', 'c', 'd', 'ď', 'g', 'h', 'ch', 'k', 'l', 'ĺ',
+  'm', 'n', 'ň', 'p', 'r', 'ŕ', 's', 'š', 't', 'ť',
+  'v', 'z', 'ž'
+];
+
+// Soft consonants in Slovak
+const softConsonants = [
+  'č', 'ď', 'j', 'ľ', 'ň', 'ť', 'ď', 'š', 'ž', 'č', 'dž'
+];
+
+
+
+
+
+
 /**
  * Slovak Noun Stem Extraction
  * ---------------------------
@@ -61,8 +80,12 @@ function masculineStem(noun) {
 
   const lastChar = word.slice(-1);
 
+
+
+
   // Common hard consonants
   const hardEndings = ["b","d","ď","g","h","ch","k","l","m","n","p","r","s","t","v","z"];
+
   if (!isVowel(lastChar)) {
     // nasal masculine: syn → syn-, muž → muž-
     return word;
@@ -149,7 +172,21 @@ function getStem(noun  ) {
 }
 
 
+function getLastConsonant(word) {
+  // Handle digraph 'ch'
+  if (word.endsWith('ch')) return 'ch';
 
+  // Loop backwards through the word to find the last consonant
+  for (let i = word.length - 1; i >= 0; i--) {
+    const char = word[i];
+    if (hardConsonants.includes(char) || softConsonants.includes(char)) {
+      return char;
+    }
+  }
+
+  // If no consonant found (vowel ending), return null
+  return null;
+}
 
 function generateNomPlural(noun) {
   const word = noun.sk;
@@ -158,16 +195,14 @@ function generateNomPlural(noun) {
   // MASCULINE
   // ======================
   if (noun.gender === "M") {
-    // Animate masculine ending in a → -i
-    if (word.endsWith("a")) return word.slice(0, -1) + "i";
-
-    // Hard endings → -y
-    if (/[bdfghklnmprtvz]$/.test(word)) return word + "y";
-
-    // Soft endings → -e
-    if (/[čšžcjľňťďr]$/.test(word)) return word + "e";
-
-    // Default
+    if (noun.animate) {
+      // Animate masculine plural
+       return word + "i"; // simple default
+    }
+    const lastCons = getLastConsonant(word);
+    if (hardConsonants.includes(lastCons)) return word + "y";
+    if (softConsonants.includes(lastCons)) return word + "e";
+    //     // neutral ending → default -y for inanimate
     return word + "y";
   }
 
@@ -243,17 +278,41 @@ const instrumentalPluralRules = {
   N: [ (noun) => ({ form: noun.sk + 'mi', explanation: 'N → add -mi for instrumental plural.' }) ]
 };
 
+const kinshipExceptions = ['dedko','otec','syn','brat'];
+
+
 const accusativeRules = {
   M: [
-    (noun) => noun.animate === "true" && noun.sk.endsWith('a')
-      ? { form: noun.sk.slice(0, -1) + 'u', explanation: 'M:A ending in -a → -u.' }
+    // 1. Animate masculine ending in -a  -> replace -a with -u
+    (noun) => noun.animate && noun.sk.endsWith("a")
+      ? {
+          form: noun.sk.slice(0, -1) + 'u',
+          explanation: 'Masculine animate ending in -a → replace -a with -u.',
+        }
       : null,
-    (noun) => noun.animate === "true"
-      ? { form: noun.sk + 'a', explanation: 'M:A → add -a.' }
+
+    // 2. Animate masculine ending in -o -> replace -o with -a
+    (noun) =>  noun.animate  && noun.sk.endsWith("o") ? {
+          form: noun.sk.slice(0, -1) + 'a',
+          explanation: 'Masculine animate ending in -o → replace -o with -a.',
+        }
       : null,
+
+    // 3. Other animate masculine (consonant or other vowel endings) -> add -a
+    (noun) => noun.animate
+      ? {
+          form: noun.sk + 'a',
+          explanation: 'Masculine animate (other endings) → add -a.',
+        }
+      : null,
+
+    // 4. Inanimate masculine -> unchanged
     (noun) => !noun.animate
-      ? { form: noun.sk, explanation: 'M:I → same as Nominative.' }
-      : null
+      ? {
+          form: noun.sk,
+          explanation: 'Masculine inanimate → same as nominative.',
+        }
+      : null,
   ],
   F: [
     (noun) => noun.sk.endsWith('a')
@@ -262,9 +321,9 @@ const accusativeRules = {
     (noun) => noun.sk.endsWith('ia')
       ? { form: noun.sk.slice(0, -2) + 'iu', explanation: 'F -ia → -iu.' }
       : null,
-    (noun) => ({ form: noun.sk, explanation: 'F consonant-ending → same as Nominative.' })
+    (noun) => ({ form: noun.sk, explanation: 'Femanine consonant-ending → same as Nominative.' })
   ],
-  N: [ (noun) => ({ form: noun.sk, explanation: 'N → same as Nominative.' }) ]
+  N: [ (noun) => ({ form: noun.sk, explanation: 'Neutral → same as Nominative.' }) ]
 };
 
 const accusativePluralRules = {
@@ -378,9 +437,15 @@ export const deriveNounCaseForm = (noun, caseName, plural = false) => {
     };
   }
 
+  console.log(`is animate ...${noun.animate}` )
+  console.log("end with o "+noun.sk.endsWith("o"))
+
   for (const rule of rules) {
     const result = rule(noun);
-    if (result) return result;
+    
+    if (result) { 
+    
+      return result;}
   }
 
   return {

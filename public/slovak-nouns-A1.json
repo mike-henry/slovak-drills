@@ -13,7 +13,7 @@
     "sk": "človek",
     "en": "person",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "rok",
@@ -264,7 +264,7 @@
     "sk": "programátor",
     "en": "programmer",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "technológia",
@@ -305,25 +305,25 @@
     "sk": "vedúci",
     "en": "leader",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "manažér",
     "en": "manager",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "zamestnanec",
     "en": "employee",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "kolega",
     "en": "colleague",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "oddelenie",
@@ -519,13 +519,13 @@
     "sk": "študent",
     "en": "student",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "učiteľ",
     "en": "teacher",
     "gender": "M",
-    "animate": "true",
+    "animate": true,
     "number": {
       "singular": {
         "accusative": "učiteľa",
@@ -627,13 +627,13 @@
     "sk": "autor",
     "en": "author",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "čitateľ",
     "en": "reader",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "kniha",
@@ -1104,25 +1104,25 @@
     "sk": "lekár",
     "en": "doctor",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "lekárka",
     "en": "female doctor",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "sestra",
     "en": "nurse",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "pacient",
     "en": "patient",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "poistenie",
@@ -1147,7 +1147,12 @@
   {
     "sk": "hodinky",
     "en": "watch",
-    "gender": "F"
+    "gender": "F",
+    "number": {
+      "plural": {
+        "accusative": "hodinky"
+      }
+    }
   },
   {
     "sk": "budík",
@@ -1618,13 +1623,13 @@
     "sk": "zákazník",
     "en": "customer",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "predavač",
     "en": "salesperson",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "cena",
@@ -2635,25 +2640,25 @@
     "sk": "čašník",
     "en": "waiter",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "čašníčka",
     "en": "waitress",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "kuchár",
     "en": "cook",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "kuchárka",
     "en": "female cook",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "recept",
@@ -3204,7 +3209,7 @@
     "sk": "hostia",
     "en": "guests",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "pozvánka",
@@ -3255,7 +3260,7 @@
     "sk": "tanečník",
     "en": "dancer",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "tanec",
@@ -3276,13 +3281,13 @@
     "sk": "spevák",
     "en": "singer",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "speváčka",
     "en": "female singer",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "kapela",
@@ -3388,7 +3393,7 @@
     "sk": "fanúšik",
     "en": "fan",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "publikum",
@@ -3414,13 +3419,13 @@
     "sk": "herec",
     "en": "actor",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "herečka",
     "en": "actress",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "scéna",
@@ -3446,13 +3451,13 @@
     "sk": "maskér",
     "en": "makeup artist",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "režisér",
     "en": "director",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "film",
@@ -3488,7 +3493,7 @@
     "sk": "kritik",
     "en": "critic",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "festival",
@@ -3609,7 +3614,7 @@
     "sk": "učiteľ",
     "en": "teacher",
     "gender": "M",
-    "animate": "true",
+    "animate": true,
     "number": {
       "singular": {
         "accusative": "učiteľa",
@@ -3621,28 +3626,36 @@
     "sk": "žiak",
     "en": "pupil",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "rodič",
     "en": "parent",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "matka",
     "en": "mother",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "otec",
     "en": "father",
     "gender": "M",
-    "animate": "true",
+    "animate": true,
     "number": {
       "singular": {
         "accusative": "otca"
+      },
+      "plural": {
+        "nominative": "otcov",
+        "genitive": "otcov",
+        "dative": "otcom",
+        "accusative": "otcov",
+        "locative": "otcoch",
+        "instrumental": "otcami"
       }
     }
   },
@@ -3650,151 +3663,151 @@
     "sk": "syn",
     "en": "son",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "dcéra",
     "en": "daughter",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "brat",
     "en": "brother",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "sestra",
     "en": "sister",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "babička",
     "en": "grandmother",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "dedko",
     "en": "grandfather",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "vnuk",
     "en": "grandson",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "vnučka",
     "en": "granddaughter",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "teta",
     "en": "aunt",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "strýko",
     "en": "uncle",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "sesternica",
     "en": "female cousin",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "bratranec",
     "en": "male cousin",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "manžel",
     "en": "husband",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "manželka",
     "en": "wife",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "partner",
     "en": "partner",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "partnerka",
     "en": "female partner",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "priateľ",
     "en": "friend",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "priateľka",
     "en": "female friend",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "známy",
     "en": "acquaintance",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "kolega",
     "en": "colleague",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "kolegyňa",
     "en": "female colleague",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "spolužiak",
     "en": "classmate",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "spolužiačka",
     "en": "female classmate",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "sused",
     "en": "neighbor",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "susedka",
     "en": "female neighbor",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "domácnosť",
@@ -3845,19 +3858,19 @@
     "sk": "snúbenec",
     "en": "fiancé",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "snúbenica",
     "en": "fiancée",
     "gender": "F",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "mladomanželia",
     "en": "newlyweds",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "rodičovstvo",
@@ -3878,7 +3891,7 @@
     "sk": "dieťa",
     "en": "child",
     "gender": "N",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "bábätko",
@@ -3889,7 +3902,7 @@
     "sk": "novorodenec",
     "en": "newborn",
     "gender": "M",
-    "animate": "true",
+    "animate": true,
     "number": {
       "singular": {
         "accusative": "novorodenca"
@@ -4210,31 +4223,31 @@
     "sk": "vedúci",
     "en": "leader",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "manažér",
     "en": "manager",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "zamestnanec",
     "en": "employee",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "pracovník",
     "en": "worker",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "kolega",
     "en": "colleague",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "oddelenie",
@@ -4365,7 +4378,7 @@
     "sk": "minister",
     "en": "minister",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "ministerstvo",
@@ -4381,31 +4394,31 @@
     "sk": "poslanec",
     "en": "member of parliament",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "zástupca",
     "en": "representative",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "prezident",
     "en": "president",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "premiér",
     "en": "prime minister",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "kandidát",
     "en": "candidate",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "voľby",
@@ -4651,25 +4664,25 @@
     "sk": "sledovateľ",
     "en": "follower",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "odberateľ",
     "en": "subscriber",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "tvorca",
     "en": "creator",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "influencer",
     "en": "influencer",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "obsah",
@@ -4735,25 +4748,25 @@
     "sk": "zákazník",
     "en": "customer",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "klient",
     "en": "client",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "dodávateľ",
     "en": "supplier",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "partner",
     "en": "partner",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "konkurencia",
@@ -4764,13 +4777,13 @@
     "sk": "konkurent",
     "en": "competitor",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "výrobca",
     "en": "manufacturer",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "dodanie",
@@ -4826,7 +4839,7 @@
     "sk": "pokladník",
     "en": "cashier",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "blok",
@@ -5392,37 +5405,37 @@
     "sk": "zákazník",
     "en": "customer",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "užívateľ",
     "en": "user",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "správca",
     "en": "administrator",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "vývojár",
     "en": "developer",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "programátor",
     "en": "programmer",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "tester",
     "en": "tester",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "projekt",
@@ -5478,7 +5491,7 @@
     "sk": "člen",
     "en": "member",
     "gender": "M",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "príbeh",
@@ -5538,7 +5551,13 @@
   {
     "sk": "peniaze",
     "en": "money",
-    "gender": "F"
+    "gender": "F",
+    "number" : {
+      "plural": {
+        "accusative": "peniaze"
+      }
+    }
+    
   },
   {
     "sk": "obchod",
@@ -5569,7 +5588,7 @@
     "sk": "dieťa",
     "en": "child",
     "gender": "N",
-    "animate": "true"
+    "animate": true
   },
   {
     "sk": "skúsenosť",

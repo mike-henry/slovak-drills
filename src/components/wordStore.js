@@ -231,11 +231,13 @@ const loadWords = async (
 };
 
 export const  loadAdjectives = async ()=> {
+    
   return loadWords(ADJECTIVES,adjectives,adjectivesLoaded,DEFAULT_ADJECTIVES)
 }
 
 
 export const  loadNouns = async ()=> {
+  const filterFn = (item) => item.gender === 'M' ;
   return loadWords(NOUNS,nouns,nounsLoaded,DEFAULT_NOUNS)
 }
 

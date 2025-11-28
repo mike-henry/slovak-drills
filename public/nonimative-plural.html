@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slovak Noun Pluralization & Softening</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    code {
+      background-color: #ecf0f1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background-color: #ecf0f1;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    table, th, td {
+      border: 1px solid #bdc3c7;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    .note {
+      background-color: #f1c40f33;
+      padding: 10px;
+      border-left: 4px solid #f1c40f;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Slovak Noun Pluralization & Stem Softening</h1>
+
+<p>This module provides tools to derive <strong>stems</strong> from Slovak nouns and generate their <strong>nominative plural forms</strong>, including <strong>softening rules</strong> for consonants at the stem-suffix boundary.</p>
+
+<hr>
+
+<h2>Table of Contents</h2>
+<ul>
+  <li><a href="#stemmer">Stemmer</a></li>
+  <li><a href="#softening-rules">Softening Rules</a></li>
+  <li><a href="#nominative-plural-generator">Nominative Plural Generator</a></li>
+  <li><a href="#examples">Examples</a></li>
+  <li><a href="#edge-cases">Edge Cases</a></li>
+  <li><a href="#usage">Usage</a></li>
+</ul>
+
+<hr>
+
+<h2 id="stemmer">Stemmer</h2>
+<p><code>deriveStem(word, gender)</code> extracts the base stem from a Slovak noun.</p>
+
+<p><strong>Rules applied:</strong></p>
+<ul>
+  <li>Remove singular endings like <code>-a</code>, <code>-o</code>, <code>-e</code>, <code>-ie</code>, <code>-um</code></li>
+  <li>Returns the raw stem without softening</li>
+</ul>
+
+<pre><code>deriveStem("vysvedčenie", "N"); // → "vysvedčen"
+deriveStem("hrdina", "M");      // → "hrdin"
+deriveStem("kosť", "F");        // → "kosť"</code></pre>
+
+<p class="note">Softening is <strong>not applied</strong> in the stemmer. It is handled separately in the plural generator.</p>
+
+<hr>
+
+<h2 id="softening-rules">Softening Rules</h2>
+
+<h3>Masculine & Neuter</h3>
+<table>
+  <tr><th>Hard</th><th>Soft</th></tr>
+  <tr><td>k</td><td>c</td></tr>
+  <tr><td>g</td><td>z</td></tr>
+  <tr><td>h</td><td>z</td></tr>
+  <tr><td>ch</td><td>š</td></tr>
+  <tr><td>d</td><td>ď</td></tr>
+  <tr><td>t</td><td>ť</td></tr>
+  <tr><td>n</td><td>ň</td></tr>
+  <tr><td>l</td><td>ľ</td></tr>
+</table>
+
+<p><strong>Exceptions:</strong></p>
+<ul>
+  <li>Masculine nouns ending in <code>-a</code> do <strong>not soften</strong></li>
+  <li>Neuter nouns do <strong>not soften</strong> in nominative plural</li>
+</ul>
+
+<h3>Feminine</h3>
+<table>
+  <tr><th>Soft consonant</th><th>Base</th></tr>
+  <tr><td>ť</td><td>t</td></tr>
+  <tr><td>ď</td><td>d</td></tr>
+  <tr><td>ň</td><td>n</td></tr>
+  <tr><td>ľ</td><td>l</td></tr>
+  <tr><td>š</td><td>s</td></tr>
+  <tr><td>ž</td><td>z</td></tr>
+  <tr><td>č</td><td>c</td></tr>
+</table>
+
+---
+
+<h2 id="nominative-plural-generator">Nominative Plural Generator</h2>
+<p><code>nominativePlural(word, gender)</code> returns the nominative plural of a Slovak noun.</p>
+
+<h3>Rules by Gender</h3>
+
+<h4>Masculine</h4>
+<ul>
+  <li>Consonant-ending: append <code>i</code> with softening</li>
+  <li><code>-a</code> ending: append <code>ovia</code>, no softening</li>
+</ul>
+
+<h4>Feminine</h4>
+<ul>
+  <li><code>-a</code> ending: append <code>y</code></li>
+  <li><code>-ia</code> ending: append <code>i</code></li>
+  <li>Consonant-ending: append <code>i</code> with softening</li>
+</ul>
+
+<h4>Neuter</h4>
+<ul>
+  <li><code>-o</code>: append <code>á</code></li>
+  <li><code>-e</code>: append <code>ia</code></li>
+  <li><code>-ie</code>: append <code>ia</code></li>
+  <li><code>-um</code>: append <code>á</code></li>
+  <li>Consonant-ending: usually unchanged, softening skipped</li>
+</ul>
+
+---
+
+<h2 id="examples">Examples</h2>
+
+<pre><code>nominativePlural("chlap", "M");        // → "chlapi"
+nominativePlural("princ", "M");        // → "princovia"
+nominativePlural("hrdina", "M");       // → "hrdinovia"
+nominativePlural("kolega", "M");       // → "kolegovia"
+
+nominativePlural("žena", "F");         // → "ženy"
+nominativePlural("chémia", "F");       // → "chémii"
+nominativePlural("kosť", "F");         // → "kosti"
+
+nominativePlural("mesto", "N");        // → "mestá"
+nominativePlural("srdce", "N");        // → "srdcia"
+nominativePlural("vysvedčenie", "N");  // → "vysvedčenia"
+nominativePlural("minimum", "N");      // → "minimá"</code></pre>
+
+---
+
+<h2 id="edge-cases">Edge Cases</h2>
+<ul>
+  <li>Single-letter nouns (e.g., "k" → "ki")</li>
+  <li>Feminine consonant-ending nouns: softening handled</li>
+  <li>Masculine nouns ending in <code>-a</code>: softening skipped</li>
+  <li>Irregulars like <code>dieťa → deti</code> or <code>človek → ľudia</code> should be handled via a lookup table</li>
+</ul>
+
+---
+
+<h2 id="usage">Usage</h2>
+
+<pre><code>import { nominativePlural } from "./NominativeDerivations.js";
+
+const plural = nominativePlural("kosť", "F");
+console.log(plural); // → "kosti"</code></pre>
+
+<p>This module can be used to generate plurals or as a foundation for building **full declension tables** for Slovak nouns.</p>
+
+---
+
+<h2>Flow Diagram</h2>
+<p><em>Word → Stem → Softening → Plural Suffix</em></p>
+<pre>
+Original Word
+     |
+     v
+ deriveStem(word, gender)
+     |
+     v
+ softenStem(stem, gender)
+     |
+     v
+ appendPluralSuffix(stem, gender)
+     |
+     v
+  Nominative Plural
+</pre>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 import { deriveStem, endsWithSoftConsonant, endsWithHardConsonant } from "../vocalGrammer.js";
-import { nominativeNounDeriver } from "./NominativeDerivations.js";
+import { nominativeNounDeriver } from "./NominativeNounDerivations.js";
 
 
 //ONLY FOR  IMPLEMENTATION FOR PLURAL
@@ -23,17 +23,22 @@ function genitivePlural(word, gender, animate = false) {
   if(gender !== "M" || !animate)  return nominativeNounDeriver.plural({ sk: word, gender, animate });
   if (IRREGULAR_GENITIVE_PLURAL[word]) return IRREGULAR_GENITIVE_PLURAL[word];
 
-
+let derived;
+let explanation;
 
   const stem = deriveStem(word, gender);
 
   // Simple softening for common cases can be added later
   if (endsWithSoftConsonant(stem) || endsWithHardConsonant(stem)) {
-    return stem + "ov";
+    derived =  stem + "ov";
+    explanation = `stem (${stem}) + ov for masculine animate nouns`;
+  } else {
+    derived = stem + "ov";
+    explanation = `stem (${stem}) + ov for masculine animate nouns`;
   }
 
   // fallback
-  return stem + "ov";
+  return { derived, explanation };
 }
 
 /**

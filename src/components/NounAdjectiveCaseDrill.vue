@@ -51,7 +51,7 @@
 <script setup>
 import { ref, onMounted, defineProps, computed } from 'vue'
 import { loadVocabulary } from './wordStore.js'
-import { deriveAdjectiveNounCaseForm } from './caseDerivation.js'
+import { deriveAdjectiveNounCase } from './caseDerivation.js'
 import DrillProgress from './DrillProgress.vue'
 import AnswerField from './AnswerField.vue'
 import HistoryList from './HistoryList.vue'
@@ -112,23 +112,20 @@ const submitAnswer = () => {
   const adjective = currentAdjective.value
   const noun = currentNoun.value
 
-  const expected = deriveAdjectiveNounCaseForm(adjective, noun, caseName, currentPlural.value).form
+  const expected = deriveAdjectiveNounCase(adjective, noun, caseName, currentPlural.value)
   const answer = normalizeSpaces(userAnswer.value).toLowerCase()
-  const correct = answer === expected.toLowerCase()
+  const correct = answer === expected.derived.toLowerCase()
 
   totalAttempts.value++
-  addToHistory(`${noun.sk} ${adjective.sk}`, answer, correct, expected)
+  addToHistory(`${adjective.sk} ${noun.sk}`, answer, correct, expected.derived)
 
   if (correct) {
     streakCount.value++
     nextQuestion()
   } else {
     streakCount.value = 0
-    const derived = deriveAdjectiveNounCaseForm(adjective, noun, caseName, currentPlural.value)
-    explanationText.value =
-      expected !== derived.form
-        ? `❗ "${adjective.sk} ${noun.sk}" is irregular — the correct form is "${expected}".`
-        : `Rule: ${derived.explanation}`
+    const derived = deriveAdjectiveNounCase(adjective, noun, caseName, currentPlural.value)
+    explanationText.value = `❗"${expected.derived} ${derived.explanation}`
     showExplanation.value = true
   }
 }

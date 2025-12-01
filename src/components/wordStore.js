@@ -237,8 +237,8 @@ export const  loadAdjectives = async ()=> {
 
 
 export const  loadNouns = async ()=> {
-  const filterFn = (item) => item.gender === 'M' ;
-  return loadWords(NOUNS,nouns,nounsLoaded,DEFAULT_NOUNS)
+  const filterFn = (item) => item.sk === 'nemocnica' ;
+  return loadWords(NOUNS,nouns,nounsLoaded,DEFAULT_NOUNS,filterFn);
 }
 
 export const  loadPropistions = async ()=> {

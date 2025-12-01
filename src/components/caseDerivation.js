@@ -1,4 +1,5 @@
 
+import { adjectiveDeriver,nounDeriver } from './derivations/NounDerivation';
 
 
 //TODO: refine hard/soft consonant handling and definitions
@@ -587,5 +588,20 @@ export const deriveAdjectiveNounCaseForm = (adjective,noun,caseName, plural = fa
   return {
     form : adjectiveForm.form + ' ' + nounForm.form,
     explanation: `adjective:${adjectiveForm.explanation}, noun:${nounForm.explanation}`
+  }
+}
+
+
+export const deriveAdjectiveNounCase = (adjective,noun,caseName, plural = false) => {
+
+  const nounInCasederiver =  plural ? nounDeriver(caseName).plural: nounDeriver(caseName).singular
+  const adjectiveInCasederiver =  plural ? adjectiveDeriver(caseName).plural: adjectiveDeriver(caseName).singular
+
+  const nounInCase =  nounInCasederiver (noun)
+  const adjectiveInCase =  adjectiveInCasederiver (adjective,noun)
+
+  return {
+    derived : `${adjectiveInCase.derived} ${nounInCase.derived}`,
+    explanation: `adjective:${adjectiveInCase.explanation}, noun:${nounInCase.explanation}`
   }
 }

@@ -1,5 +1,5 @@
 import { describe, test, expect } from "vitest";
-import { locativeNounDeriver } from "./LocalativeDerivations.js";
+import { locativeNounDeriver } from "./LocativeNounDerivations.js";
 
 const L = locativeNounDeriver;
 
@@ -9,15 +9,15 @@ describe("Locative — Singular", () => {
   // MASCULINE ANIMATE
   // --------------------
   test("chlap → chlapovi", () => {
-    expect(L.singular("chlap", "M", true)).toBe("chlapovi");
+    expect(L.singular("chlap", "M", true).derived).toBe("chlapovi");
   });
 
   test("syn → synovi", () => {
-    expect(L.singular("syn", "M", true)).toBe("synovi");
+    expect(L.singular("syn", "M", true).derived).toBe("synovi");
   });
 
   test("vojak → vojakovi", () => {
-    expect(L.singular("vojak", "M", true)).toBe("vojakovi");
+    expect(L.singular("vojak", "M", true).derived).toBe("vojakovi");
   });
 
 
@@ -25,11 +25,11 @@ describe("Locative — Singular", () => {
   // MASCULINE INANIMATE
   // --------------------
   test("stroj → stroji", () => {
-    expect(L.singular("stroj", "M", false)).toBe("stroji");
+    expect(L.singular("stroj", "M", false).derived).toBe("stroji");
   });
 
   test("papier → papieri", () => {
-    expect(L.singular("papier", "M", false)).toBe("papieri");
+    expect(L.singular("papier", "M", false).derived).toBe("papieri");
   });
 
 
@@ -37,11 +37,11 @@ describe("Locative — Singular", () => {
   // FEMININE (-a, hard stem)
   // --------------------
   test("žena → žene", () => {
-    expect(L.singular("žena", "F")).toBe("žene");
+    expect(L.singular("žena", "F").derived).toBe("žene");
   });
 
   test("kniha → knihe", () => {
-    expect(L.singular("kniha", "F")).toBe("knihe");
+    expect(L.singular("kniha", "F").derived).toBe("knihe");
   });
 
 
@@ -49,11 +49,11 @@ describe("Locative — Singular", () => {
   // FEMININE (-a, soft stem)
   // --------------------
   test("stanica → stanici", () => {
-    expect(L.singular("stanica", "F")).toBe("stanici");
+    expect(L.singular("stanica", "F").derived).toBe("stanici");
   });
 
   test("ulica → ulici", () => {
-    expect(L.singular("ulica", "F")).toBe("ulici");
+    expect(L.singular("ulica", "F").derived).toBe("ulici");
   });
 
 
@@ -61,7 +61,7 @@ describe("Locative — Singular", () => {
   // FEMININE (-ia → -ii)
   // --------------------
   test("chémia → chémii", () => {
-    expect(L.singular("chémia", "F")).toBe("chémii");
+    expect(L.singular("chémia", "F").derived).toBe("chémii");
   });
 
 
@@ -69,7 +69,7 @@ describe("Locative — Singular", () => {
   // FEMININE consonant-ending (kosť-type)
   // --------------------
   test("kosť → kosti", () => {
-    expect(L.singular("kosť", "F")).toBe("kosti");
+    expect(L.singular("kosť", "F").derived).toBe("kosti");
   });
 
 
@@ -77,7 +77,7 @@ describe("Locative — Singular", () => {
   // NEUTER -o
   // --------------------
   test("mesto → meste", () => {
-    expect(L.singular("mesto", "N")).toBe("meste");
+    expect(L.singular("mesto", "N").derived).toBe("meste");
   });
 
 
@@ -85,7 +85,7 @@ describe("Locative — Singular", () => {
   // NEUTER -e
   // --------------------
   test("srdce → srdci", () => {
-    expect(L.singular("srdce", "N")).toBe("srdci");
+    expect(L.singular("srdce", "N").derived).toBe("srdci");
   });
 
 
@@ -93,7 +93,7 @@ describe("Locative — Singular", () => {
   // NEUTER -um
   // --------------------
   test("centrum → centre", () => {
-    expect(L.singular("centrum", "N")).toBe("centre");
+    expect(L.singular("centrum", "N").derived).toBe("centre");
   });
 
 
@@ -101,7 +101,7 @@ describe("Locative — Singular", () => {
   // NEUTER -ie
   // --------------------
   test("vysvedčenie → vysvedčení", () => {
-    expect(L.singular("vysvedčenie", "N")).toBe("vysvedčení");
+    expect(L.singular("vysvedčenie", "N").derived).toBe("vysvedčení");
   });
 
 });
@@ -113,43 +113,43 @@ describe("Locative — Plural", () => {
 
   // FEMININE
   test("ženy → ženách", () => {
-    expect(L.plural("žena", "F")).toBe("ženách");
+    expect(L.plural("žena", "F").derived).toBe("ženách");
   });
 
   test("stanice → staniciach", () => {
-    expect(L.plural("stanica", "F")).toBe("staniciach");
+    expect(L.plural("stanica", "F").derived).toBe("staniciach");
   });
 
   test("chémie → chémiách", () => {
-    expect(L.plural("chémia", "F")).toBe("chémiách");
+    expect(L.plural("chémia", "F").derived).toBe("chémiách");
   });
 
   test("kosti → kostiach", () => {
-    expect(L.plural("kosť", "F")).toBe("kostiach");
+    expect(L.plural("kosť", "F").derived).toBe("kostiach");
   });
 
 
   // MASCULINE
   test("chlapi → chlapoch", () => {
-    expect(L.plural("chlap", "M", true)).toBe("chlapoch");
+    expect(L.plural("chlap", "M", true).derived).toBe("chlapoch");
   });
 
   test("stroje → strojoch", () => {
-    expect(L.plural("stroj", "M", false)).toBe("strojoch");
+    expect(L.plural("stroj", "M", false).derived).toBe("strojoch");
   });
 
 
   // NEUTER
   test("mestá → mestách", () => {
-    expect(L.plural("mesto", "N")).toBe("mestách");
+    expect(L.plural("mesto", "N").derived).toBe("mestách");
   });
 
   test("srdcia → srdciach", () => {
-    expect(L.plural("srdce", "N")).toBe("srdciach");
+    expect(L.plural("srdce", "N").derived).toBe("srdciach");
   });
 
   test("vysvedčenia → vysvedčeniach", () => {
-    expect(L.plural("vysvedčenie", "N")).toBe("vysvedčeniach");
+    expect(L.plural("vysvedčenie", "N").derived).toBe("vysvedčeniach");
   });
 
 });

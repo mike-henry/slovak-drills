@@ -25,7 +25,7 @@
 
         <div class="text-4xl font-bold mb-1">
           {{ currentNoun.sk }}
-          <span v-if="currentPlural"> in plural</span>
+          <span v-if="currentIsPlural"> in plural</span>
         </div>
 
         <div class="text-slate-400 mb-4">
@@ -71,11 +71,12 @@
 <script setup>
 import { ref, onMounted, defineProps, computed } from 'vue'
 import { loadNouns } from './wordStore.js'
-import { deriveNounCaseForm } from './caseDerivation.js'
 import {  history,  addToHistory,totalAttempts,streakCount,getRandomNoun} from './drillUtils.js'
 import HistoryList from './HistoryList.vue'
 import AnswerField from './AnswerField.vue'
-import DrillProgress from './DrillProgress.vue'         
+import DrillProgress from './DrillProgress.vue'    
+import { nounDeriver } from './derivations/NounDerivation.js' 
+
 
 
 const STREAK_TARGET = 20
@@ -84,6 +85,7 @@ onMounted(() => loadNouns())
 
 const properties = defineProps(['caseName'])
 const caseName = properties.caseName
+const deriver = nounDeriver(caseName)
 
 const caseTitle = computed(() => {
   return capitalizeFirstOnly(properties.caseName)
@@ -95,7 +97,7 @@ const capitalizeFirstOnly = (str) => {
 }
 
 const hasStarted = ref(false)
-const currentPlural = ref(false)
+const currentIsPlural = ref(false)
 const currentNoun = ref({})
 const userAnswer = ref('')
 const showExplanation = ref(false)
@@ -113,7 +115,7 @@ const startQuiz = () => {
 
 const nextQuestion = () => {
   currentNoun.value = getRandomNoun()
-  currentPlural.value = Math.random() < 0.5
+  currentIsPlural.value = Math.random() < 0.5
   userAnswer.value = currentNoun.value.sk
   showExplanation.value = false
   explanationText.value = ''
@@ -121,23 +123,26 @@ const nextQuestion = () => {
 
 const submitAnswer = () => {
   const noun = currentNoun.value
-  const expected = deriveNounCaseForm(noun, caseName, currentPlural.value).form
+  
+  console.log(`submitAnswer: plural=${currentIsPlural}, noun=${noun.sk}, case=${caseName} `);
+  const expectedValue =  currentIsPlural.value ? 
+     deriver.plural(noun):
+     deriver.singular(noun)
+  
   const answer = userAnswer.value.trim().toLowerCase()
-  const correct = answer === expected.toLowerCase()
+  const correct = answer === expectedValue.derived.toLowerCase()
 
   totalAttempts.value++
-  addToHistory(noun.sk, answer, correct,expected)
+  addToHistory(noun.sk, answer, correct,expectedValue.derived)
 
   if (correct) {
     streakCount.value++
     nextQuestion()
   } else {
     streakCount.value = 0
-    const derived = deriveNounCaseForm(noun, caseName)
-    explanationText.value =
-      expected !== derived.form
-        ? `❗ "${noun.sk}" is irregular — the correct form is "${expected}".`
-        : `Rule: ${derived.explanation}`
+    
+    explanationText.value = `❗ "for ${noun.sk}" : explanation "${expectedValue.explanation}".`
+       
     showExplanation.value = true
   }
 }

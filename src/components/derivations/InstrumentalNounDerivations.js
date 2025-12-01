@@ -1,5 +1,5 @@
 import { deriveStem } from "../vocalGrammer.js";
-import { nominativeNounDeriver } from "./NominativeDerivations.js";
+import { nominativeNounDeriver } from "./NominativeNounDerivations.js";
 
 /**
  * Get the instrumental singular form of a Slovak noun

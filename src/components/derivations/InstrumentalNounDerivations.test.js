@@ -1,5 +1,5 @@
 import { describe, test, expect } from "vitest";
-import { instrumentalNounDeriver } from "./InstrumentalDerivations.js";
+import { instrumentalNounDeriver } from "./InstrumentalNounDerivations.js";
 
 // ---------------------------------------------------------
 // MASCULINE — INSTRUMENTAL SINGULAR
@@ -15,7 +15,7 @@ describe("Masculine nouns — instrumental singular", () => {
     expect(instrumentalNounDeriver.singular(chlap)).toBe("chlapom");
     expect(instrumentalNounDeriver.singular(muz)).toBe("mužom");
   });
-
+  
   test("Masculine animate ending in -a → stem + om", () => {
     expect(instrumentalNounDeriver.singular(hrdina)).toBe("hrdinom");
     expect(instrumentalNounDeriver.singular(kolega)).toBe("kolegom");

@@ -1,9 +1,5 @@
 // Hard consonants in Slovak
-// const HARD_CONSONANTS = [
-//   'b', 'c', 'd', 'ď', 'g', 'h', 'ch', 'k', 'l', 'ĺ',
-//   'm', 'n', 'ň', 'p', 'r', 'ŕ', 's', 'š', 't', 'ť',
-//   'v', 'z', 'ž'
-// ];
+
 
 export const HARD_CONSONANTS = [
   "h", "ch", "k", "g",
@@ -11,9 +7,6 @@ export const HARD_CONSONANTS = [
 ];
 
 // Soft consonants in Slovak
-// const SOFT_CONSONANTS = [
-//   'č', 'ď', 'j', 'ľ', 'ň', 'ť', 'ď', 'š', 'ž', 'č', 'dž'
-// ];
 
 export const SOFT_CONSONANTS = [
   "č", "dž", "š", "ž",
@@ -152,7 +145,5 @@ export function deriveStem(word, gender, isPlural = false) {
       throw new Error(`Invalid gender '${gender}' — must be 'Masculine', 'Femanine', or 'Nueter'.`);
   }
 }
-
-
 
 

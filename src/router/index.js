@@ -59,19 +59,19 @@ const routes = [
     path: '/noun-localative-case',
     name: 'localive',
     component: NounCaseDrill,
-    props: { caseName: 'localative' } 
+    props: { caseName: 'locative' } 
   },
    {
     path: '/adjective-localative-case',
     name: 'localive-adjective',
     component: AdjectiveCaseDrill,
-    props: { caseName: 'localative' } 
+    props: { caseName: 'locative' } 
   },
   {
     path: '/adjective-noun-localative-case',
     name: 'localative-adjective-noun',
     component: NounAdjectiveCaseDrill,
-    props: { caseName: 'localative' } 
+    props: { caseName: 'locative' } 
   },
   {
    path: '/proposition-adjective-noun',

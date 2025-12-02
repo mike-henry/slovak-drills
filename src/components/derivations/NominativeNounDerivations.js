@@ -1,5 +1,13 @@
 import { deriveStem, endsWithSoftConsonant } from "../vocalGrammer.js";
 
+const SOFT_CONSONANTS = [
+  "ň", "ľ", "ť", "ď", "j",
+  "c", "č", "š", "ž"
+];
+
+
+const getLast = (str) => str.slice(-1);
+
 // Masculine & neuter softening
 const SOFTENING_MAP = {
   k: "c",
@@ -55,34 +63,41 @@ export function softenStem(stem, gender, originalWord) {
  * @returns {string} plural form
  */
 function nominativePlural(word, gender, animate = false) {
-  let stem = deriveStem(word, gender);
+  let origstem = deriveStem(word, gender);
   let derived;
   let explanation;
 
-  stem = softenStem(stem, gender, word); // apply softening before suffix
-console.log("nominativePlural:");
+  const stem = softenStem(origstem, gender, word); // apply softening before suffix
+  
+  
   switch (gender) {
     case "M":
+        // nouns ending in -a (hrdina, kolega...)
       if (word.endsWith("a")) {
         derived = stem + "ovia";
-        explanation = `softened stem (${stem}) + ovia for masculine nouns ending with -a`;
-      } else {
-        if (animate) {
-          derived = stem + "ovia";
-          explanation = `softened stem (${stem}) + ovia for masculine animate nouns`;
-        }
+        explanation = `stem ${stem} + ovia for masculine nouns ending in -a`;
+        break;
+      }
 
-        if (!animate) {
-          derived = stem + "e";
-          explanation = `softened stem (${stem}) + e for masculine inanimate nouns`;
-          // stroj → stroje
-        } else {
-          derived = stem + "i";
-          explanation = `softened stem (${stem}) + i for masculine nouns`;
-        }
+      // Animate masculine → regular -i (NOT softening!)
+      if (animate) {
+        // Many animate nouns use -i (chlap → chlapi)
+        // Irregular ones like syn → synovia will be handled separately
+        derived = stem + "i";
+        explanation = `stem ${stem} + i for masculine animate nouns`;
+        break;
+      }
+
+      if (endsWithSoftConsonant(origstem)) {
+        derived = stem + "e"; // stroj → stroje
+        explanation = `soft-stem masculine inanimate → stem ${stem} + e`;
+      } else {
+        derived = stem + "y"; // hrad → hrady
+        explanation = `hard-stem masculine inanimate → stem ${stem} + y`;
       }
 
       break;
+
     case "F":
       if (word.endsWith("ie")) {
         derived = stem + "ia";

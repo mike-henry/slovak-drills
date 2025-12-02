@@ -231,19 +231,17 @@ const loadWords = async (
 };
 
 export const  loadAdjectives = async ()=> {
-    
   return loadWords(ADJECTIVES,adjectives,adjectivesLoaded,DEFAULT_ADJECTIVES)
 }
 
 
 export const  loadNouns = async ()=> {
-  const filterFn = (item) => item.sk === 'nemocnica' ;
-  return loadWords(NOUNS,nouns,nounsLoaded,DEFAULT_NOUNS,filterFn);
+    return loadWords(NOUNS,nouns,nounsLoaded,DEFAULT_NOUNS);
 }
 
 export const  loadPropistions = async ()=> {
   // const includedCases = ["instrumental","localative","accusative"]
-  const includedCases = ["localative"]
+  const includedCases = ["locative"]
   const filterFn = (item) => includedCases.includes(item.case);
   return loadWords(PROPOSITIONS,propositions,propositionsLoaded,DEFAULT_PROPOSITIONS,filterFn);
 }

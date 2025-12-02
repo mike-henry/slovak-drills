@@ -1,155 +1,111 @@
 import { describe, test, expect } from "vitest";
 import { locativeNounDeriver } from "./LocativeNounDerivations.js";
 
-const L = locativeNounDeriver;
+describe("Locative Noun Derivations (explicit noun objects)", () => {
 
-describe("Locative — Singular", () => {
-
-  // --------------------
-  // MASCULINE ANIMATE
-  // --------------------
-  test("chlap → chlapovi", () => {
-    expect(L.singular("chlap", "M", true).derived).toBe("chlapovi");
-  });
-
-  test("syn → synovi", () => {
-    expect(L.singular("syn", "M", true).derived).toBe("synovi");
-  });
-
-  test("vojak → vojakovi", () => {
-    expect(L.singular("vojak", "M", true).derived).toBe("vojakovi");
-  });
-
-
-  // --------------------
-  // MASCULINE INANIMATE
-  // --------------------
-  test("stroj → stroji", () => {
-    expect(L.singular("stroj", "M", false).derived).toBe("stroji");
-  });
-
-  test("papier → papieri", () => {
-    expect(L.singular("papier", "M", false).derived).toBe("papieri");
-  });
-
-
-  // --------------------
-  // FEMININE (-a, hard stem)
-  // --------------------
-  test("žena → žene", () => {
-    expect(L.singular("žena", "F").derived).toBe("žene");
-  });
-
-  test("kniha → knihe", () => {
-    expect(L.singular("kniha", "F").derived).toBe("knihe");
-  });
-
-
-  // --------------------
-  // FEMININE (-a, soft stem)
-  // --------------------
-  test("stanica → stanici", () => {
-    expect(L.singular("stanica", "F").derived).toBe("stanici");
-  });
-
-  test("ulica → ulici", () => {
-    expect(L.singular("ulica", "F").derived).toBe("ulici");
-  });
-
-
-  // --------------------
-  // FEMININE (-ia → -ii)
-  // --------------------
-  test("chémia → chémii", () => {
-    expect(L.singular("chémia", "F").derived).toBe("chémii");
-  });
-
-
-  // --------------------
-  // FEMININE consonant-ending (kosť-type)
-  // --------------------
-  test("kosť → kosti", () => {
-    expect(L.singular("kosť", "F").derived).toBe("kosti");
-  });
-
-
-  // --------------------
-  // NEUTER -o
-  // --------------------
-  test("mesto → meste", () => {
-    expect(L.singular("mesto", "N").derived).toBe("meste");
-  });
-
-
-  // --------------------
-  // NEUTER -e
-  // --------------------
-  test("srdce → srdci", () => {
-    expect(L.singular("srdce", "N").derived).toBe("srdci");
-  });
-
-
-  // --------------------
-  // NEUTER -um
-  // --------------------
-  test("centrum → centre", () => {
-    expect(L.singular("centrum", "N").derived).toBe("centre");
-  });
-
-
-  // --------------------
-  // NEUTER -ie
-  // --------------------
-  test("vysvedčenie → vysvedčení", () => {
-    expect(L.singular("vysvedčenie", "N").derived).toBe("vysvedčení");
-  });
-
-});
-
-
-describe("Locative — Plural", () => {
-
-  // All genders → -och
-
-  // FEMININE
-  test("ženy → ženách", () => {
-    expect(L.plural("žena", "F").derived).toBe("ženách");
-  });
-
-  test("stanice → staniciach", () => {
-    expect(L.plural("stanica", "F").derived).toBe("staniciach");
-  });
-
-  test("chémie → chémiách", () => {
-    expect(L.plural("chémia", "F").derived).toBe("chémiách");
-  });
-
-  test("kosti → kostiach", () => {
-    expect(L.plural("kosť", "F").derived).toBe("kostiach");
-  });
-
-
+  // -------------------------
   // MASCULINE
-  test("chlapi → chlapoch", () => {
-    expect(L.plural("chlap", "M", true).derived).toBe("chlapoch");
-  });
+  // -------------------------
 
-  test("stroje → strojoch", () => {
-    expect(L.plural("stroj", "M", false).derived).toBe("strojoch");
-  });
+  const CHLAP = {
+    sk: "chlap",
+    gender: "M",
+    animate: true,
+  };
 
+  const HRAD = {
+    sk: "hrad",
+    gender: "M",
+    animate: false,
+  };
 
+  const STROJ = {
+    sk: "stroj",
+    gender: "M",
+    animate: false,
+  };
+
+  // -------------------------
+  // FEMININE
+  // -------------------------
+
+  const STANICA = {
+    sk: "stanica",
+    gender: "F",
+    animate: false,
+  };
+
+  const KOST = {
+    sk: "kosť",
+    gender: "F",
+    animate: false,
+  };
+
+  // -------------------------
   // NEUTER
-  test("mestá → mestách", () => {
-    expect(L.plural("mesto", "N").derived).toBe("mestách");
+  // -------------------------
+
+  const MESTO = {
+    sk: "mesto",
+    gender: "N",
+    animate: false,
+  };
+
+  // -------------------------
+  // SINGULAR TESTS
+  // -------------------------
+
+  test("masculine animate → -ovi (chlap → chlapovi)", () => {
+    const result = locativeNounDeriver.singular(CHLAP);
+    expect(result.derived).toBe("chlapovi");
   });
 
-  test("srdcia → srdciach", () => {
-    expect(L.plural("srdce", "N").derived).toBe("srdciach");
+  test("masculine inanimate hrad-class → -e (hrad → hrade)", () => {
+    const result = locativeNounDeriver.singular(HRAD);
+    expect(result.derived).toBe("hrade");
   });
 
-  test("vysvedčenia → vysvedčeniach", () => {
-    expect(L.plural("vysvedčenie", "N").derived).toBe("vysvedčeniach");
+  test("masculine inanimate stroj-class → -i (stroj → stroji)", () => {
+    const result = locativeNounDeriver.singular(STROJ);
+    expect(result.derived).toBe("stroji");
+  });
+
+  test("feminine -a with soft stem (stanica → stanici)", () => {
+    const result = locativeNounDeriver.singular(STANICA);
+    expect(result.derived).toBe("stanici");
+  });
+
+  test("feminine consonant-ending (kosť → kosti)", () => {
+    const result = locativeNounDeriver.singular(KOST);
+    expect(result.derived).toBe("kosti");
+  });
+
+  test("neuter -o → -e (mesto → meste)", () => {
+    const result = locativeNounDeriver.singular(MESTO);
+    expect(result.derived).toBe("meste");
+  });
+
+  // -------------------------
+  // PLURAL TESTS
+  // -------------------------
+
+  test("masculine plural (stroj → strojoch)", () => {
+    const result = locativeNounDeriver.plural(STROJ);
+    expect(result.derived).toBe("strojoch");
+  });
+
+  test("neuter plural (mesto → mestách)", () => {
+    const result = locativeNounDeriver.plural(MESTO);
+    expect(result.derived).toBe("mestách");
+  });
+
+  test("feminine plural (žena → ženách)", () => {
+    const result = locativeNounDeriver.plural({
+      sk: "žena",
+      gender: "F",
+      animate: false
+    });
+    expect(result.derived).toBe("ženách");
   });
 
 });

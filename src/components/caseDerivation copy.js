@@ -1,5 +1,5 @@
 
-import { adjectiveDeriver,nounDeriver } from './derivations/NounDerivation';
+import { adjectiveDeriver,nounDeriver } from './derivations/_NounDerivation';
 
 
 //TODO: refine hard/soft consonant handling and definitions
@@ -582,7 +582,7 @@ export const deriveAdjectiveCaseForm = (adj, caseName, gender, plural = false, a
   };
 };
 
-export const deriveAdjectiveNounCaseForm = (adjective,noun,caseName, plural = false) => {
+ const deriveAdjectiveNounCaseForm = (adjective,noun,caseName, plural = false) => {
   const adjectiveForm = deriveAdjectiveCaseForm (adjective, caseName, noun.gender, plural, noun.animate)
   const nounForm =  deriveNounCaseForm (noun, caseName, plural)
   return {
@@ -592,16 +592,33 @@ export const deriveAdjectiveNounCaseForm = (adjective,noun,caseName, plural = fa
 }
 
 
-export const deriveAdjectiveNounCase = (adjective,noun,caseName, plural = false) => {
+// Derived form  ________________________________________________________________________________________________
 
+export const deriveAdjectiveNounCase = (adjective,noun,caseName, plural = false) => {
   const nounInCasederiver =  plural ? nounDeriver(caseName).plural: nounDeriver(caseName).singular
   const adjectiveInCasederiver =  plural ? adjectiveDeriver(caseName).plural: adjectiveDeriver(caseName).singular
-
   const nounInCase =  nounInCasederiver (noun)
   const adjectiveInCase =  adjectiveInCasederiver (adjective,noun)
-
   return {
     derived : `${adjectiveInCase.derived} ${nounInCase.derived}`,
-    explanation: `adjective:${adjectiveInCase.explanation}, noun:${nounInCase.explanation}`
+    explanation: `for ${caseName} - adjective:${adjectiveInCase.explanation}, noun:${nounInCase.explanation}`
+  }
+}
+
+export const deriveNounCase = (noun,caseName, plural = false) => {
+  const nounInCasederiver =  plural ? nounDeriver(caseName).plural: nounDeriver(caseName).singular
+  const nounInCase =  nounInCasederiver (noun)
+  return {
+    derived : nounInCase.derived,
+    explanation: `for ${caseName} - noun:${nounInCase.explanation}`
+  }
+}
+
+export const deriveAdjectiveCase = (adjective,noun,caseName, plural = false) => {
+  const adjectiveInCasederiver =  plural ? adjectiveDeriver(caseName).plural: adjectiveDeriver(caseName).singular
+  const adjectiveInCase =  adjectiveInCasederiver (adjective,noun)
+  return {
+    derived : adjectiveInCase.derived,
+    explanation: `for ${caseName} - adjective:${adjectiveInCase.explanation}`
   }
 }

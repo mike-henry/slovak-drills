@@ -18,7 +18,7 @@
       <div class="drill-panel">
         <div class="text-4xl font-bold mb-1">
           {{ currentAdjective.sk }} {{ currentNoun.sk }}
-          <span v-if="currentPlural"> in plural</span>
+          <span lass="drill-plural"  v-if="currentPlural"> in plural</span>
         </div>
 
         <div class="prompt-subtext">
@@ -51,7 +51,7 @@
 <script setup>
 import { ref, onMounted, defineProps, computed } from 'vue'
 import { loadVocabulary } from './wordStore.js'
-import { deriveAdjectiveNounCase } from './caseDerivation.js'
+import { deriveAdjectiveNounCase } from './derivations/CaseDerivation.js'
 import DrillProgress from './DrillProgress.vue'
 import AnswerField from './AnswerField.vue'
 import HistoryList from './HistoryList.vue'

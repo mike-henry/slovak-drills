@@ -25,7 +25,7 @@
 
         <div class="text-4xl font-bold mb-1">
           {{ currentNoun.sk }}
-          <span v-if="currentIsPlural"> in plural</span>
+          <span class="drill-plural" v-if="currentIsPlural"> in plural</span>
         </div>
 
         <div class="text-slate-400 mb-4">
@@ -75,7 +75,7 @@ import {  history,  addToHistory,totalAttempts,streakCount,getRandomNoun} from '
 import HistoryList from './HistoryList.vue'
 import AnswerField from './AnswerField.vue'
 import DrillProgress from './DrillProgress.vue'    
-import { nounDeriver } from './derivations/NounDerivation.js' 
+import { nounDeriver } from './derivations/CaseDerivation.js' 
 
 
 

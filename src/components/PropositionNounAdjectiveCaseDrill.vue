@@ -1,11 +1,11 @@
 <template>
   <div class="drill-container">
     <h1 class="title">
-      Slovak {{ caseTitle }} adjective with noun Case Drill
+      Slovak proposition adjective with noun Case Drill
     </h1>
 
     <p class="subtitle">
-      Type the correct <b>{{ caseTitle }}</b> form of each adjective.
+      Type the correct  form of each adjective and noun
     </p>
 
     <div v-if="!started" class="text-center mt-8">
@@ -18,7 +18,7 @@
       <div class="drill-panel">
         <div class="text-4xl font-bold mb-1">
            {{ currentProposition.sk }} {{ currentAdjective.sk }} {{ currentNoun.sk }}
-          <span v-if="currentPlural"> in plural</span>
+          <span  class="drill-plural" v-if="currentPlural"> in plural</span>
         </div>
 
         <div class="prompt-subtext">
@@ -51,7 +51,7 @@
 <script setup>
 import { ref, onMounted, defineProps, computed } from 'vue'
 import { loadVocabulary } from './wordStore.js'
-import { deriveAdjectiveNounCaseForm } from './caseDerivation.js'
+import { deriveAdjectiveNounCase } from './derivations/CaseDerivation.js'
 import DrillProgress from './DrillProgress.vue'
 import AnswerField from './AnswerField.vue'
 import HistoryList from './HistoryList.vue'
@@ -116,7 +116,7 @@ const submitAnswer = () => {
   const adjective = currentAdjective.value
   const noun = currentNoun.value
   const proposition = currentProposition.value
-  const expectedAdjectiveNoun = deriveAdjectiveNounCaseForm(adjective, noun, caseName.value, currentPlural.value).form
+  const expectedAdjectiveNoun = deriveAdjectiveNounCase(adjective, noun, caseName.value, currentPlural.value).derived
   const expected = `${proposition.sk} ${expectedAdjectiveNoun}`
   const answer = normalizeSpaces(userAnswer.value).toLowerCase()
   const correct = answer === expected.toLowerCase()
@@ -129,11 +129,11 @@ const submitAnswer = () => {
     nextQuestion()
   } else {
     streakCount.value = 0
-    const derived = deriveAdjectiveNounCaseForm(adjective, noun, caseName.value, currentPlural.value)
-    explanationText.value =
-      expected !== derived.form
-        ? `❗ "${adjective.sk} ${noun.sk}" is irregular — the correct form is "${expected}".`
-        : `Rule: ${derived.explanation}`
+    const derived =  deriveAdjectiveNounCase(adjective, noun, caseName.value, currentPlural.value)
+    explanationText.value = 
+      
+        `❗ for ${proposition} - ${derived.explanation} `
+      
     showExplanation.value = true
   }
 }

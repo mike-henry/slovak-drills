@@ -48,3 +48,8 @@
 .drill-history {
   @apply text-slate-400 dark:text-slate-500;
 }
+
+/* Plural Text indication */
+.drill-plural {
+  color: red;
+}

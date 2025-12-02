@@ -1,13 +1,13 @@
 [
-  { "en": "in", "sk": "v", "case": "localative" },
+  { "en": "in", "sk": "v", "case":"locative"},
   { "en": "into", "sk": "v", "case": "accusative" },
 
-  { "en": "in", "sk": "vo", "case": "localative" },
+  { "en": "in", "sk": "vo", "case":"locative"},
   { "en": "into", "sk": "vo", "case": "accusative" },
 
-  { "en": "on", "sk": "na", "case": "localative" },
+  { "en": "on", "sk": "na", "case":"locative"},
   { "en": "onto", "sk": "na", "case": "accusative" },
-  { "en": "at", "sk": "na", "case": "localative" },
+  { "en": "at", "sk": "na", "case":"locative"},
 
   { "en": "from", "sk": "z", "case": "genitive" },
   { "en": "from", "sk": "zo", "case": "genitive" },
@@ -31,7 +31,7 @@
   { "en": "over", "sk": "nad", "case": "instrumental" },
   { "en": "over", "sk": "nad", "case": "accusative" },
 
-  { "en": "near", "sk": "pri", "case": "localative" },
+  { "en": "near", "sk": "pri", "case":"locative"},
 
   { "en": "between", "sk": "medzi", "case": "instrumental" },
   { "en": "between", "sk": "medzi", "case": "accusative" },
@@ -42,7 +42,7 @@
   { "en": "beyond", "sk": "za", "case": "accusative" },
   { "en": "beyond", "sk": "za", "case": "instrumental" },
 
-  { "en": "by", "sk": "pri", "case": "localative" },
+  { "en": "by", "sk": "pri", "case":"locative"},
 
   { "en": "around", "sk": "okolo", "case": "genitive" },
 
@@ -51,7 +51,7 @@
   { "en": "across", "sk": "cez", "case": "accusative" },
   { "en": "through", "sk": "cez", "case": "accusative" },
 
-  { "en": "past", "sk": "popri", "case": "localative" },
+  { "en": "past", "sk": "popri", "case":"locative"},
   { "en": "past", "sk": "popri", "case": "accusative" },
 
   { "en": "towards", "sk": "k", "case": "dative" },
@@ -64,7 +64,7 @@
 
   { "en": "against", "sk": "proti", "case": "dative" },
 
-  { "en": "after", "sk": "po", "case": "localative" },
+  { "en": "after", "sk": "po", "case":"locative"},
   { "en": "after", "sk": "po", "case": "accusative" },
 
   { "en": "before", "sk": "pred", "case": "instrumental" },
@@ -79,11 +79,11 @@
   { "en": "across", "sk": "ponad", "case": "accusative" },
   { "en": "over", "sk": "ponad", "case": "accusative" },
 
-  { "en": "along", "sk": "popri", "case": "localative" },
+  { "en": "along", "sk": "popri", "case":"locative"},
   { "en": "along", "sk": "popri", "case": "accusative" },
 
   { "en": "in front of", "sk": "pred", "case": "instrumental" },
   { "en": "in front of", "sk": "pred", "case": "accusative" },
 
-  { "en": "beside", "sk": "pri", "case": "localative" }
+  { "en": "beside", "sk": "pri", "case":"locative"}
 ]

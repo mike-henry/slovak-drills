@@ -26,7 +26,7 @@ const SOFTENING_MAP = {
 function accusativeSingular(word, gender, animate = false) {
   let derived;
   let explanation;
-  console.log("accusativeSingular:");
+  
   switch (gender) {
     case "M":
       // Inanimate → same as nominative

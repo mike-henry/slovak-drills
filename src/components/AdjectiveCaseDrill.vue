@@ -22,7 +22,7 @@
           {{ currentAdjective.sk }}:
           of <span v-if="currentNoun.animate">living </span>
           {{ currentGenderText }}
-          <span v-if="currentPlural"> in plural</span>
+          <span class="drill-plural" v-if="currentPlural"> in plural</span>
         </div>
 
         <div class="text-slate-400 mb-4">({{ currentAdjective.en }})</div>
@@ -66,7 +66,7 @@ import { ref, onMounted, defineProps, computed } from 'vue'
 import AnswerField from './AnswerField.vue'
 import HistoryList from './HistoryList.vue'
 import { loadVocabulary, nouns ,adjectives } from './wordStore.js'
-import { deriveNounCaseForm, deriveAdjectiveCaseForm } from './caseDerivation.js'
+import { deriveAdjectiveCase } from './derivations/CaseDerivation.js'
 import { addToHistory,history, streakCount,totalAttempts} from './drillUtils'
 import DrillProgress from './DrillProgress.vue'
 
@@ -97,7 +97,6 @@ const userAnswer = ref('')
 const showExplanation = ref(false)
 const explanationText = ref('')
 
-//const totalAttempts = ref(0)
 
 
 const answerInput = ref(null)
@@ -157,7 +156,7 @@ const submitAnswer = () => {
   const adjective = currentAdjective.value 
   const noun = currentNoun.value
   //(adj, caseName, gender, plural = false, animate = false)
-  const expected = deriveAdjectiveCaseForm(adjective,caseName, noun.gender, currentPlural.value,noun.animate).form
+  const expected = deriveAdjectiveCase(adjective, noun,caseName,currentPlural.value).derived
   const answer = userAnswer.value.trim().toLowerCase()
   const correct = answer === expected.toLowerCase()
 
@@ -169,11 +168,8 @@ const submitAnswer = () => {
     nextQuestion()
   } else {
     streakCount.value = 0
-    const derived = deriveNounCaseForm(noun, caseName, currentPlural.value)
-    explanationText.value =
-      expected !== derived.form
-        ? `❗ "${adjective.sk}" is irregular — the correct form is "${expected}".`
-        : `Rule: ${derived.explanation}`
+    const derived =  deriveAdjectiveCase(adjective, noun,caseName,currentPlural.value)
+    explanationText.value = `❗ "${derived.explanation}`
     showExplanation.value = true
   }
 }
@@ -188,6 +184,10 @@ const progressPercent = computed(() =>
 </script>
 
 <style scoped>
+
+.plural {
+  color: red;
+}
 ul::-webkit-scrollbar {
   width: 6px;
 }

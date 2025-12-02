@@ -21,20 +21,22 @@ function locativeSingular(word, gender, animate = false) {
   const stem = deriveStem(word, gender);
   let derived;
   let explanation;
+
+const nominativePluralDerived = () => nominativeNounDeriver.plural({
+      sk: word,
+      gender,
+      animate,
+    }).derived
+
+
+
   // ---------- MASCULINE ----------
   if (gender === "M") {
     // Animate → -ovi (chlap → o chlapovi)
     if (animate) { derived = stem + "ovi"; explanation= `animate noun ${stem} + ov + i`; return {derived, explanation}; }
-
     // Inanimate: determine hrad vs stroj class
-    const nominativePluralDerived = nominativeNounDeriver.plural({
-      sk: word,
-      gender,
-      animate,
-    }).derived;
-
     // stroj-class → plural in -e → locative in -i
-    if (nominativePluralDerived.endsWith("e")) {
+    if (nominativePluralDerived().endsWith("e")) {
       derived = stem + "i"; // stroj → o stroji
       explanation= `inanimate noun ${stem} + i` ;
     } else {
@@ -177,13 +179,10 @@ export function locativePlural(word, gender, animate = false) {
   }
 
 
-
-
-
   return { derived, explanation };
 }
 
 export const locativeNounDeriver = {
-  singular: locativeSingular,
-  plural: locativePlural,
+  singular: (noun) =>locativeSingular(noun.sk,noun.gender,noun.animate),
+  plural: (noun) =>locativePlural(noun.sk,noun.gender,noun.animate)
 };

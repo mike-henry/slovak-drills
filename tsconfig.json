@@ -1,0 +1,18 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "compilerOptions": {
+    "allowJs": true,         // ← JS is allowed
+    "checkJs": false,        // ← doesn't type-check JS yet
+    "strict": false,         // ← loosen rules until you're ready
+    "isolatedModules": true,
+    "noEmit": true,
+    "moduleResolution": "bundler",
+    "module": "ESNext",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*", "vite.config.*", "vitest.config.*"]
+}
+

@@ -83,6 +83,6 @@ let explanation;
 }
 
 export const nominativeAdjectiveDeriver = {
-  singular: nominativeSingular,
-  plural: nominativePlural,
+  singular: (adjective,noun) =>nominativeSingular(adjective.sk,noun),
+  plural: (adjective,noun) =>nominativePlural(adjective.sk,noun),
 };

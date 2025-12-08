@@ -1,5 +1,6 @@
 import { nominativeNounDeriver } from "./NominativeNounDerivations.js";
 import { genitiveNounDeriver } from "./GenitiveNounDerivations.js";
+import { deriveStem } from "../vocalGrammer.js";
 
 const IRREGULAR_ACCUSATIVE = {
   otec: "otca",
@@ -52,7 +53,8 @@ function accusativeSingular(word, gender, animate = false) {
          derived = word.slice(0, -1) + "u"; // hrdina → hrdinu
          explanation = `animate noun stem (${word.slice(0, -1)}) + u`;
       } else {
-           derived = word + "a"; // chlap → chlapa
+           const stem = deriveStem(word,gender,false,animate)
+           derived = stem + "a"; // chlap → chlapa
            explanation = `animate noun ${word} + a`;
       }
       break;
@@ -97,11 +99,22 @@ export const accusativeNounDeriver = {
     // noun.sk = the word
     // noun.gender = M/F/N
     // noun.animate = boolean (only meaningful for masculine)
-    return accusativeSingular(noun.sk, noun.gender, noun.animate);
+    const derivation = accusativeSingular(noun.sk, noun.gender, noun.animate);
+
+    return {
+      derived: derivation.derived,
+      explanation: derivation.explanation,
+      documentation: 'noun-endings-singular'
+    }
   },
 
   plural: (noun) => {
-    return accusativePlural(noun.sk, noun.gender, noun.animate);
+    const derivation =  accusativePlural(noun.sk, noun.gender, noun.animate);
+        return {
+      derived: derivation.derived,
+      explanation: derivation.explanation,
+      documentation: 'noun-endings-plural'
+    }
   },
 };
 

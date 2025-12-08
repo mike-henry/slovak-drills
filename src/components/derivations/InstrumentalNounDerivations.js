@@ -2,75 +2,129 @@ import { deriveStem } from "../vocalGrammer.js";
 import { nominativeNounDeriver } from "./NominativeNounDerivations.js";
 
 /**
- * Get the instrumental singular form of a Slovak noun
- *
- * @param {string} word - noun in Slovak
- * @param {"M"|"F"|"N"} gender - grammatical gender
- * @param {boolean} [animate=false] - only used for masculine nouns
- * @returns {string} - instrumental singular
+ * Instrumental singular
  */
 function instrumentalSingular(word, gender, animate = false) {
   const stem = deriveStem(word, gender);
 
   switch (gender) {
-    case "M":
-      return stem + "om"; // chlap → chlapom, hrdina → hrdinom
-    case "F":
-      if (word.endsWith("ia")) return stem + "iou"; // chémia → chémiou
-      if (word.endsWith("a")) return stem + "ou"; // žena → ženou, kniha → knihou
-      return stem + "ou"; // consonant-ending feminines: kosť → kosťou
-    case "N":
-      if (word.endsWith("ie")) return stem + "ím"; // vysvedčenie → vysvedčením
-      return stem + "om"; // mesto → mestom, more → morom
+    case "M": {
+      const derived = stem + "om";
+      return {
+        derived,
+        explanation: `masculine instrumental singular = stem (${stem}) + om`,
+      };
+    }
+
+    case "F": {
+      if (word.endsWith("ia")) {
+        const derived = stem + "iou";
+        return {
+          derived,
+          explanation: `feminine ending -ia → instrumental singular = stem (${stem}) + iou`,
+        };
+      }
+
+      if (word.endsWith("a")) {
+        const derived = stem + "ou";
+        return {
+          derived,
+          explanation: `feminine ending -a → instrumental singular = stem (${stem}) + ou`,
+        };
+      }
+
+      const derived = stem + "ou";
+      return {
+        derived,
+        explanation: `consonant-ending feminine → instrumental singular = stem (${stem}) + ou`,
+      };
+    }
+
+    case "N": {
+      if (word.endsWith("ie")) {
+        const derived = stem + "ím";
+        return {
+          derived,
+          explanation: `neuter ending -ie → instrumental singular = stem (${stem}) + ím`,
+        };
+      }
+
+      const derived = stem + "om";
+      return {
+        derived,
+        explanation: `neuter instrumental singular = stem (${stem}) + om`,
+      };
+    }
+
     default:
       throw new Error("Invalid gender");
   }
 }
 
 /**
- * Get the instrumental plural form of a Slovak noun
- *
- * @param {string} word - noun in Slovak
- * @param {"M"|"F"|"N"} gender - grammatical gender
- * @param {boolean} [animate=false] - only used for masculine nouns
- * @returns {string} - instrumental plural
+ * Instrumental plural
  */
-
-// ---------------------------
-// INSTRUMENTAL PLURAL
-// ---------------------------
 export function instrumentalPlural(word, gender, animate = false) {
-  // Derive the singular stem first
   const stem = deriveStem(word, gender, true);
 
-  // ------------------- MASCULINE -------------------
+  // ----- MASCULINE -----
   if (gender === "M") {
-    // animate or inanimate, same suffix for plural: -mi
     if (word.endsWith("a")) {
-      // masculine nouns ending in -a (hrdina → hrdinami)
-      return stem + "ami";
+      const derived = stem + "ami";
+      return {
+        derived,
+        explanation: `masculine ending -a → instrumental plural = stem (${stem}) + ami`,
+      };
     }
-    // consonant-ending masculine (chlap → chlapmi)
-    return stem + "mi";
+
+    const derived = stem + "mi";
+    return {
+      derived,
+      explanation: `masculine consonant-ending → instrumental plural = stem (${stem}) + mi`,
+    };
   }
 
-  // ------------------- FEMININE -------------------
+  // ----- FEMININE -----
   if (gender === "F") {
-    // All feminine plurals: -ami
-    if(word.endsWith("ia"))  return stem + "iami"; // chémia → chémiami
-    return stem + "ami";
+    if (word.endsWith("ia")) {
+      const derived = stem + "iami";
+      return {
+        derived,
+        explanation: `feminine ending -ia → instrumental plural = stem (${stem}) + iami`,
+      };
+    }
+
+    const derived = stem + "ami";
+    return {
+      derived,
+      explanation: `feminine instrumental plural = stem (${stem}) + ami`,
+    };
   }
 
-  // ------------------- NEUTER -------------------
+  // ----- NEUTER -----
   if (gender === "N") {
-    // All neuter plurals: -ami
-    return stem + "ami";
+    const derived = stem + "ami";
+    return {
+      derived,
+      explanation: `neuter instrumental plural = stem (${stem}) + ami`,
+    };
   }
 
   throw new Error("Invalid gender for instrumental plural");
 }
 
 export const instrumentalNounDeriver = {
-  singular: (noun) => instrumentalSingular(noun.sk, noun.gender, noun.animate),
-  plural: (noun) => instrumentalPlural(noun.sk, noun.gender, noun.animate),
+  singular: (noun) =>
+    instrumentalSingular(
+      noun.sk,
+      noun.gender,
+      noun.animate
+    ),
+
+  plural: (noun) =>
+    instrumentalPlural(
+      noun.sk,
+      noun.gender,
+      noun.animate
+    ),
 };

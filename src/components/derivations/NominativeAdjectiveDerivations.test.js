@@ -12,7 +12,7 @@ describe("Nominative Adjectives — Singular", () => {
   const zena  = { sk: "žena", gender: "F", animate: false };
   const mesto = { sk: "mesto", gender: "N", animate: false };
 
-  const adj = "dobrý";
+  const adj =  { sk: "dobrý" };
 
   test("Masculine animate singular → -ý", () => {
     expect(nominativeAdjectiveDeriver.singular(adj, chlap).derived).toBe("dobrý");
@@ -40,7 +40,7 @@ describe("Nominative Adjectives — Plural", () => {
   const zeny   = { sk: "ženy", gender: "F", animate: false };
   const mesta  = { sk: "mestá", gender: "N", animate: false };
 
-  const adj = "dobrý";
+  const adj = {sk :"dobrý" };
 
   test("Masculine animate plural → -í", () => {
     expect(nominativeAdjectiveDeriver.plural(adj, chlapi).derived).toBe("dobrí");

@@ -1,10 +1,5 @@
 import { deriveStem, endsWithSoftConsonant } from "../vocalGrammer.js";
 
-const SOFT_CONSONANTS = [
-  "ň", "ľ", "ť", "ď", "j",
-  "c", "č", "š", "ž"
-];
-
 
 const getLast = (str) => str.slice(-1);
 
@@ -62,20 +57,26 @@ export function softenStem(stem, gender, originalWord) {
  * @param {"M"|"F"|"N"} gender - grammatical gender
  * @returns {string} plural form
  */
-function nominativePlural(word, gender, animate = false) {
-  let origstem = deriveStem(word, gender);
+function nominativePlural(word, gender, animate = false,pluralOnly = false) {
+  let orgininalStem = deriveStem(word, gender,pluralOnly,animate);
   let derived;
   let explanation;
 
-  const stem = softenStem(origstem, gender, word); // apply softening before suffix
+  const softenedStem = softenStem(orgininalStem, gender, word); // apply softening before suffix
   
+  if (pluralOnly){
+    return {
+      derived: word,
+      explanation: `"${word}" only has plural form`
+    }
+  }
   
   switch (gender) {
     case "M":
         // nouns ending in -a (hrdina, kolega...)
       if (word.endsWith("a")) {
-        derived = stem + "ovia";
-        explanation = `stem ${stem} + ovia for masculine nouns ending in -a`;
+        derived = softenedStem + "ovia";
+        explanation = `stem ${softenedStem} + ovia for masculine nouns ending in -a`;
         break;
       }
 
@@ -83,59 +84,58 @@ function nominativePlural(word, gender, animate = false) {
       if (animate) {
         // Many animate nouns use -i (chlap → chlapi)
         // Irregular ones like syn → synovia will be handled separately
-        derived = stem + "i";
-        explanation = `stem ${stem} + i for masculine animate nouns`;
+        derived = softenedStem + "i";
+        explanation = `stem ${softenedStem} + i for masculine animate nouns`;
         break;
       }
-
-      if (endsWithSoftConsonant(origstem)) {
-        derived = stem + "e"; // stroj → stroje
-        explanation = `soft-stem masculine inanimate → stem ${stem} + e`;
+      if (endsWithSoftConsonant(orgininalStem)) {
+        derived = orgininalStem + "e"; // stroj → stroje
+        explanation = `soft-stem masculine inanimate → stem ${softenedStem} + e`;
       } else {
-        derived = stem + "y"; // hrad → hrady
-        explanation = `hard-stem masculine inanimate → stem ${stem} + y`;
+        derived = orgininalStem + "y"; // hrad → hrady
+        explanation = `hard-stem masculine inanimate → stem ${softenedStem} + y`;
       }
 
       break;
 
     case "F":
       if (word.endsWith("ie")) {
-        derived = stem + "ia";
-        explanation = `stem ${stem} + ia for feminines ending with ie`;
+        derived = softenedStem + "ia";
+        explanation = `stem ${softenedStem} + ia for feminines ending with ie`;
       } else if (word.endsWith("ia")) {
-        derived = stem + "ie";
-        explanation = `stem ${stem} + ie for feminines ending with ia`;
+        derived = softenedStem + "ie";
+        explanation = `stem ${softenedStem} + ie for feminines ending with ia`;
         // chemia → chémie
       } else if (word.endsWith("a")) {
-        if (endsWithSoftConsonant(stem)) {
+        if (endsWithSoftConsonant(orgininalStem)) {
           // stanica -> stanice
-          derived = stem + "e";
-          explanation = `softened stem (${stem}) + e for feminines with soft consonant-ending`;
+          derived = softenedStem + "e";
+          explanation = `softened stem (${softenedStem}) + e for feminines with soft consonant-ending`;
         } else {
           // žena → ženy
-          derived = stem + "y";
-          explanation = `stem (${stem}) + y for feminines ending with -a`;
+          derived = softenedStem + "y";
+          explanation = `stem (${softenedStem}) + y for feminines ending with -a`;
         }
       } else {
-        derived = stem + "i"; // consonant-ending feminines: kosť → kosti
-        explanation = `stem (${stem}) + i for consonant-ending feminines`;
+        derived = softenedStem + "i"; // consonant-ending feminines: kosť → kosti
+        explanation = `stem (${softenedStem}) + i for consonant-ending feminines`;
       }
       break;
     case "N":
       if (word.endsWith("o")) {
-        derived = stem + "á"; // mesto → mestá
-        explanation = `stem ${stem} + á for neuters ending with o`;
+        derived = softenedStem + "á"; // mesto → mestá
+        explanation = `stem ${softenedStem} + á for neuters ending with o`;
       } else if (word.endsWith("e")) {
-        derived = stem + "ia";
-        explanation = `stem ${stem} + ia for neuters ending with e`;
+        derived = softenedStem + "ia";
+        explanation = `stem ${softenedStem} + ia for neuters ending with e`;
       } else if (word.endsWith("ie")) {
-        derived = stem + "ia";
-        explanation = `stem ${stem} + ia for neuters ending with ie`;
+        derived = softenedStem + "ia";
+        explanation = `stem ${softenedStem} + ia for neuters ending with ie`;
       } else if (word.endsWith("um")) {
-        derived = stem + "á";
-        explanation = `stem ${stem} + á for neuters ending with um`;
+        derived = softenedStem + "á";
+        explanation = `stem ${softenedStem} + á for neuters ending with um`;
       } else {
-        derived = stem;
+        derived = softenedStem;
         explanation = `unchanged stem for neuters`;
       }
       break;
@@ -152,5 +152,5 @@ export const nominativeNounDeriver = {
       explanation: "nominative singular is the base form",
     };
   },
-  plural: (noun) => nominativePlural(noun.sk, noun.gender, noun.animate),
+  plural: (noun) => nominativePlural(noun.sk, noun.gender, noun.animate,noun.plural),
 };

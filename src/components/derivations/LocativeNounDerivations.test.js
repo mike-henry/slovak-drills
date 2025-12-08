@@ -2,86 +2,59 @@ import { describe, test, expect } from "vitest";
 import { locativeNounDeriver } from "./LocativeNounDerivations.js";
 
 describe("Locative Noun Derivations (explicit noun objects)", () => {
-
   // -------------------------
   // MASCULINE
   // -------------------------
 
-  const CHLAP = {
-    sk: "chlap",
-    gender: "M",
-    animate: true,
-  };
-
-  const HRAD = {
-    sk: "hrad",
-    gender: "M",
-    animate: false,
-  };
-
-  const STROJ = {
-    sk: "stroj",
-    gender: "M",
-    animate: false,
-  };
+  const chlap = { sk: "chlap", gender: "M", animate: true };
+  const terminal = { sk: "terminál", gender: "M" };
+  const hrad = { sk: "hrad", gender: "M", animate: false };
+  const stroj = { sk: "stroj", gender: "M", animate: false };
 
   // -------------------------
   // FEMININE
   // -------------------------
 
-  const STANICA = {
-    sk: "stanica",
-    gender: "F",
-    animate: false,
-  };
-
-  const KOST = {
-    sk: "kosť",
-    gender: "F",
-    animate: false,
-  };
+  const stanica = { sk: "stanica", gender: "F", animate: false };
+  const kost = { sk: "kosť", gender: "F", animate: false };
 
   // -------------------------
   // NEUTER
   // -------------------------
 
-  const MESTO = {
-    sk: "mesto",
-    gender: "N",
-    animate: false,
-  };
+  const mesto = { sk: "mesto", gender: "N", animate: false };
 
   // -------------------------
   // SINGULAR TESTS
   // -------------------------
 
   test("masculine animate → -ovi (chlap → chlapovi)", () => {
-    const result = locativeNounDeriver.singular(CHLAP);
+    const result = locativeNounDeriver.singular(chlap);
     expect(result.derived).toBe("chlapovi");
   });
 
   test("masculine inanimate hrad-class → -e (hrad → hrade)", () => {
-    const result = locativeNounDeriver.singular(HRAD);
+    const result = locativeNounDeriver.singular(hrad);
     expect(result.derived).toBe("hrade");
   });
 
   test("masculine inanimate stroj-class → -i (stroj → stroji)", () => {
-    const result = locativeNounDeriver.singular(STROJ);
+    const result = locativeNounDeriver.singular(stroj);
     expect(result.derived).toBe("stroji");
   });
 
   test("feminine -a with soft stem (stanica → stanici)", () => {
-    const result = locativeNounDeriver.singular(STANICA);
+    const result = locativeNounDeriver.singular(stanica);
     expect(result.derived).toBe("stanici");
   });
 
   test("feminine consonant-ending (kosť → kosti)", () => {
-    const result = locativeNounDeriver.singular(KOST);
+    const result = locativeNounDeriver.singular(kost);
     expect(result.derived).toBe("kosti");
   });
 
   test("neuter -o → -e (mesto → meste)", () => {
-    const result = locativeNounDeriver.singular(MESTO);
+    const result = locativeNounDeriver.singular(mesto);
     expect(result.derived).toBe("meste");
   });
 
@@ -90,12 +63,17 @@ describe("Locative Noun Derivations (explicit noun objects)", () => {
   // -------------------------
 
   test("masculine plural (stroj → strojoch)", () => {
-    const result = locativeNounDeriver.plural(STROJ);
+    const result = locativeNounDeriver.plural(stroj);
     expect(result.derived).toBe("strojoch");
   });
 
+  test("masculine inanimate terminal → -i (terminál → terminálych)", () => {
+    const result = locativeNounDeriver.plural(terminal);
+    expect(result.derived).toBe("terminálych");
+  });
+
   test("neuter plural (mesto → mestách)", () => {
-    const result = locativeNounDeriver.plural(MESTO);
+    const result = locativeNounDeriver.plural(mesto);
     expect(result.derived).toBe("mestách");
   });
 
@@ -103,9 +81,8 @@ describe("Locative Noun Derivations (explicit noun objects)", () => {
     const result = locativeNounDeriver.plural({
       sk: "žena",
       gender: "F",
-      animate: false
+      animate: false,
     });
     expect(result.derived).toBe("ženách");
   });
-
 });

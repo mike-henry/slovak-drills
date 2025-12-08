@@ -10,10 +10,7 @@
 
     <!-- START BUTTON -->
     <div v-if="!hasStarted" class="text-center mt-8">
-      <button
-        @click="startQuiz"
-        class="drill-button-primary px-6 py-3"
-      >
+      <button @click="startQuiz" class="drill-button-primary px-6 py-3">
         Start / Reset
       </button>
     </div>
@@ -31,36 +28,42 @@
         <div class="text-slate-400 mb-4">
           ({{ currentNoun.en }})
         </div>
-        <answer-field
-          v-model="userAnswer"
-          :disabled="showExplanation" />
+        <answer-field v-model="userAnswer" :disabled="showExplanation" />
 
         <!-- ACTION BUTTONS -->
         <div class="mt-4 flex gap-3">
-          <button
-            v-if="!showExplanation"
-            @click="submitAnswer"
-            class="drill-button-primary"
-          >
+          <button v-if="!showExplanation" @click="submitAnswer" class="drill-button-primary">
             Submit
           </button>
-
-          <button
-            v-else
-            @click="handleContinue"
-            class="drill-button-secondary"
-          >
+          <div v-else>
+          <button  @click="handleContinue" class="drill-button-secondary">
             Continue
           </button>
+          <button @click="openDocumentation" class="drill-button-secondary">
+            Explanation
+          </button>
+          </div>
+
+
         </div>
 
         <!-- EXPLANATION -->
         <div v-if="showExplanation" class="drill-explanation">
           <p class="text-lg">{{ explanationText }}</p>
         </div>
-       <drill-progress    />
+        <drill-progress />
 
       </div>
+      <congrats-modal v-model="showStreakDialog" title="Streak Level Accomplished!" @confirm="resetStreak">
+        <p> for {{ caseName }} Nouns You reached a streak of {{ streakCount }}!</p>
+        <p>You should now try another  drill</p>
+      </congrats-modal>
+    <case-Help ref="caseHelp"
+      v-if="caseHelpShow"
+      :case-name=caseName
+      :section=caseHelpSection
+       @confirm="caseHelpShow = false"
+    />
       <history-list :history="history" />
 
     </div>
@@ -71,21 +74,27 @@
 <script setup>
 import { ref, onMounted, defineProps, computed } from 'vue'
 import { loadNouns } from './wordStore.js'
-import {  history,  addToHistory,totalAttempts,streakCount,getRandomNoun} from './drillUtils.js'
+import { history, addToHistory, totalAttempts, streakCount, getRandomNoun } from './drillUtils.js'
 import HistoryList from './HistoryList.vue'
 import AnswerField from './AnswerField.vue'
-import DrillProgress from './DrillProgress.vue'    
-import { nounDeriver } from './derivations/CaseDerivation.js' 
+import DrillProgress from './DrillProgress.vue'
+import CongratsModal from './CongratsModal.vue'
+import { nounDeriver , deriveNounCase} from './derivations/CaseDerivation.js'
+import CaseHelp from './CaseHelp.vue'
 
 
-
-const STREAK_TARGET = 20
+const STREAK_TARGET = 5
 
 onMounted(() => loadNouns())
 
 const properties = defineProps(['caseName'])
 const caseName = properties.caseName
 const deriver = nounDeriver(caseName)
+
+const caseHelp = ref(null)
+const caseHelpSection = ref('')
+const caseHelpShow = ref(false)
+
 
 const caseTitle = computed(() => {
   return capitalizeFirstOnly(properties.caseName)
@@ -102,12 +111,12 @@ const currentNoun = ref({})
 const userAnswer = ref('')
 const showExplanation = ref(false)
 const explanationText = ref('')
-
+const showStreakDialog = ref(false)
 
 
 const startQuiz = () => {
   hasStarted.value = true
-  streakCount.value = 0
+  resetStreak()
   totalAttempts.value = 0
   history.value = []
   nextQuestion()
@@ -123,32 +132,33 @@ const nextQuestion = () => {
 
 const submitAnswer = () => {
   const noun = currentNoun.value
-  
-  console.log(`submitAnswer: plural=${currentIsPlural}, noun=${noun.sk}, case=${caseName} `);
-  const expectedValue =  currentIsPlural.value ? 
-     deriver.plural(noun):
-     deriver.singular(noun)
-  
+  const expectedValue = deriveNounCase(noun,caseName,currentIsPlural.value)
+
   const answer = userAnswer.value.trim().toLowerCase()
   const correct = answer === expectedValue.derived.toLowerCase()
+   caseHelpSection.value = expectedValue.documentation 
 
   totalAttempts.value++
-  addToHistory(noun.sk, answer, correct,expectedValue.derived)
-
+  console.warn(`adding to history ${caseName} ${expectedValue.documentation}`)
+  addToHistory(noun.sk, answer, correct, expectedValue.derived,caseName,expectedValue.documentation)
+ 
+ 
   if (correct) {
     streakCount.value++
+    if (streakCount.value >= STREAK_TARGET) showStreakDialog.value = true
     nextQuestion()
   } else {
-    streakCount.value = 0
-    
+    resetStreak()
+
     explanationText.value = `❗ "for ${noun.sk}" : explanation "${expectedValue.explanation}".`
-       
+
     showExplanation.value = true
   }
 }
 
-
-
+const resetStreak = () => {
+  streakCount.value = 0
+}
 
 
 const handleContinue = () => {
@@ -156,12 +166,18 @@ const handleContinue = () => {
 }
 
 
+
+function openDocumentation() {
+  caseHelpShow.value = true
+}
+
 </script>
 
 <style scoped>
 ul::-webkit-scrollbar {
   width: 6px;
 }
+
 ul::-webkit-scrollbar-thumb {
   background-color: rgba(100, 116, 139, 0.4);
   border-radius: 3px;

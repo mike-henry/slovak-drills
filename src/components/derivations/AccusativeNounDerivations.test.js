@@ -6,6 +6,7 @@ import { accusativeNounDeriver } from "./AccusativeNounDerivations.js";
 // ---------------------------
 describe("Masculine nouns — accusative singular and plural", () => {
   const chlap = { sk: "chlap", gender: "M", animate: true, en: "man" };
+  const chlapec = { sk: "chlapec", gender: "M", animate: true, en: "man" };
   const muz = { sk: "muž", gender: "M", animate: true, en: "man" };
   const stroj = { sk: "stroj", gender: "M", animate: false, en: "machine" };
   const hrdina = { sk: "hrdina", gender: "M", animate: true, en: "hero" };
@@ -13,6 +14,7 @@ describe("Masculine nouns — accusative singular and plural", () => {
 
   test("Masculine singular", () => {
     expect(accusativeNounDeriver.singular(chlap).derived).toBe("chlapa");
+    expect(accusativeNounDeriver.singular(chlapec).derived).toBe("chlapca");
     expect(accusativeNounDeriver.singular(muz).derived).toBe("muža");
     expect(accusativeNounDeriver.singular(stroj).derived).toBe("stroj");
     expect(accusativeNounDeriver.singular(hrdina).derived).toBe("hrdinu");
@@ -22,11 +24,14 @@ describe("Masculine nouns — accusative singular and plural", () => {
   test("Masculine plural", () => {
     // Masculine animate → genitive plural
     expect(accusativeNounDeriver.plural(chlap).derived).toBe("chlapov");
+    expect(accusativeNounDeriver.plural(chlapec).derived).toBe("chlapcov");
     expect(accusativeNounDeriver.plural(muz).derived).toBe("mužov");
     expect(accusativeNounDeriver.plural(hrdina).derived).toBe("hrdinov");
     expect(accusativeNounDeriver.plural(kolega).derived).toBe("kolegov");
     // Masculine inanimate → nominative plural
     expect(accusativeNounDeriver.plural(stroj).derived).toBe("stroje");
+  
+    
   });
 });
 
@@ -40,6 +45,7 @@ describe("Feminine nouns — accusative singular and plural", () => {
   const energia = { sk: "energia", gender: "F", animate: false };
   const kost = { sk: "kosť", gender: "F", animate: false };
   const vec = { sk: "vec", gender: "F", animate: false };
+  const chlapec = { sk: "chlapec", gender: "M", animate: true, en: "man" };
 
   test("Feminine singular", () => {
     expect(accusativeNounDeriver.singular(zena).derived).toBe("ženu");
@@ -71,6 +77,7 @@ describe("Neuter nouns — accusative singular and plural", () => {
   const vysvedcenie = { sk: "vysvedčenie", gender: "N", animate: false };
   const minimum = { sk: "minimum", gender: "N", animate: false };
   const studium = { sk: "štúdium", gender: "N", animate: false };
+
 
   test("Neuter singular = nominative", () => {
     expect(accusativeNounDeriver.singular(mesto).derived).toBe("mesto");

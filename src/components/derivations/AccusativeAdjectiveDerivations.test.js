@@ -34,6 +34,7 @@ describe("Accusative Adjectives — Singular", () => {
 
   test("Neuter → dobré", () => {
     expect(accusativeAdjectiveDeriver.singular(adj, mesto).derived).toBe("dobré");
+    
   });
 });
 

@@ -12,17 +12,17 @@ describe("Masculine nouns — instrumental singular", () => {
   const kolega = { sk: "kolega", gender: "M", animate: true };
 
   test("Masculine animate → -om", () => {
-    expect(instrumentalNounDeriver.singular(chlap)).toBe("chlapom");
-    expect(instrumentalNounDeriver.singular(muz)).toBe("mužom");
+    expect(instrumentalNounDeriver.singular(chlap).derived).toBe("chlapom");
+    expect(instrumentalNounDeriver.singular(muz).derived).toBe("mužom");
   });
-  
+
   test("Masculine animate ending in -a → stem + om", () => {
-    expect(instrumentalNounDeriver.singular(hrdina)).toBe("hrdinom");
-    expect(instrumentalNounDeriver.singular(kolega)).toBe("kolegom");
+    expect(instrumentalNounDeriver.singular(hrdina).derived).toBe("hrdinom");
+    expect(instrumentalNounDeriver.singular(kolega).derived).toBe("kolegom");
   });
 
   test("Masculine inanimate → -om", () => {
-    expect(instrumentalNounDeriver.singular(stroj)).toBe("strojom");
+    expect(instrumentalNounDeriver.singular(stroj).derived).toBe("strojom");
   });
 });
 
@@ -37,17 +37,17 @@ describe("Feminine nouns — instrumental singular", () => {
   const radost = { sk: "radosť", gender: "F" };
 
   test("Feminine -a → -ou", () => {
-    expect(instrumentalNounDeriver.singular(zena)).toBe("ženou");
-    expect(instrumentalNounDeriver.singular(kniha)).toBe("knihou");
+    expect(instrumentalNounDeriver.singular(zena).derived).toBe("ženou");
+    expect(instrumentalNounDeriver.singular(kniha).derived).toBe("knihou");
   });
 
   test("Feminine -ia → -ou", () => {
-    expect(instrumentalNounDeriver.singular(chemia)).toBe("chémiou");
+    expect(instrumentalNounDeriver.singular(chemia).derived).toBe("chémiou");
   });
 
   test("Feminine consonant-ending → +ou", () => {
-    expect(instrumentalNounDeriver.singular(kost)).toBe("kosťou");
-    expect(instrumentalNounDeriver.singular(radost)).toBe("radosťou");
+    expect(instrumentalNounDeriver.singular(kost).derived).toBe("kosťou");
+    expect(instrumentalNounDeriver.singular(radost).derived).toBe("radosťou");
   });
 });
 
@@ -64,22 +64,22 @@ describe("Neuter nouns — instrumental singular", () => {
   const studium = { sk: "štúdium", gender: "N" };
 
   test("Neuter -o → -om", () => {
-    expect(instrumentalNounDeriver.singular(mesto)).toBe("mestom");
-    expect(instrumentalNounDeriver.singular(auto)).toBe("autom");
+    expect(instrumentalNounDeriver.singular(mesto).derived).toBe("mestom");
+    expect(instrumentalNounDeriver.singular(auto).derived).toBe("autom");
   });
 
   test("Neuter -e → -om", () => {
-    expect(instrumentalNounDeriver.singular(srdce)).toBe("srdcom");
-    expect(instrumentalNounDeriver.singular(more)).toBe( "morom"); // depending on your stem rules
+    expect(instrumentalNounDeriver.singular(srdce).derived).toBe("srdcom");
+    expect(instrumentalNounDeriver.singular(more).derived).toBe("morom");
   });
 
   test("Neuter -ie → -ím", () => {
-    expect(instrumentalNounDeriver.singular(vysvedcenie)).toBe("vysvedčením");
+    expect(instrumentalNounDeriver.singular(vysvedcenie).derived).toBe("vysvedčením");
   });
 
   test("Neuter -um → -om", () => {
-    expect(instrumentalNounDeriver.singular(minimum)).toBe("minimom");
-    expect(instrumentalNounDeriver.singular(studium)).toBe("štúdiom");
+    expect(instrumentalNounDeriver.singular(minimum).derived).toBe("minimom");
+    expect(instrumentalNounDeriver.singular(studium).derived).toBe("štúdiom");
   });
 });
 
@@ -94,14 +94,14 @@ describe("Masculine nouns — instrumental plural", () => {
   const kolega = { sk: "kolega", gender: "M", animate: true };
 
   test("All masculine (animate & inanimate) consonant-ending → -mi", () => {
-    expect(instrumentalNounDeriver.plural(chlap)).toBe("chlapmi");
-    expect(instrumentalNounDeriver.plural(muz)).toBe("mužmi");
-    expect(instrumentalNounDeriver.plural(stroj)).toBe("strojmi");
+    expect(instrumentalNounDeriver.plural(chlap).derived).toBe("chlapmi");
+    expect(instrumentalNounDeriver.plural(muz).derived).toBe("mužmi");
+    expect(instrumentalNounDeriver.plural(stroj).derived).toBe("strojmi");
   });
 
   test("Masculine ending in -a → -ami", () => {
-    expect(instrumentalNounDeriver.plural(hrdina)).toBe("hrdinami");
-    expect(instrumentalNounDeriver.plural(kolega)).toBe("kolegami");
+    expect(instrumentalNounDeriver.plural(hrdina).derived).toBe("hrdinami");
+    expect(instrumentalNounDeriver.plural(kolega).derived).toBe("kolegami");
   });
 });
 
@@ -116,17 +116,17 @@ describe("Feminine nouns — instrumental plural", () => {
   const vec = { sk: "vec", gender: "F" };
 
   test("Feminine -a → -ami", () => {
-    expect(instrumentalNounDeriver.plural(zena)).toBe("ženami");
-    expect(instrumentalNounDeriver.plural(kniha)).toBe("knihami");
+    expect(instrumentalNounDeriver.plural(zena).derived).toBe("ženami");
+    expect(instrumentalNounDeriver.plural(kniha).derived).toBe("knihami");
   });
 
   test("Feminine -ia → -ami", () => {
-    expect(instrumentalNounDeriver.plural(chemia)).toBe("chémiami");
+    expect(instrumentalNounDeriver.plural(chemia).derived).toBe("chémiami");
   });
 
   test("Feminine consonant-ending → -ami", () => {
-    expect(instrumentalNounDeriver.plural(kost)).toBe("kosťami");
-    expect(instrumentalNounDeriver.plural(vec)).toBe("vecami");
+    expect(instrumentalNounDeriver.plural(kost).derived).toBe("kosťami");
+    expect(instrumentalNounDeriver.plural(vec).derived).toBe("vecami");
   });
 });
 
@@ -141,12 +141,10 @@ describe("Neuter nouns — instrumental plural", () => {
   const vysvedcenie = { sk: "vysvedčenie", gender: "N" };
 
   test("All neuters → -ami", () => {
-    expect(instrumentalNounDeriver.plural(mesto)).toBe("mestami");
-    expect(instrumentalNounDeriver.plural(auto)).toBe("autami");
-    expect(instrumentalNounDeriver.plural(srdce)).toBe("srdcami");
-    expect(instrumentalNounDeriver.plural(more)).toBe("morami");
-    expect(instrumentalNounDeriver.plural(vysvedcenie)).toBe("vysvedčeniami");
+    expect(instrumentalNounDeriver.plural(mesto).derived).toBe("mestami");
+    expect(instrumentalNounDeriver.plural(auto).derived).toBe("autami");
+    expect(instrumentalNounDeriver.plural(srdce).derived).toBe("srdcami");
+    expect(instrumentalNounDeriver.plural(more).derived).toBe("morami");
+    expect(instrumentalNounDeriver.plural(vysvedcenie).derived).toBe("vysvedčeniami");
   });
 });
-
-

@@ -13,7 +13,7 @@ const chlapi = { sk: "chlapi", gender: "M", animate: true };
 const zeny   = { sk: "ženy", gender: "F", animate: false };
 const mesta  = { sk: "mestá", gender: "N", animate: false };
 
-const adj = "dobrý";
+const adj =  { sk: "dobrý" };
 
 // ---------------------------
 // Singular

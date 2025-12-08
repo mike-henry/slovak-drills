@@ -525,13 +525,7 @@
     "sk": "učiteľ",
     "en": "teacher",
     "gender": "M",
-    "animate": true,
-    "number": {
-      "singular": {
-        "accusative": "učiteľa",
-        "dative": "učiteľovi"
-      }
-    }
+    "animate": true
   },
   {
     "sk": "učebnica",
@@ -843,7 +837,8 @@
   {
     "sk": "ústa",
     "en": "mouth",
-    "gender": "N"
+    "gender": "N",
+    "plural":true
   },
   {
     "sk": "jazyk",
@@ -964,11 +959,7 @@
     "sk": "pľúca",
     "en": "lungs (pl)",
     "gender": "N",
-    "number": {
-      "singular": {
-        "accusative": "pľúca"
-      }
-    }
+    "plural":true
   },
   {
     "sk": "žalúdok",
@@ -1148,11 +1139,7 @@
     "sk": "hodinky",
     "en": "watch",
     "gender": "F",
-    "number": {
-      "plural": {
-        "accusative": "hodinky"
-      }
-    }
+    "plural":true
   },
   {
     "sk": "budík",
@@ -1173,11 +1160,7 @@
     "sk": "dvere",
     "en": "door",
     "gender": "F",
-    "number": {
-      "plural": {
-        "accusative": "dvere"
-      }
-    }
+    "plural" :true
   },
   {
     "sk": "okno",
@@ -1395,11 +1378,6 @@
     "gender": "F"
   },
   {
-    "sk": "make-up",
-    "en": "makeup",
-    "gender": "M"
-  },
-  {
     "sk": "krém",
     "en": "cream",
     "gender": "M"
@@ -1447,7 +1425,8 @@
   {
     "sk": "nohavice",
     "en": "pants",
-    "gender": "F"
+    "gender": "F",
+    "plural":true
   },
   {
     "sk": "rifle",
@@ -1467,7 +1446,8 @@
   {
     "sk": "šaty",
     "en": "dress",
-    "gender": "F"
+    "gender": "F",
+    "plural":true
   },
   {
     "sk": "kabát",
@@ -1512,7 +1492,8 @@
   {
     "sk": "pančuchy",
     "en": "tights",
-    "gender": "F"
+    "gender": "F",
+    "plural": true
   },
   {
     "sk": "rukavice",
@@ -1562,7 +1543,8 @@
   {
     "sk": "okuliare",
     "en": "glasses",
-    "gender": "F"
+    "gender": "F",
+    "plural":true
   },
   {
     "sk": "hodinky",
@@ -1587,7 +1569,8 @@
   {
     "sk": "náušnice",
     "en": "earrings",
-    "gender": "F"
+    "gender": "F",
+    "plural":true
   },
   {
     "sk": "šperky",
@@ -1779,7 +1762,8 @@
   {
     "sk": "raňajky",
     "en": "breakfast",
-    "gender": "F"
+    "gender": "F",
+    "plural": true
   },
   {
     "sk": "obed",
@@ -2014,7 +1998,8 @@
   {
     "sk": "schody",
     "en": "stairs",
-    "gender": "F"
+    "gender": "F",
+    "plural":true
   },
   {
     "sk": "chodba",
@@ -2319,7 +2304,8 @@
   {
     "sk": "hodiny",
     "en": "clock",
-    "gender": "F"
+    "gender": "F",
+    "plural":true
   },
   {
     "sk": "budík",
@@ -2585,11 +2571,6 @@
     "sk": "menu",
     "en": "menu",
     "gender": "N"
-  },
-  {
-    "sk": "jedálny lístok",
-    "en": "menu",
-    "gender": "M"
   },
   {
     "sk": "ponuka",
@@ -3183,12 +3164,14 @@
   {
     "sk": "narodeniny",
     "en": "birthday",
-    "gender": "F"
+    "gender": "F",
+    "plural":true
   },
   {
     "sk": "meniny",
     "en": "name day",
-    "gender": "F"
+    "gender": "F",
+    "plural":true
   },
   {
     "sk": "svadba",
@@ -3317,7 +3300,8 @@
   {
     "sk": "husle",
     "en": "violin",
-    "gender": "F"
+    "gender": "F",
+    "plural":true
   },
   {
     "sk": "bicie",
@@ -3614,13 +3598,7 @@
     "sk": "učiteľ",
     "en": "teacher",
     "gender": "M",
-    "animate": true,
-    "number": {
-      "singular": {
-        "accusative": "učiteľa",
-        "dative": "učiteľovi"
-      }
-    }
+    "animate": true
   },
   {
     "sk": "žiak",
@@ -3902,12 +3880,7 @@
     "sk": "novorodenec",
     "en": "newborn",
     "gender": "M",
-    "animate": true,
-    "number": {
-      "singular": {
-        "accusative": "novorodenca"
-      }
-    }
+    "animate": true
   },
   {
     "sk": "kočík",
@@ -5552,12 +5525,7 @@
     "sk": "peniaze",
     "en": "money",
     "gender": "F",
-    "number" : {
-      "plural": {
-        "accusative": "peniaze"
-      }
-    }
-    
+    "plural":true
   },
   {
     "sk": "obchod",

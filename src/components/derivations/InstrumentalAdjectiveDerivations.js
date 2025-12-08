@@ -1,5 +1,7 @@
 // InstrumentalAdjectiveDerivations.js
 
+import { adjectives } from "../wordStore";
+
 /**
  * Instrumental adjective — singular
  */
@@ -25,6 +27,6 @@ function instrumentalAdjectivePlural(adj) {
 }
 
 export const instrumentalAdjectiveDeriver = {
-  singular: instrumentalAdjectiveSingular,
-  plural: instrumentalAdjectivePlural,
+  singular: (adjective,noun) =>instrumentalAdjectiveSingular(adjective.sk,noun),
+  plural: (adjective,noun) =>instrumentalAdjectivePlural(adjective.sk,noun),
 };

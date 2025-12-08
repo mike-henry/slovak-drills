@@ -6,6 +6,7 @@ import { instrumentalAdjectiveDeriver } from "./InstrumentalAdjectiveDerivations
 import { nominativeAdjectiveDeriver } from "./NominativeAdjectiveDerivations.js";
 import { accusativeAdjectiveDeriver } from "./AccusativeAdjectiveDerivations.js";
 import { locativeAdjectiveDeriver } from "./LocativeAdjectiveDerivations.js";
+import { STANDARD_SECTIONS} from "../../documents/DocumentLoader.js"
 
 export const nounDeriver = (vocalCase) => {
   switch (vocalCase) {
@@ -66,9 +67,15 @@ export const deriveAdjectiveNounCase = (
     : adjectiveDeriver(caseName).singular;
   const nounInCase = nounInCasederiver(noun);
   const adjectiveInCase = adjectiveInCasederiver(adjective, noun);
+  const adjectiveDocumentation = adjectiveInCase.documentation? adjectiveInCase.documentation: STANDARD_SECTIONS.adjectiveEndings
+  const nounDocumentation = nounInCase.documentation? nounInCase.documentation: STANDARD_SECTIONS.adjectiveEndings
   return {
     derived: `${adjectiveInCase.derived} ${nounInCase.derived}`,
     explanation: `for ${caseName} - adjective:${adjectiveInCase.explanation}, noun:${nounInCase.explanation}`,
+    documentation: {
+      noun: nounDocumentation,
+      adjective: adjectiveDocumentation
+    }
   };
 };
 
@@ -77,9 +84,11 @@ export const deriveNounCase = (noun, caseName, plural = false) => {
     ? nounDeriver(caseName).plural
     : nounDeriver(caseName).singular;
   const nounInCase = nounInCasederiver(noun);
+  const documentation = nounInCase.documentation? nounInCase.documentation: STANDARD_SECTIONS.nounEndings
   return {
     derived: nounInCase.derived,
     explanation: `for ${caseName} - noun:${nounInCase.explanation}`,
+    documentation
   };
 };
 

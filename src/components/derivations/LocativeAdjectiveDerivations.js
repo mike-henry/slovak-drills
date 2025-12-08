@@ -39,6 +39,6 @@ function locativeAdjectivePlural(adj) {
 }
 
 export const locativeAdjectiveDeriver = {
-  singular: locativeAdjectiveSingular,
-  plural: locativeAdjectivePlural,
+  singular: (adjective, noun) =>locativeAdjectiveSingular(adjective.sk,noun),
+  plural: (adjective, noun) =>locativeAdjectivePlural(adjective.sk, noun),
 };

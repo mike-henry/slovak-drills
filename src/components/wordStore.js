@@ -236,6 +236,7 @@ export const  loadAdjectives = async ()=> {
 
 
 export const  loadNouns = async ()=> {
+ 
     return loadWords(NOUNS,nouns,nounsLoaded,DEFAULT_NOUNS);
 }
 

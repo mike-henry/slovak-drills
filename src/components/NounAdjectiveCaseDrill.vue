@@ -40,6 +40,10 @@
         </div>
         <drill-progress />
       </div>
+      <congrats-modal v-model="showStreakDialog" title="Streak Level Accomplished!" @confirm="resetStreak">
+        <p> for {{ caseName }} Nouns with adjectives you reached a streak of {{ streakCount }}!</p>
+        <p>You should now try another  drill</p>
+      </congrats-modal>
       <div class="mt-6">
         <history-list :history="history" />
       </div>
@@ -55,7 +59,8 @@ import { deriveAdjectiveNounCase } from './derivations/CaseDerivation.js'
 import DrillProgress from './DrillProgress.vue'
 import AnswerField from './AnswerField.vue'
 import HistoryList from './HistoryList.vue'
-import { addToHistory, history, progressPercent, getRandomAdjective, getRandomNoun, streakCount, totalAttempts } from './drillUtils.js'
+import CongratsModal from './CongratsModal.vue'
+import { addToHistory, history,  getRandomAdjective, getRandomNoun, streakCount, totalAttempts } from './drillUtils.js'
 
 
 
@@ -83,12 +88,13 @@ const currentAdjective = ref({})
 const userAnswer = ref('')
 const showExplanation = ref(false)
 const explanationText = ref('')
+const showStreakDialog = ref(false)
 
 
 
 const startQuiz = () => {
   started.value = true
-  streakCount.value = 0
+  resetStreak()
   totalAttempts.value = 0
   history.value = []
   nextQuestion()
@@ -121,6 +127,7 @@ const submitAnswer = () => {
 
   if (correct) {
     streakCount.value++
+    if (streakCount >= STREAK_TARGET) showStreakDialog.value = true
     nextQuestion()
   } else {
     streakCount.value = 0
@@ -132,6 +139,10 @@ const submitAnswer = () => {
 
 const handleContinue = () => {
   nextQuestion()
+}
+
+const resetStreak = () => {
+  streakCount.value = 0
 }
 
 

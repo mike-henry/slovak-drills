@@ -130,10 +130,10 @@ export function locativePlural(word, gender, animate = false) {
     else if (nomPl.endsWith("ia")) {
       derived = stemed2() + "iach"; 
       explanation = `stem ${stemed2()} + iách`;
-    }// chémie → chémiách
-    else if (nomPl.endsWith("ia")) {
-      derived = stemed2() + "iach"; 
-      explanation = `stem ${stemed2()} + iách`;     
+    // }// chémie → chémiách
+    // else if (nomPl.endsWith("ia")) {
+    //   derived = stemed2() + "iach"; 
+    //   explanation = `stem ${stemed2()} + iách`;     
     } // chémie → chémiách
     else if (nomPl.endsWith("y")) { 
       derived = stemed1() + "ách"; 
@@ -160,6 +160,10 @@ export function locativePlural(word, gender, animate = false) {
       derived = stemed1() + "och";
       explanation = `stem ${stemed1()} + och`;
     }  // stroje → strojoch
+    else {
+        derived = stemed1() + "ych";
+        explanation = `stem ${stemed1()} + ych`;
+    } 
   }
   // --- NEUTER ---
   else if (gender === "N") {
@@ -172,6 +176,7 @@ export function locativePlural(word, gender, animate = false) {
     else if (nomPl.endsWith("ie")) { return stem2() + "iach"; // vysvedčenia → vysvedčeniach
        explanation = `stem ${stem2()} + iach`;
     } // vysvedčenia → vysvedčeniach
+    
   }  
     else {
       // fallback — rarely needed

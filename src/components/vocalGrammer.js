@@ -44,7 +44,7 @@ const endsWith = (word , consenent) => {
   if (!word || word.length === 0) return false;
   const lower = word.toLowerCase();
   for (const d of consenent) {
-    if (lower.endsWith(d)) {
+    if (word.endsWith(d)) {
       return true;
     }
   }
@@ -79,6 +79,10 @@ function masculineStem(word) {
 
   // Consonant-ending masculine → unchanged stem
   if (endsWithConsonant(word)) {
+
+    if(word.endsWith("ec")){
+      return word.slice(0, -2) + "c"
+    }
     return word;
   }
 
@@ -132,13 +136,19 @@ function neuterStem(word,isPlural){
     return word.slice(0, -1);
   }
 
+    // -a → remove vowel add at
+  if (word.endsWith("a")) {
+    return word.slice(0, -1) + "at";
+  }
+
+
   return word;
 }
 
 
-export function deriveStem(word, gender, isPlural = false) {
+export function deriveStem(word, gender, isPlural = false, animate = false) {
   switch (gender) {
-    case "M": return masculineStem(word,isPlural);
+    case "M": return masculineStem(word,isPlural,animate);
     case "F": return feminineStem(word,isPlural);
     case "N": return neuterStem(word,isPlural);
     default:

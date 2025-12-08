@@ -18,12 +18,14 @@ export const history = ref([])  // Array of { word, answer, correct, expected }
 export const streakCount = ref(0)
 export const totalAttempts = ref(0)
 
-export const addToHistory = (word, answer, correct, expected) => {
+export const addToHistory = (word, answer, correct, expected,caseName,documentation) => {
   history.value.unshift({
     word,
     answer,
     correct,
-    expected
+    expected,
+    caseName,
+    documentation
   })
 }
 

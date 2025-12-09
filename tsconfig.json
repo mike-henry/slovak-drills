@@ -1,5 +1,5 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
     "allowJs": true,         // ← JS is allowed
     "checkJs": false,        // ← doesn't type-check JS yet

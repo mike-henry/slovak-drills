@@ -1,5 +1,7 @@
-import { deriveStem, endsWithSoftConsonant } from "../vocalGrammer.js";
-
+import type { Gender, Noun } from "../grammer/WordTypes.ts";
+import { deriveStem, endsWithSoftConsonant } from "../vocalGrammer.ts";
+import type { NounDeriver } from "./Derivers.ts";
+import { CaseDerivedNoun } from "./Derivers.ts";
 
 const getLast = (str) => str.slice(-1);
 
@@ -23,7 +25,7 @@ const FEMININE_SOFTEN_MAP = {
   ľ: "l",
   š: "s",
   ž: "z",
-  č: "c",
+  č: "c",
 };
 
 export function softenStem(stem, gender, originalWord) {
@@ -57,23 +59,28 @@ export function softenStem(stem, gender, originalWord) {
  * @param {"M"|"F"|"N"} gender - grammatical gender
  * @returns {string} plural form
  */
-function nominativePlural(word, gender, animate = false,pluralOnly = false) {
-  let orgininalStem = deriveStem(word, gender,pluralOnly,animate);
+function nominativePlural(
+  word,
+  gender: Gender,
+  animate = false,
+  pluralOnly = false
+) {
+  let orgininalStem = deriveStem(word, gender, pluralOnly, animate);
   let derived;
   let explanation;
 
   const softenedStem = softenStem(orgininalStem, gender, word); // apply softening before suffix
-  
-  if (pluralOnly){
+
+  if (pluralOnly) {
     return {
       derived: word,
-      explanation: `"${word}" only has plural form`
-    }
+      explanation: `"${word}" only has plural form`,
+    };
   }
-  
+
   switch (gender) {
     case "M":
-        // nouns ending in -a (hrdina, kolega...)
+      // nouns ending in -a (hrdina, kolega...)
       if (word.endsWith("a")) {
         derived = softenedStem + "ovia";
         explanation = `stem ${softenedStem} + ovia for masculine nouns ending in -a`;
@@ -152,5 +159,22 @@ export const nominativeNounDeriver = {
       explanation: "nominative singular is the base form",
     };
   },
-  plural: (noun) => nominativePlural(noun.sk, noun.gender, noun.animate,noun.plural),
+  plural: (noun) =>
+    nominativePlural(noun.sk, noun.gender, noun.animate, noun.plural),
+};
+
+export const NominativeNounDeriver: NounDeriver = {
+  singular(noun: Noun): CaseDerivedNoun {
+    // throw new Error("Method not implemented.");
+    return new CaseDerivedNoun(noun.sk, "nominative singular is the base form");
+  },
+  plural(noun: Noun): CaseDerivedNoun {
+    const response = nominativePlural(
+      noun.sk,
+      noun.gender,
+      noun.animate,
+      noun.plural
+    );
+    return new CaseDerivedNoun(response.derived, response.explanation);
+  },
 };

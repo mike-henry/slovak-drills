@@ -1,7 +1,7 @@
 import { locativeNounDeriver } from "./LocativeNounDerivations.js";
 import { accusativeNounDeriver } from "./AccusativeNounDerivations.js";
 import { instrumentalNounDeriver } from "./InstrumentalNounDerivations";
-import { nominativeNounDeriver } from "./NominativeNounDerivations.js";
+import { nominativeNounDeriver } from "./NominativeNounDerivations.ts";
 import { instrumentalAdjectiveDeriver } from "./InstrumentalAdjectiveDerivations.js";
 import { nominativeAdjectiveDeriver } from "./NominativeAdjectiveDerivations.js";
 import { accusativeAdjectiveDeriver } from "./AccusativeAdjectiveDerivations.js";

@@ -1,6 +1,6 @@
 // AdjectiveDerivations.js
 
-import { nominativeNounDeriver } from "./NominativeNounDerivations.js";
+import { NominativeNounDeriver } from "./NominativeNounDerivations";
 
 /**
  * Derive the stem of an adjective (base form ends in -ý / -á / -é)

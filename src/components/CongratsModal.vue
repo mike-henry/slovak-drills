@@ -8,7 +8,7 @@
       <h2 class="text-xl font-bold mb-3">{{ title }}</h2>
 
       <div class="text-slate-700 mb-6">
-        <slot > </slot>
+        <slot></slot>
       </div>
 
       <div class="flex justify-end gap-3">
@@ -18,21 +18,24 @@
   </div>
 </template>
 
-<script setup>
-const props = defineProps({
-  modelValue: Boolean,
-  title: String
-})
+<script setup lang="ts">
+const props = defineProps<{
+  modelValue: boolean
+  title: string
+}>()
 
-const emit = defineEmits(['update:modelValue', 'confirm'])
-
+const emit = defineEmits<{
+  (e: 'update:modelValue', value: boolean): void
+  (e: 'confirm'): void
+}>()
 
 const confirm = () => {
   emit('confirm')
   emit('update:modelValue', false)
 }
+
+const close = () => {
+  emit('update:modelValue', false)
+}
 </script>
 
-<style scoped>
-/* light styling */
-</style>

@@ -9,7 +9,7 @@
                     <h2  class="  drill-title">Stem Rules:</h2>
                     <div class=" drill-container" v-html="stemHtml"></div>
                     <h2  class="  drill-title" >Ending Rules: </h2>
-                    <div class="drill-container " v-html="sectionHtml"></div>
+                    <div v-for="item in sectionHtml" class="drill-container " v-html="item"></div>
                 </div>
                 <div class="drill-container ">
                     <button class=" drill-button-primary" @click="close">Close</button>
@@ -19,26 +19,43 @@
     </transition>
 </template>
 
-<script setup>
+<script setup lang="ts" >
 import { ref, onMounted } from 'vue'
 import { marked } from 'marked'
 import { loadMarkdown } from '@/documents/DocumentLoader'
 
-const props = defineProps(['caseName', 'section'])
+const props = defineProps({
+  caseName: {
+    type: String,
+    required: true
+  },
+  section: {
+    type: Array as () => string[],
+    required: true
+  }
+})
+
 const emit = defineEmits(['update:modelValue', 'confirm'])
 
 const stemHtml = ref('')
-const sectionHtml = ref('')
+const sectionHtml = ref([])
 
 onMounted(async () => {
     const md = await loadMarkdown(props.caseName)
-    const html = marked.parse(md || `No content found for ${props.caseName}`)
+    const html = await marked.parse(md || `No content found for ${props.caseName}`)
 
     stemHtml.value = extractSectionById(html, 'stems')
-    sectionHtml.value = extractSectionById(html, props.section)
+    sectionHtml.value = extractSectionsByIds(html, props.section)
 })
 
-function extractSectionById(htmlString, id) {
+
+
+function extractSectionsByIds(htmlString:string, ids:string[]):string[] {
+       return ids.map(id =>extractSectionById(htmlString, id) )
+}
+
+
+function extractSectionById(htmlString:string, id) {
     const parser = new DOMParser()
     const doc = parser.parseFromString(htmlString, 'text/html')
     const el = doc.getElementById(id)

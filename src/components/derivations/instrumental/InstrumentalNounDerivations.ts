@@ -1,13 +1,16 @@
-import { deriveStem } from "../vocalGrammer.js";
-import { nominativeNounDeriver } from "./NominativeNounDerivations.js";
+import type { Noun } from "@/components/grammer/WordTypes.js";
+import { deriveStem, deriveVocalStem } from "../../vocalGrammer.js";
+import type { NounDeriver } from "../Derivers.js";
+import { nominativeNounDeriver } from "../nominative/NominativeNounDerivations.js";
 
 /**
  * Instrumental singular
  */
-function instrumentalSingular(word, gender, animate = false) {
-  const stem = deriveStem(word, gender);
+function instrumentalSingular(noun:Noun) {
+  const word = noun.sk
+  const stem = deriveVocalStem(noun);
 
-  switch (gender) {
+  switch (noun.gender) {
     case "M": {
       const derived = stem + "om";
       return {
@@ -64,11 +67,12 @@ function instrumentalSingular(word, gender, animate = false) {
 /**
  * Instrumental plural
  */
-export function instrumentalPlural(word, gender, animate = false) {
-  const stem = deriveStem(word, gender, true);
+export function instrumentalPlural(noun:Noun) {
+  const word = noun.sk
+  const stem = deriveVocalStem(noun);
 
   // ----- MASCULINE -----
-  if (gender === "M") {
+  if (noun.gender === "M") {
     if (word.endsWith("a")) {
       const derived = stem + "ami";
       return {
@@ -85,7 +89,7 @@ export function instrumentalPlural(word, gender, animate = false) {
   }
 
   // ----- FEMININE -----
-  if (gender === "F") {
+  if (noun.gender === "F") {
     if (word.endsWith("ia")) {
       const derived = stem + "iami";
       return {
@@ -102,8 +106,8 @@ export function instrumentalPlural(word, gender, animate = false) {
   }
 
   // ----- NEUTER -----
-  if (gender === "N") {
-    const derived = stem + "ami";
+  if (noun.gender === "N") {
+    const derived = stem +  ((noun.sk.endsWith("nie") ||noun.sk.endsWith("tie") ) ? "iami": "ami");
     return {
       derived,
       explanation: `neuter instrumental plural = stem (${stem}) + ami`,
@@ -115,16 +119,20 @@ export function instrumentalPlural(word, gender, animate = false) {
 
 export const instrumentalNounDeriver = {
   singular: (noun) =>
-    instrumentalSingular(
-      noun.sk,
-      noun.gender,
-      noun.animate
-    ),
+    instrumentalSingular(noun),
 
   plural: (noun) =>
+    instrumentalPlural(noun),
+};
+
+export const InstrumentalNounDeriver:NounDeriver = {
+  singular: (noun:Noun) =>
+    instrumentalSingular(
+      noun
+    ),
+
+  plural: (noun:Noun) =>
     instrumentalPlural(
-      noun.sk,
-      noun.gender,
-      noun.animate
+      noun
     ),
 };

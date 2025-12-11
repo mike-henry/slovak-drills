@@ -1,5 +1,7 @@
 // Hard consonants in Slovak
 
+import type { Noun } from "./grammer/WordTypes";
+
 export const HARD_CONSONANTS: string[] = [
   "h",
   "ch",
@@ -170,6 +172,22 @@ export function deriveStem(word, gender, isPlural = false, animate = false) {
     default:
       throw new Error(
         `Invalid gender '${gender}' — must be 'Masculine', 'Femanine', or 'Nueter'.`
+      );
+  }
+}
+
+
+export function deriveVocalStem(noun:Noun):string {
+  switch (noun.gender) {
+    case "M":
+      return masculineStem(noun.sk);
+    case "F":
+      return feminineStem(noun.sk);
+    case "N":
+      return neuterStem(noun.sk, noun.plural);
+    default:
+      throw new Error(
+        `Invalid gender '${noun.gender}' — must be 'Masculine', 'Femanine', or 'Nueter'.`
       );
   }
 }

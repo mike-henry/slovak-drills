@@ -15,7 +15,7 @@ import { STANDARD_SECTIONS } from "../../documents/DocumentLoader.js";
 // inside CaseDerivations.js
 // ---------------------------------------------------------------------
 
-vi.mock("./LocativeNounDerivations.js", () => ({
+vi.mock("./locative/LocativeNounDerivations.js", () => ({
   locativeNounDeriver: {
     singular: vi.fn(() => ({
       derived: "noun-loc-sing",
@@ -30,8 +30,8 @@ vi.mock("./LocativeNounDerivations.js", () => ({
   },
 }));
 
-vi.mock("./AccusativeNounDerivations.js", () => ({
-  accusativeNounDeriver: {
+vi.mock("./accusative/AccusativeNounDerivations.ts", () => ({
+  AccusativeNounDeriver: {
     singular: vi.fn(() => ({
       derived: "noun-acc-sing",
       explanation: "acc noun explanation"
@@ -43,7 +43,7 @@ vi.mock("./AccusativeNounDerivations.js", () => ({
   },
 }));
 
-vi.mock("./InstrumentalNounDerivations.js", () => ({
+vi.mock("./instrumental/InstrumentalNounDerivations.js", () => ({
   instrumentalNounDeriver: {
     singular: vi.fn(() => ({
       derived: "noun-inst-sing",
@@ -52,8 +52,8 @@ vi.mock("./InstrumentalNounDerivations.js", () => ({
   },
 }));
 
-vi.mock("./NominativeNounDerivations.js", () => ({
-  nominativeNounDeriver: {
+vi.mock("./nominative/NominativeNounDerivations", () => ({
+  NominativeNounDeriver: {
     singular: vi.fn(() => ({
       derived: "noun-nom-sing",
       explanation: "nom noun explanation"
@@ -61,7 +61,7 @@ vi.mock("./NominativeNounDerivations.js", () => ({
   },
 }));
 
-vi.mock("./InstrumentalAdjectiveDerivations.js", () => ({
+vi.mock("./instrumental/InstrumentalAdjectiveDerivations.js", () => ({
   instrumentalAdjectiveDeriver: {
     singular: vi.fn(() => ({
       derived: "adj-inst-sing",
@@ -70,8 +70,8 @@ vi.mock("./InstrumentalAdjectiveDerivations.js", () => ({
   },
 }));
 
-vi.mock("./NominativeAdjectiveDerivations.js", () => ({
-  nominativeAdjectiveDeriver: {
+vi.mock("./nominative/NominativeAdjectiveDerivations", () => ({
+  NominativeAdjectiveDeriver: {
     singular: vi.fn(() => ({
       derived: "adj-nom-sing",
       explanation: "nom adjective explanation"
@@ -79,8 +79,8 @@ vi.mock("./NominativeAdjectiveDerivations.js", () => ({
   },
 }));
 
-vi.mock("./AccusativeAdjectiveDerivations.js", () => ({
-  accusativeAdjectiveDeriver: {
+vi.mock("./accusative/AccusativeAdjectiveDerivations", () => ({
+  AccusativeAdjectiveDeriver: {
     singular: vi.fn(() => ({
       derived: "adj-acc-sing",
       explanation: "acc adjective explanation"
@@ -88,7 +88,7 @@ vi.mock("./AccusativeAdjectiveDerivations.js", () => ({
   },
 }));
 
-vi.mock("./LocativeAdjectiveDerivations.js", () => ({
+vi.mock("./locative/LocativeAdjectiveDerivations.js", () => ({
   locativeAdjectiveDeriver: {
     singular: vi.fn(() => ({
       derived: "adj-loc-sing",
@@ -115,7 +115,6 @@ describe("nounDeriver", () => {
 describe("deriveNounCase()", () => {
   test("derives noun in singular", () => {
     const result = deriveNounCase({ sk: "test" }, CASE.NOMINATIVE);
-
     expect(result.derived).toBe("noun-nom-sing");
     expect(result.explanation).toMatch(/nominative/);
   });
@@ -141,7 +140,7 @@ describe("deriveAdjectiveNounCase()", () => {
   test("combines adjective + noun", () => {
     const result = deriveAdjectiveNounCase(
       "big",
-      { sk: "tree" },
+      { sk: "tree", gender: "M" },
       CASE.ACCUSATIVE
     );
 

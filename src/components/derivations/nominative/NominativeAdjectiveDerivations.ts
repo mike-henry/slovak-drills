@@ -1,5 +1,7 @@
 // AdjectiveDerivations.js
 
+import { Gender, type Adjective, type Noun } from "../../grammer/WordTypes";
+import type { AdjectiveDeriver } from "../Derivers";
 import { NominativeNounDeriver } from "./NominativeNounDerivations";
 
 /**
@@ -21,13 +23,13 @@ function deriveAdjectiveStem(adj) {
 /**
  * Nominative singular adjective
  */
-function nominativeSingular(adj, noun) {
+function nominativeSingular(adj:string, noun:Noun) {
   const stem = deriveAdjectiveStem(adj);
-  let derived;
-  let explanation;
+  let derived:string;
+  let explanation:string;
 
   switch (noun.gender) {
-    case "M":
+    case Gender.Masculine:
       if( noun.animate){
         derived=   stem + "ý"
         explanation= `adjective stem (${stem}) + ý for animate masculine singular`;
@@ -36,11 +38,11 @@ function nominativeSingular(adj, noun) {
          explanation= `adjective stem (${stem}) + ý for inanimate masculine singular`;
        }
       break
-    case "F":
+    case Gender.Femenine:
       derived = stem + "á";
       explanation = `femanine adjective stem (${stem}) + á `;
       break
-    case "N":
+    case Gender.Neutral:
       derived = stem + "é";
       explanation = `neuter adjective stem (${stem}) + é `;
       break;
@@ -55,8 +57,8 @@ function nominativeSingular(adj, noun) {
  */
 function nominativePlural(adj, noun) {
   const stem = deriveAdjectiveStem(adj);
-let derived;
-let explanation;
+let derived:string;
+let explanation:string;
   switch (noun.gender) {
     case "M":
       if (noun.animate) {
@@ -85,4 +87,9 @@ let explanation;
 export const nominativeAdjectiveDeriver = {
   singular: (adjective,noun) =>nominativeSingular(adjective.sk,noun),
   plural: (adjective,noun) =>nominativePlural(adjective.sk,noun),
+};
+
+export const NominativeAdjectiveDeriver:AdjectiveDeriver = {
+  singular: (adjective:Adjective,noun:Noun) =>nominativeSingular(adjective.sk,noun),
+  plural: (adjective:Adjective,noun:Noun)  =>nominativePlural(adjective.sk,noun),
 };

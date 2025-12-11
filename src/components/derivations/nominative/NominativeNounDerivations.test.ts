@@ -1,6 +1,6 @@
 import { describe, test, expect } from "vitest";
-import { NominativeNounDeriver } from "./NominativeNounDerivations";
-import { Gender, Noun } from "../grammer/WordTypes.js";
+import { NominativeNounDeriver } from "./NominativeNounDerivations.ts";
+import { Gender, Noun } from "../../grammer/WordTypes.js";
   
 // ---------------------------
 // BASIC MASCULINE TESTS

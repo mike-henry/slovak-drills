@@ -1,16 +1,17 @@
 import { describe, test, expect } from "vitest";
-import { accusativeNounDeriver } from "./AccusativeNounDerivations.js";
+import { AccusativeNounDeriver as accusativeNounDeriver } from "./AccusativeNounDerivations.js";
+import { Gender, type Noun } from "@/components/grammer/WordTypes.js";
 
 // ---------------------------
 // BASIC MASCULINE TESTS
 // ---------------------------
 describe("Masculine nouns — accusative singular and plural", () => {
-  const chlap = { sk: "chlap", gender: "M", animate: true, en: "man" };
-  const chlapec = { sk: "chlapec", gender: "M", animate: true, en: "man" };
-  const muz = { sk: "muž", gender: "M", animate: true, en: "man" };
-  const stroj = { sk: "stroj", gender: "M", animate: false, en: "machine" };
-  const hrdina = { sk: "hrdina", gender: "M", animate: true, en: "hero" };
-  const kolega = { sk: "kolega", gender: "M", animate: true, en: "colleague" };
+  const chlap:Noun = {  sk: "chlap", gender: Gender.Masculine, animate: true, en: "man" };
+  const chlapec:Noun = {  sk: "chlapec", gender: Gender.Masculine, animate: true, en: "man" };
+  const muz:Noun = {  sk: "muž", gender: Gender.Masculine, animate: true, en: "man" };
+  const stroj:Noun = {  sk: "stroj", gender: Gender.Masculine, animate: false, en: "machine" };
+  const hrdina:Noun = {  sk: "hrdina", gender: Gender.Masculine, animate: true, en: "hero" };
+  const kolega:Noun = {  sk: "kolega", gender: Gender.Masculine, animate: true, en: "colleague" };
 
   test("Masculine singular", () => {
     expect(accusativeNounDeriver.singular(chlap).derived).toBe("chlapa");
@@ -39,13 +40,13 @@ describe("Masculine nouns — accusative singular and plural", () => {
 // BASIC FEMININE TESTS
 // ---------------------------
 describe("Feminine nouns — accusative singular and plural", () => {
-  const zena = { sk: "žena", gender: "F", animate: false };
-  const kniha = { sk: "kniha", gender: "F", animate: false };
-  const chemia = { sk: "chémia", gender: "F", animate: false };
-  const energia = { sk: "energia", gender: "F", animate: false };
-  const kost = { sk: "kosť", gender: "F", animate: false };
-  const vec = { sk: "vec", gender: "F", animate: false };
-  const chlapec = { sk: "chlapec", gender: "M", animate: true, en: "man" };
+  const zena:Noun = { en:"", sk: "žena", gender: Gender.Femenine, animate: false };
+  const kniha:Noun = { en:"", sk: "kniha",  gender: Gender.Femenine, animate: false };
+  const chemia:Noun = { en:"", sk: "chémia",  gender: Gender.Femenine, animate: false };
+  const energia:Noun = { en:"", sk: "energia",  gender: Gender.Femenine, animate: false };
+  const kost:Noun = { en:"", sk: "kosť",  gender: Gender.Femenine, animate: false };
+  const vec:Noun = { en:"", sk: "vec",  gender: Gender.Femenine, animate: false };
+  const chlapec:Noun = {  sk: "chlapec", gender: Gender.Masculine, animate: true, en: "man" };
 
   test("Feminine singular", () => {
     expect(accusativeNounDeriver.singular(zena).derived).toBe("ženu");
@@ -70,13 +71,13 @@ describe("Feminine nouns — accusative singular and plural", () => {
 // BASIC NEUTER TESTS
 // ---------------------------
 describe("Neuter nouns — accusative singular and plural", () => {
-  const mesto = { sk: "mesto", gender: "N", animate: false };
-  const auto = { sk: "auto", gender: "N", animate: false };
-  const srdce = { sk: "srdce", gender: "N", animate: false };
-  const more = { sk: "more", gender: "N", animate: false };
-  const vysvedcenie = { sk: "vysvedčenie", gender: "N", animate: false };
-  const minimum = { sk: "minimum", gender: "N", animate: false };
-  const studium = { sk: "štúdium", gender: "N", animate: false };
+  const mesto:Noun = { en:"", sk: "mesto", gender: Gender.Neutral, animate: false };
+  const auto:Noun = { en:"", sk: "auto",  gender: Gender.Neutral, animate: false };
+  const srdce:Noun = { en:"", sk: "srdce",  gender: Gender.Neutral, animate: false };
+  const more:Noun = { en:"", sk: "more",  gender: Gender.Neutral, animate: false };
+  const vysvedcenie:Noun = { en:"", sk: "vysvedčenie",  gender: Gender.Neutral, animate: false };
+  const minimum:Noun = { en:"", sk: "minimum",  gender: Gender.Neutral, animate: false };
+  const studium:Noun = { en:"", sk: "štúdium",  gender: Gender.Neutral, animate: false };
 
 
   test("Neuter singular = nominative", () => {
@@ -104,9 +105,9 @@ describe("Neuter nouns — accusative singular and plural", () => {
 // EDGE CASES
 // ---------------------------
 describe("Edge cases — accusative singular and plural", () => {
-  const a = { sk: "a", gender: "F", animate: false };
-  const o = { sk: "o", gender: "N", animate: false };
-  const k = { sk: "k", gender: "M", animate: true };
+  const a:Noun = { en:"", sk: "a",  gender: Gender.Femenine, animate: false };
+  const o:Noun = { en:"", sk: "o",  gender: Gender.Neutral, animate: false };
+  const k:Noun = { en:"", sk: "k", gender: Gender.Masculine, animate: true };
 
   test("Single-letter singular", () => {
     expect(accusativeNounDeriver.singular(a).derived).toBe("u");

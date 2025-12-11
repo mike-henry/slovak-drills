@@ -8,11 +8,12 @@
     "noEmit": true,
     "moduleResolution": "bundler",
     "module": "ESNext",
-    "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "baseUrl": ".",
+    
   },
-  "include": ["src/**/*", "vite.config.*", "vitest.config.*"]
+  "include": ["src/**/*", "vite.config.*", "vitest.config.*", "src/components/derivations/nominative/NominativeAdjectiveDerivations.ts"]
 }
 

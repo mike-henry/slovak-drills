@@ -1,9 +1,9 @@
-import type { Gender, Noun } from "../grammer/WordTypes.ts";
-import { deriveStem, endsWithSoftConsonant } from "../vocalGrammer.ts";
-import type { NounDeriver } from "./Derivers.ts";
-import { CaseDerivedNoun } from "./Derivers.ts";
+import type { Gender, Noun } from "../../grammer/WordTypes.ts";
+import { deriveStem, endsWithSoftConsonant } from "@/components/vocalGrammer.ts";
+import type { NounDeriver, } from "@/components/derivations/Derivers.ts"
+import { DerivedWord } from "@/components/derivations/Derivers.ts";
 
-const getLast = (str) => str.slice(-1);
+const getLast = (str:string) => str.slice(-1);
 
 // Masculine & neuter softening
 const SOFTENING_MAP = {
@@ -60,14 +60,14 @@ export function softenStem(stem, gender, originalWord) {
  * @returns {string} plural form
  */
 function nominativePlural(
-  word,
+  word:string,
   gender: Gender,
   animate = false,
   pluralOnly = false
 ) {
   let orgininalStem = deriveStem(word, gender, pluralOnly, animate);
-  let derived;
-  let explanation;
+  let derived:string;
+  let explanation:string;
 
   const softenedStem = softenStem(orgininalStem, gender, word); // apply softening before suffix
 
@@ -164,17 +164,17 @@ export const nominativeNounDeriver = {
 };
 
 export const NominativeNounDeriver: NounDeriver = {
-  singular(noun: Noun): CaseDerivedNoun {
+  singular(noun: Noun): DerivedWord {
     // throw new Error("Method not implemented.");
-    return new CaseDerivedNoun(noun.sk, "nominative singular is the base form");
+    return new DerivedWord(noun.sk, "nominative singular is the base form");
   },
-  plural(noun: Noun): CaseDerivedNoun {
+  plural(noun: Noun): DerivedWord {
     const response = nominativePlural(
       noun.sk,
       noun.gender,
       noun.animate,
       noun.plural
     );
-    return new CaseDerivedNoun(response.derived, response.explanation);
+    return new DerivedWord(response.derived, response.explanation);
   },
 };

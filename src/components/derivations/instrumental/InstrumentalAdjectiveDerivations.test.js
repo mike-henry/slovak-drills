@@ -20,15 +20,16 @@ const adj =  { sk: "dobrý" };
 // ---------------------------
 describe("Instrumental Adjectives — Singular", () => {
   test("Masculine → dobrým", () => {
-    expect(instrumentalAdjectiveDeriver.singular(adj, chlap)).toBe("dobrým");
+    expect(instrumentalAdjectiveDeriver.singular(adj, chlap).derived).toBe("dobrým");
   });
 
   test("Feminine → dobrou", () => {
-    expect(instrumentalAdjectiveDeriver.singular(adj, zena)).toBe("dobrou");
+    expect(instrumentalAdjectiveDeriver.singular(adj, zena).derived).toBe("dobrou");
   });
 
   test("Neuter → dobrým", () => {
-    expect(instrumentalAdjectiveDeriver.singular(adj, mesto)).toBe("dobrým");
+    expect(instrumentalAdjectiveDeriver.singular(adj, mesto).derived).
+toBe("dobrým");
   });
 });
 
@@ -37,14 +38,17 @@ describe("Instrumental Adjectives — Singular", () => {
 // ---------------------------
 describe("Instrumental Adjectives — Plural", () => {
   test("Masculine plural → dobrými", () => {
-    expect(instrumentalAdjectiveDeriver.plural(adj, chlapi)).toBe("dobrými");
+    expect(instrumentalAdjectiveDeriver.plural(adj, chlapi).derived).
+toBe("dobrými");
   });
 
   test("Feminine plural → dobrými", () => {
-    expect(instrumentalAdjectiveDeriver.plural(adj, zeny)).toBe("dobrými");
+    expect(instrumentalAdjectiveDeriver.plural(adj, zeny).derived).
+toBe("dobrými");
   });
 
   test("Neuter plural → dobrými", () => {
-    expect(instrumentalAdjectiveDeriver.plural(adj, mesta)).toBe("dobrými");
+    expect(instrumentalAdjectiveDeriver.plural(adj, mesta).derived).
+toBe("dobrými");
   });
 });

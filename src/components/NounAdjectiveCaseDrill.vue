@@ -123,7 +123,7 @@ const submitAnswer = () => {
   const correct = answer === expected.derived.toLowerCase()
 
   totalAttempts.value++
-  addToHistory(`${adjective.sk} ${noun.sk}`, answer, correct, expected.derived)
+  addToHistory(`${adjective.sk} ${noun.sk}`, answer, correct, expected.derived,caseName,expected.documentation)
 
   if (correct) {
     streakCount.value++

@@ -1,5 +1,7 @@
+import type { Noun } from "../grammer/WordTypes.js";
 import { deriveStem, endsWithSoftConsonant, endsWithHardConsonant } from "../vocalGrammer.js";
-import { nominativeNounDeriver } from "./NominativeNounDerivations.js";
+import  { DerivedWord } from "./Derivers.js";
+import { nominativeNounDeriver } from "./nominative/NominativeNounDerivations.js";
 
 
 //ONLY FOR  IMPLEMENTATION FOR PLURAL
@@ -19,7 +21,7 @@ const IRREGULAR_GENITIVE_PLURAL = {
  * @param {string} word - Slovak noun
  * @returns {string} genitive plural
  */
-function genitivePlural(word, gender, animate = false) {
+function genitivePlural(word, gender, animate = false):DerivedWord {
   if(gender !== "M" || !animate)  return nominativeNounDeriver.plural({ sk: word, gender, animate });
   if (IRREGULAR_GENITIVE_PLURAL[word]) return IRREGULAR_GENITIVE_PLURAL[word];
 
@@ -38,17 +40,17 @@ let explanation;
   }
 
   // fallback
-  return { derived, explanation };
+  return new DerivedWord( derived, explanation );
 }
 
 /**
  * Genitive noun deriver object
  */
 export const genitiveNounDeriver = {
-  singular: (noun) => {
+  singular: (noun:Noun) => {
     throw new Error("Genitive singular not implemented yet");
   },
 
-  plural: (noun) => genitivePlural(noun.sk,noun.gender, noun.animate)
+plural: (noun:Noun) => genitivePlural(noun.sk,noun.gender, noun.animate)
   
 };

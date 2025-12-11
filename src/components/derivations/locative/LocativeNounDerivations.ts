@@ -2,9 +2,10 @@ import {
   deriveStem,
   endsWithSoftConsonant,
   endsWithConsonant,
-} from "../vocalGrammer.js";
+} from "../../vocalGrammer.js";
+import type { DerivedWord } from "../Derivers.js";
 
-import { nominativeNounDeriver,softenStem } from "./NominativeNounDerivations.js";
+import { nominativeNounDeriver,softenStem } from "../nominative/NominativeNounDerivations.js";
 
 // kosť-class consonants that lose diacritic before -i
 const SOFTEN_MAP = {
@@ -114,17 +115,17 @@ const IRREGULAR_LOC_PL = {
 /**
  * LOCATIVE — PLURAL
  */
-export function locativePlural(word, gender, animate = false) {
+export function locativePlural(word, gender, animate = false):DerivedWord {
   const nomPl = nominativeNounDeriver.plural({ sk: word, gender, animate }).derived;
-  let derived;
-  let explanation;
+  let derived:string;
+  let explanation:string;
   let stemed1 =  () => nomPl.slice(0, -1) // helper to get stem by removing last  char
   let stemed2 =  () => nomPl.slice(0, -2) // helper to get stem by removing last 2 chars
   
   // --- FEMININE SPECIAL CASES ---
   if (gender === "F") {
     if (nomPl.endsWith("ie")) {
-      derived = stemed2(stemed2) + "iách"; 
+      derived = stemed2() + "iách"; 
       explanation = `stem ${stemed2()} + iách`;
     } // stanice → staniciach
     else if (nomPl.endsWith("ia")) {
@@ -173,8 +174,9 @@ export function locativePlural(word, gender, animate = false) {
     else if (nomPl.endsWith("a")) { derived= stemed1() + "ach"; // srdcia → srdciach
       explanation = `stem ${stemed1()} + ach`;
     }
-    else if (nomPl.endsWith("ie")) { return stem2() + "iach"; // vysvedčenia → vysvedčeniach
-       explanation = `stem ${stem2()} + iach`;
+    else if (nomPl.endsWith("ie")) {
+       explanation= stemed2() + "iach"; // vysvedčenia → vysvedčeniach
+       explanation = `stem ${stemed2()} + iach`;
     } // vysvedčenia → vysvedčeniach
     
   }  

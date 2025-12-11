@@ -1,28 +1,29 @@
 import { describe, test, expect } from "vitest";
 import { locativeNounDeriver } from "./LocativeNounDerivations.js";
+import { Gender, type Noun } from "../../grammer/WordTypes.js";
 
 describe("Locative Noun Derivations (explicit noun objects)", () => {
   // -------------------------
   // MASCULINE
   // -------------------------
 
-  const chlap = { sk: "chlap", gender: "M", animate: true };
-  const terminal = { sk: "terminál", gender: "M" };
-  const hrad = { sk: "hrad", gender: "M", animate: false };
-  const stroj = { sk: "stroj", gender: "M", animate: false };
+  const chlap:Noun  = { sk: "chlap", en:"", gender: Gender.Masculine, animate: true };
+  const terminal :Noun = { en: "",sk: "terminál", gender: Gender.Masculine };
+  const hrad :Noun = { en: "",sk: "hrad", gender: Gender.Masculine, animate: false };
+  const stroj :Noun = { en: "",sk: "stroj", gender: Gender.Masculine, animate: false };
 
   // -------------------------
   // FEMININE
   // -------------------------
 
-  const stanica = { sk: "stanica", gender: "F", animate: false };
-  const kost = { sk: "kosť", gender: "F", animate: false };
+  const stanica :Noun = { en: "",sk: "stanica", gender: Gender.Femenine, animate: false };
+  const kost :Noun = { en: "",sk: "kosť", gender: Gender.Femenine, animate: false };
 
   // -------------------------
   // NEUTER
   // -------------------------
 
-  const mesto = { sk: "mesto", gender: "N", animate: false };
+  const mesto :Noun = { en: "",sk: "mesto", gender: Gender.Neutral, animate: false };
 
   // -------------------------
   // SINGULAR TESTS
@@ -79,8 +80,8 @@ describe("Locative Noun Derivations (explicit noun objects)", () => {
 
   test("feminine plural (žena → ženách)", () => {
     const result = locativeNounDeriver.plural({
-      sk: "žena",
-      gender: "F",
+      en: "",sk: "žena",
+      gender: Gender.Femenine,
       animate: false,
     });
     expect(result.derived).toBe("ženách");

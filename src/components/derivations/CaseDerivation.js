@@ -1,11 +1,11 @@
-import { locativeNounDeriver } from "./LocativeNounDerivations.js";
-import { accusativeNounDeriver } from "./AccusativeNounDerivations.js";
-import { instrumentalNounDeriver } from "./InstrumentalNounDerivations";
-import { nominativeNounDeriver } from "./NominativeNounDerivations.ts";
-import { instrumentalAdjectiveDeriver } from "./InstrumentalAdjectiveDerivations.js";
-import { nominativeAdjectiveDeriver } from "./NominativeAdjectiveDerivations.js";
-import { accusativeAdjectiveDeriver } from "./AccusativeAdjectiveDerivations.js";
-import { locativeAdjectiveDeriver } from "./LocativeAdjectiveDerivations.js";
+import { locativeNounDeriver } from "./locative/LocativeNounDerivations.js";
+import { AccusativeNounDeriver } from "./accusative/AccusativeNounDerivations.js";
+import { instrumentalNounDeriver } from "./instrumental/InstrumentalNounDerivations.js";
+import { NominativeNounDeriver } from "./nominative/NominativeNounDerivations";
+import { instrumentalAdjectiveDeriver } from "./instrumental/InstrumentalAdjectiveDerivations.js";
+import { NominativeAdjectiveDeriver } from "./nominative/NominativeAdjectiveDerivations";
+import { AccusativeAdjectiveDeriver } from "./accusative/AccusativeAdjectiveDerivations.js";
+import { locativeAdjectiveDeriver } from "./locative/LocativeAdjectiveDerivations.js";
 import { STANDARD_SECTIONS} from "../../documents/DocumentLoader.js"
 
 export const nounDeriver = (vocalCase) => {
@@ -13,9 +13,9 @@ export const nounDeriver = (vocalCase) => {
     case CASE.LOCATIVE:
       return locativeNounDeriver;
     case CASE.ACCUSATIVE:
-      return accusativeNounDeriver;
+      return AccusativeNounDeriver;
     case CASE.NOMINATIVE:
-      return nominativeNounDeriver;
+      return NominativeNounDeriver;
     case CASE.INSTRUMENTAL:
       return instrumentalNounDeriver;
     default:
@@ -28,9 +28,9 @@ const adjectiveDeriver = (vocalCase) => {
     case CASE.INSTRUMENTAL:
       return instrumentalAdjectiveDeriver;
     case CASE.ACCUSATIVE:
-      return accusativeAdjectiveDeriver;
+      return AccusativeAdjectiveDeriver;
     case CASE.NOMINATIVE:
-      return nominativeAdjectiveDeriver;
+      return NominativeAdjectiveDeriver;
     case CASE.LOCATIVE:
       return locativeAdjectiveDeriver;
     default:
@@ -72,10 +72,7 @@ export const deriveAdjectiveNounCase = (
   return {
     derived: `${adjectiveInCase.derived} ${nounInCase.derived}`,
     explanation: `for ${caseName} - adjective:${adjectiveInCase.explanation}, noun:${nounInCase.explanation}`,
-    documentation: {
-      noun: nounDocumentation,
-      adjective: adjectiveDocumentation
-    }
+    documentation: [ nounDocumentation,adjectiveDocumentation]
   };
 };
 

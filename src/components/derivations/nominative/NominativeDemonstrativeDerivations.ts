@@ -1,5 +1,7 @@
 // NominativeDemonstrativeDerivations.js
 
+import type { Noun } from "../../grammer/WordTypes";
+
 
 
 function nominativeSingular(gender) {
@@ -49,4 +51,10 @@ function nominativePlural(gender) {
 export const nominativeDemonstrativeDeriver = {
   singular: (noun) => nominativeSingular(noun.gender),
   plural: (noun) => nominativePlural(noun.gender),
+};
+
+
+export const NominativeDemonstrativeDeriver = {
+  singular: (noun:Noun) => nominativeSingular(noun.gender),
+  plural: (noun:Noun) => nominativePlural(noun.gender),
 };

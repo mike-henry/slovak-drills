@@ -1,20 +1,22 @@
 // LocativeDemonstrativeDerivations.js
 
-function locativeSingular({ gender }) {
+import { Gender, type Noun } from "../../grammer/WordTypes";
+
+function locativeSingular(noun:Noun) {
   let derived;
   let explanation;
-  switch (gender) {
-    case "M": {
+  switch (noun.gender) {
+    case Gender.Masculine: {
       derived = "tom";
       explanation = `demonstrative stem (t) + om `;
       break;
     }
-    case "F": {
+    case Gender.Femenine: {
       derived = "tej";
       explanation = `demonstrative stem (t) + ej `;
       break;
     }
-    case "N": {
+    case Gender.Neutral: {
       derived = "tom";
       explanation = `demonstrative stem (t) + om `;
       break;
@@ -25,7 +27,7 @@ function locativeSingular({ gender }) {
   return { derived, explanation };
 }
 
-function locativePlural() {
+function locativePlural(noun:Noun) {
   return {
     derived: "tých",
     explanation: `demonstrative stem (t) + ých same for all genders`,
@@ -33,6 +35,12 @@ function locativePlural() {
 }
 
 export const locativeDemonstrativeDeriver = {
-  singular: locativeSingular,
-  plural: locativePlural,
+  singular: (noun) =>locativeSingular(noun),
+  plural: (noun) =>locativePlural(noun),
+};
+
+
+export const LocativeDemonstrativeDeriver = {
+  singular: (noun:Noun) =>locativeSingular(noun),
+  plural: (noun:Noun) =>locativePlural(noun),
 };

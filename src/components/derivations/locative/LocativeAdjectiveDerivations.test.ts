@@ -1,7 +1,7 @@
 // LocativeAdjectiveDerivations.test.js
 
 import { describe, test, expect } from "vitest";
-import { locativeAdjectiveDeriver } from "./LocativeAdjectiveDerivations.js";
+import { locativeAdjectiveDeriver } from "./LocativeAdjectiveDerivations";
 
 // Example nouns for gender detection
 const chlap = { sk: "chlap", gender: "M", animate: true };

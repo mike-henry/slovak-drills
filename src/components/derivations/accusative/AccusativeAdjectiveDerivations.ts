@@ -1,13 +1,15 @@
 // AccusativeAdjectiveDerivations.js
 
-import { endsWithSoftConsonant } from "../vocalGrammer.js";
+import { endsWithSoftConsonant } from "@/components/vocalGrammer";
+import type { AdjectiveDeriver, DerivedWord } from "../Derivers";
+import type { Adjective, Noun } from "@/components/grammer/WordTypes";
 
-function accusativeAdjectiveSingular(adj, nounInfo) {
+function accusativeAdjectiveSingular(adj:string, nounInfo:Noun) {
   const { gender, animate } = nounInfo;
-  let derived;
-  let explanation;
+  let derived:string;
+  let explanation:string;
 
-  // Adjective base (dobr-)
+  // Adjective base  (dobr-)
   const base = adj.slice(0, -1); // remove -ý
 
   // ---------- MASCULINE ----------
@@ -76,4 +78,9 @@ function accusativeAdjectivePlural(adj, nounInfo) {
 export const accusativeAdjectiveDeriver = {
   singular: (adjective, noun) => accusativeAdjectiveSingular(adjective.sk, noun),
   plural: (adjective, noun) => accusativeAdjectivePlural(adjective.sk, noun)
+};
+
+export const AccusativeAdjectiveDeriver:AdjectiveDeriver = {
+  singular: (adjective:Adjective, noun:Noun) => accusativeAdjectiveSingular(adjective.sk, noun),
+  plural:  (adjective:Adjective, noun:Noun) => accusativeAdjectivePlural(adjective.sk, noun)
 };

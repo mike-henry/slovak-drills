@@ -1,15 +1,16 @@
 import { describe, test, expect } from "vitest";
-import { instrumentalNounDeriver } from "./InstrumentalNounDerivations.js";
+import { InstrumentalNounDeriver as instrumentalNounDeriver } from "./InstrumentalNounDerivations";
+import { Gender, type Noun } from "@/components/grammer/WordTypes";
 
 // ---------------------------------------------------------
 // MASCULINE — INSTRUMENTAL SINGULAR
 // ---------------------------------------------------------
 describe("Masculine nouns — instrumental singular", () => {
-  const chlap = { sk: "chlap", gender: "M", animate: true };
-  const muz = { sk: "muž", gender: "M", animate: true };
-  const stroj = { sk: "stroj", gender: "M", animate: false };
-  const hrdina = { sk: "hrdina", gender: "M", animate: true };
-  const kolega = { sk: "kolega", gender: "M", animate: true };
+  const chlap:Noun = {en:"", sk: "chlap", gender: Gender.Masculine, animate: true };
+  const muz:Noun = {en:"", sk: "muž", gender: Gender.Masculine, animate: true };
+  const stroj:Noun = {en:"", sk: "stroj", gender: Gender.Masculine, animate: false };
+  const hrdina:Noun = {en:"", sk: "hrdina", gender: Gender.Masculine, animate: true };
+  const kolega:Noun = {en:"", sk: "kolega", gender: Gender.Masculine, animate: true };
 
   test("Masculine animate → -om", () => {
     expect(instrumentalNounDeriver.singular(chlap).derived).toBe("chlapom");
@@ -30,11 +31,11 @@ describe("Masculine nouns — instrumental singular", () => {
 // FEMININE — INSTRUMENTAL SINGULAR
 // ---------------------------------------------------------
 describe("Feminine nouns — instrumental singular", () => {
-  const zena = { sk: "žena", gender: "F" };
-  const kniha = { sk: "kniha", gender: "F" };
-  const chemia = { sk: "chémia", gender: "F" };
-  const kost = { sk: "kosť", gender: "F" };
-  const radost = { sk: "radosť", gender: "F" };
+  const zena:Noun = {en:"", sk: "žena",  gender: Gender.Femenine };
+  const kniha:Noun = {en:"", sk: "kniha",  gender: Gender.Femenine };
+  const chemia:Noun = {en:"", sk: "chémia",  gender: Gender.Femenine };
+  const kost:Noun = {en:"", sk: "kosť",  gender: Gender.Femenine };
+  const radost:Noun = {en:"", sk: "radosť",  gender: Gender.Femenine };
 
   test("Feminine -a → -ou", () => {
     expect(instrumentalNounDeriver.singular(zena).derived).toBe("ženou");
@@ -55,13 +56,13 @@ describe("Feminine nouns — instrumental singular", () => {
 // NEUTER — INSTRUMENTAL SINGULAR
 // ---------------------------------------------------------
 describe("Neuter nouns — instrumental singular", () => {
-  const mesto = { sk: "mesto", gender: "N" };
-  const auto = { sk: "auto", gender: "N" };
-  const srdce = { sk: "srdce", gender: "N" };
-  const more = { sk: "more", gender: "N" };
-  const vysvedcenie = { sk: "vysvedčenie", gender: "N" };
-  const minimum = { sk: "minimum", gender: "N" };
-  const studium = { sk: "štúdium", gender: "N" };
+  const mesto:Noun = {en:"", sk: "mesto",  gender: Gender.Neutral };
+  const auto:Noun = {en:"", sk: "auto",  gender: Gender.Neutral };
+  const srdce:Noun = {en:"", sk: "srdce",  gender: Gender.Neutral };
+  const more:Noun = {en:"", sk: "more",  gender: Gender.Neutral };
+  const vysvedcenie:Noun = {en:"", sk: "vysvedčenie",  gender: Gender.Neutral };
+  const minimum:Noun = {en:"", sk: "minimum",  gender: Gender.Neutral };
+  const studium:Noun = {en:"", sk: "štúdium",  gender: Gender.Neutral };
 
   test("Neuter -o → -om", () => {
     expect(instrumentalNounDeriver.singular(mesto).derived).toBe("mestom");
@@ -87,11 +88,11 @@ describe("Neuter nouns — instrumental singular", () => {
 // MASCULINE — INSTRUMENTAL PLURAL
 // ---------------------------------------------------------
 describe("Masculine nouns — instrumental plural", () => {
-  const chlap = { sk: "chlap", gender: "M", animate: true };
-  const muz = { sk: "muž", gender: "M", animate: true };
-  const stroj = { sk: "stroj", gender: "M", animate: false };
-  const hrdina = { sk: "hrdina", gender: "M", animate: true };
-  const kolega = { sk: "kolega", gender: "M", animate: true };
+  const chlap:Noun = {en:"", sk: "chlap", gender: Gender.Masculine, animate: true };
+  const muz:Noun = {en:"", sk: "muž", gender: Gender.Masculine, animate: true };
+  const stroj:Noun = {en:"", sk: "stroj", gender: Gender.Masculine, animate: false };
+  const hrdina:Noun = {en:"", sk: "hrdina", gender: Gender.Masculine, animate: true };
+  const kolega:Noun = {en:"", sk: "kolega", gender: Gender.Masculine, animate: true };
 
   test("All masculine (animate & inanimate) consonant-ending → -mi", () => {
     expect(instrumentalNounDeriver.plural(chlap).derived).toBe("chlapmi");
@@ -109,11 +110,11 @@ describe("Masculine nouns — instrumental plural", () => {
 // FEMININE — INSTRUMENTAL PLURAL
 // ---------------------------------------------------------
 describe("Feminine nouns — instrumental plural", () => {
-  const zena = { sk: "žena", gender: "F" };
-  const kniha = { sk: "kniha", gender: "F" };
-  const chemia = { sk: "chémia", gender: "F" };
-  const kost = { sk: "kosť", gender: "F" };
-  const vec = { sk: "vec", gender: "F" };
+  const zena:Noun = {en:"", sk: "žena",  gender: Gender.Femenine };
+  const kniha:Noun = {en:"", sk: "kniha",  gender: Gender.Femenine };
+  const chemia:Noun = {en:"", sk: "chémia",  gender: Gender.Femenine };
+  const kost:Noun = {en:"", sk: "kosť",  gender: Gender.Femenine };
+  const vec:Noun = {en:"", sk: "vec",  gender: Gender.Femenine };
 
   test("Feminine -a → -ami", () => {
     expect(instrumentalNounDeriver.plural(zena).derived).toBe("ženami");
@@ -134,11 +135,11 @@ describe("Feminine nouns — instrumental plural", () => {
 // NEUTER — INSTRUMENTAL PLURAL
 // ---------------------------------------------------------
 describe("Neuter nouns — instrumental plural", () => {
-  const mesto = { sk: "mesto", gender: "N" };
-  const auto = { sk: "auto", gender: "N" };
-  const srdce = { sk: "srdce", gender: "N" };
-  const more = { sk: "more", gender: "N" };
-  const vysvedcenie = { sk: "vysvedčenie", gender: "N" };
+  const mesto:Noun = {en:"", sk: "mesto",  gender: Gender.Neutral };
+  const auto:Noun = {en:"", sk: "auto",  gender: Gender.Neutral };
+  const srdce:Noun = {en:"", sk: "srdce",  gender: Gender.Neutral };
+  const more:Noun = {en:"", sk: "more",  gender: Gender.Neutral };
+  const vysvedcenie:Noun = {en:"", sk: "vysvedčenie",  gender: Gender.Neutral };
 
   test("All neuters → -ami", () => {
     expect(instrumentalNounDeriver.plural(mesto).derived).toBe("mestami");

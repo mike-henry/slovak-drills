@@ -79,9 +79,7 @@ export function instrumentalPlural(noun: Noun):DerivedWord {
      derived = stem + 'ami';
      explanation= `feminine instrumental plural = stem (${stem}) + ami`;
     }
-
-
-  } if (noun.gender === 'N') { // ----- NEUTER -----
+  } else if (noun.gender === 'N') { // ----- NEUTER -----
     derived = stem + (noun.sk.endsWith('nie') || noun.sk.endsWith('tie') ? 'iami' : 'ami');
       explanation= `neuter instrumental plural = stem (${stem}) + ami`;
   } else throw new Error('Invalid gender for instrumental plural');

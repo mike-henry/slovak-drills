@@ -8,7 +8,7 @@
       Type the correct <b>{{ caseTitle }}</b> form of each adjective.
     </p>
 
-    <div v-if="!started" class="text-center mt-8">
+    <div v-if="!hasStarted" class="text-center mt-8">
       <button @click="startQuiz" class="drill-button-primary">
         Start / Reset
       </button>
@@ -17,12 +17,12 @@
     <div v-else>
       <div class="drill-panel">
         <div class="text-4xl font-bold mb-1">
-          {{ currentAdjective.sk }} {{ currentNoun.sk }}
-          <span lass="drill-plural"  v-if="currentPlural"> in plural</span>
+          {{ currentItem.adjective.sk }} {{ currentItem.noun.sk }}
+          <span class="drill-plural" v-if="currentItem && currentItem.plural"> in plural</span>
         </div>
 
-        <div class="prompt-subtext">
-          ({{ currentAdjective.en }} {{ currentNoun.en }})
+        <div class="text-slate-400 mb-4">
+          ({{ currentItem.adjective.en }} {{ currentItem.noun.en }})
         </div>
         <answer-field v-model="userAnswer" :disabled="showExplanation" />
         <div class="mt-4 flex gap-3">
@@ -30,20 +30,33 @@
             Submit
           </button>
 
-          <button v-else @click="nextQuestion" class="drill-button-secondary">
-            Continue
-          </button>
+          <div v-else>
+            <button @click="handleContinue" class="drill-button-secondary">
+              Continue
+            </button>
+            <button @click="openDocumentation" class="drill-button-secondary">
+              Explanation
+            </button>
+          </div>
         </div>
 
-        <div v-if="showExplanation" class="explanation-box">
+        <div v-if="showExplanation" class="drill-explanation">
           <p class="text-lg">{{ explanationText }}</p>
         </div>
         <drill-progress />
       </div>
       <congrats-modal v-model="showStreakDialog" title="Streak Level Accomplished!" @confirm="resetStreak">
         <p> for {{ caseName }} Nouns with adjectives you reached a streak of {{ streakCount }}!</p>
-        <p>You should now try another  drill</p>
+        <p>You should now try another drill</p>
       </congrats-modal>
+
+      <case-Help ref="caseHelp"
+        v-if="caseHelpShow"
+        :case-name="caseName"
+        :section="caseHelpSection"
+        @confirm="caseHelpShow = false"
+      />
+
       <div class="mt-6">
         <history-list :history="history" />
       </div>
@@ -53,79 +66,65 @@
 
 
 <script setup lang="ts">
-import { ref, onMounted,  computed, type Ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { loadVocabulary } from '@/utils/grammer/wordStore.js'
 import DrillProgress from "@/components/DrillProgress.vue"
 import AnswerField from '@/components/AnswerField.vue'
 import HistoryList from '@/components/HistoryList.vue'
 import CongratsModal from '@/components/CongratsModal.vue'
-import { addToHistory, history,  getRandomAdjective, getRandomNoun, streakCount, totalAttempts,STREAK_TARGET, capitalizeFirstOnly,resetStreak,normalizeSpaces} from './drillUtils.js'
+import CaseHelp from '@/components/CaseHelp.vue'
+import { useDrill, getRandomAdjective, getRandomNoun, history, streakCount, resetStreak, normalizeSpaces } from './drillUtils.js'
 import { declinateAdjectiveWithNoun } from '@/utils/grammer/declinations/DeclinationUtils.js'
-import type Noun from '@/utils/grammer/declinations/Noun.js'
-import type Adjective from '@/utils/grammer/declinations/Adjective.js'
-
+import { CASE_TYPE } from '@/utils/grammer/WordTypes'
 
 onMounted(() => loadVocabulary())
 
 const properties = defineProps(['caseName'])
 const caseName = properties.caseName
 
-const caseTitle = computed(() => {
-  return capitalizeFirstOnly(properties.caseName)
+const caseHelp = ref(null)
+
+// Use the shared drill composable
+const {
+  caseTitle,
+  hasStarted,
+  currentItem,
+  userAnswer,
+  showExplanation,
+  explanationText,
+  showStreakDialog,
+  caseHelpSection,
+  caseHelpShow,
+  startQuiz,
+  submitAnswer: baseSubmitAnswer,
+  handleContinue,
+  openDocumentation
+} = useDrill({
+  caseName,
+  getNextItem: () => ({ adjective: getRandomAdjective(), noun: getRandomNoun(), plural: Math.random() < 0.5 }),
+  getExpected: (item) => declinateAdjectiveWithNoun(item.adjective, item.noun, caseName as CASE_TYPE, item.plural),
+  getInitialAnswer: (item) => `${item.adjective.sk} ${item.noun.sk}`,
+  getWordForHistory: (item) => `${item.adjective.sk} ${item.noun.sk}`
 })
 
-
-const started = ref(false)
-const currentPlural = ref(false)
-const currentNoun:Ref<Noun> = ref()
-const currentAdjective:Ref<Adjective> = ref()
-const userAnswer = ref('')
-const showExplanation = ref(false)
-const explanationText = ref('')
-const showStreakDialog = ref(false)
-
-
-
-const startQuiz = () => {
-  started.value = true
-  resetStreak()
-  totalAttempts.value = 0
-  history.value = []
-  nextQuestion()
-}
-
-const nextQuestion = () => {
-  currentNoun.value = getRandomNoun()
-  currentAdjective.value = getRandomAdjective()
-
-  currentPlural.value = Math.random() < 0.5
-  userAnswer.value = currentAdjective.value.sk + ' ' + currentNoun.value.sk
-  showExplanation.value = false
-  explanationText.value = ''
-}
-
-
-
+// Override submitAnswer for normalizeSpaces and custom explanation
 const submitAnswer = () => {
-  const adjective = currentAdjective.value
-  const noun = currentNoun.value
-
-  const expected = declinateAdjectiveWithNoun(adjective, noun, caseName, currentPlural.value)
-
+  const item = currentItem.value
+  const expected = declinateAdjectiveWithNoun(item.adjective, item.noun, caseName as CASE_TYPE, item.plural)
   const answer = normalizeSpaces(userAnswer.value).toLowerCase()
   const correct = answer === expected.derived.toLowerCase()
 
-  totalAttempts.value++
-  addToHistory(`${adjective.sk} ${noun.sk}`, answer, correct, expected.derived,caseName,expected.documentation)
+  caseHelpSection.value = expected.documentation
+
+  // Custom logic for this drill
   if (correct) {
     streakCount.value++
-    if (streakCount.value >= STREAK_TARGET) showStreakDialog.value = true
-    nextQuestion()
+    if (streakCount.value >= 10) showStreakDialog.value = true
+    handleContinue()
   } else {
-    streakCount.value = 0
-    explanationText.value = `❗"${expected.derived} ${expected.explanation}`
+    resetStreak()
+    explanationText.value = `❗"${expected.derived} ${expected.explanation}"`
     showExplanation.value = true
   }
 }
-
 </script>

@@ -21,12 +21,12 @@
       <div class="drill-panel">
 
         <div class="text-4xl font-bold mb-1">
-          {{ currentNoun.sk }}
-          <span class="drill-plural" v-if="currentIsPlural"> in plural</span>
+          {{ currentItem.noun.sk }}
+          <span class="drill-plural" v-if="currentItem && currentItem.isPlural"> in plural</span>
         </div>
 
         <div class="text-slate-400 mb-4">
-          ({{ currentNoun.en }})
+          ({{ currentItem.noun.en }})
         </div>
         <answer-field v-model="userAnswer" :disabled="showExplanation" />
 
@@ -72,9 +72,10 @@
 
 
 <script setup lang="ts">
-import { ref, onMounted,  computed, type Ref } from 'vue'
-import {  loadVocabulary } from '../utils/grammer/wordStore.js'
-import { history, addToHistory, totalAttempts, streakCount, getRandomNoun ,STREAK_TARGET, capitalizeFirstOnly,resetStreak} from './drillUtils.js'
+import { ref, onMounted } from 'vue'
+import { loadVocabulary } from '../utils/grammer/wordStore.js'
+import { useDrill, getRandomNoun, resetStreak, history, streakCount } from './drillUtils.js'
+import { CASE_TYPE } from '@/utils/grammer/WordTypes'
 import HistoryList from '@/components/HistoryList.vue'
 import AnswerField from '@/components/AnswerField.vue'
 import DrillProgress from '@/components/DrillProgress.vue'
@@ -89,77 +90,28 @@ const properties = defineProps(['caseName'])
 const caseName = properties.caseName
 
 const caseHelp = ref(null)
-const caseHelpSection:Ref<string[]> = ref()
-const caseHelpShow = ref(false)
 
-
-const caseTitle = computed(() => {
-  return capitalizeFirstOnly(properties.caseName)
+// Use the shared drill composable
+const {
+  caseTitle,
+  hasStarted,
+  currentItem,
+  userAnswer,
+  showExplanation,
+  explanationText,
+  showStreakDialog,
+  caseHelpSection,
+  caseHelpShow,
+  startQuiz,
+  submitAnswer,
+  handleContinue,
+  openDocumentation
+} = useDrill({
+  caseName,
+  getNextItem: () => ({ noun: getRandomNoun(), isPlural: Math.random() < 0.5 }),
+  getExpected: (item) => item.noun.declinate(caseName as CASE_TYPE, item.isPlural),
+  getInitialAnswer: (item) => item.noun.sk,
+  getWordForHistory: (item) => item.noun.sk
 })
-
-
-
-const hasStarted = ref(false)
-const currentIsPlural = ref(false)
-const currentNoun:Ref<Noun> = ref()
-const userAnswer = ref('')
-const showExplanation = ref(false)
-const explanationText = ref('')
-const showStreakDialog = ref(false)
-
-
-const startQuiz = () => {
-  hasStarted.value = true
-  resetStreak()
-  totalAttempts.value = 0
-  history.value = []
-  nextQuestion()
-}
-
-const nextQuestion = () => {
-  currentNoun.value = getRandomNoun()
-  currentIsPlural.value = Math.random() < 0.5
-  userAnswer.value = currentNoun.value.sk
-  showExplanation.value = false
-  explanationText.value = ''
-}
-
-const submitAnswer = () => {
-  const noun = currentNoun.value
-  const expectedValue = noun.declinate(caseName,currentIsPlural.value)
-  const answer = userAnswer.value.trim().toLowerCase()
-  const correct = answer === expectedValue.derived.toLowerCase()
-   caseHelpSection.value = expectedValue.documentation 
-
-  totalAttempts.value++
-  addToHistory(noun.sk, answer, correct, expectedValue.derived,caseName,expectedValue.documentation)
- 
- 
-  if (correct) {
-    streakCount.value++
-    if (streakCount.value >= STREAK_TARGET) showStreakDialog.value = true
-    nextQuestion()
-  } else {
-    resetStreak()
-
-    explanationText.value = `❗ "for ${noun.sk}" : explanation "${expectedValue.explanation}".`
-
-    showExplanation.value = true
-  }
-}
-
-
-
-
-const handleContinue = () => {
-  nextQuestion()
-}
-
-
-
-function openDocumentation() {
-  caseHelpShow.value = true
-}
-
 </script>
 

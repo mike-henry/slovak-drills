@@ -30,9 +30,14 @@
             Submit
           </button>
 
-          <button v-else @click="handleContinue" class="drill-button-secondary">
-            Continue
-          </button>
+          <div v-else>
+            <button @click="handleContinue" class="drill-button-secondary">
+              Continue
+            </button>
+            <button @click="openDocumentation" class="drill-button-secondary">
+              Explanation
+            </button>
+          </div>
         </div>
 
         <div v-if="showExplanation" class="explanation-box">
@@ -40,6 +45,14 @@
         </div>
         <drill-progress />
       </div>
+
+      <case-Help ref="caseHelp"
+        v-if="caseHelpShow"
+        :case-name="caseName"
+        :section="caseHelpSection"
+        @confirm="caseHelpShow = false"
+      />
+
       <div class="mt-6">
         <history-list :history="history" />
       </div>
@@ -54,16 +67,12 @@ import { loadVocabulary } from '@/utils/grammer/wordStore.js'
 import DrillProgress from '@/components/DrillProgress.vue'
 import AnswerField from '@/components/AnswerField.vue'
 import HistoryList from '@/components/HistoryList.vue'
+import CaseHelp from '@/components/CaseHelp.vue'
 import { addToHistory, history, getRandomAdjective, getRandomNoun, streakCount, totalAttempts, getRandomProposition } from '@/views/drillUtils'
 import type Noun from '@/utils/grammer/declinations/Noun'
 import type Adjective from '@/utils/grammer/declinations/Adjective'
 import { declinateAdjectiveWithNoun } from '@/utils/grammer/declinations/DeclinationUtils'
 import type Proposition from './Proposition'
-
-
-
-
-const STREAK_TARGET = 20
 
 onMounted(() => loadVocabulary())
 
@@ -88,8 +97,10 @@ const currentAdjective: Ref<Adjective> = ref()
 const currentProposition:Ref<Proposition> = ref()
 const userAnswer = ref('')
 const showExplanation = ref(false)
+const caseHelp = ref(null)
+const caseHelpSection: Ref<string[]> = ref()
+const caseHelpShow = ref(false)
 const explanationText = ref('')
-
 
 
 const startQuiz = () => {
@@ -124,18 +135,17 @@ const submitAnswer = () => {
   const answer = normalizeSpaces(userAnswer.value).toLowerCase()
   const correct = answer === expected.toLowerCase()
 
+  caseHelpSection.value = expectedAdjectiveNoun.documentation
+
   totalAttempts.value++
-  addToHistory(`${proposition.sk} ${noun.sk} ${adjective.sk}`, answer, correct, expected,caseName,expectedAdjectiveNoun.documentation)
+  addToHistory(`${proposition.sk} ${noun.sk} ${adjective.sk}`, answer, correct, expected,properties.caseName ,expectedAdjectiveNoun.documentation)
 
   if (correct) {
     streakCount.value++
     nextQuestion()
   } else {
     streakCount.value = 0
-
-    explanationText.value =
-
-      `❗ for ${proposition} - ${expectedAdjectiveNoun.explanation} `
+    explanationText.value = `❗ for ${proposition} - ${expectedAdjectiveNoun.explanation} `
 
     showExplanation.value = true
   }
@@ -145,16 +155,9 @@ const handleContinue = () => {
   nextQuestion()
 }
 
+function openDocumentation() {
+  caseHelpShow.value = true
+}
+
 
 </script>
-
-<style scoped>
-ul::-webkit-scrollbar {
-  width: 6px;
-}
-
-ul::-webkit-scrollbar-thumb {
-  background-color: rgba(100, 116, 139, 0.4);
-  border-radius: 3px;
-}
-</style>

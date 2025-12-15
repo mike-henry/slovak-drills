@@ -18,13 +18,11 @@ export default class Proposition extends WORD {
         en: string;
         case: CASE_TYPE
     }): Proposition {
-        if (!params.case) console.log('NO CASE')
+        if (!params.case) console.warn('NO CASE in Proposition')
         return new Proposition(
             params.sk,
             params.en,
-            params.case
+            params.case as CASE_TYPE
         );
     }
-
-
 }

@@ -16,7 +16,7 @@
 <script setup>
 
 import { computed  } from 'vue'
-import { STREAK_TARGET, streakCount, totalAttempts} from './drillUtils'
+import { STREAK_TARGET, streakCount, totalAttempts} from '../views/drillUtils'
 
 
 const progressPercent = computed(() =>

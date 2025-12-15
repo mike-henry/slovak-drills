@@ -108,7 +108,7 @@ Masculine animate nouns take genitive-style endings (explicitly shown below).
 
 <section id="adjective-endings">
 
-### Adjective endings — accusative
+### **Adjective endings — accusative**
 
 **Singular**
 - Masculine animate → **-ého** (*dobrého chlapca*)

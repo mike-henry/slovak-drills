@@ -14,6 +14,6 @@
     "baseUrl": ".",
     
   },
-  "include": ["src/**/*", "vite.config.*", "vitest.config.*", "src/components/derivations/nominative/NominativeAdjectiveDerivations.ts"]
+  "include": ["src/**/*", "vite.config.*", "vitest.config.*", "src/utils/grammer/declinations/nominative/NominativeAdjectiveDerivations.ts"]
 }
 

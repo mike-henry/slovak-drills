@@ -34,24 +34,11 @@ function closeHelp(){
 }
 
 function isCaseHelpShow(section,item){
-  console.warn(`${section} ${item}`)
     return presentSection.value === section
 }
 
 function openHelp(section){
   presentSection.value =section
 }
-
-
 </script>
 
-<style scoped>
-ul::-webkit-scrollbar {
-  width: 6px;
-}
-
-ul::-webkit-scrollbar-thumb {
-  background-color: rgba(100, 116, 139, 0.4);
-  border-radius: 3px;
-}
-</style>

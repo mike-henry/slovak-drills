@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 // Import your test components
-import NounGenderDrill from '../components/NounGenderDrill.vue'
+import NounGenderDrill from '../views/NounGenderDrill.vue'
 
-import NounCaseDrill from '../components/NounCaseDrill.vue'
-import AdjectiveCaseDrill from '../components/AdjectiveCaseDrill.vue'
-import NounAdjectiveCaseDrill from '@/components/NounAdjectiveCaseDrill.vue'
-import PropositionNounAdjectiveCaseDrill from '@/components/PropositionNounAdjectiveCaseDrill.vue'
+import NounCaseDrill from '../views/NounCaseDrill.vue'
+import AdjectiveCaseDrill from '../views/AdjectiveCaseDrill.vue'
+import NounAdjectiveCaseDrill from '@/views/NounAdjectiveCaseDrill.vue'
+import PropositionNounAdjectiveCaseDrill from '@/views/PropositionNounAdjectiveCaseDrill.vue'
 
 const routes = [
   {

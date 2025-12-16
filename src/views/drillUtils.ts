@@ -60,6 +60,7 @@ export const getRandomProposition = () => {
   return shuffled[Math.floor(Math.random() * shuffled.length)]
 }
 
+export const randomBoolean = () => Math.random() < 0.5;
 
 export const normalizeSpaces = (str: string) => {
   return str.trim().replace(/\s+/g, ' ');
@@ -67,22 +68,22 @@ export const normalizeSpaces = (str: string) => {
 
 // Composable for shared drill logic
 export function useDrill(options: {
-  caseName: string
-  getNextItem: () => any // e.g., { noun, isPlural } or { adjective, noun, isPlural }
-  getExpected: (item: any) => { derived: string, explanation: string, documentation: string[] }
+  caseName: ()=>CASE_TYPE
+  getNextItem: () => any // e.g., { noun, isPlural } or { adjective, noun, isPlural } actually Noun or Adjective (Verb too coming)
+  getExpected: (item: any) => { derived: string, explanation: string, documentation: string[] } //DerivedWord
   getInitialAnswer: (item: any) => string
   getWordForHistory: (item: any) => string
 }) {
   const { caseName, getNextItem, getExpected, getInitialAnswer, getWordForHistory } = options
 
-  const caseTitle = computed(() => capitalizeFirstOnly(caseName))
+  const caseTitle = computed(() => capitalizeFirstOnly(caseName()))
 
   const hasStarted = ref(false)
   const currentItem = ref<any>()
   const userAnswer = ref('')
   const showExplanation = ref(false)
   const explanationText = ref('')
-  const caseHelpSection = ref<string[]>()
+  const caseHelpSections = ref<string[]>()
   const caseHelpShow = ref(false)
 
   const openDocumentation = () => {
@@ -110,10 +111,10 @@ export function useDrill(options: {
     const answer = userAnswer.value.trim().toLowerCase()
     const correct = answer === expected.derived.toLowerCase()
 
-    caseHelpSection.value = expected.documentation
+    caseHelpSections.value = expected.documentation
 
     totalAttempts.value++
-    addToHistory(getWordForHistory(item), answer, correct, expected.derived, caseName as CASE_TYPE, expected.documentation)
+    addToHistory(getWordForHistory(item), answer, correct, expected.derived, caseName() , expected.documentation)
 
     if (correct) {
       streakCount.value++
@@ -138,7 +139,7 @@ export function useDrill(options: {
     showExplanation,
     explanationText,
     showStreakDialog,
-    caseHelpSection,
+    caseHelpSection: caseHelpSections,
     caseHelpShow,
     startQuiz,
     nextQuestion,

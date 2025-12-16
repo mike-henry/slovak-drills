@@ -8,7 +8,7 @@
       Type the correct form of each adjective and noun
     </p>
 
-    <div v-if="!started" class="text-center mt-8">
+    <div v-if="!hasStarted" class="text-center mt-8">
       <button @click="startQuiz" class="drill-button-primary">
         Start / Reset
       </button>
@@ -17,12 +17,13 @@
     <div v-else>
       <div class="drill-panel">
         <div class="text-4xl font-bold mb-1">
-          {{ currentProposition.sk }} {{ currentAdjective.sk }} {{ currentNoun.sk }}
-          <span class="drill-plural" v-if="currentPlural"> in plural</span>
+          {{ currentItem.proposition.sk }} {{ currentItem.adjective.sk }} {{ currentItem.noun.sk }}
+
+          <span class="drill-plural" v-if="currentItem.isPlural"> in plural</span>
         </div>
 
         <div class="prompt-subtext">
-          ( {{ currentProposition.en }} a {{ currentAdjective.en }} {{ currentNoun.en }})
+          {{ currentItem.proposition.en }} {{ currentItem.adjective.en }} {{ currentItem.noun.en }}
         </div>
         <answer-field v-model="userAnswer" :disabled="showExplanation" />
         <div class="mt-4 flex gap-3">
@@ -46,12 +47,8 @@
         <drill-progress />
       </div>
 
-      <case-Help ref="caseHelp"
-        v-if="caseHelpShow"
-        :case-name="caseName"
-        :section="caseHelpSection"
-        @confirm="caseHelpShow = false"
-      />
+      <case-Help ref="caseHelp" v-if="caseHelpShow" :case-name="caseName" :section="caseHelpSection"
+        @confirm="caseHelpShow = false" />
 
       <div class="mt-6">
         <history-list :history="history" />
@@ -68,11 +65,13 @@ import DrillProgress from '@/components/DrillProgress.vue'
 import AnswerField from '@/components/AnswerField.vue'
 import HistoryList from '@/components/HistoryList.vue'
 import CaseHelp from '@/components/CaseHelp.vue'
-import { addToHistory, history, getRandomAdjective, getRandomNoun, streakCount, totalAttempts, getRandomProposition } from '@/views/drillUtils'
+import { useDrill, history, getRandomAdjective, getRandomNoun, getRandomProposition, randomBoolean } from '@/views/drillUtils'
+
 import type Noun from '@/utils/grammer/declinations/Noun'
 import type Adjective from '@/utils/grammer/declinations/Adjective'
 import { declinateAdjectiveWithNoun } from '@/utils/grammer/declinations/DeclinationUtils'
 import type Proposition from './Proposition'
+
 
 onMounted(() => loadVocabulary())
 
@@ -81,83 +80,56 @@ const caseName = computed(() => {
   return currentProposition.value.caseType
 })
 
-const caseTitle = computed(() => {
-  return capitalizeFirstOnly(properties.caseName)
-})
 
-const capitalizeFirstOnly = (str) => {
-  if (!str) return ''
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
-}
 
-const started = ref(false)
+
 const currentPlural = ref(false)
-const currentNoun: Ref<Noun> = ref()
-const currentAdjective: Ref<Adjective> = ref()
-const currentProposition:Ref<Proposition> = ref()
-const userAnswer = ref('')
-const showExplanation = ref(false)
-const caseHelp = ref(null)
-const caseHelpSection: Ref<string[]> = ref()
-const caseHelpShow = ref(false)
-const explanationText = ref('')
 
 
-const startQuiz = () => {
-  started.value = true
-  streakCount.value = 0
-  totalAttempts.value = 0
-  history.value = []
-  nextQuestion()
+const currentProposition: Ref<Proposition> = ref()
+
+
+
+
+let proposition: Proposition;
+const getAndSetProposition = (): Proposition => {
+  proposition = getRandomProposition();
+  return proposition;
 }
 
-const nextQuestion = () => {
-  currentNoun.value = getRandomNoun()
-  currentAdjective.value = getRandomAdjective()
-  currentProposition.value = getRandomProposition()
 
-  currentPlural.value = Math.random() < 0.5
-  userAnswer.value = `${currentProposition.value.sk} ${currentAdjective.value.sk} ${currentNoun.value.sk}`
-  showExplanation.value = false
-  explanationText.value = ''
-}
 
-const normalizeSpaces = (str) => {
-  return str.trim().replace(/\s+/g, ' ');
-}
 
-const submitAnswer = () => {
-  const adjective = currentAdjective.value
-  const noun = currentNoun.value
-  const proposition = currentProposition.value
-  const expectedAdjectiveNoun = declinateAdjectiveWithNoun(adjective, noun, proposition.caseType, currentPlural.value)
-  const expected = `${proposition.sk} ${expectedAdjectiveNoun.derived}`
-  const answer = normalizeSpaces(userAnswer.value).toLowerCase()
-  const correct = answer === expected.toLowerCase()
+const buildNextItem = (): any => ({
+  noun: getRandomNoun(),
+  adjective: getRandomAdjective(),
+  proposition: getAndSetProposition(),
+  isPlural: randomBoolean(),
+});
 
-  caseHelpSection.value = expectedAdjectiveNoun.documentation
 
-  totalAttempts.value++
-  addToHistory(`${proposition.sk} ${noun.sk} ${adjective.sk}`, answer, correct, expected,properties.caseName ,expectedAdjectiveNoun.documentation)
 
-  if (correct) {
-    streakCount.value++
-    nextQuestion()
-  } else {
-    streakCount.value = 0
-    explanationText.value = `❗ for ${proposition} - ${expectedAdjectiveNoun.explanation} `
-
-    showExplanation.value = true
-  }
-}
-
-const handleContinue = () => {
-  nextQuestion()
-}
-
-function openDocumentation() {
-  caseHelpShow.value = true
-}
+const {
+  caseTitle,
+  hasStarted,
+  currentItem,
+  userAnswer,
+  showExplanation,
+  explanationText,
+  showStreakDialog,
+  caseHelpSection,
+  caseHelpShow,
+  startQuiz,
+  submitAnswer,
+  handleContinue,
+  openDocumentation
+} = useDrill({
+  caseName: () => proposition.caseType,
+  getNextItem: buildNextItem,
+  getExpected: (item) => declinateAdjectiveWithNoun(item.adjective, item.noun, item.proposition.caseType, currentPlural.value),
+  getInitialAnswer: (item) => `${item.proposition.sk} ${item.adjective.sk} ${item.noun.sk}`,
+  getWordForHistory: (item) => `${item.proposition.sk} ${item.adjective.sk} ${item.noun.sk}`
+})
 
 
 </script>

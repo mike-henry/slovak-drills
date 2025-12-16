@@ -84,8 +84,7 @@ import CongratsModal from '@/components/CongratsModal.vue'
 import { loadVocabulary } from '@/utils/grammer/wordStore.js'
 import { useDrill, getRandomNoun, getRandomAdjective, history, streakCount, resetStreak } from './drillUtils.js'
 import { CASE_TYPE } from '@/utils/grammer/WordTypes'
-import type Noun from '@/utils/grammer/declinations/Noun.js'
-import type Adjective from '@/utils/grammer/declinations/Adjective.js'
+
 
 onMounted(() => loadVocabulary())
 

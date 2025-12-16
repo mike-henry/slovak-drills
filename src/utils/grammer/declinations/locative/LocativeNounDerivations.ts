@@ -41,7 +41,7 @@ function locativeSingular(noun:Noun): DerivedWord {
     if (animate) {
       derived = stem + "ovi";
       explanation = `animate noun ${stem} + ov + i`;
-      return { derived, explanation };
+      return new DerivedWord( derived, explanation );
     }
     // Inanimate: determine hrad vs stroj class
     // stroj-class → plural in -e → locative in -i

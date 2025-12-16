@@ -74,14 +74,14 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { loadVocabulary } from '../utils/grammer/wordStore.js'
-import { useDrill, getRandomNoun, resetStreak, history, streakCount } from './drillUtils.js'
+import { useDrill, getRandomNoun, resetStreak, history, streakCount, randomBoolean } from './drillUtils.js'
 import { CASE_TYPE } from '@/utils/grammer/WordTypes'
 import HistoryList from '@/components/HistoryList.vue'
 import AnswerField from '@/components/AnswerField.vue'
 import DrillProgress from '@/components/DrillProgress.vue'
 import CongratsModal from '@/components/CongratsModal.vue'
 import CaseHelp from '@/components/CaseHelp.vue'
-import type Noun from '@/utils/grammer/declinations/Noun.js'
+
 
 
 onMounted(() => loadVocabulary())
@@ -107,8 +107,8 @@ const {
   handleContinue,
   openDocumentation
 } = useDrill({
-  caseName,
-  getNextItem: () => ({ noun: getRandomNoun(), isPlural: Math.random() < 0.5 }),
+  caseName: () => caseName,
+  getNextItem: () => ({ noun: getRandomNoun(), isPlural:randomBoolean() }),
   getExpected: (item) => item.noun.declinate(caseName as CASE_TYPE, item.isPlural),
   getInitialAnswer: (item) => item.noun.sk,
   getWordForHistory: (item) => item.noun.sk

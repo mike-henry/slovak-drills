@@ -110,7 +110,7 @@ const {
   handleContinue,
   openDocumentation
 } = useDrill({
-  caseName,
+  caseName: ()=>caseName,
   getNextItem: () => ({ adjective: getRandomAdjective(), noun: getRandomNoun(), plural: Math.random() < 0.5 }),
   getExpected: (item) => item.adjective.declinate(caseName as CASE_TYPE, item.noun, item.plural),
   getInitialAnswer: (item) => item.adjective.sk,

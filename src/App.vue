@@ -177,7 +177,7 @@ const menu = [
     label: "Other Drills",
     items: [
       { label: "Noun Gender", to: "/noun-gender" },
-      //{ label: "Verb Conjugation", to: "/verb-conjugation" }
+      { label: "Verb Conjugation", to: "/present-tense-verb" },
       { label: "Preposition + Adjective + Noun", to: "/proposition-adjective-noun" }
     ]
   }

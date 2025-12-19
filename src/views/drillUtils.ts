@@ -1,7 +1,8 @@
 import { computed, ref, type Ref } from "vue"
-import { nouns, adjectives, propositions } from '@/utils/grammer/wordStore.js'
+import { nouns, adjectives, propositions, verbs } from '@/utils/grammer/wordStore.js'
 import type Noun from "@/utils/grammer/declinations/Noun"
-import { CASE_TYPE } from '@/utils/grammer/WordTypes'
+import { CASE_TYPE, Pronoun } from '@/utils/grammer/WordTypes'
+import type Verb from "@/utils/grammer/verbs/Verb"
 
 
 export const STREAK_TARGET = 10              // Number to win streak
@@ -58,6 +59,17 @@ export const getRandomAdjective = () => {
 export const getRandomProposition = () => {
   const shuffled = shuffleArray(propositions.value)
   return shuffled[Math.floor(Math.random() * shuffled.length)]
+}
+
+export const getRandomVerb = (): Verb => {
+  const shuffled = shuffleArray(verbs.value)
+  return shuffled[Math.floor(Math.random() * shuffled.length)]
+}
+
+export function getRandomPronoun(): Pronoun {
+  const values = Object.values(Pronoun)
+  const index = Math.floor(Math.random() * values.length)
+  return values[index]
 }
 
 export const randomBoolean = () => Math.random() < 0.5;

@@ -31,3 +31,60 @@ export enum Pronoun {
 }
 
 
+export interface PronounMeta {
+  en: string
+  sk: string
+  person: 1 | 2 | 3
+  number: "singular" | "plural"
+}
+
+export const PRONOUN_META: Record<Pronoun, PronounMeta> = {
+  [Pronoun.I]: {
+    en: "I",
+    sk: "ja",
+    person: 1,
+    number: "singular",
+  },
+  [Pronoun.YOU]: {
+    en: "you",
+    sk: "ty",
+    person: 2,
+    number: "singular",
+  },
+  [Pronoun.HE]: {
+    en: "he",
+    sk: "on",
+    person: 3,
+    number: "singular",
+  },
+  [Pronoun.SHE]: {
+    en: "she",
+    sk: "ona",
+    person: 3,
+    number: "singular",
+  },
+  [Pronoun.IT]: {
+    en: "it",
+    sk: "ono",
+    person: 3,
+    number: "singular",
+  },
+  [Pronoun.WE]: {
+    en: "we",
+    sk: "my",
+    person: 1,
+    number: "plural",
+  },
+  [Pronoun.YOU_PL]: {
+    en: "you*",
+    sk: "vy",
+    person: 2,
+    number: "plural",
+  },
+  [Pronoun.THEY]: {
+    en: "they",
+    sk: "oni",
+    person: 3,
+    number: "plural",
+  },
+}

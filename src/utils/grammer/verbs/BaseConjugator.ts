@@ -1,20 +1,20 @@
 import DerivedWord from "../DerivedWord";
-import type { Person, Gender } from "../WordTypes";
+import type { Pronoun, Gender } from "../WordTypes";
 import type { PresentConjugator } from "./PresentConjugator";
 import type { Verb } from "./Verb";
 
 export abstract class BaseConjugator implements PresentConjugator {
     constructor(protected verb: Verb) { }
  
-    abstract getEnding(person: Person, gender?: Gender): string;
+    abstract getEnding(person: Pronoun, gender?: Gender): string;
     abstract deriveStem(): string;
     getStem(): string {
     // 1. Highest priority → presentStem from verb
     if (this.verb.presentStem && this.verb.presentStem.length > 0 ) return this.verb.presentStem;
     return this.deriveStem()
    };
-    abstract deriveConjugate(person: Person, gender?: Gender): DerivedWord;
-    conjugate(person: Person, gender?: Gender): DerivedWord {
+    abstract deriveConjugate(person: Pronoun, gender?: Gender): DerivedWord;
+    conjugate(person: Pronoun, gender?: Gender): DerivedWord {
         const  deriveConjugation = this.deriveConjugate(person,gender);
         const aux = this.extractReflexiveParticle();
         return new DerivedWord(

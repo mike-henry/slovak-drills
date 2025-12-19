@@ -1,5 +1,5 @@
 import DerivedWord from "../DerivedWord";
-import { Person, Gender } from "../WordTypes";
+import { Pronoun, Gender } from "../WordTypes";
 import { BaseConjugator } from "./BaseConjugator";
 
 export class IetConjugator extends BaseConjugator {
@@ -9,21 +9,21 @@ export class IetConjugator extends BaseConjugator {
         return this.getBaseInfinitive().slice(0, -3);
     }
 
-    getEnding(person: Person, gender?: Gender): string {
-        const endings: Record<Person, string> = {
-            [Person.I]: "ím",
-            [Person.YOU]: "íš",
-            [Person.HE]: "í",
-            [Person.SHE]: "í",
-            [Person.IT]: "í",
-            [Person.WE]: "íme",
-            [Person.YOU_PL]: "íte",
-            [Person.THEY]: "ia",
+    getEnding(person: Pronoun, gender?: Gender): string {
+        const endings: Record<Pronoun, string> = {
+            [Pronoun.I]: "ím",
+            [Pronoun.YOU]: "íš",
+            [Pronoun.HE]: "í",
+            [Pronoun.SHE]: "í",
+            [Pronoun.IT]: "í",
+            [Pronoun.WE]: "íme",
+            [Pronoun.YOU_PL]: "íte",
+            [Pronoun.THEY]: "ia",
         };
         return endings[person];
     }
 
-    deriveConjugate(person: Person, gender?: Gender): DerivedWord {
+    deriveConjugate(person: Pronoun, gender?: Gender): DerivedWord {
         const stem = this.getStem();
         const ending = this.getEnding(person);
         return new DerivedWord(

@@ -1,5 +1,5 @@
 import DerivedWord from "../DerivedWord";
-import  { Person } from "../WordTypes";
+import  { Pronoun } from "../WordTypes";
 import { BaseConjugator } from "./BaseConjugator";
 import type { Verb } from "./Verb";
 
@@ -16,21 +16,21 @@ export class NutConjugator extends BaseConjugator {
       return base.slice(0, -2);   // fallback for -ut verbs
   }
 
-  getEnding(person: Person): string {
-    const endings: Record<Person, string> = {
-      [Person.I]: "em",
-      [Person.YOU]: "eš",
-      [Person.HE]: "e",
-      [Person.SHE]: "e",
-      [Person.IT]: "e",
-      [Person.WE]: "eme",
-      [Person.YOU_PL]: "ete",
-      [Person.THEY]: "ú",
+  getEnding(person: Pronoun): string {
+    const endings: Record<Pronoun, string> = {
+      [Pronoun.I]: "em",
+      [Pronoun.YOU]: "eš",
+      [Pronoun.HE]: "e",
+      [Pronoun.SHE]: "e",
+      [Pronoun.IT]: "e",
+      [Pronoun.WE]: "eme",
+      [Pronoun.YOU_PL]: "ete",
+      [Pronoun.THEY]: "ú",
     };
     return endings[person];
   }
 
-  deriveConjugate(person: Person): DerivedWord {
+  deriveConjugate(person: Pronoun): DerivedWord {
     const stem = this.getStem();
     const ending = this.getEnding(person);
     return new DerivedWord(

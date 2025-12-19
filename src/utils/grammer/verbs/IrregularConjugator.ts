@@ -1,5 +1,5 @@
 import DerivedWord from "../DerivedWord";
-import type { Person, Gender } from "../WordTypes";
+import type { Pronoun, Gender } from "../WordTypes";
 import { BaseConjugator } from "./BaseConjugator";
 
 export class IrregularConjugator extends BaseConjugator {
@@ -7,11 +7,11 @@ export class IrregularConjugator extends BaseConjugator {
         return this.getBaseInfinitive(); // Use the base infinitive for irregular verbs
     }
 
-    getEnding(person: Person, gender?: Gender): string {
+    getEnding(person: Pronoun, gender?: Gender): string {
         return ""; // Irregular verbs have specific forms, so we return an empty string here
     }
 
-    deriveConjugate(person: Person, gender?: Gender): DerivedWord {
+    deriveConjugate(person: Pronoun, gender?: Gender): DerivedWord {
         const stem = this.getStem();
         const form = this.verb.presentMap[person];
         if (!form) {

@@ -7,6 +7,7 @@ import NounCaseDrill from '../views/NounCaseDrill.vue'
 import AdjectiveCaseDrill from '../views/AdjectiveCaseDrill.vue'
 import NounAdjectiveCaseDrill from '@/views/NounAdjectiveCaseDrill.vue'
 import PropositionNounAdjectiveCaseDrill from '@/views/PropositionNounAdjectiveCaseDrill.vue'
+import { CASE_TYPE } from '@/utils/grammer/WordTypes'
 
 const routes = [
   {
@@ -23,19 +24,19 @@ const routes = [
     path: '/noun-accusative-case',
     name: 'accusative-noun',
     component: NounCaseDrill,
-    props: { caseName: 'accusative' } 
+    props: { caseName: CASE_TYPE.ACCUSATIVE } 
   },
   {
     path: '/adjective-noun-accusative-case',
     name: 'accusative-adjective-noun',
     component: NounAdjectiveCaseDrill,
-    props: { caseName: 'accusative' } 
+    props: { caseName: CASE_TYPE.ACCUSATIVE } 
   },  
   {
     path: '/adjective-accusative-case',
     name: 'accusative-adjective',
     component: AdjectiveCaseDrill,
-    props: { caseName: 'accusative' } 
+    props: { caseName: CASE_TYPE.ACCUSATIVE } 
   },  
   {
     path: '/noun-instrumental-case',

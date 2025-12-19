@@ -1,6 +1,6 @@
 import { BaseConjugator } from "./BaseConjugator";
 import type { Verb } from "./Verb";
-import { Person } from "../WordTypes";
+import { Pronoun } from "../WordTypes";
 import DerivedWord from "../DerivedWord";
 
 export class AtConjugator extends BaseConjugator {
@@ -23,24 +23,24 @@ export class AtConjugator extends BaseConjugator {
     return base;
   }
 
-  getEnding(person: Person): string {
+  getEnding(person: Pronoun): string {
 
       const hasLongVowel =() => /[áéíóúý]$/.test(this.getStem())
-    const endings: Record<Person, string> = {
-      [Person.I]: hasLongVowel() ? "ám":  "am" ,
-      [Person.YOU]: "áš",
-      [Person.HE]: "á",
-      [Person.SHE]: "á",
-      [Person.IT]: "á",
-      [Person.WE]: "áme",
-      [Person.YOU_PL]: "áte",
-      [Person.THEY]: "ajú",
+    const endings: Record<Pronoun, string> = {
+      [Pronoun.I]: hasLongVowel() ? "ám":  "am" ,
+      [Pronoun.YOU]: "áš",
+      [Pronoun.HE]: "á",
+      [Pronoun.SHE]: "á",
+      [Pronoun.IT]: "á",
+      [Pronoun.WE]: "áme",
+      [Pronoun.YOU_PL]: "áte",
+      [Pronoun.THEY]: "ajú",
     };
 
     return endings[person];
   }
 
-  deriveConjugate(person: Person): DerivedWord {
+  deriveConjugate(person: Pronoun): DerivedWord {
     const stem = this.getStem();
     const ending = this.getEnding(person);
 

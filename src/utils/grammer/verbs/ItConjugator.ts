@@ -1,9 +1,9 @@
 import DerivedWord from "../DerivedWord";
-import { Person, Gender } from "../WordTypes";
+import { Pronoun, Gender } from "../WordTypes";
 import { BaseConjugator } from "./BaseConjugator";
 
 export class ItConjugator extends BaseConjugator {
-    deriveConjugate(person: Person, gender?: Gender): DerivedWord {
+    deriveConjugate(person: Pronoun, gender?: Gender): DerivedWord {
         const stem = this.getStem();
         const ending = this.getEnding(person);
         return new DerivedWord(
@@ -15,27 +15,27 @@ export class ItConjugator extends BaseConjugator {
     deriveStem(): string {
         return this.getBaseInfinitive().slice(0, -2);
     }
-    getEnding(person: Person, gender?: Gender): string | null {
-        const longEndings: Record<Person, string> = {
-            [Person.I]:  "ím",
-            [Person.YOU]: "íš",
-            [Person.HE]: "í",
-            [Person.WE]: "íme",
-            [Person.YOU_PL]: "íte",
-            [Person.THEY]: "ia",
-            [Person.SHE]: "í",
-            [Person.IT]: "í",
+    getEnding(person: Pronoun, gender?: Gender): string | null {
+        const longEndings: Record<Pronoun, string> = {
+            [Pronoun.I]:  "ím",
+            [Pronoun.YOU]: "íš",
+            [Pronoun.HE]: "í",
+            [Pronoun.WE]: "íme",
+            [Pronoun.YOU_PL]: "íte",
+            [Pronoun.THEY]: "ia",
+            [Pronoun.SHE]: "í",
+            [Pronoun.IT]: "í",
         };
 
-          const shortEndings: Record<Person, string> = {
-            [Person.I]:  "im",
-            [Person.YOU]: "iš",
-            [Person.HE]: "i",
-            [Person.WE]: "ime",
-            [Person.YOU_PL]: "ite",
-            [Person.THEY]: "ia",
-            [Person.SHE]: "i",
-            [Person.IT]: "i",
+          const shortEndings: Record<Pronoun, string> = {
+            [Pronoun.I]:  "im",
+            [Pronoun.YOU]: "iš",
+            [Pronoun.HE]: "i",
+            [Pronoun.WE]: "ime",
+            [Pronoun.YOU_PL]: "ite",
+            [Pronoun.THEY]: "ia",
+            [Pronoun.SHE]: "i",
+            [Pronoun.IT]: "i",
         };
         
         const endings = this.hasLongVowel()?  shortEndings:  longEndings;

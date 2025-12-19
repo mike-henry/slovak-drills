@@ -19,7 +19,7 @@ export enum CASE_TYPE {
   VOCATIVE = "vocative",
 }
 
-export enum Person {
+export enum Pronoun {
   I = "I",
   YOU = "YOU",
   HE = "HE",

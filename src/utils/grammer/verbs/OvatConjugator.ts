@@ -1,5 +1,5 @@
 import DerivedWord from "../DerivedWord";
-import { Person, Gender } from "../WordTypes";
+import { Pronoun, Gender } from "../WordTypes";
 import { BaseConjugator } from "./BaseConjugator";
 
 
@@ -9,21 +9,21 @@ export class OvatConjugator extends BaseConjugator {
     return this.getBaseInfinitive().slice(0, -4);
   }
 
-  getEnding(person: Person, gender?: Gender): string {
-    const endings: Record<Person, string> = {
-      [Person.I]: "ujem",
-      [Person.YOU]: "uješ",
-      [Person.HE]: "uje",
-      [Person.SHE]: "uje",
-      [Person.IT]: "uje",
-      [Person.WE]: "ujeme",
-      [Person.YOU_PL]: "ujete",
-      [Person.THEY]: "ujú",
+  getEnding(person: Pronoun, gender?: Gender): string {
+    const endings: Record<Pronoun, string> = {
+      [Pronoun.I]: "ujem",
+      [Pronoun.YOU]: "uješ",
+      [Pronoun.HE]: "uje",
+      [Pronoun.SHE]: "uje",
+      [Pronoun.IT]: "uje",
+      [Pronoun.WE]: "ujeme",
+      [Pronoun.YOU_PL]: "ujete",
+      [Pronoun.THEY]: "ujú",
     };
     return endings[person];
   }
 
-  deriveConjugate(person: Person, gender?: Gender): DerivedWord {
+  deriveConjugate(person: Pronoun, gender?: Gender): DerivedWord {
     const stem = this.getStem();
     const ending = this.getEnding(person);
     return new DerivedWord(

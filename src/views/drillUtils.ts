@@ -67,23 +67,23 @@ export const normalizeSpaces = (str: string) => {
 }
 
 // Composable for shared drill logic
-export function useDrill(options: {
+export function useDrill<I>(options: {
   caseName: ()=>CASE_TYPE
-  getNextItem: () => any // e.g., { noun, isPlural } or { adjective, noun, isPlural } actually Noun or Adjective (Verb too coming)
-  getExpected: (item: any) => { derived: string, explanation: string, documentation: string[] } //DerivedWord
-  getInitialAnswer: (item: any) => string
-  getWordForHistory: (item: any) => string
+  getNextItem: () => I // e.g., { noun, isPlural } or { adjective, noun, isPlural } actually Noun or Adjective (Verb too coming)
+  getExpected: (item: I) => { derived: string, explanation: string, documentation: string[] } //DerivedWord
+  getInitialAnswer: (item: I) => string
+  getWordForHistory: (item: I) => string
 }) {
   const { caseName, getNextItem, getExpected, getInitialAnswer, getWordForHistory } = options
 
   const caseTitle = computed(() => capitalizeFirstOnly(caseName()))
 
   const hasStarted = ref(false)
-  const currentItem = ref<any>()
+  const currentItem = ref<I>()
   const userAnswer = ref('')
   const showExplanation = ref(false)
   const explanationText = ref('')
-  const caseHelpSections = ref<string[]>()
+  const caseHelpSections = ref<string[]>([])
   const caseHelpShow = ref(false)
 
   const openDocumentation = () => {
@@ -139,7 +139,7 @@ export function useDrill(options: {
     showExplanation,
     explanationText,
     showStreakDialog,
-    caseHelpSection: caseHelpSections,
+    caseHelpSections: caseHelpSections,
     caseHelpShow,
     startQuiz,
     nextQuestion,

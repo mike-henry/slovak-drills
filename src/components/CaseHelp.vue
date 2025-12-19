@@ -24,16 +24,12 @@ import { ref, onMounted } from 'vue'
 import { marked } from 'marked'
 import { loadMarkdown } from '@/documents/DocumentLoader'
 
-const props = defineProps({
-  caseName: {
-    type: String,
-    required: true
-  },
-  section: {
-    type: Array as () => string[],
-    required: true
-  }
-})
+
+const props = defineProps<{
+  caseName: string
+  sections: string[]
+}>()
+
 
 const emit = defineEmits(['update:modelValue', 'confirm'])
 
@@ -45,7 +41,7 @@ onMounted(async () => {
     const html = await marked.parse(md || `No content found for ${props.caseName}`)
 
     stemHtml.value = extractSectionById(html, 'stems')
-    sectionHtml.value = extractSectionsByIds(html, props.section)
+    sectionHtml.value = extractSectionsByIds(html, props.sections)
 })
 
 

@@ -1,5 +1,5 @@
 import { describe, test, expect } from "vitest";
-import { AccusativeNounDeclinator as accusativeNounDeriver } from "./AccusativeNounDerivations";
+
 import { CASE_TYPE, Gender } from "@/utils/grammer/WordTypes.js";
 import  Noun from "../Noun";
 

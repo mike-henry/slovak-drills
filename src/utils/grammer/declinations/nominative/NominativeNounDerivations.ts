@@ -1,9 +1,10 @@
-import type { Noun, NounDeclinator } from "../Noun.ts";
-import {  deriveVocalStem, endsWithSoftConsonant } from "@/utils/grammer/vocalGrammer.ts";
+import type { NounDeclinator } from "../Noun.ts";
+import Noun from "../Noun.ts";
+import { deriveVocalStem, endsWithSoftConsonant } from "@/utils/grammer/vocalGrammer.ts";
 
 import DerivedWord from "@/utils/grammer/DerivedWord.ts";
 
-const getLast = (str:string) => str.slice(-1);
+const getLast = (str: string) => str.slice(-1);
 
 // Masculine & neuter softening
 const SOFTENING_MAP = {
@@ -60,23 +61,23 @@ export function softenStem(stem, gender, originalWord) {
  * @returns {string} plural form
  */
 function nominativePlural(
-  noun:Noun
-):DerivedWord {
+  noun: Noun
+): DerivedWord {
   let word = noun.sk
   let gender = noun.gender
   let animate = noun.animate
   let pluralOnly = noun.plural
   let orgininalStem = deriveVocalStem(noun);
-  let derived:string;
-  let explanation:string;
+  let derived: string;
+  let explanation: string;
 
-  const softenedStem = softenStem(orgininalStem, gender, word); // apply softening before suffix
+  const softenedStem = softenStem(orgininalStem, gender, word); // apply softening before suffix, mpt sure if this is the right name
 
   if (pluralOnly) {
-    return {
-      derived: word,
-      explanation: `"${word}" only has plural form`,
-    };
+    return new DerivedWord(
+      word,
+      `"${word}" only has plural form`,
+    );
   }
 
   switch (gender) {
@@ -150,7 +151,7 @@ function nominativePlural(
     default:
       throw new Error("Invalid gender: must be 'M', 'F', or 'N'");
   }
-   return new DerivedWord(derived, explanation);
+  return new DerivedWord(derived, explanation);
 }
 
 

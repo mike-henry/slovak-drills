@@ -6,17 +6,16 @@ import { InstrumentalNounDeriver } from "./instrumental/InstrumentalNounDerivati
 import { NominativeNounDeriver } from "./nominative/NominativeNounDerivations";
 
 
+const DeclinatorsByCase: Record<CASE_TYPE, NounDeclinator> = {
+  [CASE_TYPE.LOCATIVE]: LocativeNounDeriver,
+  [CASE_TYPE.ACCUSATIVE]: AccusativeNounDeclinator,
+  [CASE_TYPE.NOMINATIVE]: NominativeNounDeriver,
+  [CASE_TYPE.INSTRUMENTAL]: InstrumentalNounDeriver,
+  [CASE_TYPE.GENITIVE]: undefined,
+  [CASE_TYPE.DATIVE]: undefined,
+  [CASE_TYPE.VOCATIVE]: undefined
+}
 
- const DeclinatorsByCase: Record<CASE_TYPE, NounDeclinator> =  {
-   [CASE_TYPE.LOCATIVE]: LocativeNounDeriver,
-   [CASE_TYPE.ACCUSATIVE]: AccusativeNounDeclinator,
-   [CASE_TYPE.NOMINATIVE]: NominativeNounDeriver,
-   [CASE_TYPE.INSTRUMENTAL]: InstrumentalNounDeriver,
-   [CASE_TYPE.GENITIVE]: undefined,
-   [CASE_TYPE.DATIVE]: undefined,
-   [CASE_TYPE.VOCATIVE]: undefined
- }
-  
 
 
 export default class Noun extends WORD {
@@ -29,7 +28,7 @@ export default class Noun extends WORD {
     gender: Gender,
     animate?: boolean,
     plural?: boolean,
-    en = "" 
+    en = ""
   ) {
     super();
     this.sk = sk;
@@ -39,10 +38,11 @@ export default class Noun extends WORD {
     this.plural = plural;
   }
 
-  declinate(caseType:CASE_TYPE,plural=false):DerivedWord {
+  declinate(caseType: CASE_TYPE, plural = false): DerivedWord {
     const declinator = DeclinatorsByCase[caseType];
-    if (!declinator) throw new Error(`Noun declinator for case ${caseType} not implemented yet`); 
-    return  plural? declinator.plural(this): declinator.singular(this)
+    // console.log(declinator)
+    if (!declinator) throw new Error(`Noun declinator for case ${caseType} not implemented yet ${declinator}`);
+    return plural ? declinator.plural(this) : declinator.singular(this)
   }
 
   static fromRaw(params: {

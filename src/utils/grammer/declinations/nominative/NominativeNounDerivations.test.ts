@@ -1,5 +1,4 @@
 import { describe, test, expect } from "vitest";
-import { NominativeNounDeriver } from "./NominativeNounDerivations.ts";
 import { CASE_TYPE, Gender } from "../../WordTypes.js";
 import Noun from "../Noun.ts";
 

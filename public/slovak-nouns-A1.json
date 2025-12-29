@@ -1467,12 +1467,14 @@
   {
     "sk": "topánky",
     "en": "shoes",
-    "gender": "F"
+    "gender": "F",
+    "plural": true
   },
   {
     "sk": "tenisky",
     "en": "sneakers",
-    "gender": "F"
+    "gender": "F",
+    "plural": true
   },
   {
     "sk": "čižmy",
@@ -1698,11 +1700,6 @@
     "sk": "objednávka",
     "en": "order",
     "gender": "F"
-  },
-  {
-    "sk": "internetový obchod",
-    "en": "online store",
-    "gender": "M"
   },
   {
     "sk": "webstránka",

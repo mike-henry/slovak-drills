@@ -29,12 +29,13 @@ const SOFTENING_MAP = {
  * @param {boolean} [animate=false] - only used for masculine nouns
  * @returns {string} - accusative singular
  */
-function accusativeSingular(noun:Noun) {
-  let derived;
-  let explanation;
+function accusativeSingular(noun:Noun):DerivedWord {
+  let derived:string;
+  let explanation:string;
   
   switch (noun.gender) {
-    case "M":
+    case Gender.Masculine:
+    //case "M":
       // Inanimate → same as nominative
       if (!noun.animate) {
         const nominative = NominativeNounDeriver.singular(noun);
@@ -60,8 +61,8 @@ function accusativeSingular(noun:Noun) {
       }
       break;
       // Animate consonant-ending → +a
-      
-    case "F":
+    case Gender.Femenine:  
+    //case "F":
       // -a → -u also -ia → -iu
       if (noun.sk.endsWith("a")) {
         derived = noun.sk.slice(0, -1) + "u";
@@ -72,16 +73,16 @@ function accusativeSingular(noun:Noun) {
       }
 
       break
-    case "N":
+    case Gender.Neutral:  
+    //case "N":
       const nominative = NominativeNounDeriver.singular(noun);
       derived = nominative.derived; // neuter singular = nominative
       explanation = `neuter noun accusative = nominative  (${nominative.explanation})`;
       break;
     default:
       throw new Error("Invalid gender: use 'M', 'F', or 'N'");
-      
   }
-  return { derived, explanation };
+  return new DerivedWord( derived, explanation );
 }
 
 function accusativePlural(noun:Noun):DerivedWord {

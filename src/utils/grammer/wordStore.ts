@@ -201,7 +201,7 @@ const loadWords = async (
 };
 
 
-export const loadPropistions = async () => {
+export const loadPropistions = async () => {//TODO fix this !!!
   // const includedCases = ["instrumental","localative","accusative"]
   const includedCases = ["locative"]
   const filterFn = (item) => includedCases.includes(item.case);
@@ -237,7 +237,7 @@ export const loadAdjectives = () =>
 
 export const loadVerbs = () =>
   loadTypedWords(VERBS, verbs, verbsLoaded, DEFAULT_VERBS, Verb.fromRaw);
-
+//const lfn =rawn => rawn.plural === true
 export const loadNouns = () =>
   loadTypedWords(NOUNS, nouns, nounsLoaded, DEFAULT_NOUNS, Noun.fromRaw);
 

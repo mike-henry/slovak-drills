@@ -26,9 +26,10 @@ export const resetStreak = () => {
 }
 
 
-export const addToHistory = (word: string, answer: string, correct: boolean, expected: string, caseName: CASE_TYPE, documentation: string[]) => {
+export const addToHistory = (word: string,en:string, answer: string, correct: boolean, expected: string, caseName: CASE_TYPE, documentation: string[]) => {
   history.value.unshift({
     word,
+    en,
     answer,
     correct,
     expected,
@@ -78,86 +79,5 @@ export const normalizeSpaces = (str: string) => {
   return str.trim().replace(/\s+/g, ' ');
 }
 
-// Composable for shared drill logic
-export function useDrill<I>(options: {
-  caseName: ()=>CASE_TYPE
-  getNextItem: () => I // e.g., { noun, isPlural } or { adjective, noun, isPlural } actually Noun or Adjective (Verb too coming)
-  getExpected: (item: I) => { derived: string, explanation: string, documentation: string[] } //DerivedWord
-  getInitialAnswer: (item: I) => string
-  getWordForHistory: (item: I) => string
-}) {
-  const { caseName, getNextItem, getExpected, getInitialAnswer, getWordForHistory } = options
 
-  const caseTitle = computed(() => capitalizeFirstOnly(caseName()))
-
-  const hasStarted = ref(false)
-  const currentItem = ref<I>()
-  const userAnswer = ref('')
-  const showExplanation = ref(false)
-  const explanationText = ref('')
-  const caseHelpSections = ref<string[]>([])
-  const caseHelpShow = ref(false)
-
-  const openDocumentation = () => {
-    caseHelpShow.value = true
-  }
-
-  const startQuiz = () => {
-    hasStarted.value = true
-    resetStreak()
-    totalAttempts.value = 0
-    history.value = []
-    nextQuestion()
-  }
-
-  const nextQuestion = () => {
-    currentItem.value = getNextItem()
-    userAnswer.value = getInitialAnswer(currentItem.value)
-    showExplanation.value = false
-    explanationText.value = ''
-  }
-
-  const submitAnswer = () => {
-    const item = currentItem.value
-    const expected = getExpected(item)
-    const answer = userAnswer.value.trim().toLowerCase()
-    const correct = answer === expected.derived.toLowerCase()
-
-    caseHelpSections.value = expected.documentation
-
-    totalAttempts.value++
-    addToHistory(getWordForHistory(item), answer, correct, expected.derived, caseName() , expected.documentation)
-
-    if (correct) {
-      streakCount.value++
-      if (streakCount.value >= STREAK_TARGET) showStreakDialog.value = true
-      nextQuestion()
-    } else {
-      resetStreak()
-      explanationText.value = `❗ "for ${getWordForHistory(item)}" : explanation "${expected.explanation}".`
-      showExplanation.value = true
-    }
-  }
-
-  const handleContinue = () => {
-    nextQuestion()
-  }
-
-  return {
-    caseTitle,
-    hasStarted,
-    currentItem,
-    userAnswer,
-    showExplanation,
-    explanationText,
-    showStreakDialog,
-    caseHelpSections: caseHelpSections,
-    caseHelpShow,
-    startQuiz,
-    nextQuestion,
-    submitAnswer,
-    handleContinue,
-    openDocumentation
-  }
-}
 

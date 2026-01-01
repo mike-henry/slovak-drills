@@ -1479,7 +1479,8 @@
   {
     "sk": "čižmy",
     "en": "boots",
-    "gender": "F"
+    "gender": "F",
+    "plural": true
   },
   {
     "sk": "sandále",

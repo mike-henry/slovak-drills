@@ -73,9 +73,9 @@ import type { CASE_TYPE } from '@/utils/grammer/WordTypes';
 import AnswerField from './AnswerField.vue';
 import CaseHelp from './CaseHelp.vue';
 import DrillProgress from './DrillProgress.vue';
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import HistoryList from '@/components/HistoryList.vue'
-import { history, resetStreak, streakCount, useDrill } from '@/views/drillUtils';
+import { addToHistory, capitalizeFirstOnly, history, resetStreak, STREAK_TARGET, streakCount, totalAttempts,showStreakDialog } from '@/views/drillUtils';
 import { loadVocabulary } from '@/utils/grammer/wordStore';
 import { onMounted } from 'vue';
 import type DerivedWord from '@/utils/grammer/DerivedWord';
@@ -101,16 +101,11 @@ type DrillItem = unknown
 const { caseName, drillTitle, drillSubtitle, sk, en, isPlural, buildNextItem, expectedAnswer ,question} = defineProps<DrillProps<DrillItem>>()
 
 
-
-
-
 const getQuestion = computed(() => {
    if(!currentItem.value) return ''; 
    if(question) return question(currentItem.value)
    else return sk(currentItem.value)
 })
-
-
 
 
 const {
@@ -120,7 +115,6 @@ const {
     userAnswer,
     showExplanation,
     explanationText,
-    showStreakDialog,
     caseHelpSections,
     caseHelpShow,
     startQuiz,
@@ -132,7 +126,8 @@ const {
     getNextItem: buildNextItem,
     getExpected: expectedAnswer,
     getInitialAnswer: sk,   //TODO replace with sk
-    getWordForHistory: sk   //TODO replace with sk
+    getWordForHistory: sk ,  //TODO replace with sk
+    en
 })
 
 
@@ -149,6 +144,89 @@ const plural = computed(() =>
 )
 
 
+// Composable for shared drill logic
+ function useDrill<I>(options: {
+  caseName: ()=>CASE_TYPE
+  getNextItem: () => I // e.g., { noun, isPlural } or { adjective, noun, isPlural } actually Noun or Adjective (Verb too coming)
+  getExpected: (item: I) => { derived: string, explanation: string, documentation: string[] } //DerivedWord
+  getInitialAnswer: (item: I) => string
+  getWordForHistory: (item: I) => string,
+  en: (item: I) => string
+}) {
+  const { caseName, getNextItem, getExpected, getInitialAnswer, getWordForHistory,en } = options
+
+  const caseTitle = computed(() => capitalizeFirstOnly(caseName()))
+
+  const hasStarted = ref(false)
+  const currentItem = ref<I>()
+  const userAnswer = ref('')
+  const showExplanation = ref(false)
+  const explanationText = ref('')
+  const caseHelpSections = ref<string[]>([])
+  const caseHelpShow = ref(false)
+
+  const openDocumentation = () => {
+    caseHelpShow.value = true
+  }
+
+  const startQuiz = () => {
+    hasStarted.value = true
+    resetStreak()
+    totalAttempts.value = 0
+    history.value = []
+    nextQuestion()
+  }
+
+  const nextQuestion = () => {
+    currentItem.value = getNextItem()
+    userAnswer.value = getInitialAnswer(currentItem.value)
+    showExplanation.value = false
+    explanationText.value = ''
+  }
+
+  const submitAnswer = () => {
+    const item = currentItem.value
+    const expected = getExpected(item)
+    const answer = userAnswer.value.trim().toLowerCase()
+    const correct = answer === expected.derived.toLowerCase()
+
+    caseHelpSections.value = expected.documentation
+
+    totalAttempts.value++
+    addToHistory(getWordForHistory(item),en(item), answer, correct, expected.derived, caseName() , expected.documentation)
+
+    if (correct) {
+      streakCount.value++
+      if (streakCount.value >= STREAK_TARGET) showStreakDialog.value = true
+      nextQuestion()
+    } else {
+      resetStreak()
+      explanationText.value = `❗ "for ${getWordForHistory(item)}" : explanation "${expected.explanation}".`
+      showExplanation.value = true
+    }
+  }
+
+  const handleContinue = () => {
+    nextQuestion()
+  }
+
+  return {
+    caseTitle,
+    hasStarted,
+    currentItem,
+    userAnswer,
+    showExplanation,
+    explanationText,
+    showStreakDialog,
+    caseHelpSections: caseHelpSections,
+    caseHelpShow,
+    startQuiz,
+    nextQuestion,
+    submitAnswer,
+    handleContinue,
+    openDocumentation
+  }
+}
 
 
 </script>

@@ -6,7 +6,7 @@
       <li v-for="(item, index) in history" :key="index">
         <span v-if="item.correct" class="text-emerald-500">✓</span>
         <span v-else class="text-rose-500">✗</span>
-        {{ item.word }} → {{ item.answer }} : {{ item.expected }}
+        {{ item.word }} ({{ item.en }}) → {{ item.answer }} : {{ item.expected }}
         <span v-if="!item.correct" class="text-emerald-500" @click="openHelp(item.documentation)">🔍</span>
         <case-Help  v-if="isCaseHelpShow(item.documentation,item)" :case-name=item.caseName :section=item.documentation
           @confirm="closeHelp()" />

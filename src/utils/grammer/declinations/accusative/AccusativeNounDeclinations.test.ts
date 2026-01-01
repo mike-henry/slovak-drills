@@ -48,8 +48,7 @@ describe("Feminine nouns — accusative singular and plural", () => {
   const energia:Noun = Noun.fromRaw( { en:"", sk: "energia",  gender: Gender.Femenine, animate: false });
   const kost:Noun = Noun.fromRaw( { en:"", sk: "kosť",  gender: Gender.Femenine, animate: false });
   const vec:Noun = Noun.fromRaw( { en:"", sk: "vec",  gender: Gender.Femenine, animate: false });
-  const chlapec:Noun = Noun.fromRaw( {  sk: "chlapec", gender: Gender.Masculine, animate: true, en: "man" });
-
+ 
   test("Feminine singular", () => {
     expect(zena.declinate(CASE).derived).toBe("ženu");
     expect(kniha.declinate(CASE).derived).toBe("knihu");

@@ -1,7 +1,7 @@
 import { WORD, Gender, CASE_TYPE } from "@/utils/grammer/WordTypes";
 import type DerivedWord from "../DerivedWord";
 import { LocativeNounDeriver } from "./locative/LocativeNounDerivations";
-import { AccusativeNounDeclinator } from "./accusative/AccusativeNounDerivations";
+import { AccusativeNounDeclinator } from "./accusative/AccusativeNounDeclinations";
 import { InstrumentalNounDeriver } from "./instrumental/InstrumentalNounDerivations";
 import { NominativeNounDeriver } from "./nominative/NominativeNounDerivations";
 
@@ -40,7 +40,6 @@ export default class Noun extends WORD {
 
   declinate(caseType: CASE_TYPE, plural = false): DerivedWord {
     const declinator = DeclinatorsByCase[caseType];
-    // console.log(declinator)
     if (!declinator) throw new Error(`Noun declinator for case ${caseType} not implemented yet ${declinator}`);
     return plural ? declinator.plural(this) : declinator.singular(this)
   }

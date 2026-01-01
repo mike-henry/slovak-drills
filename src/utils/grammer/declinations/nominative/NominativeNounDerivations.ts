@@ -3,6 +3,7 @@ import Noun from "../Noun.ts";
 import { deriveVocalStem, endsWithSoftConsonant } from "@/utils/grammer/vocalGrammer.ts";
 
 import DerivedWord from "@/utils/grammer/DerivedWord.ts";
+import { Gender } from "../../WordTypes.ts";
 
 const getLast = (str: string) => str.slice(-1);
 
@@ -50,6 +51,16 @@ export function softenStem(stem, gender, originalWord) {
   return stem;
 }
 
+interface PluralRule {
+  gender: Gender;
+  ending?: string;
+  animate?: boolean;
+  softStem?: boolean;
+  suffix: string;
+  explanation: (stem: string) => string;
+  useSoftenedStem: boolean; // NEW
+}
+
 /**
  * Basic Nominative Plural Generator (Slovak)
  * - Uses deriveStem()
@@ -60,100 +71,61 @@ export function softenStem(stem, gender, originalWord) {
  * @param {"M"|"F"|"N"} gender - grammatical gender
  * @returns {string} plural form
  */
-function nominativePlural(
-  noun: Noun
-): DerivedWord {
-  let word = noun.sk
-  let gender = noun.gender
-  let animate = noun.animate
-  let pluralOnly = noun.plural
-  let orgininalStem = deriveVocalStem(noun);
-  let derived: string;
-  let explanation: string;
+function nominativePlural(noun: Noun): DerivedWord {
+  const word = noun.sk;
+  const gender = noun.gender;
+  const animate = noun.animate;
+  const pluralOnly = noun.plural;
 
-  const softenedStem = softenStem(orgininalStem, gender, word); // apply softening before suffix, mpt sure if this is the right name
+  if (![Gender.Masculine, Gender.Femenine, Gender.Neutral].includes(gender)) {
+    throw new Error(`Invalid gender: ${gender}. Must be 'M', 'F', or 'N'.`);
+  }
+
+  const originalStem = deriveVocalStem(noun);
+  const softenedStem = softenStem(originalStem, gender, word);
+  const softStem = endsWithSoftConsonant(originalStem);
 
   if (pluralOnly) {
-    return new DerivedWord(
-      word,
-      `"${word}" only has plural form`,
-    );
+    return new DerivedWord(word, `"${word}" only has plural form`);
   }
 
-  switch (gender) {
-    case "M":
-      // nouns ending in -a (hrdina, kolega...)
-      if (word.endsWith("a")) {
-        derived = softenedStem + "ovia";
-        explanation = `stem ${softenedStem} + ovia for masculine nouns ending in -a`;
-        break;
-      }
+  // Table of rules (same logic as before)
 
-      // Animate masculine → regular -i (NOT softening!)
-      if (animate) {
-        // Many animate nouns use -i (chlap → chlapi)
-        // Irregular ones like syn → synovia will be handled separately
-        derived = softenedStem + "i";
-        explanation = `stem ${softenedStem} + i for masculine animate nouns`;
-        break;
-      }
-      if (endsWithSoftConsonant(orgininalStem)) {
-        derived = orgininalStem + "e"; // stroj → stroje
-        explanation = `soft-stem masculine inanimate → stem ${softenedStem} + e`;
-      } else {
-        derived = orgininalStem + "y"; // hrad → hrady
-        explanation = `hard-stem masculine inanimate → stem ${softenedStem} + y`;
-      }
+  const pluralRules: PluralRule[] = [
+    // Masculine
+    { gender: Gender.Masculine, ending: "a", suffix: "ovia", useSoftenedStem: true, explanation: (s) => `stem ${s} + ovia for masculine nouns ending in -a` },
+    { gender: Gender.Masculine, animate: true, suffix: "i", useSoftenedStem: false, explanation: (s) => `stem ${s} + i for masculine animate nouns` },
+    { gender: Gender.Masculine, softStem: true, suffix: "e", useSoftenedStem: false, explanation: (s) => `soft-stem masculine inanimate → stem ${s} + e` },
+    { gender: Gender.Masculine, suffix: "y", useSoftenedStem: false, explanation: (s) => `hard-stem masculine inanimate → stem ${s} + y` },
 
-      break;
+    // Feminine
+    { gender: Gender.Femenine, ending: "ie", suffix: "ia", useSoftenedStem: true, explanation: (s) => `stem ${s} + ia for feminines ending with ie` },
+    { gender: Gender.Femenine, ending: "ia", suffix: "ie", useSoftenedStem: true, explanation: (s) => `stem ${s} + ie for feminines ending with ia` },
+    { gender: Gender.Femenine, ending: "a", softStem: true, suffix: "e", useSoftenedStem: true, explanation: (s) => `softened stem (${s}) + e for feminines with soft consonant-ending` },
+    { gender: Gender.Femenine, ending: "a", suffix: "y", useSoftenedStem: true, explanation: (s) => `stem (${s}) + y for feminines ending with -a` },
+    { gender: Gender.Femenine, suffix: "i", useSoftenedStem: true, explanation: (s) => `stem (${s}) + i for consonant-ending feminines` },
 
-    case "F":
-      if (word.endsWith("ie")) {
-        derived = softenedStem + "ia";
-        explanation = `stem ${softenedStem} + ia for feminines ending with ie`;
-      } else if (word.endsWith("ia")) {
-        derived = softenedStem + "ie";
-        explanation = `stem ${softenedStem} + ie for feminines ending with ia`;
-        // chemia → chémie
-      } else if (word.endsWith("a")) {
-        if (endsWithSoftConsonant(orgininalStem)) {
-          // stanica -> stanice
-          derived = softenedStem + "e";
-          explanation = `softened stem (${softenedStem}) + e for feminines with soft consonant-ending`;
-        } else {
-          // žena → ženy
-          derived = softenedStem + "y";
-          explanation = `stem (${softenedStem}) + y for feminines ending with -a`;
-        }
-      } else {
-        derived = softenedStem + "i"; // consonant-ending feminines: kosť → kosti
-        explanation = `stem (${softenedStem}) + i for consonant-ending feminines`;
-      }
-      break;
-    case "N":
-      if (word.endsWith("o")) {
-        derived = softenedStem + "á"; // mesto → mestá
-        explanation = `stem ${softenedStem} + á for neuters ending with o`;
-      } else if (word.endsWith("e")) {
-        derived = softenedStem + "ia";
-        explanation = `stem ${softenedStem} + ia for neuters ending with e`;
-      } else if (word.endsWith("ie")) {
-        derived = softenedStem + "ia";
-        explanation = `stem ${softenedStem} + ia for neuters ending with ie`;
-      } else if (word.endsWith("um")) {
-        derived = softenedStem + "á";
-        explanation = `stem ${softenedStem} + á for neuters ending with um`;
-      } else {
-        derived = softenedStem;
-        explanation = `unchanged stem for neuters`;
-      }
-      break;
-    default:
-      throw new Error("Invalid gender: must be 'M', 'F', or 'N'");
+    // Neuter
+    { gender: Gender.Neutral, ending: "o", suffix: "á", useSoftenedStem: true, explanation: (s) => `stem ${s} + á for neuters ending with o` },
+    { gender: Gender.Neutral, ending: "e", suffix: "ia", useSoftenedStem: true, explanation: (s) => `stem ${s} + ia for neuters ending with e` },
+    { gender: Gender.Neutral, ending: "ie", suffix: "ia", useSoftenedStem: true, explanation: (s) => `stem ${s} + ia for neuters ending with ie` },
+    { gender: Gender.Neutral, ending: "um", suffix: "á", useSoftenedStem: true, explanation: (s) => `stem ${s} + á for neuters ending with um` }
+  ];
+
+  const rule = pluralRules.find(r =>
+    r.gender === gender &&
+    (r.ending ? word.endsWith(r.ending) : true) &&
+    (r.animate !== undefined ? r.animate === animate : true) &&
+    (r.softStem !== undefined ? r.softStem === softStem : true)
+  );
+
+  if (!rule) {
+    throw new Error(`No pluralization rule found for "${word}" (gender: ${gender}).`);
   }
-  return new DerivedWord(derived, explanation);
+  const stemToUse = rule.useSoftenedStem ? softenedStem : originalStem;
+  const derived = stemToUse + rule.suffix;
+  return new DerivedWord(derived, rule.explanation(softenedStem));
 }
-
 
 export const NominativeNounDeriver: NounDeclinator = {
   singular(noun: Noun): DerivedWord {

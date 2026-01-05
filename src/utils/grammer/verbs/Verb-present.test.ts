@@ -1,8 +1,9 @@
 import { describe, test, expect } from "vitest";
 
 
-import { CASE_TYPE, Gender, Pronoun } from "../WordTypes";
+import { CASE_TYPE, Gender} from "../WordTypes";
 import Verb from "./Verb";
+import { Pronoun } from "../Pronoun";
 
 // ---------------------------
 // Regular verbs
@@ -126,7 +127,7 @@ describe("Present tense — Regular verbs", () => {
 // ---------------------------
 const reflexiveVerbs = {
   spravatSa: new Verb("správať sa", "to behave", true),
-  zasluzitSi: new Verb("zaslúžiť si", "to deserve", true),
+  zasluzitSi: new Verb("zaslúžiť si", "to deserve", true,undefined,undefined,undefined,['it-short']),
   ucitSa: new Verb("učiť sa", "to learn", true),
   rozhodnutSa: new Verb("rozhodnúť sa", "to decide", true),
   stretnutSa: new Verb("stretnúť sa", "to meet", true),

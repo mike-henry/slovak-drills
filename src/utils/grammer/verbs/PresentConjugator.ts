@@ -1,5 +1,6 @@
 import type DerivedWord from "../DerivedWord";
-import type { Pronoun, Gender } from "../WordTypes";
+import type { Pronoun } from "../Pronoun";
+import type {  Gender } from "../WordTypes";
 
 // ---------------------------
 // Internal only conjugators

@@ -1,7 +1,8 @@
 import DerivedWord from "../DerivedWord";
-import  { Pronoun } from "../WordTypes";
+import  { Pronoun } from "../Pronoun";
+
 import { BaseConjugator } from "./BaseConjugator";
-import type { Verb } from "./Verb";
+import   Verb  from "./Verb";
 
 export class NutConjugator extends BaseConjugator {
   

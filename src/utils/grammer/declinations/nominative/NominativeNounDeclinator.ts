@@ -124,10 +124,10 @@ function nominativePlural(noun: Noun): DerivedWord {
   }
   const stemToUse = rule.useSoftenedStem ? softenedStem : originalStem;
   const derived = stemToUse + rule.suffix;
-  return new DerivedWord(derived, rule.explanation(softenedStem));
+  return new DerivedWord(derived, rule.explanation(stemToUse));
 }
 
-export const NominativeNounDeriver: NounDeclinator = {
+export const NominativeNounDeclinator: NounDeclinator = {
   singular(noun: Noun): DerivedWord {
     return new DerivedWord(noun.sk, "nominative singular is the base form");
   },

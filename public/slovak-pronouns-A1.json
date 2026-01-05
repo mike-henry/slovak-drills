@@ -1,0 +1,74 @@
+{
+  "I": {
+    "en-subject": "I",
+    "en-object": "me",
+    "nominative": "ja",
+    "accusative": { "short": "ma", "long": "mňa" },
+    "dative": { "short": "mi", "long": "mne" },
+    "locative": "mne",
+    "instrumental": "mnou"
+  },
+  "YOU": {
+    "en-subject": "you",
+    "en-object": "you",
+    "nominative": "ty",
+    "accusative": { "short": "ťa", "long": "teba" },
+    "dative": { "short": "ti", "long": "tebe" },
+    "locative": "tebe",
+    "instrumental": "tebou"
+  },
+  "HE": {
+    "en-subject": "he",
+    "en-object": "him",
+    "nominative": "on",
+    "accusative": { "short": "ho", "long": "jeho", "afterPrep": "neho" },
+    "dative": { "short": "mu", "long": "jemu", "afterPrep": "nemu" },
+    "locative": "ňom",
+    "instrumental": "ním"
+  },
+  "SHE": {
+    "en-subject": "she",
+    "en-object": "her",
+    "nominative": "ona",
+    "accusative": { "short": "ju", "long": "ňu" },
+    "dative": { "long": "jej", "afterPrep": "nej" },
+    "locative": "nej",
+    "instrumental": "ňou"
+  },
+  "IT": {
+    "en-subject": "it",
+    "en-object": "it",
+    "nominative": "ono",
+    "accusative": { "short": "ho", "long": "jeho", "afterPrep": "neho" },
+    "dative": { "short": "mu", "long": "jemu", "afterPrep": "nemu" },
+    "locative": "ňom",
+    "instrumental": "ním"
+  },
+  "WE": {
+    "en-subject": "we",
+    "en-object": "us",
+    "nominative": "my",
+    "accusative": { "long": "nás" },
+    "dative": { "long": "nám" },
+    "locative": "nás",
+    "instrumental": "nami"
+  },
+  "YOU_PL": {
+    "en-subject": "you (plural)",
+    "en-object": "you (plural)",
+    "nominative": "vy",
+    "accusative": { "long": "vás" },
+    "dative": { "long": "vám" },
+    "locative": "vás",
+    "instrumental": "vami"
+  },
+  "THEY": {
+    "en-subject": "they",
+    "en-object": "them",
+    "nominative": "oni",
+    "accusative": { "long": "ich", "afterPrep": "nich" },
+    "dative": { "long": "im", "afterPrep": "nim" },
+    "locative": "nich",
+    "instrumental": "nimi"
+  }
+}

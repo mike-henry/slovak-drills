@@ -1,8 +1,9 @@
 import { computed, ref, type Ref } from "vue"
 import { nouns, adjectives, propositions, verbs } from '@/utils/grammer/wordStore.js'
 import type Noun from "@/utils/grammer/declinations/Noun"
-import { CASE_TYPE, Pronoun } from '@/utils/grammer/WordTypes'
+import { CASE_TYPE } from '@/utils/grammer/WordTypes'
 import type Verb from "@/utils/grammer/verbs/Verb"
+import { Pronoun } from "@/utils/grammer/Pronoun"
 
 
 export const STREAK_TARGET = 10              // Number to win streak

@@ -1,23 +1,30 @@
 import { describe, it, expect } from "vitest"
-import { Pronoun, PRONOUN_META } from "./WordTypes"
+import  { PRONOUN_META, Pronoun, getPronounDeclension, getPronounForm } from "./Pronoun"
+import { CASE_TYPE } from "./WordTypes"
 
+/**
+ * These  tests are obsolete !!!  PRONOUN_META will be deprecated.
+ */
 
 describe("Pronoun metadata usage", () => {
 
   it("provides English and Slovak display values for each pronoun", () => {
-    expect(PRONOUN_META[Pronoun.I].en).toBe("I")
-    expect(PRONOUN_META[Pronoun.I].sk).toBe("ja")
+  
+    expect(getPronounDeclension(Pronoun.I).en).toBe("I")
+    expect(getPronounDeclension(Pronoun.I).nominative.long).toBe("ja")
 
-    expect(PRONOUN_META[Pronoun.WE].en).toBe("we")
-    expect(PRONOUN_META[Pronoun.WE].sk).toBe("my")
+    expect(getPronounDeclension(Pronoun.WE).en).toBe("we")
+    expect(getPronounDeclension(Pronoun.WE).nominative.long).toBe("my")
   })
 
   it("contains metadata for every Pronoun enum value", () => {
     const pronouns = Object.values(Pronoun)
-
     for (const pronoun of pronouns) {
-      expect(PRONOUN_META[pronoun]).toBeDefined()
+      expect(getPronounDeclension(pronoun)).toBeDefined()
+      expect(getPronounForm(pronoun)).toBeDefined()
+      expect(expect(getPronounForm(pronoun))).toEqual(getPronounForm(pronoun,CASE_TYPE.ACCUSATIVE,"short"))
     }
+
   })
 
   it("correctly identifies grammatical person and number", () => {

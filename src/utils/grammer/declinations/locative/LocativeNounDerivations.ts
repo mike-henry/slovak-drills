@@ -8,9 +8,9 @@ import {
 import DerivedWord from "../../DerivedWord.js";
 
 import {
-  NominativeNounDeriver,
+  NominativeNounDeclinator,
   softenStem,
-} from "../nominative/NominativeNounDerivations.js";
+} from "../nominative/NominativeNounDeclinator.js";
 import type Noun from "../Noun.js";
 
 // kosť-class consonants that lose diacritic before -i
@@ -33,7 +33,7 @@ function locativeSingular(noun:Noun): DerivedWord {
   let explanation:string;
 
   const nominativePluralDerived = () =>
-    NominativeNounDeriver.plural(noun).derived;
+    NominativeNounDeclinator.plural(noun).derived;
 
   // ---------- MASCULINE ----------
   if (gender === "M") {
@@ -122,7 +122,7 @@ const IRREGULAR_LOC_PL = {
  * LOCATIVE — PLURAL
  */
 export function locativePlural(noun:Noun): DerivedWord {
-  const nomPl = NominativeNounDeriver.plural(noun).derived;
+  const nomPl = NominativeNounDeclinator.plural(noun).derived;
   const animate = noun.animate;
   const word = noun.sk;
   const gender = noun.gender

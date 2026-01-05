@@ -1,5 +1,6 @@
 import DerivedWord from "../DerivedWord";
-import { Pronoun, Gender } from "../WordTypes";
+import  { Pronoun } from "../Pronoun";
+import {  Gender } from "../WordTypes";
 import { BaseConjugator } from "./BaseConjugator";
 
 export class IetConjugator extends BaseConjugator {

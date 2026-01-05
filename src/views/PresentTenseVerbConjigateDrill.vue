@@ -9,10 +9,11 @@
 <script setup lang="ts">
 
 import { capitalizeFirstOnly, getRandomNoun, getRandomPronoun, getRandomVerb, randomBoolean } from './drillUtils.js'
-import { CASE_TYPE, Pronoun, PRONOUN_META } from '@/utils/grammer/WordTypes'
+import { CASE_TYPE   } from '@/utils/grammer/WordTypes'
 
 import GenericDrill from '@/components/GenericDrill.vue'
 import type Verb from '@/utils/grammer/verbs/Verb.js';
+import { PRONOUN_META, type Pronoun } from '@/utils/grammer/Pronoun.js';
 // PRONOUN_META[pronoun]
 const getCaseName = () => CASE_TYPE.NOMINATIVE;
 

@@ -1,4 +1,4 @@
-import { NominativeNounDeriver } from "../nominative/NominativeNounDerivations.js";
+import { NominativeNounDeclinator } from "../nominative/NominativeNounDeclinator.js";
 import { genitiveNounDeriver } from "../genative/GenitiveNounDerivations.js"
 
 import {  deriveVocalStem } from "@/utils/grammer/vocalGrammer.js";
@@ -38,7 +38,7 @@ function accusativeSingular(noun:Noun):DerivedWord {
     //case "M":
       // Inanimate → same as nominative
       if (!noun.animate) {
-        const nominative = NominativeNounDeriver.singular(noun);
+        const nominative = NominativeNounDeclinator.singular(noun);
         derived = nominative.derived; // neuter singular = nominative
         explanation = `for non animate, neuter noun accusative = nominative  (${nominative.explanation})`;
         break;
@@ -75,7 +75,7 @@ function accusativeSingular(noun:Noun):DerivedWord {
       break
     case Gender.Neutral:  
     //case "N":
-      const nominative = NominativeNounDeriver.singular(noun);
+      const nominative = NominativeNounDeclinator.singular(noun);
       derived = nominative.derived; // neuter singular = nominative
       explanation = `neuter noun accusative = nominative  (${nominative.explanation})`;
       break;
@@ -88,7 +88,7 @@ function accusativeSingular(noun:Noun):DerivedWord {
 function accusativePlural(noun:Noun):DerivedWord {
     return noun.gender === Gender.Masculine && noun.animate
     ? genitiveNounDeriver.plural(noun)
-    : NominativeNounDeriver.plural(noun);
+    : NominativeNounDeclinator.plural(noun);
 }
 
 

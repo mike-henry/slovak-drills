@@ -1,7 +1,7 @@
 import type Noun from "../Noun";
 import {  endsWithSoftConsonant, endsWithHardConsonant, deriveVocalStem } from "@/utils/grammer/vocalGrammer";
 import  DerivedWord from "../../DerivedWord";
-import { NominativeNounDeriver } from "../nominative/NominativeNounDerivations";
+import { NominativeNounDeclinator } from "../nominative/NominativeNounDeclinator";
 
 
 //ONLY FOR  IMPLEMENTATION FOR PLURAL
@@ -22,7 +22,7 @@ const IRREGULAR_GENITIVE_PLURAL = {
  * @returns {string} genitive plural
  */
 function genitivePlural(noun:Noun):DerivedWord {
-  if(noun.gender !== "M" || !noun.animate)  return NominativeNounDeriver.plural(noun);
+  if(noun.gender !== "M" || !noun.animate)  return NominativeNounDeclinator.plural(noun);
   if (IRREGULAR_GENITIVE_PLURAL[noun.sk]) return IRREGULAR_GENITIVE_PLURAL[noun.sk];
 
 let derived:string;

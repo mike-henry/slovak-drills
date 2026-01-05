@@ -1,5 +1,6 @@
 import DerivedWord from "../DerivedWord";
-import type { Pronoun, Gender } from "../WordTypes";
+import type { Pronoun } from "../Pronoun";
+import type {  Gender } from "../WordTypes";
 import { BaseConjugator } from "./BaseConjugator";
 
 export class IrregularConjugator extends BaseConjugator {

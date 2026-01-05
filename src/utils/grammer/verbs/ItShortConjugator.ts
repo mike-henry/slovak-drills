@@ -3,7 +3,7 @@ import { Pronoun } from "../Pronoun";
 import {  Gender } from "../WordTypes";
 import { BaseConjugator } from "./BaseConjugator";
 
-export class ItConjugator extends BaseConjugator {
+export class ItShortConjugator extends BaseConjugator {
     deriveConjugate(person: Pronoun, gender?: Gender): DerivedWord {
         const stem = this.getStem();
         const ending = this.getEnding(person);
@@ -18,16 +18,15 @@ export class ItConjugator extends BaseConjugator {
     }
     getEnding(person: Pronoun): string {
         const endings: Record<Pronoun, string> = {
-            [Pronoun.I]: "ím",
-            [Pronoun.YOU]: "íš",
-            [Pronoun.HE]: "í",
-            [Pronoun.SHE]: "í",
-            [Pronoun.IT]: "í",
-            [Pronoun.WE]: "íme",
-            [Pronoun.YOU_PL]: "íte",
+            [Pronoun.I]: "im",
+            [Pronoun.YOU]: "iš",
+            [Pronoun.HE]: "i",
+            [Pronoun.SHE]: "i",
+            [Pronoun.IT]: "i",
+            [Pronoun.WE]: "ime",
+            [Pronoun.YOU_PL]: "ite",
             [Pronoun.THEY]: "ia",
         };
-
         return endings[person];
     }
 }

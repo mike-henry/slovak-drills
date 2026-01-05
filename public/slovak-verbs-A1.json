@@ -447,7 +447,7 @@
 
   { "sk": "uvedomiť", "en": "to make aware", "case": "accusative" },
   { "sk": "zasiahnuť", "en": "to intervene/strike", "case": "accusative", "past-stem": "zasiahol" },
-  
+
   { "sk": "poškodiť", "en": "to damage", "case": "accusative" },
   { "sk": "zničiť", "en": "to destroy", "case": "accusative" },
 
@@ -515,6 +515,53 @@
   { "sk": "upraviť si", "en": "to adjust for oneself", "case": "accusative" },
   { "sk": "zostať", "en": "to remain", "case": "locative", "past-stem": "zostal" },
   { "sk": "ocitnúť sa", "en": "to find oneself", "case": "locative", "past-stem": "ocitol" },
-  { "sk": "usadiť sa", "en": "to settle", "case": "locative", "past-stem": "usadil" }
-]
+  { "sk": "usadiť sa", "en": "to settle", "case": "locative", "past-stem": "usadil" },
 
+  { "sk": "slúžiť", "en": "to serve", "case": "accusative", "past-stem": "slúžil", "labels": ["it-short"] },
+  { "sk": "zaslúžiť si", "en": "to deserve", "case": "accusative", "past-stem": "zaslúžil", "labels": ["it-short"] },
+  {
+    "sk": "odslúžiť",
+    "en": "to serve (a shift, a mass)",
+    "case": "accusative",
+    "past-stem": "odslúžil",
+    "labels": ["it-short"]
+  },
+  {
+    "sk": "poslúžiť",
+    "en": "to help, to serve",
+    "case": "accusative",
+    "past-stem": "poslúžil",
+    "labels": ["it-short"]
+  },
+  {
+    "sk": "poslúžiť si",
+    "en": "to help oneself",
+    "case": "accusative",
+    "past-stem": "poslúžil",
+    "labels": ["it-short"]
+  },
+  {
+    "sk": "vyslúžiť si",
+    "en": "to earn (figuratively)",
+    "case": "accusative",
+    "past-stem": "vyslúžil",
+    "labels": ["it-short"]
+  },
+  { "sk": "prisľúžiť", "en": "to promise", "case": "accusative", "past-stem": "prisľúbil", "labels": ["it-short"] },
+  {
+    "sk": "byť",
+    "en": "to be",
+    "past-stem": "bol",
+    "labels": ["irregular"],
+    "presentMap": {
+      "I": "som",
+      "YOU": "si",
+      "HE": "je",
+      "SHE": "je",
+      "IT": "je",
+      "WE": "sme",
+      "YOU_PL": "ste",
+      "THEY": "sú"
+    }
+  }
+]

@@ -1,15 +1,15 @@
 import { WORD, Gender, CASE_TYPE } from "@/utils/grammer/WordTypes";
 import type DerivedWord from "../DerivedWord";
 import { LocativeNounDeriver } from "./locative/LocativeNounDerivations";
-import { AccusativeNounDeclinator } from "./accusative/AccusativeNounDeclinations";
+import { AccusativeNounDeclinator } from "./accusative/AccusativeNounDeclinator";
 import { InstrumentalNounDeriver } from "./instrumental/InstrumentalNounDerivations";
-import { NominativeNounDeriver } from "./nominative/NominativeNounDerivations";
+import { NominativeNounDeclinator } from "./nominative/NominativeNounDeclinator";
 
 
 const DeclinatorsByCase: Record<CASE_TYPE, NounDeclinator> = {
   [CASE_TYPE.LOCATIVE]: LocativeNounDeriver,
   [CASE_TYPE.ACCUSATIVE]: AccusativeNounDeclinator,
-  [CASE_TYPE.NOMINATIVE]: NominativeNounDeriver,
+  [CASE_TYPE.NOMINATIVE]: NominativeNounDeclinator,
   [CASE_TYPE.INSTRUMENTAL]: InstrumentalNounDeriver,
   [CASE_TYPE.GENITIVE]: undefined,
   [CASE_TYPE.DATIVE]: undefined,

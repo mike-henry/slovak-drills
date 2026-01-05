@@ -1,9 +1,10 @@
 import { BaseConjugator } from "./BaseConjugator";
-import type { Verb } from "./Verb";
-import { Pronoun } from "../WordTypes";
-import DerivedWord from "../DerivedWord";
+import type Verb from "./Verb";
 
-export class AtConjugator extends BaseConjugator {
+import DerivedWord from "../DerivedWord";
+import { Pronoun } from "../Pronoun";
+
+export default class AtConjugator extends BaseConjugator {
 
   constructor(verb: Verb) {
     super(verb);
@@ -17,7 +18,7 @@ export class AtConjugator extends BaseConjugator {
 
     // Regular -ať verbs → remove last 3 characters
     if (base.endsWith("ať")) {
-      return base.slice(0, -2 );  // remove "ať"
+      return base.slice(0, -1 );  // remove "ť"
     }
 
     return base;
@@ -27,14 +28,14 @@ export class AtConjugator extends BaseConjugator {
 
       const hasLongVowel =() => /[áéíóúý]$/.test(this.getStem())
     const endings: Record<Pronoun, string> = {
-      [Pronoun.I]: hasLongVowel() ? "ám":  "am" ,
-      [Pronoun.YOU]: "áš",
-      [Pronoun.HE]: "á",
-      [Pronoun.SHE]: "á",
-      [Pronoun.IT]: "á",
-      [Pronoun.WE]: "áme",
-      [Pronoun.YOU_PL]: "áte",
-      [Pronoun.THEY]: "ajú",
+      [Pronoun.I]:  "m" ,
+      [Pronoun.YOU]:  "š",
+      [Pronoun.HE]: "",
+      [Pronoun.SHE]: "",
+      [Pronoun.IT]: "",
+      [Pronoun.WE]: "me",
+      [Pronoun.YOU_PL]: "te",
+      [Pronoun.THEY]: "jú",
     };
 
     return endings[person];

@@ -5,7 +5,7 @@ import { BaseConjugator } from "./BaseConjugator";
 
 export class ItShortConjugator extends BaseConjugator {
     deriveConjugate(person: Pronoun, gender?: Gender): DerivedWord {
-        const stem = this.getStem();
+        const stem = this.getStem(person);
         const ending = this.getEnding(person);
         return new DerivedWord(
             stem + ending,
@@ -14,18 +14,19 @@ export class ItShortConjugator extends BaseConjugator {
     }
 
     deriveStem(): string {
-        return this.getBaseInfinitive().slice(0, -2);
+        return this.getBaseInfinitive().slice(0, -2)+"i";
     }
     getEnding(person: Pronoun): string {
         const endings: Record<Pronoun, string> = {
-            [Pronoun.I]: "im",
-            [Pronoun.YOU]: "iš",
-            [Pronoun.HE]: "i",
-            [Pronoun.SHE]: "i",
-            [Pronoun.IT]: "i",
-            [Pronoun.WE]: "ime",
-            [Pronoun.YOU_PL]: "ite",
-            [Pronoun.THEY]: "ia",
+            [Pronoun.I]: "m",
+            [Pronoun.YOU]: "š",
+            [Pronoun.HE]: "",
+            [Pronoun.SHE]: "",
+            [Pronoun.IT]: "",
+            [Pronoun.THAT]: "",
+            [Pronoun.WE]: "me",
+            [Pronoun.YOU_PL]: "te",
+            [Pronoun.THEY]: "a",
         };
         return endings[person];
     }

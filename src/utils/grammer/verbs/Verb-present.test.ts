@@ -17,8 +17,7 @@ const regularVerbs = {
     "zabudnúť",
     "to forget",
     false,
-    CASE_TYPE.ACCUSATIVE,
-    "zabudn"
+    CASE_TYPE.ACCUSATIVE
   ),
   padnut: new Verb("padnúť", "to fall"),
   sadnutSi: new Verb("sadnúť si", "to sit down", true), // reflexive

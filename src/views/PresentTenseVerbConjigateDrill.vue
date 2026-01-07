@@ -13,8 +13,8 @@ import { CASE_TYPE   } from '@/utils/grammer/WordTypes'
 
 import GenericDrill from '@/components/GenericDrill.vue'
 import type Verb from '@/utils/grammer/verbs/Verb.js';
-import { PRONOUN_META, type Pronoun } from '@/utils/grammer/Pronoun.js';
-// PRONOUN_META[pronoun]
+import { type Pronoun,getPronounDeclension } from '@/utils/grammer/Pronoun.js';
+
 const getCaseName = () => CASE_TYPE.NOMINATIVE;
 
 class Item {
@@ -28,9 +28,10 @@ const buildNextItem: () => Item = () => ({
 })
 
 const sk = (item: Item) => item.verb.sk
-const en = (item: Item) => `(${PRONOUN_META[item.pronoun].en}) ${item.verb.en}`
+// const en = (item: Item) => `(${PRONOUN_META[item.pronoun].en}) ${item.verb.en}`
+const en = (item: Item) => `(${getPronounDeclension(item.pronoun).nominative}) ${item.verb.en}`
 
-const question = (item:Item) => `(${PRONOUN_META[item.pronoun].sk}) ${item.verb.sk}  `
+//const question = (item:Item) => `(${PRONOUN_META[item.pronoun].sk}) ${item.verb.sk}  `
 
 const expected = (item: Item) => item.verb.conjugatePresent(item.pronoun)
 const plural = (item: Item) => false

@@ -1,17 +1,19 @@
 import DerivedWord from "../DerivedWord";
-import type { Pronoun, Gender } from "../WordTypes";
+import type { Pronoun } from "../Pronoun";
+import type {  Gender } from "../WordTypes";
+
 import type { PresentConjugator } from "./PresentConjugator";
-import type { Verb } from "./Verb";
+import type  Verb  from "./Verb";
 
 export abstract class BaseConjugator implements PresentConjugator {
     constructor(protected verb: Verb) { }
  
     abstract getEnding(person: Pronoun, gender?: Gender): string;
-    abstract deriveStem(): string;
-    getStem(): string {
+    abstract deriveStem(person:Pronoun): string;
+    getStem(person:Pronoun): string {
     // 1. Highest priority → presentStem from verb
     if (this.verb.presentStem && this.verb.presentStem.length > 0 ) return this.verb.presentStem;
-    return this.deriveStem()
+    return this.deriveStem(person)
    };
     abstract deriveConjugate(person: Pronoun, gender?: Gender): DerivedWord;
     conjugate(person: Pronoun, gender?: Gender): DerivedWord {
@@ -32,7 +34,4 @@ export abstract class BaseConjugator implements PresentConjugator {
       return match ? (match[1] as "si" | "sa") : "";
     }
 
-    protected hasLongVowel() {
-        return  /[áéíóúý]/.test(this.getStem())
-    }
 }

@@ -11,28 +11,18 @@ export default class AtConjugator extends BaseConjugator {
   }
 
   deriveStem(): string {
-    // Allow presentStem override
-    if (this.verb.presentStem) return this.verb.presentStem;
-
-    const base = this.getBaseInfinitive();
-
-    // Regular -ať verbs → remove last 3 characters
-    if (base.endsWith("ať")) {
-      return base.slice(0, -1 );  // remove "ť"
-    }
-
-    return base;
+    // Allow presentStem override    
+    return this.getBaseInfinitive().slice(0, -1 );  // remove "ť"
   }
 
   getEnding(person: Pronoun): string {
-
-      const hasLongVowel =() => /[áéíóúý]$/.test(this.getStem())
     const endings: Record<Pronoun, string> = {
       [Pronoun.I]:  "m" ,
       [Pronoun.YOU]:  "š",
       [Pronoun.HE]: "",
       [Pronoun.SHE]: "",
       [Pronoun.IT]: "",
+      [Pronoun. THAT]: "",
       [Pronoun.WE]: "me",
       [Pronoun.YOU_PL]: "te",
       [Pronoun.THEY]: "jú",
@@ -42,7 +32,7 @@ export default class AtConjugator extends BaseConjugator {
   }
 
   deriveConjugate(person: Pronoun): DerivedWord {
-    const stem = this.getStem();
+    const stem = this.getStem(person);
     const ending = this.getEnding(person);
 
     return new DerivedWord(

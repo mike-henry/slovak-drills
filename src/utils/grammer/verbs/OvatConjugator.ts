@@ -5,27 +5,28 @@ import { BaseConjugator } from "./BaseConjugator";
 
 
 export class OvatConjugator extends BaseConjugator {
-  deriveStem(): string {
-    // Remove 'ovať' from infinitive
-    return this.getBaseInfinitive().slice(0, -4);
+  deriveStem(person:Pronoun): string {
+    // Remove 'ovať' from infinitive and  use 'uj' or 'uje' to create stem
+    return this.getBaseInfinitive().slice(0, -4) +( person == Pronoun.THEY ?  "uj" : "uje");
   }
 
   getEnding(person: Pronoun, gender?: Gender): string {
     const endings: Record<Pronoun, string> = {
-      [Pronoun.I]: "ujem",
-      [Pronoun.YOU]: "uješ",
-      [Pronoun.HE]: "uje",
-      [Pronoun.SHE]: "uje",
-      [Pronoun.IT]: "uje",
-      [Pronoun.WE]: "ujeme",
-      [Pronoun.YOU_PL]: "ujete",
-      [Pronoun.THEY]: "ujú",
+      [Pronoun.I]: "m",
+      [Pronoun.YOU]: "š",
+      [Pronoun.HE]: "",
+      [Pronoun.SHE]: "",
+      [Pronoun.IT]: "",
+      [Pronoun.THAT]: "",
+      [Pronoun.WE]: "me",
+      [Pronoun.YOU_PL]: "te",
+      [Pronoun.THEY]: "ú",
     };
     return endings[person];
   }
 
   deriveConjugate(person: Pronoun, gender?: Gender): DerivedWord {
-    const stem = this.getStem();
+    const stem = this.getStem(person);
     const ending = this.getEnding(person);
     return new DerivedWord(
       stem + ending,

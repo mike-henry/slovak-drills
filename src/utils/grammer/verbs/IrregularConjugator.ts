@@ -13,7 +13,6 @@ export class IrregularConjugator extends BaseConjugator {
     }
 
     deriveConjugate(person: Pronoun, gender?: Gender): DerivedWord {
-        const stem = this.getStem();
         const form = this.verb.presentMap[person];
         if (!form) {
             throw new Error("Invalid person or stem for irregular conjugation.");

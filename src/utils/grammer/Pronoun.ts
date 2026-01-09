@@ -1,3 +1,4 @@
+import DerivedWord from "./DerivedWord"
 import { CASE_TYPE } from "./WordTypes"
 
 export enum Pronoun {
@@ -176,22 +177,28 @@ export function getPronounForm(
     pronoun: Pronoun,
     caseType: CASE_TYPE = CASE_TYPE.ACCUSATIVE,
     form: "short" | "long" | "afterPrep" = "short"
-): string {
+): DerivedWord {
     const entry = getPronounDeclension(pronoun)
     const caseBlock = entry[caseType] as any
+    let derived: string;
+    let explanation: string;
 
-    // If the case has a short form and user wants short → return it
-    if (form === "short" && caseBlock.short) return caseBlock.short
+    
+    if (form === "short" && caseBlock.short) {// If the case has a short form and user wants short → return it
+        derived = caseBlock.short
+    } else if (form === "long" && caseBlock.long) {// If user wants long → return long
+        derived = caseBlock.long
+    } else if (form === "afterPrep" && caseBlock.afterPrep) {   // If user wants afterPrep → return it
+        derived = caseBlock.afterPrep
+    }
+    else {
+        // Fallback logic:
+        // 1. short if available
+        // 2. else long
+        // 3. else error
+        derived = caseBlock.short ?? caseBlock.long
+    }
 
-    // If user wants long → return long
-    if (form === "long" && caseBlock.long) return caseBlock.long
-
-    // If user wants afterPrep → return it
-    if (form === "afterPrep" && caseBlock.afterPrep) return caseBlock.afterPrep
-
-    // Fallback logic:
-    // 1. short if available
-    // 2. else long
-    // 3. else error
-    return caseBlock.short ?? caseBlock.long
+    explanation = `The ${form} form of '${entry.enObject}' (${pronoun}) in ${caseType} case is '${derived}'`
+    return new DerivedWord(derived, explanation)
 }

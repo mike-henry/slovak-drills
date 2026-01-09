@@ -12,13 +12,14 @@
 </template>
 
 <script setup lang="ts">
-import { capitalizeFirstOnly, getRandomNoun, getRandomPronoun, getRandomVerb, randomBoolean } from './drillUtils.js';
+import { capitalizeFirstOnly, getRandomPronoun, getRandomVerb } from './drillUtils.js';
 import { CASE_TYPE } from '@/utils/grammer/WordTypes';
 
 import GenericDrill from '@/components/GenericDrill.vue';
 import type Verb from '@/utils/grammer/verbs/Verb.js';
-import { getPronounDeclension, getPronounForm } from '@/utils/grammer/Pronoun.js';
+import { getPronounDeclension } from '@/utils/grammer/Pronoun.js';
 import type { PronounDeclension } from '@/utils/grammer/Pronoun.js';
+import { conjugateWithPronoun } from '@/utils/grammer/verbs/VerbUtils.js';
 
 const getCaseName = () => CASE_TYPE.NOMINATIVE;
 
@@ -39,16 +40,12 @@ const buildNextItem: () => Item = () => {
   };
 };
 
-const sk = (item: Item) => `(${item.object.nominative}) ${item.verb.sk} ${item.subject.nominative} `;
-const en = (item: Item) => `(${item.object.enObject}) ${item.verb.en} to ${item.subject.en}`;
+const sk = (item: Item) => `(${item.object.nominative.long}) ${item.verb.sk} ${item.subject.nominative.long} `;
+const en = (item: Item) => `(${item.object.en}) ${item.verb.en} to ${item.subject.enObject}`;
 
-const question = (item: Item) => `(${item.object.nominative}) ${item.verb.sk} ${item.subject.nominative} `;
+const question = (item: Item) => `(${item.object.nominative.long}) ${item.verb.sk} ${item.subject.nominative.long} `;
 
-const expected = (item: Item) => {
-  const conjugatedVerb =item.verb.conjugatePresent(item.object.pronoun); /// FIX-ME
-  const formedSubject = getPronounForm( item.subject.pronoun,item.verb.caseType);
-  return `${conjugatedVerb} ${formedSubject}`
-};
+const expected = (item: Item) => conjugateWithPronoun(item.object.pronoun, item.verb, item.subject.pronoun);
 const plural = (item: Item) => false;
 const caseTitle = capitalizeFirstOnly(getCaseName());
 const drillTitle = `Slovak Verb Conjigation Drill`;

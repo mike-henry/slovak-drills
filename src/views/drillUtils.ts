@@ -27,7 +27,45 @@ export const resetStreak = () => {
 }
 
 
-export const addToHistory = (word: string,en:string, answer: string, correct: boolean, expected: string, caseName: CASE_TYPE, documentation: string[]) => {
+
+export interface HistoryEntry {
+  word: string;
+  en: string;
+  answer: string;
+  correct: boolean;
+  expected: string;
+  caseName: CASE_TYPE;
+  documentation: string[];
+}
+
+export const addToHistoryEntry = (entry: HistoryEntry): void => {
+  history.value.unshift(entry);
+};
+
+
+export const addToHistory = (
+  word: string,
+  en: string,
+  answer: string,
+  correct: boolean,
+  expected: string,
+  caseName: CASE_TYPE,
+  documentation: string[]
+): void => {
+  addToHistoryEntry({
+    word,
+    en,
+    answer,
+    correct,
+    expected,
+    caseName,
+    documentation
+  });
+};
+
+
+
+export const oldAddToHistory = (word: string,en:string, answer: string, correct: boolean, expected: string, caseName: CASE_TYPE, documentation: string[]) => {
   history.value.unshift({
     word,
     en,

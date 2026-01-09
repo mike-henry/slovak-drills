@@ -235,3 +235,60 @@ describe("Present tense — Irregular verbs", () => {
     );
   });
 });
+
+// ---------------------------
+// pozvať — stem-change (-vať → -ve-)
+// ---------------------------
+const stemChangeVerbs = {
+  pozvat: new Verb(
+    "pozvať",
+    "to invite",
+    false,
+    CASE_TYPE.ACCUSATIVE,
+    "pozve", // irregular present stem
+    {
+      [Pronoun.THEY]: "pozvú" // override only 3rd plural
+    },
+    ["nut"]
+  ),
+};
+
+describe("Present tense — Stem-changing verbs", () => {
+  test("pozvať (-vať → -ve-) singular/plural", () => {
+    expect(stemChangeVerbs.pozvat.conjugatePresent(Pronoun.I).derived).toBe(
+      "pozvem"
+    );
+    expect(stemChangeVerbs.pozvat.conjugatePresent(Pronoun.YOU).derived).toBe(
+      "pozveš"
+    );
+    expect(stemChangeVerbs.pozvat.conjugatePresent(Pronoun.HE).derived).toBe(
+      "pozve"
+    );
+    expect(stemChangeVerbs.pozvat.conjugatePresent(Pronoun.WE).derived).toBe(
+      "pozveme"
+    );
+    expect(stemChangeVerbs.pozvat.conjugatePresent(Pronoun.YOU_PL).derived).toBe(
+      "pozvete"
+    );
+    expect(stemChangeVerbs.pozvat.conjugatePresent(Pronoun.THEY).derived).toBe(
+      "pozvú"
+    );
+  });
+});
+
+test("nájsť (-sť heuristic stem)", () => {
+  const najst = new Verb("nájsť", "to find");
+
+  expect(najst.conjugatePresent(Pronoun.I).derived).toBe("nájdem");
+  expect(najst.conjugatePresent(Pronoun.YOU).derived).toBe("nájdeš");
+  expect(najst.conjugatePresent(Pronoun.THEY).derived).toBe("nájdu");
+});
+
+
+test("prísť (-sť heuristic fallback)", () => {
+  const prist = new Verb("prísť", "to come");
+
+  expect(prist.conjugatePresent(Pronoun.I).derived).toBe("prídem");
+  expect(prist.conjugatePresent(Pronoun.THEY).derived).toBe("prídu");
+});
+

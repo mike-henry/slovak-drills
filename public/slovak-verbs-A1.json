@@ -1,16 +1,15 @@
 [
   { "sk": "mať", "en": "to have", "case": "accusative", "past-stem": "mal" },
-  { "sk": "byť", "en": "to be", "case": "nominative", "past-stem": "bol" },
   { "sk": "robiť", "en": "to do, to make", "case": "accusative" },
-  { "sk": "ísť", "en": "to go", "case": "locative", "present-stem":"id", "past-stem": "iš", "labels":["it-short"]},
+  { "sk": "ísť", "en": "to go", "case": "locative", "present-stem": "id", "past-stem": "iš", "labels": ["it-short"] },
   { "sk": "chcieť", "en": "to want", "case": "accusative" },
-  { "sk": "môcť", "en": "to be able to", "case": "accusative" },
+  { "sk": "môcť", "en": "to be able to", "case": "accusative", "present-stem": "môž", "labels": ["it-short"] },
   { "sk": "musieť", "en": "to have to", "case": "accusative" },
-  { "sk": "vedieť", "en": "to know (a fact)", "case": "accusative" },
+  { "sk": "vedieť", "en": "to know (a fact)", "case": "accusative", "present-stem": "vied" },
   { "sk": "vidieť", "en": "to see", "case": "accusative" },
   { "sk": "dať", "en": "to give", "case": "accusative", "past-stem": "dal" },
 
-  { "sk": "jesť", "en": "to eat", "case": "accusative", "past-stem": "jed" , "present-stem":"je" , "labels":["at"] },
+  { "sk": "jesť", "en": "to eat", "case": "accusative", "past-stem": "jed", "present-stem": "je", "labels": ["at"] },
   { "sk": "piť", "en": "to drink", "case": "accusative" },
   { "sk": "čítať", "en": "to read", "case": "accusative" },
   { "sk": "písať", "en": "to write", "case": "accusative" },
@@ -22,7 +21,14 @@
   { "sk": "nájsť", "en": "to find", "case": "accusative", "past-stem": "naš" },
   { "sk": "brať", "en": "to take", "case": "accusative", "past-stem": "bral" },
 
-  { "sk": "niesť", "en": "to carry", "case": "accusative", "past-stem": "niesol" , "labels":["it-short"], "present-stem":"nes" },
+  {
+    "sk": "niesť",
+    "en": "to carry",
+    "case": "accusative",
+    "past-stem": "niesol",
+    "labels": ["it-short"],
+    "present-stem": "nes"
+  },
   { "sk": "vynášať", "en": "to be carrying out", "case": "accusative" },
   { "sk": "vyniesť", "en": "to carry out", "case": "accusative", "past-stem": "vyniesol" },
   { "sk": "prinášať", "en": "to be bringing", "case": "accusative" },
@@ -86,7 +92,16 @@
   { "sk": "ťahať", "en": "to pull", "case": "accusative" },
   { "sk": "zabiť", "en": "to kill", "case": "accusative" },
   { "sk": "narodiť sa", "en": "to be born", "case": "locative" },
-  { "sk": "vyrásť", "en": "to grow up", "case": "locative", "past-stem": "vyrástol" },
+  {
+    "sk": "vyrásť",
+    "en": "to grow up",
+    "case": "locative",
+    "past-stem": "vyrástol",
+    "present-stem": "vyrastie",
+    "presentMap": {
+      "THEY": "vyrastú"
+    }
+  },
   { "sk": "umrieť", "en": "to die", "case": "locative", "past-stem": "umrel" },
   { "sk": "žiť", "en": "to live", "case": "locative" },
   { "sk": "platiť", "en": "to pay", "case": "accusative" },
@@ -134,7 +149,9 @@
   { "sk": "zdvihnúť", "en": "to lift", "case": "accusative", "past-stem": "zdvihol" },
   { "sk": "chytiť", "en": "to catch", "case": "accusative" },
   { "sk": "stratiť", "en": "to lose", "case": "accusative" },
-  { "sk": "nájsť si", "en": "to find (for oneself)", "case": "accusative", "past-stem": "naš" },
+  { "sk": "nájsť si", "en": "to find (for oneself)", "case": "accusative", "past-stem": "naš" ,"present-stem": "nájde" , "presentMap": {
+      "THEY": "nájdu"
+    } },
   { "sk": "pamätať si", "en": "to remember", "case": "accusative" },
   { "sk": "zabudnúť", "en": "to forget", "case": "accusative", "past-stem": "zabudol" },
 
@@ -194,7 +211,7 @@
   { "sk": "zodpovedať", "en": "to correspond", "case": "locative" },
 
   { "sk": "volať sa", "en": "to be called", "case": "nominative" },
-  { "sk": "zdá sa", "en": "to seem", "case": "nominative" },
+  { "sk": "zdať sa", "en": "to seem", "case": "nominative" },
   { "sk": "vyzerať", "en": "to look (appear)", "case": "instrumental" },
   { "sk": "pracovať s", "en": "to work with", "case": "instrumental" },
   { "sk": "zaoberať sa", "en": "to deal with", "case": "instrumental" },
@@ -234,11 +251,18 @@
   { "sk": "trénovať", "en": "to train", "case": "accusative" },
   { "sk": "cvičiť", "en": "to exercise", "case": "accusative" },
 
-  { "sk": "ísť", "en": "to go", "case": "accusative", "present-stem": "id", "past-stem": "iš" , "labels":["it-short"]},
+  { "sk": "ísť", "en": "to go", "case": "accusative", "present-stem": "id", "past-stem": "iš", "labels": ["it-short"] },
   { "sk": "chodiť", "en": "to go repeatedly", "case": "accusative" },
   { "sk": "jazdiť", "en": "to ride regularly", "case": "accusative" },
   { "sk": "viezť", "en": "to be driving (sb/sth)", "case": "accusative", "past-stem": "viezol" },
-  { "sk": "viesť", "en": "to lead", "case": "accusative", "past-stem": "viedol", "present-stem":"vied" , "labels":["it-short"] },
+  {
+    "sk": "viesť",
+    "en": "to lead",
+    "case": "accusative",
+    "past-stem": "viedol",
+    "present-stem": "vied",
+    "labels": ["it-short"]
+  },
 
   { "sk": "zastaviť", "en": "to stop", "case": "accusative" },
   { "sk": "zastavovať", "en": "to be stopping", "case": "accusative" },
@@ -259,38 +283,14 @@
   { "sk": "relaxovať", "en": "to relax", "case": "locative" },
 
   { "sk": "snívať", "en": "to dream", "case": "o + locative" },
-  { "sk": "žiť pre", "en": "to live for", "case": "accusative" },
-  { "sk": "dúfať v", "en": "to hope for", "case": "accusative" },
-  { "sk": "modliť sa za", "en": "to pray for", "case": "accusative" },
-  { "sk": "tešiť sa na", "en": "to look forward to", "case": "accusative" },
-
-  { "sk": "rozprávať o", "en": "to talk about", "case": "locative" },
-  { "sk": "písať o", "en": "to write about", "case": "locative" },
-  { "sk": "čítať o", "en": "to read about", "case": "locative" },
-  { "sk": "povedať o", "en": "to say about", "case": "locative", "past-stem": "povedal" },
-  { "sk": "učiť o", "en": "to teach about", "case": "locative" },
-
-  { "sk": "diskutovať o", "en": "to discuss", "case": "locative" },
-  { "sk": "hlasovať o", "en": "to vote on", "case": "locative" },
-  { "sk": "rozhodnúť o", "en": "to decide about", "case": "locative", "past-stem": "rozhodol" },
-  { "sk": "žartovať o", "en": "to joke about", "case": "locative" },
-  { "sk": "pochybovať o", "en": "to doubt", "case": "locative" },
 
   { "sk": "zabávať sa", "en": "to have fun", "case": "instrumental" },
-  { "sk": "hrať sa s", "en": "to play with", "case": "instrumental" },
-  { "sk": "pracovať s", "en": "to work with", "case": "instrumental" },
-  { "sk": "zaobchádzať s", "en": "to handle", "case": "instrumental" },
-  { "sk": "manipulovať s", "en": "to manipulate", "case": "instrumental" },
 
-  { "sk": "bojovať s", "en": "to fight with", "case": "instrumental" },
   { "sk": "zaoberať sa", "en": "to deal with", "case": "instrumental" },
-  { "sk": "spojiť sa s", "en": "to connect with", "case": "instrumental", "past-stem": "spojil" },
+
   { "sk": "nadchnúť sa", "en": "to get excited about", "case": "instrumental", "past-stem": "nadchol" },
-  { "sk": "uspokojiť sa s", "en": "to settle for", "case": "instrumental" },
 
   { "sk": "podať sa", "en": "to give in", "case": "instrumental", "past-stem": "podal" },
-  { "sk": "popasovať sa s", "en": "to wrestle with", "case": "instrumental", "past-stem": "popasoval" },
-  { "sk": "poradiť si s", "en": "to manage, cope with", "case": "instrumental" },
   { "sk": "obohatiť", "en": "to enrich", "case": "accusative" },
   { "sk": "zjednodušiť", "en": "to simplify", "case": "accusative" },
 

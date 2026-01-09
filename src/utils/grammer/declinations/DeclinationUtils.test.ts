@@ -45,7 +45,7 @@ describe("declinateAdjectiveWithNoun (mocked)", () => {
 
     // Check explanation string
     expect(result.explanation).toBe(
-      "for noun nounExpl, for adjective adjExpl"
+      "for adjective: adjExpl, for noun: nounExpl"
     );
 
     // Check the third field (array of documentation refs)

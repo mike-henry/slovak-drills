@@ -8,6 +8,7 @@ import AdjectiveCaseDrill from '../views/AdjectiveCaseDrill.vue'
 import NounAdjectiveCaseDrill from '@/views/NounAdjectiveCaseDrill.vue'
 import PropositionNounAdjectiveCaseDrill from '@/views/PropositionNounAdjectiveCaseDrill.vue'
 import PresentTenseVerbConjigateDrill from '@/views/PresentTenseVerbConjigateDrill.vue'
+import PresentTenseVerbConjigateWithPronounDrill from '@/views/PresentTenseVerbConjigateWithPronounDrill.vue'
 import { CASE_TYPE } from '@/utils/grammer/WordTypes'
 
 const routes = [
@@ -84,6 +85,11 @@ const routes = [
    path: '/present-tense-verb',
    name: 'present-tense-verb',
    component: PresentTenseVerbConjigateDrill
+  } ,
+  {
+   path: '/present-tense-verb-subject',
+   name: 'present-tense-verb-subject',
+   component: PresentTenseVerbConjigateWithPronounDrill
   } 
 ]
 

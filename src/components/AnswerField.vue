@@ -1,12 +1,6 @@
 <template>
   <div class="answer-field">
-    <input
-      ref="inputEl"
-      v-model="model"
-      type="text"
-      class="drill-input"
-      :disabled="disabled"
-    />
+    <input ref="inputEl" v-model="model" type="text" class="drill-input" :disabled="disabled" />
 
     <div class="mt-2">
       <button
@@ -14,7 +8,7 @@
         :key="char"
         @click="insertChar(char)"
         class="drill-char-button"
-        style="margin: 0.1rem;"
+        style="margin: 0.1rem"
       >
         {{ char }}
       </button>
@@ -23,37 +17,30 @@
 </template>
 
 <script setup>
-import { ref } from "vue"
-import { nextTick } from "vue";
-import { computed,defineProps } from "vue"
+import { ref } from 'vue';
+import { nextTick } from 'vue';
+import { computed, defineProps } from 'vue';
 
-
-const specialChars = [
-  'á', 'ä', 'č', 'ď', 'é', 'í', 'ĺ', 'ľ', 'ň',
-  'ó', 'ô', 'ŕ', 'š', 'ť', 'ú', 'ý', 'ž'
-]
+const specialChars = ['á', 'ä', 'č', 'ď', 'é', 'í', 'ĺ', 'ľ', 'ň', 'ó', 'ô', 'ŕ', 'š', 'ť', 'ú', 'ý', 'ž'];
 
 // v-model support
 const props = defineProps({
   modelValue: { type: String, required: true },
-  disabled: { type: Boolean, default: false }
-})
+  disabled: { type: Boolean, default: false },
+});
 
-const emit = defineEmits(["update:modelValue"])
+const emit = defineEmits(['update:modelValue']);
 
 const model = computed({
   get: () => props.modelValue,
-  set: (value) => emit("update:modelValue", value)
-})
+  set: (value) => emit('update:modelValue', value),
+});
 
-const inputEl = ref(null)
+const inputEl = ref(null);
 
 const insertChar = (char) => {
-  insertAtCursor(model, inputEl, char)
-}
-
-
-
+  insertAtCursor(model, inputEl, char);
+};
 
 /**
  * Inserts a character into a text input at the cursor position,
@@ -70,8 +57,7 @@ function insertAtCursor(modelRef, inputRef, char) {
   const start = el.selectionStart;
   const end = el.selectionEnd;
 
-  modelRef.value =
-    modelRef.value.slice(0, start) + char + modelRef.value.slice(end);
+  modelRef.value = modelRef.value.slice(0, start) + char + modelRef.value.slice(end);
 
   // Restore focus + cursor position
   nextTick(() => {
@@ -80,6 +66,4 @@ function insertAtCursor(modelRef, inputRef, char) {
     el.setSelectionRange(newPos, newPos);
   });
 }
-
-
 </script>

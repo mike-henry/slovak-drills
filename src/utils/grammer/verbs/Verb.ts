@@ -9,6 +9,7 @@ import { ItShortConjugator } from "./ItShortConjugator";
 import { NutConjugator } from "./NutConjugator";
 import { OvatConjugator } from "./OvatConjugator";
 import type { PresentConjugator } from "./PresentConjugator";
+import { StConjugator } from "./StConjugator";
 
 export default class Verb extends WORD {
   reflexive: boolean;
@@ -57,6 +58,14 @@ export default class Verb extends WORD {
   }
 
   conjugatePresent(person: Pronoun, gender?: Gender): DerivedWord {
+
+    if (this.presentMap && this.presentMap[person]) {
+      return new DerivedWord(
+        this.presentMap[person] as string,
+        `Irregular /Overriden for '${Pronoun[person]} ${this.sk}'`
+      );
+    }
+    
     const presentConjugator = this.getConjugator(person);
     return presentConjugator.conjugate(person, gender);
   }
@@ -71,6 +80,7 @@ export default class Verb extends WORD {
       case "iet": return new IetConjugator(this);
       case "ovat": return new OvatConjugator(this);
       case "nut": return new NutConjugator(this);
+      case "st": return new StConjugator(this);
       case "irregular": return new IrregularConjugator(this);
       default: return new IrregularConjugator(this);
     }
@@ -84,7 +94,10 @@ export default class Verb extends WORD {
     if (infinitive.endsWith("ovať")) return "ovat";
     if (infinitive.endsWith("núť") || infinitive.endsWith("uť")) return "nut";
     if (infinitive.endsWith("ieť")) return "iet";
-    if (infinitive.endsWith("iť")) return "it-long"; // default
+    if (infinitive.endsWith("iť")) return "it-long"; 
+    if (infinitive.endsWith("sť")) return "st";
+
+    // default
     return "irregular"; // fallback
   }
 

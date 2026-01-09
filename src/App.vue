@@ -178,7 +178,9 @@ const menu = [
     items: [
       { label: "Noun Gender", to: "/noun-gender" },
       { label: "Verb Conjugation", to: "/present-tense-verb" },
+      { label: "Verb Conjugation + subject", to: "/present-tense-verb-subject" },
       { label: "Preposition + Adjective + Noun", to: "/proposition-adjective-noun" }
+      
     ]
   }
 ]

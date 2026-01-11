@@ -6,39 +6,46 @@
       <li v-for="(item, index) in history" :key="index">
         <span v-if="item.correct" class="text-emerald-500">✓</span>
         <span v-else class="text-rose-500">✗</span>
-        {{ item.word }} ({{ item.en }}) → {{ item.answer }} : {{ item.expected }}
-        <span v-if="!item.correct" class="text-emerald-500" @click="openHelp(item.documentation)">🔍</span>
-        <case-Help  v-if="isCaseHelpShow(item.documentation,item)" :case-name=item.caseName :section=item.documentation
-          @confirm="closeHelp()" />
-
+        {{ item.questionSk }} ({{ item.questionEn }}) → {{ item.givenAnswer }} : {{ item.correctAnswer.derived }}
+        <span v-if="!item.correct" class="text-emerald-500" @click="openHelp(item.correctAnswer.documentation)"
+          >🔍</span
+        >
+        <drill-Help
+          v-if="isCaseHelpShow(item.correctAnswer.documentation, item)"
+          subject="History Help"
+          :derived-word="item.correctAnswer"
+          @confirm="closeHelp()"
+        />
       </li>
     </ul>
   </div>
 </template>
 
-<script setup>
-import { defineProps,ref } from 'vue'
-import CaseHelp from './CaseHelp.vue'
+<script setup lang="ts">
+import { ref } from 'vue';
+import type { PropType } from 'vue';
+import DrillHelp from './DrillHelp.vue';
+import type { HistoryEntry } from '@/views/drillUtils';
+import DerivedWord from '@/utils/grammer/DerivedWord';
 
 const { history } = defineProps({
   history: {
-    type: Array,
-    required: true
-  }
-})
+    type: Array as PropType<HistoryEntry[]>,
+    required: true,
+  },
+});
 
-const presentSection = ref()
+const presentSection = ref();
 
-function closeHelp(){
-  presentSection.value = undefined
+function closeHelp() {
+  presentSection.value = undefined;
 }
 
-function isCaseHelpShow(section,item){
-    return presentSection.value === section
+function isCaseHelpShow(section, item) {
+  return presentSection.value === section;
 }
 
-function openHelp(section){
-  presentSection.value =section
+function openHelp(section) {
+  presentSection.value = section;
 }
 </script>
-

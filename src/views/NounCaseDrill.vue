@@ -1,37 +1,39 @@
 <template>
-
-  <GenericDrill :caseName="getCaseName" :drillTitle=drillTitle :drillSubtitle=drillSubTitle :sk="sk" :en="en"
-    :is-plural="plural" :build-next-item="buildNextItem" :expectedAnswer="expected" />
-
+  <GenericDrill
+    :subjectArea="getCaseName"
+    :drillTitle="drillTitle"
+    :drillSubtitle="drillSubTitle"
+    :sk="sk"
+    :en="en"
+    :is-plural="plural"
+    :build-next-item="buildNextItem"
+    :expectedAnswer="expected"
+  />
 </template>
 
-
 <script setup lang="ts">
+import { capitalizeFirstOnly, getRandomNoun, randomBoolean } from './drillUtils.js';
+import { CASE_TYPE } from '@/utils/grammer/WordTypes';
+import type Noun from '@/utils/grammer/declinations/Noun.js';
+import GenericDrill from '@/components/GenericDrill.vue';
 
-import { capitalizeFirstOnly, getRandomNoun, randomBoolean } from './drillUtils.js'
-import { CASE_TYPE } from '@/utils/grammer/WordTypes'
-import type Noun from '@/utils/grammer/declinations/Noun.js'
-import GenericDrill from '@/components/GenericDrill.vue'
+const properties = defineProps<{ caseName: CASE_TYPE }>();
 
-
-const properties = defineProps<{ caseName: CASE_TYPE }>()
-
-
-const getCaseName = () => properties.caseName
+const getCaseName = () => properties.caseName;
 
 class Item {
-  noun: Noun
-  isPlural: boolean
+  noun: Noun;
+  isPlural: boolean;
 }
 
-const buildNextItem: () => Item = () => ({ noun: getRandomNoun(), isPlural: randomBoolean() })
+const buildNextItem: () => Item = () => ({ noun: getRandomNoun(), isPlural: randomBoolean() });
 
-const sk = (item: Item) => item.noun.sk
-const en = (item: Item) => item.noun.en
+const sk = (item: Item) => item.noun.sk;
+const en = (item: Item) => item.noun.en;
 
-const expected = (item: Item) => item.noun.declinate(getCaseName(), item.isPlural)
-const plural = (item: Item) => item.isPlural
-const caseTitle = capitalizeFirstOnly(getCaseName())
-const drillTitle = `Slovak ${caseTitle} nouns Case Drill`
-const drillSubTitle = `Type the correct ${caseTitle} form of each noun.`
+const expected = (item: Item) => item.noun.declinate(getCaseName(), item.isPlural);
+const plural = (item: Item) => item.isPlural;
+
+const drillTitle = `Slovak ${getCaseName()} nouns Case Drill`;
+const drillSubTitle = `Type the correct ${getCaseName()} form of each noun.`;
 </script>

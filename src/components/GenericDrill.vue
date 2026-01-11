@@ -41,11 +41,11 @@
         <p>You should now try another drill</p>
       </congrats-modal>
 
-      <case-Help
+      <drill-help
         ref="caseHelp"
         v-if="caseHelpShow"
-        :case-name="caseName()"
-        :sections="caseHelpSections"
+        :subject="drillTitle"
+        :derived-word="expectedAnswer(currentItem)"
         @confirm="caseHelpShow = false"
       />
 
@@ -60,19 +60,19 @@
 import CongratsModal from './CongratsModal.vue';
 import type { CASE_TYPE } from '@/utils/grammer/WordTypes';
 import AnswerField from './AnswerField.vue';
-import CaseHelp from './CaseHelp.vue';
+
+import DrillHelp from './DrillHelp.vue';
 import DrillProgress from './DrillProgress.vue';
 import { computed, ref } from 'vue';
 import HistoryList from '@/components/HistoryList.vue';
 import {
-  addToHistory,
-  capitalizeFirstOnly,
-  history,
   resetStreak,
   STREAK_TARGET,
   streakCount,
   totalAttempts,
   showStreakDialog,
+  appendToHistory,
+  history,
 } from '@/views/drillUtils';
 import { loadVocabulary } from '@/utils/grammer/wordStore';
 import { onMounted } from 'vue';
@@ -81,7 +81,7 @@ import type DerivedWord from '@/utils/grammer/DerivedWord';
 onMounted(() => loadVocabulary());
 
 interface DrillProps<T> {
-  caseName: () => CASE_TYPE;
+  subjectArea: () => string | CASE_TYPE;
   drillTitle: string;
   drillSubtitle: string;
 
@@ -93,9 +93,26 @@ interface DrillProps<T> {
   question?: (item: T) => string;
 }
 
+const currentItem = ref<DrillItem>();
+
+const userAnswer = ref('');
+const showExplanation = ref(false);
+const explanationText = ref('');
+const caseHelpShow = ref(false);
+const caseHelpSections = ref([]);
+
 type DrillItem = unknown;
-const { caseName, drillTitle, drillSubtitle, sk, en, isPlural, buildNextItem, expectedAnswer, question } =
-  defineProps<DrillProps<DrillItem>>();
+const {
+  subjectArea: subjectArea,
+  drillTitle,
+  drillSubtitle,
+  sk,
+  en,
+  isPlural,
+  buildNextItem,
+  expectedAnswer,
+  question,
+} = defineProps<DrillProps<DrillItem>>();
 
 const getQuestion = computed(() => {
   if (!currentItem.value) return '';
@@ -103,123 +120,63 @@ const getQuestion = computed(() => {
   else return sk(currentItem.value);
 });
 
-const {
-  caseTitle,
-  hasStarted,
-  currentItem,
-  userAnswer,
-  showExplanation,
-  explanationText,
-  caseHelpSections,
-  caseHelpShow,
-  startQuiz,
-  submitAnswer,
-  handleContinue,
-  openDocumentation,
-} = useDrill({
-  caseName: caseName,
-  getNextItem: buildNextItem,
-  getExpected: expectedAnswer,
-  getInitialAnswer: sk, //TODO replace with sk
-  getWordForHistory: sk, //TODO replace with sk
-  en,
-});
+const hasStarted = ref(false);
+
+const openDocumentation = () => {
+  caseHelpShow.value = true;
+};
+
+const nextQuestion = () => {
+  currentItem.value = buildNextItem();
+  userAnswer.value = sk(currentItem.value);
+  showExplanation.value = false;
+  explanationText.value = '';
+};
+
+const startQuiz = () => {
+  hasStarted.value = true;
+  resetStreak();
+  totalAttempts.value = 0;
+  nextQuestion();
+};
+
+const handleContinue = () => {
+  nextQuestion();
+};
+
+const submitAnswer = () => {
+  const item = currentItem.value;
+  const correctAnswer = expectedAnswer(item);
+  const givenAnswer = userAnswer.value.trim().toLowerCase();
+  const correct = givenAnswer === correctAnswer.derived.toLowerCase();
+
+  caseHelpSections.value = correctAnswer.documentation;
+
+  totalAttempts.value++;
+
+  appendToHistory({
+    subject: subjectArea(), // for now TODO make generic
+    correctAnswer,
+    givenAnswer,
+    correct,
+    questionEn: en(item),
+    questionSk: sk(item),
+  });
+
+  if (correct) {
+    streakCount.value++;
+    if (streakCount.value >= STREAK_TARGET) showStreakDialog.value = true;
+    nextQuestion();
+  } else {
+    resetStreak();
+    explanationText.value = `❗ "for ${sk(item)}" : explanation "${correctAnswer.explanation}".`;
+    showExplanation.value = true;
+  }
+};
 
 const skText = computed(() => (currentItem.value ? sk(currentItem.value) : ''));
 
 const enText = computed(() => (currentItem.value ? en(currentItem.value) : ''));
 
 const plural = computed(() => (currentItem.value ? isPlural(currentItem.value) : false));
-
-// Composable for shared drill logic
-function useDrill<I>(options: {
-  caseName: () => CASE_TYPE;
-  getNextItem: () => I; // e.g., { noun, isPlural } or { adjective, noun, isPlural } actually Noun or Adjective (Verb too coming)
-  getExpected: (item: I) => { derived: string; explanation: string; documentation: string[] }; //DerivedWord
-  getInitialAnswer: (item: I) => string;
-  getWordForHistory: (item: I) => string;
-  en: (item: I) => string;
-}) {
-  const { caseName, getNextItem, getExpected, getInitialAnswer, getWordForHistory, en } = options;
-
-  const caseTitle = computed(() => capitalizeFirstOnly(caseName()));
-
-  const hasStarted = ref(false);
-  const currentItem = ref<I>();
-  const userAnswer = ref('');
-  const showExplanation = ref(false);
-  const explanationText = ref('');
-  const caseHelpSections = ref<string[]>([]);
-  const caseHelpShow = ref(false);
-
-  const openDocumentation = () => {
-    caseHelpShow.value = true;
-  };
-
-  const startQuiz = () => {
-    hasStarted.value = true;
-    resetStreak();
-    totalAttempts.value = 0;
-    history.value = [];
-    nextQuestion();
-  };
-
-  const nextQuestion = () => {
-    currentItem.value = getNextItem();
-    userAnswer.value = getInitialAnswer(currentItem.value);
-    showExplanation.value = false;
-    explanationText.value = '';
-  };
-
-  const submitAnswer = () => {
-    const item = currentItem.value;
-    const expected = getExpected(item);
-    const answer = userAnswer.value.trim().toLowerCase();
-    const correct = answer === expected.derived.toLowerCase();
-
-    caseHelpSections.value = expected.documentation;
-
-    totalAttempts.value++;
-    addToHistory(
-      getWordForHistory(item),
-      en(item),
-      answer,
-      correct,
-      expected.derived,
-      caseName(),
-      expected.documentation,
-    );
-
-    if (correct) {
-      streakCount.value++;
-      if (streakCount.value >= STREAK_TARGET) showStreakDialog.value = true;
-      nextQuestion();
-    } else {
-      resetStreak();
-      explanationText.value = `❗ "for ${getWordForHistory(item)}" : explanation "${expected.explanation}".`;
-      showExplanation.value = true;
-    }
-  };
-
-  const handleContinue = () => {
-    nextQuestion();
-  };
-
-  return {
-    caseTitle,
-    hasStarted,
-    currentItem,
-    userAnswer,
-    showExplanation,
-    explanationText,
-    showStreakDialog,
-    caseHelpSections: caseHelpSections,
-    caseHelpShow,
-    startQuiz,
-    nextQuestion,
-    submitAnswer,
-    handleContinue,
-    openDocumentation,
-  };
-}
 </script>

@@ -4,6 +4,8 @@ import type Verb from './Verb';
 import DerivedWord from '../DerivedWord';
 import { Pronoun } from '../Pronoun';
 
+const DOCUMENTREF = 'verb://at';
+
 export default class AtConjugator extends BaseConjugator {
   constructor(verb: Verb) {
     super(verb);
@@ -33,6 +35,8 @@ export default class AtConjugator extends BaseConjugator {
   deriveConjugate(person: Pronoun): DerivedWord {
     const stem = this.getStem(person);
     const ending = this.getEnding(person);
-    return new DerivedWord(stem + ending, `Regular -ať conjugation: stem '${stem}' + ending '${ending}'`);
+    return new DerivedWord(stem + ending, `Regular -ať conjugation: stem '${stem}' + ending '${ending}'`, [
+      DOCUMENTREF,
+    ]);
   }
 }

@@ -3,12 +3,9 @@
     <div class="help-overlay">
       <div class="help-panel drill-container">
         <!-- BOTTOM BUTTON BAR -->
-        <h2 class="drill-title">Rules for the {{ caseName }} case old</h2>
+        <h2 class="drill-title">Help for the {{ subject }}</h2>
         <div class="content-scroll">
-          <!-- STEM SECTION (top pane) -->
-          <h2 class="drill-title">Stem Rules:</h2>
-          <div class="drill-container" v-html="stemHtml"></div>
-          <h2 class="drill-title">Ending Rules:</h2>
+          <h2 class="drill-title">Rules:</h2>
           <div v-for="item in sectionHtml" class="drill-container" v-html="item"></div>
         </div>
         <div class="drill-container">
@@ -20,38 +17,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import { marked } from 'marked';
-import { loadMarkdown } from '@/documents/DocumentLoader';
+import { ref, onMounted, type Ref } from 'vue';
+import { readDocSections } from '@/documents/DocumentBuilder';
+import type DerivedWord from '@/utils/grammer/DerivedWord';
 
 const props = defineProps<{
-  caseName: string;
-  sections: string[];
+  subject: string;
+  derivedWord: DerivedWord;
 }>();
 
 const emit = defineEmits(['update:modelValue', 'confirm']);
 
-const stemHtml = ref('');
-const sectionHtml = ref([]);
+const sectionHtml: Ref<string[]> = ref([]);
 
 onMounted(async () => {
-  const md = (await loadMarkdown(props.caseName)) as string;
-  const html = await marked.parse(md || `No content found for ${props.caseName}`);
-
-  stemHtml.value = extractSectionById(html, 'stems');
-  sectionHtml.value = extractSectionsByIds(html, props.sections);
+  sectionHtml.value = await readDocSections(props.derivedWord);
 });
-
-function extractSectionsByIds(htmlString: string, ids: string[]): string[] {
-  return ids.map((id) => extractSectionById(htmlString, id));
-}
-
-function extractSectionById(htmlString: string, id) {
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(htmlString, 'text/html');
-  const el = doc.getElementById(id);
-  return el ? el.outerHTML : `<p>No content found for ${id}</p>`;
-}
 
 function close() {
   emit('confirm');

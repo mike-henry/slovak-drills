@@ -3,6 +3,8 @@ import { Pronoun } from '../Pronoun';
 import { Gender } from '../WordTypes';
 import { BaseConjugator } from './BaseConjugator';
 
+const DOCUMENTREF = 'verb://at'; // Temporary, replace with iet reference when available
+
 export class IetConjugator extends BaseConjugator {
   deriveStem(person: Pronoun): string {
     // if (this.verb.presentStem) return this.verb.presentStem;
@@ -29,6 +31,8 @@ export class IetConjugator extends BaseConjugator {
   deriveConjugate(person: Pronoun, gender?: Gender): DerivedWord {
     const stem = this.getStem(person);
     const ending = this.getEnding(person);
-    return new DerivedWord(stem + ending, `Regular -ieť conjugation: stem '${stem}' + ending '${ending}'`);
+    return new DerivedWord(stem + ending, `Regular -ieť conjugation: stem '${stem}' + ending '${ending}'`, [
+      DOCUMENTREF,
+    ]);
   }
 }

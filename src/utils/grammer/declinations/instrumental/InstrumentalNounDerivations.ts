@@ -47,43 +47,48 @@ function instrumentalSingular(noun: Noun) {
       throw new Error('Invalid gender');
   }
 
-  return new DerivedWord(derived, explanation);
+  return new DerivedWord(derived, explanation, [
+    'noun://instrumental?noun-stems',
+    'noun://instrumental?noun-endings-plural',
+  ]);
 }
-
-
 
 /**
  * Instrumental plural
  */
-export function instrumentalPlural(noun: Noun):DerivedWord {
+export function instrumentalPlural(noun: Noun): DerivedWord {
   const word = noun.sk;
   const stem = deriveVocalStem(noun);
-  let derived:string;
-  let explanation:string;
+  let derived: string;
+  let explanation: string;
 
   // ----- MASCULINE -----
   if (noun.gender === 'M') {
     if (word.endsWith('a')) {
       derived = stem + 'ami';
-      explanation= `masculine ending -a → instrumental plural = stem (${stem}) + ami`
+      explanation = `masculine ending -a → instrumental plural = stem (${stem}) + ami`;
     } else {
-    derived = stem + 'mi';
-      explanation= `masculine consonant-ending → instrumental plural = stem (${stem}) + mi`;
+      derived = stem + 'mi';
+      explanation = `masculine consonant-ending → instrumental plural = stem (${stem}) + mi`;
     }
-  }
-  else if (noun.gender === 'F') {// ----- FEMININE -----
+  } else if (noun.gender === 'F') {
+    // ----- FEMININE -----
     if (word.endsWith('ia')) {
-       derived = stem + 'iami';
-       explanation= `feminine ending -ia → instrumental plural = stem (${stem}) + iami`;
+      derived = stem + 'iami';
+      explanation = `feminine ending -ia → instrumental plural = stem (${stem}) + iami`;
     } else {
-     derived = stem + 'ami';
-     explanation= `feminine instrumental plural = stem (${stem}) + ami`;
+      derived = stem + 'ami';
+      explanation = `feminine instrumental plural = stem (${stem}) + ami`;
     }
-  } else if (noun.gender === 'N') { // ----- NEUTER -----
+  } else if (noun.gender === 'N') {
+    // ----- NEUTER -----
     derived = stem + (noun.sk.endsWith('nie') || noun.sk.endsWith('tie') ? 'iami' : 'ami');
-      explanation= `neuter instrumental plural = stem (${stem}) + ami`;
+    explanation = `neuter instrumental plural = stem (${stem}) + ami`;
   } else throw new Error('Invalid gender for instrumental plural');
-  return new DerivedWord(derived,explanation)
+  return new DerivedWord(derived, explanation, [
+    'noun://instrumental?noun-stems',
+    'noun://instrumental?noun-endings-plural',
+  ]);
 }
 
 export const InstrumentalNounDeriver: NounDeclinator = {

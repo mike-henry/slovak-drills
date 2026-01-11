@@ -1,6 +1,6 @@
 <template>
   <GenericDrill
-    :caseName="getCaseName"
+    :subjectArea="getCaseName"
     :drillTitle="drillTitle"
     :drillSubtitle="drillSubTitle"
     :sk="sk"
@@ -33,11 +33,11 @@ const buildNextItem: () => Item = () => ({
 
 const sk = (item: Item) => item.verb.sk;
 
-const en = (item: Item) => `(${getPronounDeclension(item.pronoun).nominative}) ${item.verb.en}`;
+const en = (item: Item) => `(${getPronounDeclension(item.pronoun).nominative.long}) ${item.verb.en}`;
 
 const expected = (item: Item) => item.verb.conjugatePresent(item.pronoun);
 const plural = (item: Item) => false;
-const caseTitle = capitalizeFirstOnly(getCaseName());
+
 const drillTitle = `Slovak Verb Conjigation Drill`;
 const drillSubTitle = `Type the correct form of the verb.`;
 </script>

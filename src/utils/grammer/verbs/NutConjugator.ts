@@ -3,6 +3,7 @@ import { Pronoun } from '../Pronoun';
 
 import { BaseConjugator } from './BaseConjugator';
 import Verb from './Verb';
+const DOCUMENTREF = 'verb://nut'; // Temporary, replace with iet reference when available
 
 export class NutConjugator extends BaseConjugator {
   constructor(verb: Verb) {
@@ -32,6 +33,8 @@ export class NutConjugator extends BaseConjugator {
   deriveConjugate(person: Pronoun): DerivedWord {
     const stem = this.getStem(person);
     const ending = this.getEnding(person);
-    return new DerivedWord(stem + ending, `Regular -núť/-ut conjugation: stem '${stem}' + ending '${ending}'`);
+    return new DerivedWord(stem + ending, `Regular -núť/-ut conjugation: stem '${stem}' + ending '${ending}'`, [
+      DOCUMENTREF,
+    ]);
   }
 }

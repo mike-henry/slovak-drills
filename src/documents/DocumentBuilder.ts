@@ -24,12 +24,12 @@ ADJECTIVE_MAP.set('dative', 'nominals/dative-nominals');
 ADJECTIVE_MAP.set('locative', 'nominals/locative-nominals');
 ADJECTIVE_MAP.set('vocative', 'nominals/vocative-nominals');
 
-VERB_MAP.set('st', 'st-verbs');
-VERB_MAP.set('at', 'at-verbs');
-VERB_MAP.set('it', 'it-short-verbs');
-VERB_MAP.set('it-long', 'it-long-verbs');
-VERB_MAP.set('nut', 'nut-verbs');
-VERB_MAP.set('nut', 'nut-verbs');
+VERB_MAP.set('st', 'verbs/st-verbs');
+VERB_MAP.set('at', 'verbs/at-verbs');
+VERB_MAP.set('it', 'verbs/it-short-verbs');
+VERB_MAP.set('it-long', 'verbs/it-long-verbs');
+VERB_MAP.set('nut', 'verbs/nut-verbs');
+VERB_MAP.set('nut', 'verbs/nut-verbs');
 
 DOCUMENT_MAP.set('noun://accusative', 'Noun Accusative Stem Section');
 

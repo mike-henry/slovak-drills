@@ -3,7 +3,7 @@ import { Pronoun } from '../Pronoun';
 import { Gender } from '../WordTypes';
 import { BaseConjugator } from './BaseConjugator';
 
-const DOCUMENTREF = 'verb://at'; // Temporary, replace with iet reference when available
+const DOCUMENTREF = 'verb://iet'; // Temporary, replace with iet reference when available
 
 export class IetConjugator extends BaseConjugator {
   deriveStem(person: Pronoun): string {

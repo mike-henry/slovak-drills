@@ -3,6 +3,7 @@ import { Pronoun } from '../Pronoun';
 import { Gender } from '../WordTypes';
 import { BaseConjugator } from './BaseConjugator';
 
+const DOCUMENTREF = 'verb://st'; // Temporary, replace with iet reference when available
 export class StConjugator extends BaseConjugator {
   deriveStem(_: Pronoun): string {
     // remove -sť
@@ -31,6 +32,8 @@ export class StConjugator extends BaseConjugator {
     const stem = this.getStem(person);
     const ending = this.getEnding(person);
 
-    return new DerivedWord(stem + ending, `-sť conjugation (heuristic): stem '${stem}' + ending '${ending}'`);
+    return new DerivedWord(stem + ending, `-sť conjugation (heuristic): stem '${stem}' + ending '${ending}'`, [
+      DOCUMENTREF,
+    ]);
   }
 }

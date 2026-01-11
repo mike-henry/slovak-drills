@@ -3,6 +3,7 @@ import { Pronoun } from '../Pronoun';
 import { Gender } from '../WordTypes';
 import { BaseConjugator } from './BaseConjugator';
 
+const DOCUMENTREF = 'verb://ovat'; // Temporary, replace with iet reference when available
 export class OvatConjugator extends BaseConjugator {
   deriveStem(person: Pronoun): string {
     // Remove 'ovať' from infinitive and  use 'uj' or 'uje' to create stem
@@ -27,6 +28,8 @@ export class OvatConjugator extends BaseConjugator {
   deriveConjugate(person: Pronoun, gender?: Gender): DerivedWord {
     const stem = this.getStem(person);
     const ending = this.getEnding(person);
-    return new DerivedWord(stem + ending, `Regular -ovať conjugation: stem '${stem}' + ending '${ending}'`);
+    return new DerivedWord(stem + ending, `Regular -ovať conjugation: stem '${stem}' + ending '${ending}'`, [
+      DOCUMENTREF,
+    ]);
   }
 }

@@ -22,6 +22,7 @@ export abstract class BaseConjugator implements PresentConjugator {
     return new DerivedWord(
       `${deriveConjugation.derived} ${aux}`.trim(),
       `${deriveConjugation.explanation}` + (aux.length > 0) ? ` plus the reflexiv aux ${aux}` : '',
+      deriveConjugation.documentation,
     );
   }
   protected getBaseInfinitive(): string {

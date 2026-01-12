@@ -7,6 +7,7 @@ const DOCUMENT_MAP = new Map<string, string>();
 const NOUN_MAP = new Map<string, string>();
 const VERB_MAP = new Map<string, string>();
 const ADJECTIVE_MAP = new Map<string, string>();
+const PRONOUN_MAP = new Map<string, string>();
 
 NOUN_MAP.set('nominative', 'nominals/nominative-nominals');
 NOUN_MAP.set('accusative', 'nominals/accusative-nominals');
@@ -24,12 +25,20 @@ ADJECTIVE_MAP.set('dative', 'nominals/dative-nominals');
 ADJECTIVE_MAP.set('locative', 'nominals/locative-nominals');
 ADJECTIVE_MAP.set('vocative', 'nominals/vocative-nominals');
 
+PRONOUN_MAP.set('nominative', 'nominals/nominative-nominals');
+PRONOUN_MAP.set('accusative', 'nominals/accusative-nominals');
+PRONOUN_MAP.set('instrumental', 'nominals/instrumental-nominals');
+PRONOUN_MAP.set('genitive', 'nominals/genitive-nominals');
+PRONOUN_MAP.set('dative', 'nominals/dative-nominals');
+PRONOUN_MAP.set('locative', 'nominals/locative-nominals');
+PRONOUN_MAP.set('vocative', 'nominals/vocative-nominals');
+
 VERB_MAP.set('st', 'verbs/st-verbs');
 VERB_MAP.set('at', 'verbs/at-verbs');
 VERB_MAP.set('it', 'verbs/it-short-verbs');
 VERB_MAP.set('it-long', 'verbs/it-long-verbs');
 VERB_MAP.set('nut', 'verbs/nut-verbs');
-VERB_MAP.set('nut', 'verbs/nut-verbs');
+VERB_MAP.set('ovat', 'verbs/ovat-verbs');
 
 DOCUMENT_MAP.set('noun://accusative', 'Noun Accusative Stem Section');
 
@@ -84,6 +93,8 @@ function getGrammerMap(uri: DocURI) {
       return VERB_MAP;
     case 'adjective':
       return ADJECTIVE_MAP;
+    case 'pronoun':
+      return PRONOUN_MAP;
     default:
       throw new Error(`Unsupported scheme: ${uri.scheme}`);
   }

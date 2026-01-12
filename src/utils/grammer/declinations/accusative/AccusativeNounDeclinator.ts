@@ -96,15 +96,13 @@ export const AccusativeNounDeclinator: NounDeclinator = {
     // noun.animate = boolean (only meaningful for masculine)
     const derivation = accusativeSingular(noun);
     return new DerivedWord(derivation.derived, derivation.explanation, [
-      'noun://accusative?noun-stems',
-      'noun://accusative?noun-endings-singular',
+      'noun://accusative?noun-introduction&noun-stems&noun-endings-singular',
     ]);
   },
   plural: (noun: Noun) => {
     const derivation = accusativePlural(noun);
     return new DerivedWord(derivation.derived, derivation.explanation, [
-      'noun://accusative?noun-stems',
-      'noun://accusative?noun-endings-plural',
+      'noun://accusative?noun-introduction&noun-stems&noun-endings-plural',
     ]);
   },
 };

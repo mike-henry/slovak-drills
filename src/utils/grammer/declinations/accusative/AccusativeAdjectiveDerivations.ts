@@ -41,7 +41,9 @@ function accusativeAdjectiveSingular(adjective: string, noun: Noun) {
     default:
       throw new Error('Invalid gender for accusative adjective singular');
   }
-  return new DerivedWord(derived, explanation, [`adjective://accusative?${STANDARD_SECTIONS.adjectiveEndings}`]);
+  return new DerivedWord(derived, explanation, [
+    `adjective://accusative?${STANDARD_SECTIONS.adjectivesIntroduction}&${STANDARD_SECTIONS.adjectiveEndings}`,
+  ]);
 }
 
 function accusativeAdjectivePlural(adj, noun: Noun) {
@@ -73,7 +75,9 @@ function accusativeAdjectivePlural(adj, noun: Noun) {
     default:
       throw new Error('Invalid gender for accusative adjective plural');
   }
-  return new DerivedWord(derived, explanation, [`adjective://accusative?${STANDARD_SECTIONS.adjectiveEndings}`]);
+  return new DerivedWord(derived, explanation, [
+    `adjective://accusative?${STANDARD_SECTIONS.adjectivesIntroduction}&${STANDARD_SECTIONS.adjectiveStems}&${STANDARD_SECTIONS.adjectiveEndings}`,
+  ]);
 }
 
 export const AccusativeAdjectiveDeriver: AdjectiveDeclinator = {

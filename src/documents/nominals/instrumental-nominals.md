@@ -1,3 +1,4 @@
+<section id="noun-introduction" >
 # Instrumental Case
 
 Used to express **the means**, **the companion**, or **the tool** used to perform an action.  
@@ -5,6 +6,7 @@ Often used after verbs meaning _working with_, _going with_, _dealing with_, and
 
 ---
 
+</section>
 <section id="stems">
 
 ## 1. Stems

@@ -1,3 +1,5 @@
+<section id="noun-introduction" >
+<section id="adjective-introduction" >
 # Locative Case
 
 Used only with prepositions to express **location, state, or topic**.  
@@ -5,6 +7,8 @@ Never stands alone. Often contrasts with accusative (motion vs. location).
 
 ---
 
+</section>
+</section>
 <section id="stems">
 
 ## 1. Stems

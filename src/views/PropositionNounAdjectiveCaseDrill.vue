@@ -16,8 +16,11 @@ import GenericDrill from '@/components/GenericDrill.vue';
 import { ref, type Ref } from 'vue';
 import { getRandomAdjective, getRandomNoun, getRandomProposition, randomBoolean } from '@/views/drillUtils';
 
-import { declinateAdjectiveWithNoun } from '@/utils/grammer/declinations/DeclinationUtils';
-import type Proposition from './Proposition';
+import {
+  declinateAdjectiveWithNoun,
+  declinatePropositionAdjectiveWithNoun,
+} from '@/utils/grammer/declinations/DeclinationUtils';
+import type Proposition from '../utils/grammer/Proposition';
 import type Adjective from '@/utils/grammer/declinations/Adjective';
 import type Noun from '@/utils/grammer/declinations/Noun';
 
@@ -45,7 +48,7 @@ const buildNextItem: () => Item = () => {
 };
 
 const getExpected = (item: Item) =>
-  declinateAdjectiveWithNoun(item.adjective, item.noun, item.proposition.caseType, item.isPlural);
+  declinatePropositionAdjectiveWithNoun(item.adjective, item.noun, item.proposition, item.isPlural);
 const sk = (item: Item) => (item ? `${item.proposition.sk} ${item.adjective.sk} ${item.noun.sk}` : '');
 const en: (item: Item) => string = (item: any) =>
   item ? `${item.proposition.en} ${item.adjective.en} ${item.noun.en}` : '';

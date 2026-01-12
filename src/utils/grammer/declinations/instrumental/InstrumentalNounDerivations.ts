@@ -48,8 +48,7 @@ function instrumentalSingular(noun: Noun) {
   }
 
   return new DerivedWord(derived, explanation, [
-    'noun://instrumental?noun-stems',
-    'noun://instrumental?noun-endings-plural',
+    'noun://instrumental?noun-introduction&noun-stems&noun-endings-singular',
   ]);
 }
 
@@ -86,8 +85,7 @@ export function instrumentalPlural(noun: Noun): DerivedWord {
     explanation = `neuter instrumental plural = stem (${stem}) + ami`;
   } else throw new Error('Invalid gender for instrumental plural');
   return new DerivedWord(derived, explanation, [
-    'noun://instrumental?noun-stems',
-    'noun://instrumental?noun-endings-plural',
+    'noun://instrumental?noun-introduction&noun-stems&noun-endings-plural',
   ]);
 }
 

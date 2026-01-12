@@ -31,7 +31,9 @@ function locativeAdjectiveSingular(adj, nounInfo) {
     default:
       throw new Error('Invalid gender for locative adjective singular');
   }
-  return new DerivedWord(derived, explanation, [`adjective://locative?${STANDARD_SECTIONS.adjectiveEndings}`]);
+  return new DerivedWord(derived, explanation, [
+    `adjective://locative?${STANDARD_SECTIONS.adjectivesIntroduction}&${STANDARD_SECTIONS.adjectiveStems}&${STANDARD_SECTIONS.adjectiveEndings}`,
+  ]);
 }
 
 /**
@@ -41,7 +43,7 @@ function locativeAdjectivePlural(adj: string) {
   const base = adj.slice(0, -1); // dobr-
 
   return new DerivedWord(base + 'ých', `stem ${base} + ých" same for all genders`, [
-    `adjective://locative?${STANDARD_SECTIONS.adjectiveEndings}`,
+    `adjective://locative?${STANDARD_SECTIONS.adjectivesIntroduction}&${STANDARD_SECTIONS.adjectiveStems}&${STANDARD_SECTIONS.adjectiveEndings}`,
   ]); // same for all genders
 }
 

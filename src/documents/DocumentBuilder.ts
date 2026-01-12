@@ -1,4 +1,5 @@
 import type DerivedWord from '@/utils/grammer/DerivedWord';
+import { CASE_TYPE } from '@/utils/grammer/WordTypes';
 import { marked } from 'marked';
 
 const mdFiles = import.meta.glob('./**/*.md', { query: '?raw', import: 'default' });
@@ -65,6 +66,11 @@ export function parseDocURI(input: string): DocURI {
     path,
     sections,
   };
+}
+
+export function standardNominalSections(caseType: CASE_TYPE, scheme: Scheme, plural: boolean = false): string[] {
+  const plurality = plural ? 'plural' : 'singular';
+  return [`${scheme}://${caseType}?${scheme}-introduction&${scheme}-stems&${scheme}-endings-${plurality}`];
 }
 
 export const readDocSections = async (derivedWord: DerivedWord): Promise<string[]> => {

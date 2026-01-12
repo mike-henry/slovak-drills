@@ -1,9 +1,12 @@
+<section id="noun-introduction" >
 # Accusative Case
 
 Marks direct objects.  
 Masculine animate nouns take genitive-style endings (explicitly shown below).
 
 ---
+
+</section>
 
 <section id="stems">
 
@@ -122,7 +125,7 @@ Masculine animate nouns take genitive-style endings (explicitly shown below).
 </section>
 
 <section id="adjective-endings">
-
+<section id="adjective-endings-singular">
 ### **Adjective endings — accusative**
 
 **Singular**
@@ -131,7 +134,8 @@ Masculine animate nouns take genitive-style endings (explicitly shown below).
 - Masculine inanimate → **-ý** (_dobrý dom_)
 - Feminine → **-ú** (_dobrú ženu_)
 - Neuter → **-é** (_dobré auto_)
-
+</section>
+<section id="adjective-endings-plural">
 **Plural**
 
 - Masculine animate → **-ých** (_dobrých mužov_)
@@ -139,6 +143,7 @@ Masculine animate nouns take genitive-style endings (explicitly shown below).
 - Feminine → **-é** (_dobré knihy_)
 - Neuter → **-é** (_dobré mestá_)
 
+</section>
 **Exceptions**
 
 - Soft adjectives ending in **-í** keep long vowels (_cudzí → cudzieho_).

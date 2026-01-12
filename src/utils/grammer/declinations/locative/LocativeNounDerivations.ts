@@ -10,13 +10,7 @@ import DerivedWord from '../../DerivedWord.js';
 import { NominativeNounDeclinator, softenStem } from '../nominative/NominativeNounDeclinator.js';
 import type Noun from '../Noun.js';
 
-// kosť-class consonants that lose diacritic before -i
-const SOFTEN_MAP = {
-  ť: 't',
-  ď: 'd',
-  ň: 'n',
-  ľ: 'l',
-};
+const DOCUMENTREF = 'noun://locative'; // Temporary, replace with iet reference when available
 
 /**
  * LOCATIVE — SINGULAR
@@ -50,7 +44,7 @@ function locativeSingular(noun: Noun): DerivedWord {
       explanation = `inanimate noun ${stem} + e`;
     }
 
-    return new DerivedWord(derived, explanation, ['noun://locative?noun-stems', 'noun://locative?noun-endings-plural']);
+    return new DerivedWord(derived, explanation, ['noun://locative?noun-introduction&noun-stems&noun-endings-plural']);
   }
 
   // ---------- FEMININE ----------
@@ -78,7 +72,7 @@ function locativeSingular(noun: Noun): DerivedWord {
       derived = stem + 'i'; // other feminines
       explanation = `feminine noun ${stem} + i`;
     }
-    return new DerivedWord(derived, explanation, ['noun://locative?noun-stems', 'noun://locative?noun-endings-plural']);
+    return new DerivedWord(derived, explanation, ['noun://locative?noun-introduction&noun-stems&noun-endings-plural']);
   }
 
   // ---------- NEUTER ----------
@@ -183,7 +177,7 @@ export function locativePlural(noun: Noun): DerivedWord {
     derived = nomPl + 'ch';
   }
 
-  return new DerivedWord(derived, explanation);
+  return new DerivedWord(derived, explanation, ['noun://locative?noun-introduction&noun-stems&noun-endings-singular']);
 }
 
 export const LocativeNounDeriver: NounDeclinator = {

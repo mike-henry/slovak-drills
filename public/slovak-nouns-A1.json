@@ -10,11 +10,6 @@
     "sk": "akcia"
   },
   {
-    "en": "promotion",
-    "gender": "F",
-    "sk": "akcia"
-  },
-  {
     "en": "update",
     "gender": "F",
     "sk": "aktualizácia"
@@ -147,11 +142,6 @@
     "sk": "bar"
   },
   {
-    "en": "bar",
-    "gender": "M",
-    "sk": "bar"
-  },
-  {
     "en": "backpack",
     "gender": "M",
     "sk": "batoh"
@@ -233,11 +223,7 @@
     "gender": "M",
     "sk": "budík"
   },
-  {
-    "en": "alarm clock",
-    "gender": "M",
-    "sk": "budík"
-  },
+
   {
     "en": "jacket",
     "gender": "F",
@@ -378,16 +364,7 @@
     "gender": "M",
     "sk": "cieľ"
   },
-  {
-    "en": "goal",
-    "gender": "M",
-    "sk": "cieľ"
-  },
-  {
-    "en": "goal",
-    "gender": "M",
-    "sk": "cieľ"
-  },
+
   {
     "en": "lemon",
     "gender": "M",
@@ -519,11 +496,7 @@
     "gender": "F",
     "sk": "diskusia"
   },
-  {
-    "en": "discussion",
-    "gender": "F",
-    "sk": "diskusia"
-  },
+
   {
     "en": "theatre",
     "gender": "N",
@@ -540,11 +513,7 @@
     "gender": "N",
     "sk": "dobrodružstvo"
   },
-  {
-    "en": "adventure",
-    "gender": "N",
-    "sk": "dobrodružstvo"
-  },
+
   {
     "en": "delivery",
     "gender": "N",
@@ -561,11 +530,7 @@
     "gender": "F",
     "sk": "dohoda"
   },
-  {
-    "en": "agreement",
-    "gender": "F",
-    "sk": "dohoda"
-  },
+
   {
     "en": "document",
     "gender": "M",
@@ -637,11 +602,7 @@
     "gender": "M",
     "sk": "dátum"
   },
-  {
-    "en": "date",
-    "gender": "M",
-    "sk": "dátum"
-  },
+
   {
     "en": "rain",
     "gender": "M",
@@ -798,11 +759,7 @@
     "gender": "F",
     "sk": "fľaša"
   },
-  {
-    "en": "bottle",
-    "gender": "F",
-    "sk": "fľaša"
-  },
+
   {
     "en": "guitar",
     "gender": "F",
@@ -891,11 +848,7 @@
     "plural": true,
     "sk": "hodinky"
   },
-  {
-    "en": "watch",
-    "gender": "F",
-    "sk": "hodinky"
-  },
+
   {
     "en": "clock",
     "gender": "F",
@@ -927,11 +880,7 @@
     "gender": "N",
     "sk": "hodnotenie"
   },
-  {
-    "en": "evaluation",
-    "gender": "N",
-    "sk": "hodnotenie"
-  },
+
   {
     "en": "mountain",
     "gender": "F",
@@ -973,11 +922,7 @@
     "gender": "F",
     "sk": "hotovosť"
   },
-  {
-    "en": "cash",
-    "gender": "F",
-    "sk": "hotovosť"
-  },
+
   {
     "en": "beef",
     "gender": "F",
@@ -1060,11 +1005,7 @@
     "gender": "F",
     "sk": "informácia"
   },
-  {
-    "en": "information",
-    "gender": "F",
-    "sk": "informácia"
-  },
+
   {
     "en": "information",
     "gender": "F",
@@ -1085,16 +1026,7 @@
     "gender": "M",
     "sk": "internet"
   },
-  {
-    "en": "internet",
-    "gender": "M",
-    "sk": "internet"
-  },
-  {
-    "en": "internet",
-    "gender": "M",
-    "sk": "internet"
-  },
+
   {
     "en": "installation",
     "gender": "F",
@@ -1153,11 +1085,7 @@
   {
     "en": "dining room",
     "gender": "F",
-    "number": {
-      "singular": {
-        "localative": "jedálňach"
-      }
-    },
+
     "sk": "jedáleň"
   },
   {
@@ -1205,11 +1133,7 @@
     "gender": "F",
     "sk": "kamera"
   },
-  {
-    "en": "camera",
-    "gender": "F",
-    "sk": "kamera"
-  },
+
   {
     "en": "stone",
     "gender": "M",
@@ -1262,11 +1186,7 @@
     "gender": "F",
     "sk": "karta"
   },
-  {
-    "en": "card",
-    "gender": "F",
-    "sk": "karta"
-  },
+
   {
     "en": "café",
     "gender": "F",
@@ -1359,18 +1279,7 @@
     "gender": "M",
     "sk": "kolega"
   },
-  {
-    "animate": true,
-    "en": "colleague",
-    "gender": "M",
-    "sk": "kolega"
-  },
-  {
-    "animate": true,
-    "en": "colleague",
-    "gender": "M",
-    "sk": "kolega"
-  },
+
   {
     "animate": true,
     "en": "female colleague",
@@ -1417,11 +1326,7 @@
     "gender": "M",
     "sk": "koncept"
   },
-  {
-    "en": "concert",
-    "gender": "M",
-    "sk": "koncert"
-  },
+
   {
     "en": "conflict",
     "gender": "M",
@@ -1525,16 +1430,7 @@
     "gender": "F",
     "sk": "kritika"
   },
-  {
-    "en": "criticism",
-    "gender": "F",
-    "sk": "kritika"
-  },
-  {
-    "en": "criticism",
-    "gender": "F",
-    "sk": "kritika"
-  },
+
   {
     "en": "intersection",
     "gender": "F",
@@ -1565,11 +1461,7 @@
     "gender": "F",
     "sk": "kuchyňa"
   },
-  {
-    "en": "kitchen",
-    "gender": "F",
-    "sk": "kuchyňa"
-  },
+
   {
     "animate": true,
     "en": "cook",
@@ -1710,11 +1602,7 @@
     "gender": "F",
     "sk": "lož"
   },
-  {
-    "en": "lie",
-    "gender": "F",
-    "sk": "lož"
-  },
+
   {
     "en": "spoon",
     "gender": "F",
@@ -1730,11 +1618,7 @@
     "gender": "F",
     "sk": "láska"
   },
-  {
-    "en": "love",
-    "gender": "F",
-    "sk": "láska"
-  },
+
   {
     "en": "ticket",
     "gender": "M",
@@ -1842,11 +1726,7 @@
     "gender": "N",
     "sk": "menu"
   },
-  {
-    "en": "menu",
-    "gender": "N",
-    "sk": "menu"
-  },
+
   {
     "en": "month",
     "gender": "M",
@@ -1882,11 +1762,7 @@
     "gender": "M",
     "sk": "mikrofón"
   },
-  {
-    "en": "microphone",
-    "gender": "M",
-    "sk": "mikrofón"
-  },
+
   {
     "en": "microwave",
     "gender": "F",
@@ -1913,11 +1789,7 @@
     "gender": "F",
     "sk": "minúta"
   },
-  {
-    "en": "minute",
-    "gender": "F",
-    "sk": "minúta"
-  },
+
   {
     "en": "blender",
     "gender": "M",
@@ -2090,21 +1962,7 @@
     "gender": "M",
     "sk": "neúspech"
   },
-  {
-    "en": "failure",
-    "gender": "M",
-    "sk": "neúspech"
-  },
-  {
-    "en": "failure",
-    "gender": "M",
-    "sk": "neúspech"
-  },
-  {
-    "en": "failure",
-    "gender": "M",
-    "sk": "neúspech"
-  },
+
   {
     "en": "night",
     "gender": "F",
@@ -2146,11 +2004,7 @@
     "gender": "F",
     "sk": "noviny"
   },
-  {
-    "en": "newspaper",
-    "gender": "F",
-    "sk": "noviny"
-  },
+
   {
     "animate": true,
     "en": "newborn",
@@ -2182,11 +2036,7 @@
     "gender": "M",
     "sk": "nákup"
   },
-  {
-    "en": "purchase",
-    "gender": "M",
-    "sk": "nákup"
-  },
+
   {
     "en": "square",
     "gender": "N",
@@ -2258,11 +2108,7 @@
     "gender": "M",
     "sk": "obchod"
   },
-  {
-    "en": "shop",
-    "gender": "M",
-    "sk": "obchod"
-  },
+
   {
     "en": "shop",
     "gender": "M",
@@ -2293,11 +2139,7 @@
     "gender": "F",
     "sk": "objednávka"
   },
-  {
-    "en": "order",
-    "gender": "F",
-    "sk": "objednávka"
-  },
+
   {
     "en": "cloud",
     "gender": "M",
@@ -2491,11 +2333,7 @@
     "gender": "F",
     "sk": "organizácia"
   },
-  {
-    "en": "organization",
-    "gender": "F",
-    "sk": "organizácia"
-  },
+
   {
     "en": "organ",
     "gender": "M",
@@ -2520,19 +2358,7 @@
     "animate": true,
     "en": "father",
     "gender": "M",
-    "number": {
-      "plural": {
-        "accusative": "otcov",
-        "dative": "otcom",
-        "genitive": "otcov",
-        "instrumental": "otcami",
-        "locative": "otcoch",
-        "nominative": "otcov"
-      },
-      "singular": {
-        "accusative": "otca"
-      }
-    },
+
     "sk": "otec"
   },
   {
@@ -2776,21 +2602,7 @@
     "gender": "F",
     "sk": "pochvala"
   },
-  {
-    "en": "praise",
-    "gender": "F",
-    "sk": "pochvala"
-  },
-  {
-    "en": "praise",
-    "gender": "F",
-    "sk": "pochvala"
-  },
-  {
-    "en": "doubt",
-    "gender": "F",
-    "sk": "pochybnosť"
-  },
+
   {
     "en": "doubt",
     "gender": "F",
@@ -2831,11 +2643,7 @@
     "gender": "F",
     "sk": "podpora"
   },
-  {
-    "en": "support",
-    "gender": "F",
-    "sk": "podpora"
-  },
+
   {
     "en": "sofa",
     "gender": "F",
@@ -2867,21 +2675,13 @@
     "gender": "F",
     "sk": "pokladňa"
   },
-  {
-    "en": "cash register",
-    "gender": "F",
-    "sk": "pokladňa"
-  },
+
   {
     "en": "decline",
     "gender": "M",
     "sk": "pokles"
   },
-  {
-    "en": "decline",
-    "gender": "M",
-    "sk": "pokles"
-  },
+
   {
     "en": "lid",
     "gender": "F",
@@ -2932,16 +2732,7 @@
     "gender": "F",
     "sk": "pomoc"
   },
-  {
-    "en": "help",
-    "gender": "F",
-    "sk": "pomoc"
-  },
-  {
-    "en": "help",
-    "gender": "F",
-    "sk": "pomoc"
-  },
+
   {
     "en": "Monday",
     "gender": "M",
@@ -2973,11 +2764,7 @@
     "gender": "F",
     "sk": "postava"
   },
-  {
-    "en": "character",
-    "gender": "F",
-    "sk": "postavička"
-  },
+
   {
     "en": "bed",
     "gender": "F",
@@ -2998,11 +2785,7 @@
     "gender": "F",
     "sk": "poznámka"
   },
-  {
-    "en": "note",
-    "gender": "F",
-    "sk": "poznámka"
-  },
+
   {
     "en": "attention",
     "gender": "F",
@@ -3149,11 +2932,7 @@
     "gender": "N",
     "sk": "priateľstvo"
   },
-  {
-    "en": "friendship",
-    "gender": "N",
-    "sk": "priateľstvo"
-  },
+
   {
     "en": "space",
     "gender": "M",
@@ -3174,11 +2953,7 @@
     "gender": "M",
     "sk": "problém"
   },
-  {
-    "en": "problem",
-    "gender": "M",
-    "sk": "problém"
-  },
+
   {
     "en": "processor",
     "gender": "M",
@@ -3204,11 +2979,7 @@
     "gender": "M",
     "sk": "profil"
   },
-  {
-    "en": "profile",
-    "gender": "M",
-    "sk": "profil"
-  },
+
   {
     "en": "program",
     "gender": "M",
@@ -3219,17 +2990,7 @@
     "gender": "M",
     "sk": "program"
   },
-  {
-    "en": "program",
-    "gender": "M",
-    "sk": "program"
-  },
-  {
-    "animate": true,
-    "en": "programmer",
-    "gender": "M",
-    "sk": "programátor"
-  },
+
   {
     "animate": true,
     "en": "programmer",
@@ -3241,16 +3002,7 @@
     "gender": "M",
     "sk": "projekt"
   },
-  {
-    "en": "project",
-    "gender": "M",
-    "sk": "projekt"
-  },
-  {
-    "en": "project",
-    "gender": "M",
-    "sk": "projekt"
-  },
+
   {
     "en": "projector",
     "gender": "M",
@@ -3301,11 +3053,7 @@
     "gender": "M",
     "sk": "prípad"
   },
-  {
-    "en": "case",
-    "gender": "M",
-    "sk": "prípad"
-  },
+
   {
     "en": "nature",
     "gender": "F",
@@ -3402,22 +3150,14 @@
     "gender": "M",
     "sk": "rast"
   },
-  {
-    "en": "growth",
-    "gender": "M",
-    "sk": "rast"
-  },
+
   {
     "en": "breakfast",
     "gender": "F",
     "plural": true,
     "sk": "raňajky"
   },
-  {
-    "en": "breakfast",
-    "gender": "F",
-    "sk": "raňajky"
-  },
+
   {
     "en": "chart",
     "gender": "M",
@@ -3428,26 +3168,13 @@
     "gender": "F",
     "sk": "recenzia"
   },
-  {
-    "en": "review",
-    "gender": "F",
-    "sk": "recenzia"
-  },
-  {
-    "en": "review",
-    "gender": "F",
-    "sk": "recenzia"
-  },
+
   {
     "en": "recipe",
     "gender": "M",
     "sk": "recept"
   },
-  {
-    "en": "recipe",
-    "gender": "M",
-    "sk": "recept"
-  },
+
   {
     "en": "reform",
     "gender": "F",
@@ -3478,11 +3205,7 @@
     "gender": "M",
     "sk": "reproduktor"
   },
-  {
-    "en": "speaker",
-    "gender": "M",
-    "sk": "reproduktor"
-  },
+
   {
     "en": "reputation",
     "gender": "F",
@@ -3514,16 +3237,7 @@
     "gender": "N",
     "sk": "riešenie"
   },
-  {
-    "en": "solution",
-    "gender": "N",
-    "sk": "riešenie"
-  },
-  {
-    "en": "solution",
-    "gender": "N",
-    "sk": "riešenie"
-  },
+
   {
     "en": "jeans",
     "gender": "F",
@@ -3534,11 +3248,7 @@
     "gender": "F",
     "sk": "rodina"
   },
-  {
-    "en": "family",
-    "gender": "F",
-    "sk": "rodina"
-  },
+
   {
     "animate": true,
     "en": "parent",
@@ -3575,11 +3285,7 @@
     "gender": "N",
     "sk": "rozhodnutie"
   },
-  {
-    "en": "decision",
-    "gender": "N",
-    "sk": "rozhodnutie"
-  },
+
   {
     "en": "conversation",
     "gender": "M",
@@ -3726,11 +3432,7 @@
     "gender": "M",
     "sk": "server"
   },
-  {
-    "en": "server",
-    "gender": "M",
-    "sk": "server"
-  },
+
   {
     "en": "service",
     "gender": "M",
@@ -3769,11 +3471,7 @@
     "gender": "F",
     "sk": "sieť"
   },
-  {
-    "en": "network",
-    "gender": "F",
-    "sk": "sieť"
-  },
+
   {
     "en": "signal",
     "gender": "M",
@@ -3824,16 +3522,7 @@
     "gender": "F",
     "sk": "skúsenosť"
   },
-  {
-    "en": "experience",
-    "gender": "F",
-    "sk": "skúsenosť"
-  },
-  {
-    "en": "experience",
-    "gender": "F",
-    "sk": "skúsenosť"
-  },
+
   {
     "en": "exam",
     "gender": "F",
@@ -3885,16 +3574,7 @@
     "gender": "F",
     "sk": "služba"
   },
-  {
-    "en": "service",
-    "gender": "F",
-    "sk": "služba"
-  },
-  {
-    "en": "service",
-    "gender": "F",
-    "sk": "služba"
-  },
+
   {
     "en": "headphones",
     "gender": "F",
@@ -3925,11 +3605,7 @@
     "gender": "M",
     "sk": "smiech"
   },
-  {
-    "en": "laughter",
-    "gender": "M",
-    "sk": "smiech"
-  },
+
   {
     "en": "cream",
     "gender": "F",
@@ -4009,11 +3685,7 @@
     "gender": "F",
     "sk": "spokojnosť"
   },
-  {
-    "en": "satisfaction",
-    "gender": "F",
-    "sk": "spokojnosť"
-  },
+
   {
     "en": "corporation",
     "gender": "F",
@@ -4132,16 +3804,7 @@
     "gender": "F",
     "sk": "stolička"
   },
-  {
-    "en": "chair",
-    "gender": "F",
-    "sk": "stolička"
-  },
-  {
-    "en": "chair",
-    "gender": "F",
-    "sk": "stolička"
-  },
+
   {
     "en": "century",
     "gender": "N",
@@ -4152,11 +3815,7 @@
     "gender": "M",
     "sk": "strach"
   },
-  {
-    "en": "fear",
-    "gender": "M",
-    "sk": "strach"
-  },
+
   {
     "en": "side",
     "gender": "F",
@@ -4172,16 +3831,7 @@
     "gender": "F",
     "sk": "stratégia"
   },
-  {
-    "en": "strategy",
-    "gender": "F",
-    "sk": "stratégia"
-  },
-  {
-    "en": "strategy",
-    "gender": "F",
-    "sk": "stratégia"
-  },
+
   {
     "en": "stream",
     "gender": "M",
@@ -4202,11 +3852,7 @@
     "gender": "N",
     "sk": "stretnutie"
   },
-  {
-    "en": "meeting",
-    "gender": "N",
-    "sk": "stretnutie"
-  },
+
   {
     "en": "machine",
     "gender": "M",
@@ -4222,11 +3868,7 @@
     "gender": "F",
     "sk": "stránka"
   },
-  {
-    "en": "page",
-    "gender": "F",
-    "sk": "stránka"
-  },
+
   {
     "en": "grater",
     "gender": "N",
@@ -4243,16 +3885,7 @@
     "gender": "M",
     "sk": "stôl"
   },
-  {
-    "en": "table",
-    "gender": "M",
-    "sk": "stôl"
-  },
-  {
-    "en": "table",
-    "gender": "M",
-    "sk": "stôl"
-  },
+
   {
     "en": "skirt",
     "gender": "F",
@@ -4285,11 +3918,7 @@
     "gender": "F",
     "sk": "svadba"
   },
-  {
-    "en": "wedding",
-    "gender": "F",
-    "sk": "svadba"
-  },
+
   {
     "en": "muscle",
     "gender": "M",
@@ -4300,11 +3929,7 @@
     "gender": "M",
     "sk": "svet"
   },
-  {
-    "en": "world",
-    "gender": "M",
-    "sk": "svet"
-  },
+
   {
     "en": "sweater",
     "gender": "M",
@@ -4346,21 +3971,13 @@
     "gender": "M",
     "sk": "systém"
   },
-  {
-    "en": "system",
-    "gender": "M",
-    "sk": "systém"
-  },
+
   {
     "en": "file",
     "gender": "M",
     "sk": "súbor"
   },
-  {
-    "en": "file",
-    "gender": "M",
-    "sk": "súbor"
-  },
+
   {
     "en": "privacy",
     "gender": "N",
@@ -4422,11 +4039,7 @@
     "gender": "F",
     "sk": "technika"
   },
-  {
-    "en": "technology",
-    "gender": "F",
-    "sk": "technológia"
-  },
+
   {
     "en": "technology",
     "gender": "F",
@@ -4500,11 +4113,7 @@
     "gender": "M",
     "sk": "text"
   },
-  {
-    "en": "text",
-    "gender": "M",
-    "sk": "text"
-  },
+
   {
     "en": "theory",
     "gender": "F",
@@ -4633,11 +4242,7 @@
     "gender": "F",
     "sk": "ulica"
   },
-  {
-    "en": "street",
-    "gender": "F",
-    "sk": "ulica"
-  },
+
   {
     "en": "dishwasher",
     "gender": "F",
@@ -4674,12 +4279,7 @@
     "gender": "M",
     "sk": "učiteľ"
   },
-  {
-    "animate": true,
-    "en": "teacher",
-    "gender": "M",
-    "sk": "učiteľ"
-  },
+
   {
     "animate": true,
     "en": "user",
@@ -4722,12 +4322,7 @@
     "gender": "M",
     "sk": "vedúci"
   },
-  {
-    "animate": true,
-    "en": "leader",
-    "gender": "M",
-    "sk": "vedúci"
-  },
+
   {
     "en": "version",
     "gender": "F",
@@ -4743,11 +4338,7 @@
     "gender": "F",
     "sk": "večera"
   },
-  {
-    "en": "dinner",
-    "gender": "F",
-    "sk": "večera"
-  },
+
   {
     "en": "video",
     "gender": "N",
@@ -4783,16 +4374,7 @@
     "gender": "F",
     "sk": "vláda"
   },
-  {
-    "en": "government",
-    "gender": "F",
-    "sk": "vláda"
-  },
-  {
-    "en": "government",
-    "gender": "F",
-    "sk": "vláda"
-  },
+
   {
     "animate": true,
     "en": "grandson",
@@ -4921,21 +4503,13 @@
     "gender": "M",
     "sk": "výsledok"
   },
-  {
-    "en": "result",
-    "gender": "M",
-    "sk": "výsledok"
-  },
+
   {
     "en": "development",
     "gender": "M",
     "sk": "vývoj"
   },
-  {
-    "en": "development",
-    "gender": "M",
-    "sk": "vývoj"
-  },
+
   {
     "animate": true,
     "en": "developer",
@@ -4973,12 +4547,7 @@
     "gender": "M",
     "sk": "zamestnanec"
   },
-  {
-    "animate": true,
-    "en": "employee",
-    "gender": "M",
-    "sk": "zamestnanec"
-  },
+
   {
     "en": "device",
     "gender": "N",
@@ -5024,16 +4593,7 @@
     "gender": "F",
     "sk": "zmena"
   },
-  {
-    "en": "change",
-    "gender": "F",
-    "sk": "zmena"
-  },
-  {
-    "en": "change",
-    "gender": "F",
-    "sk": "zmena"
-  },
+
   {
     "en": "contract",
     "gender": "F",
@@ -5157,22 +4717,13 @@
     "gender": "M",
     "sk": "zákazník"
   },
-  {
-    "animate": true,
-    "en": "customer",
-    "gender": "M",
-    "sk": "zákazník"
-  },
+
   {
     "en": "law",
     "gender": "M",
     "sk": "zákon"
   },
-  {
-    "en": "law",
-    "gender": "M",
-    "sk": "zákon"
-  },
+
   {
     "en": "wrist",
     "gender": "N",
@@ -5188,11 +4739,7 @@
     "gender": "F",
     "sk": "zásielka"
   },
-  {
-    "en": "shipment",
-    "gender": "F",
-    "sk": "zásielka"
-  },
+
   {
     "en": "engagement",
     "gender": "F",
@@ -5214,11 +4761,7 @@
     "gender": "F",
     "sk": "zásuvka"
   },
-  {
-    "en": "socket",
-    "gender": "F",
-    "sk": "zásuvka"
-  },
+
   {
     "en": "interest",
     "gender": "M",
@@ -5239,11 +4782,7 @@
     "gender": "M",
     "sk": "záznam"
   },
-  {
-    "en": "record",
-    "gender": "M",
-    "sk": "záznam"
-  },
+
   {
     "en": "discount",
     "gender": "F",
@@ -5279,11 +4818,7 @@
     "gender": "F",
     "sk": "úloha"
   },
-  {
-    "en": "task",
-    "gender": "F",
-    "sk": "úloha"
-  },
+
   {
     "en": "task",
     "gender": "F",
@@ -5350,26 +4885,13 @@
     "gender": "M",
     "sk": "čas"
   },
-  {
-    "en": "time",
-    "gender": "M",
-    "sk": "čas"
-  },
-  {
-    "en": "time",
-    "gender": "M",
-    "sk": "čas"
-  },
+
   {
     "en": "magazine",
     "gender": "M",
     "sk": "časopis"
   },
-  {
-    "en": "magazine",
-    "gender": "M",
-    "sk": "časopis"
-  },
+
   {
     "en": "part",
     "gender": "F",
@@ -5380,11 +4902,7 @@
     "gender": "F",
     "sk": "časť"
   },
-  {
-    "en": "part",
-    "gender": "F",
-    "sk": "časť"
-  },
+
   {
     "animate": true,
     "en": "waiter",

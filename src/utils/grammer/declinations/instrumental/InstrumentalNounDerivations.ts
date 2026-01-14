@@ -1,5 +1,5 @@
 import type Noun from '../Noun.js';
-import { deriveVocalStem } from '../../vocalGrammer.js';
+//import { deriveVocalStem } from '../../vocalGrammer.js';
 import DerivedWord from '../../DerivedWord';
 import type { NounDeclinator } from '../Noun.js';
 
@@ -9,7 +9,7 @@ import type { NounDeclinator } from '../Noun.js';
 
 function instrumentalSingular(noun: Noun) {
   const word = noun.sk;
-  const stem = deriveVocalStem(noun);
+  const stem = noun.getStem();
 
   let derived = '';
   let explanation = '';
@@ -22,7 +22,7 @@ function instrumentalSingular(noun: Noun) {
 
     case 'F':
       if (word.endsWith('ia')) {
-        derived = stem + 'iou';
+        derived = stem + 'ou';
         explanation = `feminine ending -ia → instrumental singular = stem (${stem}) + iou`;
       } else if (word.endsWith('a')) {
         derived = stem + 'ou';
@@ -57,7 +57,7 @@ function instrumentalSingular(noun: Noun) {
  */
 export function instrumentalPlural(noun: Noun): DerivedWord {
   const word = noun.sk;
-  const stem = deriveVocalStem(noun);
+  const stem = noun.getStem();
   let derived: string;
   let explanation: string;
 
@@ -73,7 +73,7 @@ export function instrumentalPlural(noun: Noun): DerivedWord {
   } else if (noun.gender === 'F') {
     // ----- FEMININE -----
     if (word.endsWith('ia')) {
-      derived = stem + 'iami';
+      derived = stem + 'ami';
       explanation = `feminine ending -ia → instrumental plural = stem (${stem}) + iami`;
     } else {
       derived = stem + 'ami';
@@ -91,6 +91,5 @@ export function instrumentalPlural(noun: Noun): DerivedWord {
 
 export const InstrumentalNounDeriver: NounDeclinator = {
   singular: (noun: Noun) => instrumentalSingular(noun),
-
   plural: (noun: Noun) => instrumentalPlural(noun),
 };

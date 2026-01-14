@@ -1,41 +1,22 @@
 import { NominativeNounDeclinator } from '../nominative/NominativeNounDeclinator.js';
 import { genitiveNounDeriver } from '../genative/GenitiveNounDerivations.js';
 
-import { deriveVocalStem } from '@/utils/grammer/vocalGrammer.js';
 import DerivedWord from '../../DerivedWord.js';
 import { Gender } from '@/utils/grammer/WordTypes.js';
 import type Noun from '../Noun.js';
 import type { NounDeclinator } from '../Noun.js';
 
-const IRREGULAR_ACCUSATIVE = {
-  otec: 'otca',
-  kôň: 'koňa',
-  syn: 'syna',
-  // add more irregulars as needed
-};
-
-// Softening map for consonants before -a
-const SOFTENING_MAP = {
-  k: 'c',
-  g: 'z',
-  h: 'z',
-  ch: 'š',
-};
 /**
  * Get the accusative singular form of a Slovak noun
- *
- * @param {string} word - noun in Slovak
- * @param {"M"|"F"|"N"} gender - grammatical gender
- * @param {boolean} [animate=false] - only used for masculine nouns
- * @returns {string} - accusative singular
+ * @param {Noun } noun - noun in Slovak
+ * @returns {DerivedWord} - accusative singular
  */
 function accusativeSingular(noun: Noun): DerivedWord {
   let derived: string;
   let explanation: string;
-
+  const stem = noun.getStem();
   switch (noun.gender) {
     case Gender.Masculine:
-      //case "M":
       // Inanimate → same as nominative
       if (!noun.animate) {
         const nominative = NominativeNounDeclinator.singular(noun);
@@ -44,18 +25,12 @@ function accusativeSingular(noun: Noun): DerivedWord {
         break;
       }
 
-      // Irregular animate
-      if (IRREGULAR_ACCUSATIVE[noun.sk]) {
-        derived = IRREGULAR_ACCUSATIVE[noun.sk];
-        explanation = `irregular animate noun ${noun.sk} → ${derived}`;
-      }
-
       // Animate ending in -a → -u
       if (noun.sk.endsWith('a')) {
-        derived = noun.sk.slice(0, -1) + 'u'; // hrdina → hrdinu
-        explanation = `animate noun stem (${noun.sk.slice(0, -1)}) + u`;
+        derived = stem + 'u'; // hrdina → hrdinu
+        explanation = `animate noun stem (${stem}) + u`;
       } else {
-        const stem = deriveVocalStem(noun);
+        // const stem = noun.getStem();
         derived = stem + 'a'; // chlap → chlapa
         explanation = `animate noun ${stem} + a`;
       }
@@ -64,8 +39,8 @@ function accusativeSingular(noun: Noun): DerivedWord {
     case Gender.Femenine:
       // -a → -u also -ia → -iu
       if (noun.sk.endsWith('a')) {
-        derived = noun.sk.slice(0, -1) + 'u';
-        explanation = `feminine noun stem (${noun.sk.slice(0, -1)}) + u`;
+        derived = stem + 'u';
+        explanation = `feminine noun stem (${stem}) + u`;
       } else {
         derived = noun.sk; // consonant-ending feminine → unchanged
         explanation = `consonant-ending feminine noun unchanged (${noun.sk})`;

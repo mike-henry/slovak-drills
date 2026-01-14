@@ -50,7 +50,7 @@
       />
 
       <div class="mt-6">
-        <history-list :history="history" />
+        <history-list ref="historyList" />
       </div>
     </div>
   </div>
@@ -65,15 +65,7 @@ import DrillHelp from './DrillHelp.vue';
 import DrillProgress from './DrillProgress.vue';
 import { computed, ref } from 'vue';
 import HistoryList from '@/components/HistoryList.vue';
-import {
-  resetStreak,
-  STREAK_TARGET,
-  streakCount,
-  totalAttempts,
-  showStreakDialog,
-  appendToHistory,
-  history,
-} from '@/views/drillUtils';
+import { resetStreak, STREAK_TARGET, streakCount, totalAttempts, showStreakDialog } from '@/views/drillUtils';
 import { loadVocabulary } from '@/utils/grammer/wordStore';
 import { onMounted } from 'vue';
 import type DerivedWord from '@/utils/grammer/DerivedWord';
@@ -92,7 +84,7 @@ interface DrillProps<T> {
   expectedAnswer: (item: T) => DerivedWord;
   question?: (item: T) => string;
 }
-
+const historyList = ref<InstanceType<typeof HistoryList>>();
 const currentItem = ref<DrillItem>();
 
 const userAnswer = ref('');
@@ -154,7 +146,7 @@ const submitAnswer = () => {
 
   totalAttempts.value++;
 
-  appendToHistory({
+  historyList.value?.appendToHistory({
     subject: subjectArea(), // for now TODO make generic
     correctAnswer,
     givenAnswer,

@@ -1,17 +1,16 @@
-import type Noun from "../Noun";
-import {  endsWithSoftConsonant, endsWithHardConsonant, deriveVocalStem } from "@/utils/grammer/vocalGrammer";
-import  DerivedWord from "../../DerivedWord";
-import { NominativeNounDeclinator } from "../nominative/NominativeNounDeclinator";
-
+import type Noun from '../Noun';
+import { endsWithSoftConsonant, endsWithHardConsonant } from '@/utils/grammer/declinations/NounUtils';
+import DerivedWord from '../../DerivedWord';
+import { NominativeNounDeclinator } from '../nominative/NominativeNounDeclinator';
 
 //ONLY FOR  IMPLEMENTATION FOR PLURAL
 
 // Irregular genitive plurals for masculine animate nouns
 const IRREGULAR_GENITIVE_PLURAL = {
-  "otec": "otcov",
-  "syn": "synov",
-  "kôň": "koní",
-  "človek": "ľudí",
+  otec: 'otcov',
+  syn: 'synov',
+  kôň: 'koní',
+  človek: 'ľudí',
   // add more irregulars here
 };
 
@@ -21,36 +20,35 @@ const IRREGULAR_GENITIVE_PLURAL = {
  * @param {string} word - Slovak noun
  * @returns {string} genitive plural
  */
-function genitivePlural(noun:Noun):DerivedWord {
-  if(noun.gender !== "M" || !noun.animate)  return NominativeNounDeclinator.plural(noun);
+function genitivePlural(noun: Noun): DerivedWord {
+  if (noun.gender !== 'M' || !noun.animate) return NominativeNounDeclinator.plural(noun);
   if (IRREGULAR_GENITIVE_PLURAL[noun.sk]) return IRREGULAR_GENITIVE_PLURAL[noun.sk];
 
-let derived:string;
-let explanation:string;
+  let derived: string;
+  let explanation: string;
 
-  const stem = deriveVocalStem(noun);
+  const stem = noun.getStem();
 
   // Simple softening for common cases can be added later
   if (endsWithSoftConsonant(stem) || endsWithHardConsonant(stem)) {
-    derived =  stem + "ov";
+    derived = stem + 'ov';
     explanation = `stem (${stem}) + ov for masculine animate nouns`;
   } else {
-    derived = stem + "ov";
+    derived = stem + 'ov';
     explanation = `stem (${stem}) + ov for masculine animate nouns`;
   }
 
   // fallback
-  return new DerivedWord( derived, explanation );
+  return new DerivedWord(derived, explanation);
 }
 
 /**
  * Genitive noun deriver object
  */
 export const genitiveNounDeriver = {
-  singular: (noun:Noun) => {
-    throw new Error("Genitive singular not implemented yet");
+  singular: (noun: Noun) => {
+    throw new Error('Genitive singular not implemented yet');
   },
 
-plural: (noun:Noun) => genitivePlural(noun)
-  
+  plural: (noun: Noun) => genitivePlural(noun),
 };

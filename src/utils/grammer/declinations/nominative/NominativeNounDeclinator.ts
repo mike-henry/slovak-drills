@@ -1,6 +1,6 @@
 import type { NounDeclinator } from '../Noun.ts';
 import Noun from '../Noun.ts';
-import { deriveVocalStem, endsWithSoftConsonant } from '@/utils/grammer/vocalGrammer.ts';
+import { endsWithSoftConsonant } from '@/utils/grammer/declinations/NounUtils.ts';
 
 import DerivedWord from '@/utils/grammer/DerivedWord.ts';
 import { Gender } from '../../WordTypes.ts';
@@ -81,7 +81,7 @@ function nominativePlural(noun: Noun): DerivedWord {
     throw new Error(`Invalid gender: ${gender}. Must be 'M', 'F', or 'N'.`);
   }
 
-  const originalStem = deriveVocalStem(noun);
+  const originalStem = noun.getStem();
   const softenedStem = softenStem(originalStem, gender, word);
   const softStem = endsWithSoftConsonant(originalStem);
 
@@ -132,7 +132,7 @@ function nominativePlural(noun: Noun): DerivedWord {
     {
       gender: Gender.Femenine,
       ending: 'ia',
-      suffix: 'ie',
+      suffix: 'e',
       useSoftenedStem: true,
       explanation: (s) => `stem ${s} + ie for feminines ending with ia`,
     },

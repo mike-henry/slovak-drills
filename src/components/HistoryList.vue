@@ -22,17 +22,24 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import type { PropType } from 'vue';
-import DrillHelp from './DrillHelp.vue';
-import type { HistoryEntry } from '@/views/drillUtils';
-import DerivedWord from '@/utils/grammer/DerivedWord';
+import { computed, ref } from 'vue';
 
-const { history } = defineProps({
-  history: {
-    type: Array as PropType<HistoryEntry[]>,
-    required: true,
-  },
+import DrillHelp from './DrillHelp.vue';
+import { globalHistory } from './HistoryEntry';
+import type HistoryEntry from './HistoryEntry';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+const history = computed(() => globalHistory.value.filter((entry) => entry.drillPath === route.fullPath));
+
+const appendToHistory = (entry: HistoryEntry): void => {
+  entry.drillPath = route.fullPath;
+  globalHistory.value.unshift(entry);
+};
+
+defineExpose({
+  appendToHistory,
 });
 
 const presentSection = ref();

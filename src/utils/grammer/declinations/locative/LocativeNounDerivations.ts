@@ -3,8 +3,7 @@ import {
   // deriveStem,
   endsWithSoftConsonant,
   endsWithConsonant,
-  deriveVocalStem,
-} from '../../vocalGrammer.js';
+} from '../NounUtils.js';
 import DerivedWord from '../../DerivedWord.js';
 
 import { NominativeNounDeclinator, softenStem } from '../nominative/NominativeNounDeclinator.js';
@@ -19,7 +18,7 @@ function locativeSingular(noun: Noun): DerivedWord {
   const word = noun.sk;
   const animate = noun.animate;
   const gender = noun.gender;
-  const stem = deriveVocalStem(noun);
+  const stem = noun.getStem();
   let derived: string;
   let explanation: string;
 
@@ -55,10 +54,10 @@ function locativeSingular(noun: Noun): DerivedWord {
       explanation = `feminine consonant-ending noun softened ${softenedStem} + i`;
     }
     // Ending in -ia → -ii
-    else if (word.endsWith('ia')) {
-      derived = stem + 'ii'; // chémia → chémii
-      explanation = `feminine noun ${stem} + ii`;
-    }
+    // else if (word.endsWith('ia')) {
+    //   derived = stem + 'ii'; // chémia → chémii
+    //   explanation = `feminine noun ${stem} + ii`;
+    // }
     // Ending in -a → -e or -i
     else if (word.endsWith('a')) {
       if (endsWithSoftConsonant(stem)) {

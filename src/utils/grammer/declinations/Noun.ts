@@ -4,7 +4,7 @@ import { LocativeNounDeriver } from './locative/LocativeNounDerivations';
 import { AccusativeNounDeclinator } from './accusative/AccusativeNounDeclinator';
 import { InstrumentalNounDeriver } from './instrumental/InstrumentalNounDerivations';
 import { NominativeNounDeclinator } from './nominative/NominativeNounDeclinator';
-import { deriveVocalStem } from './NounUtils';
+import { deriveNounStem, deriveVocalStem } from './NounUtils';
 
 const DeclinatorsByCase: Record<CASE_TYPE, NounDeclinator> = {
   [CASE_TYPE.LOCATIVE]: LocativeNounDeriver,
@@ -21,8 +21,17 @@ export default class Noun extends WORD {
   animate?: boolean;
   plural?: boolean;
   stem?: string;
+  singularForm?: string;
 
-  private constructor(sk: string, gender: Gender, animate?: boolean, plural?: boolean, en = '', stem?: string) {
+  private constructor(
+    sk: string,
+    gender: Gender,
+    animate?: boolean,
+    plural?: boolean,
+    en = '',
+    stem?: string,
+    singularForm?: string,
+  ) {
     super();
     this.sk = sk;
     this.en = en;
@@ -30,6 +39,7 @@ export default class Noun extends WORD {
     this.animate = animate;
     this.plural = plural;
     this.stem = stem;
+    this.singularForm = singularForm;
   }
 
   declinate(caseType: CASE_TYPE, plural = false): DerivedWord {
@@ -39,8 +49,13 @@ export default class Noun extends WORD {
   }
 
   getStem(): string {
-    if (this.stem) return this.stem; // highest priority
-    return deriveVocalStem(this); // fallback to utils
+    return deriveNounStem(this); // fallback to utils
+  }
+
+  createSingular(): Noun {
+    if (!this.singularForm) throw new Error('singular form not present');
+    if (!this.plural) throw new Error('singular form only possible for plural form nouns');
+    return new Noun(this.singularForm, this.gender, this.animate, this.plural, this.en, this.stem);
   }
 
   static fromRaw(params: {
@@ -50,8 +65,17 @@ export default class Noun extends WORD {
     animate?: boolean;
     plural?: boolean;
     stem?: string;
+    singularForm?: string;
   }): Noun {
-    return new Noun(params.sk, params.gender, params.animate, params.plural, params.en, params.stem);
+    return new Noun(
+      params.sk,
+      params.gender,
+      params.animate,
+      params.plural,
+      params.en,
+      params.stem,
+      params.singularForm,
+    );
   }
 }
 

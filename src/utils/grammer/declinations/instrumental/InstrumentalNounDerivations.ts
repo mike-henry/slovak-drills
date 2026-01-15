@@ -56,6 +56,7 @@ function instrumentalSingular(noun: Noun) {
  * Instrumental plural
  */
 export function instrumentalPlural(noun: Noun): DerivedWord {
+  if (noun.plural) noun = noun.createSingular();
   const word = noun.sk;
   const stem = noun.getStem();
   let derived: string;
@@ -90,6 +91,6 @@ export function instrumentalPlural(noun: Noun): DerivedWord {
 }
 
 export const InstrumentalNounDeriver: NounDeclinator = {
-  singular: (noun: Noun) => instrumentalSingular(noun),
+  singular: (noun: Noun) => (noun.plural ? instrumentalPlural(noun.createSingular()) : instrumentalSingular(noun)),
   plural: (noun: Noun) => instrumentalPlural(noun),
 };

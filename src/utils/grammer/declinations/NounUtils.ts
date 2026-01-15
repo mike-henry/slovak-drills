@@ -1,5 +1,6 @@
 // Hard consonants in Slovak
 
+import { Gender } from '../WordTypes';
 import type Noun from './Noun';
 
 const HARD_CONSONANTS: string[] = ['h', 'ch', 'k', 'g', 'd', 't', 'n', 'l', 'r'];
@@ -40,8 +41,8 @@ const IRREGULAR_STEMS = {
   // ... more later
 };
 
-function masculineStem(word: string): string {
-  word = word.toLowerCase();
+function masculineStem(noun: Noun): string {
+  const word = noun.sk.toLowerCase();
 
   // Masculines ending in -a → remove -a
   // Masculines ending in -o/-e → remove vowel
@@ -60,8 +61,8 @@ function masculineStem(word: string): string {
   return word;
 }
 
-function feminineStem(word: string): string {
-  word = word.toLowerCase();
+function feminineStem(noun: Noun): string {
+  const word = noun.sk.toLowerCase();
 
   // -ia → remove -ia, add -i
   if (word.endsWith('ie')) {
@@ -77,8 +78,8 @@ function feminineStem(word: string): string {
   return word;
 }
 
-function neuterStem(word: string, isPlural: boolean) {
-  word = word.toLowerCase();
+function neuterStem(noun: Noun) {
+  let word = noun.sk.toLowerCase();
 
   // -um → remove -um
   if (word.endsWith('um')) {
@@ -87,7 +88,7 @@ function neuterStem(word: string, isPlural: boolean) {
 
   // -ie → replace with -i
   if (word.endsWith('ie')) {
-    return word.slice(0, isPlural ? -1 : -2);
+    return word.slice(0, noun.plural ? -1 : -2);
   }
 
   // -o or -e → remove vowel
@@ -97,21 +98,22 @@ function neuterStem(word: string, isPlural: boolean) {
 
   // -a → remove vowel add at
   if (word.endsWith('a')) {
-    return word.slice(0, -1) + 'at';
+    return word.slice(0, -1) + (noun.plural ? '' : 'at');
   }
 
   return word;
 }
 
-export function deriveVocalStem(noun: Noun): string {
+export function deriveNounStem(noun: Noun): string {
+  if (noun.stem) return noun.stem;
   switch (noun.gender) {
-    case 'M':
-      return masculineStem(noun.sk);
-    case 'F':
-      return feminineStem(noun.sk);
-    case 'N':
-      return neuterStem(noun.sk, noun.plural);
+    case Gender.Masculine:
+      return masculineStem(noun);
+    case Gender.Femenine:
+      return feminineStem(noun);
+    case Gender.Neutral:
+      return neuterStem(noun);
     default:
-      throw new Error(`Invalid gender '${noun.gender}' — must be 'Masculine', 'Femanine', or 'Nueter'.`);
+      throw new Error(`Invalid gender '${noun.gender}' — must be 'Masculine', 'Feminine', or 'Nueter'.`);
   }
 }

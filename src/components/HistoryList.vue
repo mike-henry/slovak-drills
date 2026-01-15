@@ -1,6 +1,8 @@
 <template>
   <div class="mt-6">
-    <h2 class="text-lg font-semibold mb-2">History</h2>
+    <h2 class="text-lg font-semibold mb-2">
+      History <button class="drill-char-button" style="margin: 0.1rem" @click="deleteHistory">clear</button>
+    </h2>
 
     <ul class="history-list">
       <li v-for="(item, index) in history" :key="index">
@@ -36,6 +38,10 @@ const history = computed(() => globalHistory.value.filter((entry) => entry.drill
 const appendToHistory = (entry: HistoryEntry): void => {
   entry.drillPath = route.fullPath;
   globalHistory.value.unshift(entry);
+};
+
+const deleteHistory = () => {
+  globalHistory.value = globalHistory.value.filter((entry) => entry.drillPath !== route.fullPath);
 };
 
 defineExpose({

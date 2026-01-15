@@ -119,3 +119,64 @@ describe('Edge cases — accusative singular and plural', () => {
     expect(k.declinate(CASE, true).derived).toBe('kov'); // masculine animate → genitive plural
   });
 });
+
+// ---------------------------
+// PLURAL NOUNS (pluralOnly)
+// ---------------------------
+describe('Plural nouns — accusative plural', () => {
+  // neuter plural
+  const dvere: Noun = Noun.fromRaw({
+    sk: 'dvere',
+    singularForm: 'dvera', // surrogate singular
+    gender: Gender.Neutral,
+    animate: false,
+    en: 'door',
+    plural: true,
+  });
+
+  const usta: Noun = Noun.fromRaw({
+    sk: 'ústa',
+    singularForm: 'ústo', // surrogate singular
+    gender: Gender.Neutral,
+    animate: false,
+    en: 'mouth',
+    plural: true,
+  });
+
+  // feminine plural
+  const ranajky: Noun = Noun.fromRaw({
+    sk: 'raňajky',
+    singularForm: 'raňajka', // surrogate singular
+    gender: Gender.Femenine,
+    animate: false,
+    en: 'breakfast',
+    plural: true,
+  });
+
+  const cestoviny: Noun = Noun.fromRaw({
+    sk: 'cestoviny',
+    singularForm: 'cestovina', // surrogate singular
+    gender: Gender.Femenine,
+    animate: false,
+    en: 'pasta',
+    plural: true,
+  });
+
+  // masculine plural
+  const peniaze: Noun = Noun.fromRaw({
+    sk: 'peniaze',
+    singularForm: 'peniaz', // surrogate singular
+    gender: Gender.Masculine,
+    animate: false,
+    en: 'money',
+    plural: true,
+  });
+
+  test('Accusative plural forms', () => {
+    expect(dvere.declinate(CASE, true).derived).toBe('dvere');
+    expect(usta.declinate(CASE, true).derived).toBe('ústa');
+    expect(ranajky.declinate(CASE, true).derived).toBe('raňajky');
+    expect(cestoviny.declinate(CASE, true).derived).toBe('cestoviny');
+    expect(peniaze.declinate(CASE, true).derived).toBe('peniaze');
+  });
+});

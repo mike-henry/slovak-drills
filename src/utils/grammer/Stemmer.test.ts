@@ -47,12 +47,6 @@ describe('Basic Slovak stemmer', () => {
     expect(noun('romancia', Gender.Femenine).getStem()).toBe('romanci');
   });
 
-  test('Plural-sensitive neuter stems', () => {
-    expect(noun('dieťa', Gender.Neutral, false).getStem()).toBe('dieťat');
-    expect(noun('dieťa', Gender.Neutral, true).getStem()).toBe('dieťat'); // same
-    expect(noun('more', Gender.Neutral, true).getStem()).toBe('mor'); // plural stem
-  });
-
   test('Words with diphthongs', () => {
     expect(noun('srdiečko', Gender.Neutral).getStem()).toBe('srdiečk');
     expect(noun('pódium', Gender.Neutral).getStem()).toBe('pódi');

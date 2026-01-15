@@ -142,7 +142,7 @@ export function locativePlural(noun: Noun): DerivedWord {
       derived = stemed1() + 'iach';
       explanation = `stem ${stemed1()} + iách`;
     }
-    return new DerivedWord(derived, explanation);
+    return new DerivedWord(derived, explanation, ['noun://locative?noun-introduction&noun-stems&noun-endings-plural']);
   }
 
   // --- MASCULINE ---
@@ -161,7 +161,7 @@ export function locativePlural(noun: Noun): DerivedWord {
   }
   // --- NEUTER ---
   else if (gender === 'N') {
-    if (nomPl.endsWith('á')) {
+    if (nomPl.endsWith('á') || nomPl.endsWith('e')) {
       derived = stemed1() + 'ách'; // mestá → mestách
       explanation = `stem ${stemed1()} + ách`;
     } else if (nomPl.endsWith('a')) {
@@ -180,6 +180,6 @@ export function locativePlural(noun: Noun): DerivedWord {
 }
 
 export const LocativeNounDeriver: NounDeclinator = {
-  singular: (noun: Noun) => locativeSingular(noun),
+  singular: (noun: Noun) => (noun.plural ? locativePlural(noun.createSingular()) : locativeSingular(noun)),
   plural: (noun: Noun) => locativePlural(noun),
 };

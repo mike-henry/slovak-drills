@@ -210,6 +210,10 @@ function nominativePlural(noun: Noun): DerivedWord {
 
 export const NominativeNounDeclinator: NounDeclinator = {
   singular(noun: Noun): DerivedWord {
+    if (noun.plural) {
+      return new DerivedWord(noun.sk, `"${noun.sk}" only has plural form`);
+    }
+
     return new DerivedWord(noun.sk, 'nominative singular is the base form');
   },
   plural(noun: Noun): DerivedWord {

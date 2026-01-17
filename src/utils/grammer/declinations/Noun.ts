@@ -4,7 +4,7 @@ import { LocativeNounDeriver } from './locative/LocativeNounDerivations';
 import { AccusativeNounDeclinator } from './accusative/AccusativeNounDeclinator';
 import { InstrumentalNounDeriver } from './instrumental/InstrumentalNounDerivations';
 import { NominativeNounDeclinator } from './nominative/NominativeNounDeclinator';
-import { deriveNounStem, deriveVocalStem } from './NounUtils';
+import { deriveNounStem } from './NounUtils';
 
 const DeclinatorsByCase: Record<CASE_TYPE, NounDeclinator> = {
   [CASE_TYPE.LOCATIVE]: LocativeNounDeriver,

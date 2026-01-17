@@ -8,8 +8,13 @@ import DerivedWord from '../../DerivedWord.js';
 
 import { NominativeNounDeclinator, softenStem } from '../nominative/NominativeNounDeclinator.js';
 import type Noun from '../Noun.js';
+import { CASE_TYPE } from '../../WordTypes.js';
+import { standardNominalSections } from '@/documents/DocumentBuilder.js';
 
-const DOCUMENTREF = 'noun://locative'; // Temporary, replace with iet reference when available
+const CASE = CASE_TYPE.LOCATIVE;
+const schema = 'noun';
+const STD_DOC_SINGULAR = standardNominalSections(schema, CASE);
+const STD_DOC_PLURAL = standardNominalSections(schema, CASE, true);
 
 /**
  * LOCATIVE — SINGULAR
@@ -36,14 +41,14 @@ function locativeSingular(noun: Noun): DerivedWord {
     // stroj-class → plural in -e → locative in -i
     if (nominativePluralDerived().endsWith('e')) {
       derived = stem + 'i'; // stroj → o stroji
-      explanation = `inanimate noun ${stem} + i`;
+      explanation = `inanimate noun ${stem} + i (stroj class)`;
     } else {
       // hrad-class → -e
       derived = stem + 'e'; // hrad → o hrade
       explanation = `inanimate noun ${stem} + e`;
     }
 
-    return new DerivedWord(derived, explanation, ['noun://locative?noun-introduction&noun-stems&noun-endings-plural']);
+    return new DerivedWord(derived, explanation, STD_DOC_SINGULAR);
   }
 
   // ---------- FEMININE ----------
@@ -52,14 +57,8 @@ function locativeSingular(noun: Noun): DerivedWord {
       const softenedStem = softenStem(stem, gender, word);
       derived = softenedStem + 'i'; // kosť → kosti
       explanation = `feminine consonant-ending noun softened ${softenedStem} + i`;
-    }
-    // Ending in -ia → -ii
-    // else if (word.endsWith('ia')) {
-    //   derived = stem + 'ii'; // chémia → chémii
-    //   explanation = `feminine noun ${stem} + ii`;
-    // }
-    // Ending in -a → -e or -i
-    else if (word.endsWith('a')) {
+    } else if (word.endsWith('a')) {
+      // Ending in -a → -e or -i
       if (endsWithSoftConsonant(stem)) {
         derived = stem + 'i'; // stanica → stanici
         explanation = `feminine noun with soft consonant stem ${stem} + i`;
@@ -71,7 +70,7 @@ function locativeSingular(noun: Noun): DerivedWord {
       derived = stem + 'i'; // other feminines
       explanation = `feminine noun ${stem} + i`;
     }
-    return new DerivedWord(derived, explanation, ['noun://locative?noun-introduction&noun-stems&noun-endings-plural']);
+    return new DerivedWord(derived, explanation, STD_DOC_SINGULAR);
   }
 
   // ---------- NEUTER ----------
@@ -99,13 +98,8 @@ function locativeSingular(noun: Noun): DerivedWord {
   } else {
     throw new Error('Invalid gender for locative singular');
   }
-  return new DerivedWord(derived, explanation);
+  return new DerivedWord(derived, explanation, STD_DOC_SINGULAR);
 }
-
-const IRREGULAR_LOC_PL = {
-  // add known irregular locative plurals here, e.g.:
-  // "ľudia": "ľuďoch", // example only — verify before adding
-};
 
 /**
  * LOCATIVE — PLURAL
@@ -142,22 +136,13 @@ export function locativePlural(noun: Noun): DerivedWord {
       derived = stemed1() + 'iach';
       explanation = `stem ${stemed1()} + iách`;
     }
-    return new DerivedWord(derived, explanation, ['noun://locative?noun-introduction&noun-stems&noun-endings-plural']);
+    return new DerivedWord(derived, explanation, STD_DOC_PLURAL);
   }
 
   // --- MASCULINE ---
   else if (gender === 'M') {
-    if (nomPl.endsWith('i')) {
-      derived = stemed1() + 'och'; // chlapi → chlapoch
-      explanation = `stem ${stemed1()} + och`;
-    } else if (nomPl.endsWith('e')) {
-      derived = stemed1() + 'och';
-      explanation = `stem ${stemed1()} + och`;
-    } // stroje → strojoch
-    else {
-      derived = stemed1() + 'ych';
-      explanation = `stem ${stemed1()} + ych`;
-    }
+    derived = stemed1() + 'och'; // chlapi → chlapoch
+    explanation = `stem ${stemed1()} + och`;
   }
   // --- NEUTER ---
   else if (gender === 'N') {
@@ -176,7 +161,7 @@ export function locativePlural(noun: Noun): DerivedWord {
     derived = nomPl + 'ch';
   }
 
-  return new DerivedWord(derived, explanation, ['noun://locative?noun-introduction&noun-stems&noun-endings-singular']);
+  return new DerivedWord(derived, explanation, STD_DOC_PLURAL);
 }
 
 export const LocativeNounDeriver: NounDeclinator = {

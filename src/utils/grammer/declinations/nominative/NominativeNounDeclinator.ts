@@ -3,7 +3,8 @@ import Noun from '../Noun.ts';
 import { endsWithSoftConsonant } from '@/utils/grammer/declinations/NounUtils.ts';
 
 import DerivedWord from '@/utils/grammer/DerivedWord.ts';
-import { Gender } from '../../WordTypes.ts';
+import { CASE_TYPE, Gender } from '../../WordTypes.ts';
+import { standardNominalSections } from '@/documents/DocumentBuilder.ts';
 
 const getLast = (str: string) => str.slice(-1);
 
@@ -29,6 +30,11 @@ const FEMININE_SOFTEN_MAP = {
   ž: 'z',
   č: 'c',
 };
+
+const CASE = CASE_TYPE.NOMINATIVE;
+const schema = 'noun';
+const STD_DOC_SINGULAR = standardNominalSections(schema, CASE);
+const STD_DOC_PLURAL = standardNominalSections(schema, CASE, true);
 
 export function softenStem(stem, gender, originalWord) {
   if (!stem || stem.length <= 1) return stem; // <- don't soften single-letter stems
@@ -202,10 +208,7 @@ function nominativePlural(noun: Noun): DerivedWord {
   }
   const stemToUse = rule.useSoftenedStem ? softenedStem : originalStem;
   const derived = stemToUse + rule.suffix;
-  return new DerivedWord(derived, rule.explanation(stemToUse), [
-    'noun://nominative?noun-stems',
-    'noun://nominative?noun-endings-plural',
-  ]);
+  return new DerivedWord(derived, rule.explanation(stemToUse), STD_DOC_PLURAL);
 }
 
 export const NominativeNounDeclinator: NounDeclinator = {
@@ -214,13 +217,10 @@ export const NominativeNounDeclinator: NounDeclinator = {
       return new DerivedWord(noun.sk, `"${noun.sk}" only has plural form`);
     }
 
-    return new DerivedWord(noun.sk, 'nominative singular is the base form');
+    return new DerivedWord(noun.sk, 'nominative singular is the base form', STD_DOC_SINGULAR);
   },
   plural(noun: Noun): DerivedWord {
     const response = nominativePlural(noun);
-    return new DerivedWord(response.derived, response.explanation, [
-      'noun://nominative?noun-stems',
-      'noun://nominative?noun-endings-plural',
-    ]);
+    return new DerivedWord(response.derived, response.explanation, STD_DOC_PLURAL);
   },
 };

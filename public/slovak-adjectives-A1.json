@@ -1,235 +1,682 @@
 [
-  {"en": "accurate", "sk": "presný"},
-  {"en": "bad", "sk": "zlý"},
-  {"en": "beautiful", "sk": "krásny"},
-  {"en": "big", "sk": "veľký"},
-  {"en": "black", "sk": "čierny"},
-  {"en": "blue", "sk": "modrý"},
-  {"en": "boring", "sk": "nudný"},
-  {"en": "brave", "sk": "statočný"},
-  {"en": "broad", "sk": "široký"},
-  {"en": "broken", "sk": "zlomený"},
-  {"en": "brown", "sk": "hnedý"},
-  {"en": "cheap", "sk": "lacný"},
-  {"en": "clean", "sk": "čistý"},
-  {"en": "clumsy", "sk": "nemotorný"},
-  {"en": "cold", "sk": "chladný"},
-  {"en": "colorful", "sk": "farbistý"},
-  {"en": "comfortable", "sk": "pohodlný"},
-  {"en": "complicated", "sk": "komplikovaný"},
-  {"en": "crazy", "sk": "bláznivý"},
-  {"en": "curious", "sk": "zvedavý"},
-  {"en": "cute", "sk": "milý"},
-  {"en": "dangerous", "sk": "nebezpečný"},
-  {"en": "dark", "sk": "tmavý"},
-  {"en": "dead", "sk": "mŕtvy"},
-  {"en": "deep", "sk": "hlboký"},
-  {"en": "delicious", "sk": "chutný"},
-  {"en": "different", "sk": "odlišný"},
-  {"en": "dirty", "sk": "špinavý"},
-  {"en": "disgusting", "sk": "odporný"},
-  {"en": "dry", "sk": "suchý"},
-  {"en": "easy", "sk": "ľahký"},
-  {"en": "edible", "sk": "jedlý"},
-  {"en": "effective", "sk": "účinný"},
-  {"en": "elegant", "sk": "elegantný"},
-  {"en": "empty", "sk": "prázdny"},
-  {"en": "excellent", "sk": "vynikajúci"},
-  {"en": "excited", "sk": "vzrušený"},
-  {"en": "exciting", "sk": "vzrušujúci"},
-  {"en": "expensive", "sk": "drahý"},
-  {"en": "famous", "sk": "slávny"},
-  {"en": "far", "sk": "ďaleký"},
-  {"en": "fast", "sk": "rýchly"},
-  {"en": "first", "sk": "prvý"},
-  {"en": "flat", "sk": "plochý"},
-  {"en": "forbidden", "sk": "zakázaný"},
-  {"en": "friendly", "sk": "priateľský"},
-  {"en": "full", "sk": "plný"},
-  {"en": "funny", "sk": "smiešny"},
-  {"en": "good", "sk": "dobrý"},
-  {"en": "great", "sk": "veľký"},
-  {"en": "green", "sk": "zelený"},
-  {"en": "grey", "sk": "šedý"},
-  {"en": "happy", "sk": "šťastný"},
-  {"en": "hard", "sk": "tvrdý"},
-  {"en": "healthy", "sk": "zdravý"},
-  {"en": "heavy", "sk": "ťažký"},
-  {"en": "high", "sk": "vysoký"},
-  {"en": "honest", "sk": "poctivý"},
-  {"en": "huge", "sk": "obrovský"},
-  {"en": "hungry", "sk": "hladný"},
-  {"en": "immediate", "sk": "okamžitý"},
-  {"en": "important", "sk": "dôležitý"},
-  {"en": "impossible", "sk": "nemožný"},
-  {"en": "incredible", "sk": "neuveriteľný"},
-  {"en": "innocent", "sk": "nevinný"},
-  {"en": "intelligent", "sk": "inteligentný"},
-  {"en": "interesting", "sk": "zaujímavý"},
-  {"en": "international", "sk": "medzinárodný"},
-  {"en": "jealous", "sk": "žiarlivý"},
-  {"en": "lazy", "sk": "lenivý"},
-  {"en": "legal", "sk": "legálny"},
-  {"en": "lonely", "sk": "osamelý"},
-  {"en": "long", "sk": "dlhý"},
-  {"en": "low", "sk": "nízky"},
-  {"en": "mysterious", "sk": "záhadný"},
-  {"en": "narrow", "sk": "úzky"},
-  {"en": "necessary", "sk": "nutný"},
-  {"en": "new", "sk": "nový"},
-  {"en": "nice", "sk": "pekný"},
-  {"en": "noisy", "sk": "hlučný"},
-  {"en": "official", "sk": "oficiálny"},
-  {"en": "old", "sk": "starý"},
-  {"en": "open", "sk": "otvorený"},
-  {"en": "orange", "sk": "oranžový"},
-  {"en": "ordinary", "sk": "obyčajný"},
-  {"en": "passionate", "sk": "vášnivý"},
-  {"en": "patient", "sk": "trpezlivý"},
-  {"en": "perfect", "sk": "dokonalý"},
-  {"en": "pink", "sk": "ružový"},
-  {"en": "polluted", "sk": "znečistený"},
-  {"en": "poor", "sk": "chudobný"},
-  {"en": "popular", "sk": "populárny"},
-  {"en": "possible", "sk": "možný"},
-  {"en": "powerful", "sk": "mocný"},
-  {"en": "precious", "sk": "drahý"},
-  {"en": "purple", "sk": "fialový"},
-  {"en": "quiet", "sk": "pokojný"},
-  {"en": "rare", "sk": "zriedkavý"},
-  {"en": "red", "sk": "červený"},
-  {"en": "rich", "sk": "bohatý"},
-  {"en": "romantic", "sk": "romantický"},
-  {"en": "rotten", "sk": "zhnitý"},
-  {"en": "sad", "sk": "smutný"},
-  {"en": "scary", "sk": "desivý"},
-  {"en": "shallow", "sk": "plytký"},
-  {"en": "short", "sk": "krátky"},
-  {"en": "shy", "sk": "nesmelý"},
-  {"en": "sick", "sk": "chorý"},
-  {"en": "silent", "sk": "tichý"},
-  {"en": "similar", "sk": "podobný"},
-  {"en": "simple", "sk": "jednoduchý"},
-  {"en": "slow", "sk": "pomalý"},
-  {"en": "small", "sk": "malý"},
-  {"en": "soft", "sk": "mäkký"},
-  {"en": "solid", "sk": "pevný"},
-  {"en": "sour", "sk": "kyslý"},
-  {"en": "special", "sk": "špeciálny"},
-  {"en": "steep", "sk": "strmý"},
-  {"en": "strange", "sk": "zvláštny"},
-  {"en": "strong", "sk": "silný"},
-  {"en": "stubborn", "sk": "tvrdohlavý"},
-  {"en": "sweet", "sk": "sladký"},
-  {"en": "sympathetic", "sk": "súcitný"},
-  {"en": "tedious", "sk": "nudný"},
-  {"en": "thick", "sk": "tlstý"},
-  {"en": "thin", "sk": "tenký"},
-  {"en": "thirsty", "sk": "smädný"},
-  {"en": "tiny", "sk": "maličký"},
-  {"en": "tired", "sk": "unavený"},
-  {"en": "traditional", "sk": "tradičný"},
-  {"en": "unique", "sk": "jedinečný"},
-  {"en": "warm", "sk": "teplý"},
-  {"en": "weak", "sk": "slabý"},
-  {"en": "weird", "sk": "čudný"},
-  {"en": "wet", "sk": "mokrý"},
-  {"en": "white", "sk": "biely"},
-  {"en": "worst", "sk": "najhorší"},
-  {"en": "yellow", "sk": "žltý"},
-  {"en": "young", "sk": "mladý"},
-  {"en": "baked", "sk": "pečený"},
-  {"en": "boiled", "sk": "varený"},
-  {"en": "fried", "sk": "vyprážaný"},
-  {"en": "grilled", "sk": "grilovaný"},
-  {"en": "roasted", "sk": "pečený"},
-  {"en": "steamed", "sk": "parený"},
-  {"en": "stewed", "sk": "dusený"},
-  {"en": "smoked", "sk": "údený"},
-  {"en": "poached", "sk": "pošírovaný"},
-  {"en": "breaded", "sk": "obalený"},
-  {"en": "marinated", "sk": "marinovaný"},
-  {"en": "pickled", "sk": "nakladaný"},
-  {"en": "salted", "sk": "solený"},
-  {"en": "fermented", "sk": "kvasený"},
-  {"en": "raw", "sk": "surový"},
-  { "en": "big", "sk": "veľký" },
-  { "en": "small", "sk": "malý" },
-  { "en": "long", "sk": "dlhý" },
-  { "en": "short", "sk": "krátky" },
-  { "en": "wide", "sk": "široký" },
-  { "en": "narrow", "sk": "úzky" },
-  { "en": "tall", "sk": "vysoký" },
-  { "en": "high", "sk": "vysoký" },
-  { "en": "low", "sk": "nízky" },
-  { "en": "old", "sk": "starý" },
-  { "en": "young", "sk": "mladý" },
-  { "en": "new", "sk": "nový" },
-  { "en": "good", "sk": "dobrý" },
-  { "en": "bad", "sk": "zlý" },
-  { "en": "pretty", "sk": "pekný" },
-  { "en": "nice", "sk": "pekný" },
-  { "en": "ugly", "sk": "škaredý" },
-  { "en": "strong", "sk": "silný" },
-  { "en": "weak", "sk": "slabý" },
-  { "en": "straight", "sk": "rovný" },
-  { "en": "crooked", "sk": "krivý" },
-  { "en": "white", "sk": "biely" },
-  { "en": "black", "sk": "čierny" },
-  { "en": "red", "sk": "červený" },
-  { "en": "blue", "sk": "modrý" },
-  { "en": "green", "sk": "zelený" },
-  { "en": "yellow", "sk": "žltý" },
-  { "en": "orange", "sk": "oranžový" },
-  { "en": "pink", "sk": "ružový" },
-  { "en": "purple", "sk": "fialový" },
-  { "en": "brown", "sk": "hnedý" },
-  { "en": "grey", "sk": "sivý" },
-  { "en": "sad", "sk": "smutný" },
-  { "en": "happy", "sk": "veselý" },
-  { "en": "tired", "sk": "unavený" },
-  { "en": "healthy", "sk": "zdravý" },
-  { "en": "sick", "sk": "chorý" },
-  { "en": "hungry", "sk": "hladný" },
-  { "en": "thirsty", "sk": "smädný" },
-  { "en": "warm", "sk": "teplý" },
-  { "en": "cold", "sk": "studený" },
-  { "en": "hot", "sk": "horúci" },
-  { "en": "cool", "sk": "chladný" },
-  { "en": "sunny", "sk": "slnečný" },
-  { "en": "rainy", "sk": "daždivý" },
-  { "en": "windy", "sk": "veterný" },
-  { "en": "cloudy", "sk": "zamračený" },
-  { "en": "cheap", "sk": "lacný" },
-  { "en": "expensive", "sk": "drahý" },
-  { "en": "fast", "sk": "rýchly" },
-  { "en": "slow", "sk": "pomalý" },
-  { "en": "simple", "sk": "jednoduchý" },
-  { "en": "difficult", "sk": "ťažký" },
-  { "en": "light", "sk": "ľahký" },
-  { "en": "heavy", "sk": "ťažký" },
-  { "en": "full", "sk": "plný" },
-  { "en": "empty", "sk": "prázdny" },
-  { "en": "same", "sk": "rovnaký" },
-  { "en": "different", "sk": "iný" },
-  { "en": "kind", "sk": "milý" },
-  { "en": "friendly", "sk": "priateľský" },
-  { "en": "quiet", "sk": "tichý" },
-  { "en": "noisy", "sk": "hlučný" },
-  { "en": "rich", "sk": "bohatý" },
-  { "en": "poor", "sk": "chudobný" },
-  { "en": "clean", "sk": "čistý" },
-  { "en": "dirty", "sk": "špinavý" },
-  { "en": "open", "sk": "otvorený" },
-  { "en": "closed", "sk": "zatvorený" },
-  { "en": "wet", "sk": "mokrý" },
-  { "en": "dry", "sk": "suchý" },
-  { "en": "soft", "sk": "mäkký" },
-  { "en": "hard", "sk": "tvrdý" },
-  { "en": "early", "sk": "skorý" },
-  { "en": "late", "sk": "neskorý" },
-  { "en": "last", "sk": "minulý" },
-  { "en": "next", "sk": "budúci" },
-  { "en": "today's", "sk": "dnešný" },
-  { "en": "daily", "sk": "denný" }
+  {
+    "en": "accurate",
+    "sk": "presný"
+  },
+  {
+    "en": "bad",
+    "sk": "zlý"
+  },
+  {
+    "en": "baked",
+    "sk": "pečený"
+  },
+  {
+    "en": "beautiful",
+    "sk": "krásny"
+  },
+  {
+    "en": "big",
+    "sk": "veľký"
+  },
+  {
+    "en": "black",
+    "sk": "čierny"
+  },
+  {
+    "en": "blue",
+    "sk": "modrý"
+  },
+  {
+    "en": "boiled",
+    "sk": "varený"
+  },
+  {
+    "en": "boring",
+    "sk": "nudný"
+  },
+  {
+    "en": "brave",
+    "sk": "statočný"
+  },
+  {
+    "en": "breaded",
+    "sk": "obalený"
+  },
+  {
+    "en": "broad",
+    "sk": "široký"
+  },
+  {
+    "en": "broken",
+    "sk": "zlomený"
+  },
+  {
+    "en": "brown",
+    "sk": "hnedý"
+  },
+  {
+    "en": "cheap",
+    "sk": "lacný"
+  },
+  {
+    "en": "clean",
+    "sk": "čistý"
+  },
+  {
+    "en": "closed",
+    "sk": "zatvorený"
+  },
+  {
+    "en": "cloudy",
+    "sk": "zamračený"
+  },
+  {
+    "en": "clumsy",
+    "sk": "nemotorný"
+  },
+  {
+    "en": "cold",
+    "sk": "chladný"
+  },
+  {
+    "en": "cold",
+    "sk": "studený"
+  },
+  {
+    "en": "colorful",
+    "sk": "farbistý"
+  },
+  {
+    "en": "comfortable",
+    "sk": "pohodlný"
+  },
+  {
+    "en": "complicated",
+    "sk": "komplikovaný"
+  },
+  {
+    "en": "crazy",
+    "sk": "bláznivý"
+  },
+  {
+    "en": "crooked",
+    "sk": "krivý"
+  },
+  {
+    "en": "curious",
+    "sk": "zvedavý"
+  },
+  {
+    "en": "cute",
+    "sk": "milý"
+  },
+  {
+    "en": "daily",
+    "sk": "denný"
+  },
+  {
+    "en": "dangerous",
+    "sk": "nebezpečný"
+  },
+  {
+    "en": "dark",
+    "sk": "tmavý"
+  },
+  {
+    "en": "dead",
+    "sk": "mŕtvy"
+  },
+  {
+    "en": "deep",
+    "sk": "hlboký"
+  },
+  {
+    "en": "delicious",
+    "sk": "chutný"
+  },
+  {
+    "en": "different",
+    "sk": "odlišný"
+  },
+  {
+    "en": "different",
+    "sk": "iný"
+  },
+  {
+    "en": "difficult",
+    "sk": "ťažký"
+  },
+  {
+    "en": "dirty",
+    "sk": "špinavý"
+  },
+  {
+    "en": "disgusting",
+    "sk": "odporný"
+  },
+  {
+    "en": "dry",
+    "sk": "suchý"
+  },
+  {
+    "en": "early",
+    "sk": "skorý"
+  },
+  {
+    "en": "easy",
+    "sk": "ľahký"
+  },
+  {
+    "en": "edible",
+    "sk": "jedlý"
+  },
+  {
+    "en": "effective",
+    "sk": "účinný"
+  },
+  {
+    "en": "elegant",
+    "sk": "elegantný"
+  },
+  {
+    "en": "empty",
+    "sk": "prázdny"
+  },
+  {
+    "en": "excellent",
+    "sk": "vynikajúci"
+  },
+  {
+    "en": "excited",
+    "sk": "vzrušený"
+  },
+  {
+    "en": "exciting",
+    "sk": "vzrušujúci"
+  },
+  {
+    "en": "expensive",
+    "sk": "drahý"
+  },
+  {
+    "en": "famous",
+    "sk": "slávny"
+  },
+  {
+    "en": "far",
+    "sk": "ďaleký"
+  },
+  {
+    "en": "fast",
+    "sk": "rýchly"
+  },
+  {
+    "en": "fermented",
+    "sk": "kvasený"
+  },
+  {
+    "en": "first",
+    "sk": "prvý"
+  },
+  {
+    "en": "flat",
+    "sk": "plochý"
+  },
+  {
+    "en": "forbidden",
+    "sk": "zakázaný"
+  },
+  {
+    "en": "fried",
+    "sk": "vyprážaný"
+  },
+  {
+    "en": "friendly",
+    "sk": "priateľský"
+  },
+  {
+    "en": "full",
+    "sk": "plný"
+  },
+  {
+    "en": "funny",
+    "sk": "smiešny"
+  },
+  {
+    "en": "good",
+    "sk": "dobrý"
+  },
+  {
+    "en": "green",
+    "sk": "zelený"
+  },
+  {
+    "en": "grey",
+    "sk": "šedý"
+  },
+  {
+    "en": "grey",
+    "sk": "sivý"
+  },
+  {
+    "en": "grilled",
+    "sk": "grilovaný"
+  },
+  {
+    "en": "happy",
+    "sk": "šťastný"
+  },
+  {
+    "en": "happy",
+    "sk": "veselý"
+  },
+  {
+    "en": "hard",
+    "sk": "tvrdý"
+  },
+  {
+    "en": "healthy",
+    "sk": "zdravý"
+  },
+  {
+    "en": "high",
+    "sk": "vysoký"
+  },
+  {
+    "en": "honest",
+    "sk": "poctivý"
+  },
+  {
+    "en": "hot",
+    "sk": "horúci"
+  },
+  {
+    "en": "huge",
+    "sk": "obrovský"
+  },
+  {
+    "en": "hungry",
+    "sk": "hladný"
+  },
+  {
+    "en": "immediate",
+    "sk": "okamžitý"
+  },
+  {
+    "en": "important",
+    "sk": "dôležitý"
+  },
+  {
+    "en": "impossible",
+    "sk": "nemožný"
+  },
+  {
+    "en": "incredible",
+    "sk": "neuveriteľný"
+  },
+  {
+    "en": "innocent",
+    "sk": "nevinný"
+  },
+  {
+    "en": "intelligent",
+    "sk": "inteligentný"
+  },
+  {
+    "en": "interesting",
+    "sk": "zaujímavý"
+  },
+  {
+    "en": "international",
+    "sk": "medzinárodný"
+  },
+  {
+    "en": "jealous",
+    "sk": "žiarlivý"
+  },
+  {
+    "en": "last",
+    "sk": "minulý"
+  },
+  {
+    "en": "late",
+    "sk": "neskorý"
+  },
+  {
+    "en": "lazy",
+    "sk": "lenivý"
+  },
+  {
+    "en": "legal",
+    "sk": "legálny"
+  },
+  {
+    "en": "lonely",
+    "sk": "osamelý"
+  },
+  {
+    "en": "long",
+    "sk": "dlhý"
+  },
+  {
+    "en": "low",
+    "sk": "nízky"
+  },
+  {
+    "en": "marinated",
+    "sk": "marinovaný"
+  },
+  {
+    "en": "mysterious",
+    "sk": "záhadný"
+  },
+  {
+    "en": "narrow",
+    "sk": "úzky"
+  },
+  {
+    "en": "necessary",
+    "sk": "nutný"
+  },
+  {
+    "en": "new",
+    "sk": "nový"
+  },
+  {
+    "en": "next",
+    "sk": "budúci"
+  },
+  {
+    "en": "nice",
+    "sk": "pekný"
+  },
+  {
+    "en": "noisy",
+    "sk": "hlučný"
+  },
+  {
+    "en": "official",
+    "sk": "oficiálny"
+  },
+  {
+    "en": "old",
+    "sk": "starý"
+  },
+  {
+    "en": "open",
+    "sk": "otvorený"
+  },
+  {
+    "en": "orange",
+    "sk": "oranžový"
+  },
+  {
+    "en": "ordinary",
+    "sk": "obyčajný"
+  },
+  {
+    "en": "passionate",
+    "sk": "vášnivý"
+  },
+  {
+    "en": "patient",
+    "sk": "trpezlivý"
+  },
+  {
+    "en": "perfect",
+    "sk": "dokonalý"
+  },
+  {
+    "en": "pickled",
+    "sk": "nakladaný"
+  },
+  {
+    "en": "pink",
+    "sk": "ružový"
+  },
+  {
+    "en": "poached",
+    "sk": "pošírovaný"
+  },
+  {
+    "en": "polluted",
+    "sk": "znečistený"
+  },
+  {
+    "en": "poor",
+    "sk": "chudobný"
+  },
+  {
+    "en": "popular",
+    "sk": "populárny"
+  },
+  {
+    "en": "possible",
+    "sk": "možný"
+  },
+  {
+    "en": "powerful",
+    "sk": "mocný"
+  },
+  {
+    "en": "purple",
+    "sk": "fialový"
+  },
+  {
+    "en": "quiet",
+    "sk": "pokojný"
+  },
+  {
+    "en": "quiet",
+    "sk": "tichý"
+  },
+  {
+    "en": "rainy",
+    "sk": "daždivý"
+  },
+  {
+    "en": "rare",
+    "sk": "zriedkavý"
+  },
+  {
+    "en": "raw",
+    "sk": "surový"
+  },
+  {
+    "en": "red",
+    "sk": "červený"
+  },
+  {
+    "en": "rich",
+    "sk": "bohatý"
+  },
+  {
+    "en": "romantic",
+    "sk": "romantický"
+  },
+  {
+    "en": "rotten",
+    "sk": "zhnitý"
+  },
+  {
+    "en": "sad",
+    "sk": "smutný"
+  },
+  {
+    "en": "salted",
+    "sk": "solený"
+  },
+  {
+    "en": "same",
+    "sk": "rovnaký"
+  },
+  {
+    "en": "scary",
+    "sk": "desivý"
+  },
+  {
+    "en": "shallow",
+    "sk": "plytký"
+  },
+  {
+    "en": "short",
+    "sk": "krátky"
+  },
+  {
+    "en": "shy",
+    "sk": "nesmelý"
+  },
+  {
+    "en": "sick",
+    "sk": "chorý"
+  },
+  {
+    "en": "similar",
+    "sk": "podobný"
+  },
+  {
+    "en": "simple",
+    "sk": "jednoduchý"
+  },
+  {
+    "en": "slow",
+    "sk": "pomalý"
+  },
+  {
+    "en": "small",
+    "sk": "malý"
+  },
+  {
+    "en": "smoked",
+    "sk": "údený"
+  },
+  {
+    "en": "soft",
+    "sk": "mäkký"
+  },
+  {
+    "en": "solid",
+    "sk": "pevný"
+  },
+  {
+    "en": "sour",
+    "sk": "kyslý"
+  },
+  {
+    "en": "special",
+    "sk": "špeciálny"
+  },
+  {
+    "en": "steamed",
+    "sk": "parený"
+  },
+  {
+    "en": "steep",
+    "sk": "strmý"
+  },
+  {
+    "en": "stewed",
+    "sk": "dusený"
+  },
+  {
+    "en": "straight",
+    "sk": "rovný"
+  },
+  {
+    "en": "strange",
+    "sk": "zvláštny"
+  },
+  {
+    "en": "strong",
+    "sk": "silný"
+  },
+  {
+    "en": "stubborn",
+    "sk": "tvrdohlavý"
+  },
+  {
+    "en": "sunny",
+    "sk": "slnečný"
+  },
+  {
+    "en": "sweet",
+    "sk": "sladký"
+  },
+  {
+    "en": "sympathetic",
+    "sk": "súcitný"
+  },
+  {
+    "en": "thick",
+    "sk": "tlstý"
+  },
+  {
+    "en": "thin",
+    "sk": "tenký"
+  },
+  {
+    "en": "thirsty",
+    "sk": "smädný"
+  },
+  {
+    "en": "tiny",
+    "sk": "maličký"
+  },
+  {
+    "en": "tired",
+    "sk": "unavený"
+  },
+  {
+    "en": "today's",
+    "sk": "dnešný"
+  },
+  {
+    "en": "traditional",
+    "sk": "tradičný"
+  },
+  {
+    "en": "ugly",
+    "sk": "škaredý"
+  },
+  {
+    "en": "unique",
+    "sk": "jedinečný"
+  },
+  {
+    "en": "warm",
+    "sk": "teplý"
+  },
+  {
+    "en": "weak",
+    "sk": "slabý"
+  },
+  {
+    "en": "weird",
+    "sk": "čudný"
+  },
+  {
+    "en": "wet",
+    "sk": "mokrý"
+  },
+  {
+    "en": "white",
+    "sk": "biely"
+  },
+  {
+    "en": "windy",
+    "sk": "veterný"
+  },
+  {
+    "en": "worst",
+    "sk": "najhorší"
+  },
+  {
+    "en": "yellow",
+    "sk": "žltý"
+  },
+  {
+    "en": "young",
+    "sk": "mladý"
+  }
 ]

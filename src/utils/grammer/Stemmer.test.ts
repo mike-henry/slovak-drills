@@ -38,6 +38,7 @@ describe('Basic Slovak stemmer', () => {
   test('Masculine -ec alternations', () => {
     expect(noun('starec', Gender.Masculine).getStem()).toBe('starc');
     expect(noun('otec', Gender.Masculine).getStem()).toBe('otc');
+    expect(noun('článok', Gender.Masculine).getStem()).toBe('článk');
     expect(noun('mladík', Gender.Masculine).getStem()).toBe('mladík'); // no change
   });
 

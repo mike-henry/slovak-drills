@@ -1,0 +1,28 @@
+[
+  { "en": "today", "sk": "dnes", "label": ["time"] },
+  { "en": "yesterday", "sk": "včera", "label": ["time"] },
+  { "en": "tomorrow", "sk": "zajtra", "label": ["time"] },
+  { "en": "now", "sk": "teraz", "label": ["time"] },
+  { "en": "soon", "sk": "čoskoro", "label": ["time"] },
+  { "en": "later", "sk": "neskôr", "label": ["time"] },
+  { "en": "early", "sk": "skoro", "label": ["time"] },
+  { "en": "late", "sk": "neskoro", "label": ["time"] },
+  { "en": "already", "sk": "už", "label": ["time"] },
+  { "en": "still", "sk": "ešte", "label": ["time"] },
+  { "en": "yet", "sk": "ešte", "label": ["time"] },
+  { "en": "then", "sk": "potom", "label": ["time"] },
+  { "en": "afterwards", "sk": "potom", "label": ["time"] },
+  { "en": "recently", "sk": "nedávno", "label": ["time"] },
+  { "en": "immediately", "sk": "hneď", "label": ["time"] }
+
+  { "en": "always", "sk": "vždy", "label": ["frequency"] },
+  { "en": "usually", "sk": "zvyčajne", "label": ["frequency"] },
+  { "en": "often", "sk": "často", "label": ["frequency"] },
+  { "en": "sometimes", "sk": "niekedy", "label": ["frequency"] },
+  { "en": "occasionally", "sk": "občas", "label": ["frequency"] },
+  { "en": "rarely", "sk": "zriedka", "label": ["frequency"] },
+  { "en": "seldom", "sk": "zriedka", "label": ["frequency"] },
+  { "en": "never", "sk": "nikdy", "label": ["frequency"] },
+  { "en": "once", "sk": "raz", "label": ["frequency"] },
+  { "en": "twice", "sk": "dvakrát", "label": ["frequency"] }
+]

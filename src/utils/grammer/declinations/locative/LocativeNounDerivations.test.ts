@@ -70,9 +70,9 @@ describe('Locative Noun Derivations (explicit noun objects)', () => {
     expect(result.derived).toBe('strojoch');
   });
 
-  test('masculine inanimate terminal → -i (terminál → terminálych)', () => {
+  test('masculine inanimate terminal → -i (terminál → termináloch)', () => {
     const result = terminal.declinate(CASE, true);
-    expect(result.derived).toBe('terminálych');
+    expect(result.derived).toBe('termináloch');
   });
 
   test('neuter plural (mesto → mestách)', () => {

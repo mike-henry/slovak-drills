@@ -1,14 +1,16 @@
 <section id="noun-introduction" >
 <section id="adjective-introduction" >
-# Locative Case
 
-Used only with prepositions to express **location, state, or topic**.  
-Never stands alone. Often contrasts with accusative (motion vs. location).
+# Locative Case (Lokál)
+
+Used only with prepositions to express **static location, state, or topic**.  
+Never stands alone. It is the only case in Slovak that is strictly prepositional.
 
 ---
 
 </section>
 </section>
+
 <section id="stems">
 
 ## 1. Stems
@@ -17,9 +19,10 @@ Never stands alone. Often contrasts with accusative (motion vs. location).
 
 ### Adjective stems
 
-- Adjectives keep their base stem (no dropping letters).
-- Declension endings attach directly to the stem.
-- Example: _dobr-_ → _dobrý, dobrého, dobrom_.
+- Adjectives keep their base stem (found by removing the ending _-ý/-ia/-ie_).
+- **Hard adjectives:** Stem ends in a hard or neutral consonant (e.g., _pekn-_ from _pekný_).
+- **Soft adjectives:** Stem ends in a soft consonant (e.g., _cudz-_ from _cudzí_).
+- Declension endings attach directly to this stem.
 
 </section>
 
@@ -29,25 +32,24 @@ Never stands alone. Often contrasts with accusative (motion vs. location).
 
 **Masculine**
 
-- Consonant stems are kept.
-- Nouns ending in **-ec** drop **e** (_chlapec → chlapc-_).
-- Nouns ending in **-a** drop **a** (_kolega → koleg-_).
+- **Inanimate:** The stem is the Nominative form (_hrad, stroj_).
+- **Dropping Vowels:** Nouns ending in **-ec, -ok, -el, -er** often drop the last vowel (_chlapec → chlapc-_, _piatok → piatk-_).
+- **-a nouns:** Nouns ending in **-a** (animate) drop the **-a** (_kolega → koleg-_).
 
 **Feminine**
 
-- **-a →** drop **a** (_žena → žen-_).
-- **-ia →** drop **ia** (_ulica → ulic-_).
-- Consonant-ending stems remain unchanged (_dlaň_).
+- **-a →** drop **-a** (_žena → žen-_).
+- **-ia →** drop **-ia** (_ulica → ulic-_).
+- **Consonant stems:** Remain unchanged (_dlaň_).
 
 **Neuter**
 
-- Same as nominative stem rules (_mesto → mest-_).
+- **-o / -e / -ie nouns:** Drop the final vowel (_mesto → mest-_, _srdce → srdc-_, _vysvedčenie → vysvedčen-_).
 
 **Exceptions**
 
-- Masculine animate in **-ec** → drop _e_.
-- Masculine animate in **-a** → drop _a_.
-- Feminine consonant stems stay unchanged.
+- Masculine animate nouns usually take the suffix **-ovi**, so the stem remains fully intact.
+- Foreign neuter nouns in **-um** drop the **-um** (_múzeum → múze-_).
 
 </section>
 
@@ -67,23 +69,22 @@ Never stands alone. Often contrasts with accusative (motion vs. location).
 
 **Masculine**
 
-- Endings: **-e**, **-ovi**
-- Soft vs. hard stems determine which ending is used.
-- Examples: _o chlapcovi, o mužovi, o stroji_
+- **Animate:** **-ovi** (_o chlapcovi, o mužovi_)
+- **Inanimate Hard Stem:** **-e** (_v pláne, na stole_)
+- **Inanimate Soft Stem:** **-i** (_v počítači, v koši_)
+- **Velar Stem (k, g, h, ch):** **-u** (_v parku, v batohu_)
 
 **Feminine**
 
-- **-a → -e**
-- **-ia → -i**
-- Consonant stems → **-i**
-- Examples: _o žene, o kraji, o dlani_
+- **Hard Stem (-a):** **-e** (_o žene, v škole_)
+- **Soft Stem (-ia / -a with soft consonant):** **-i** (_v ulici, o práci_)
+- **Consonant stems:** **-i** (_v dlani, v noci_)
 
 **Neuter**
 
-- **-o → -e**
-- **-e → -i**
-- **-um → -e**
-- Examples: _o meste, o srdci_
+- **Hard Stem (-o):** **-e** (_v meste, v kine_)
+- **Soft Stem (-e / -ie):** **-i** (_v srdci, na vysvedčení_)
+- **Velar Stem:** **-u** (_v jablku_)
 
 </section>
 
@@ -93,24 +94,22 @@ Never stands alone. Often contrasts with accusative (motion vs. location).
 
 **Masculine**
 
-- Typical ending: **-och**
-- Example: _o chlapoch, o mužoch_
+- **All stems:** **-och** (_o chlapoch, v počítačoch, v hradoch_)
 
 **Feminine**
 
-- Typical ending: **-ách**
-- Example: _o ženách, o krajinách_
+- **Hard stems:** **-ách** (_o ženách, v knihách_)
+- **Soft stems:** **-iach** (_v uliciach, v prácach_)
 
 **Neuter**
 
-- Typical ending: **-ách**
-- Example: _o mestách, o srdciach_
+- **Hard stems:** **-ách** (_v mestách, v jablkách_)
+- **Soft stems:** **-iach** (_v srdciach, v poliach_)
 
 **Exceptions**
 
-- Some masculine nouns vary:
-  - _o hradoch, o strojoch_
-- Irregular neuters may vary (_dieťa → o detoch_).
+- Irregular neuter _dieťa_ (child) → **o deťoch**.
+- Some masculine nouns ending in _-ia_ (like _bratia_) → **o bratoch**.
 
 </section>
 
@@ -122,18 +121,13 @@ Never stands alone. Often contrasts with accusative (motion vs. location).
 
 **Singular**
 
-- Masculine → **-om** (_o dobrom mužovi_)
-- Feminine → **-ej** (_o dobrej žene_)
-- Neuter → **-om** (_o dobrom meste_)
+- Masculine & Neuter → **-om** (_o dobrom mužovi, v dobrom meste_)
+- Feminine → **-ej** (_v dobrej škole_)
 
 **Plural**
 
-- All genders → **-ých**
-  - _o dobrých mužoch, o dobrých ženách, o dobrých mestách_
-
-**Exceptions**
-
-- Soft adjectives in **-í** follow the same pattern (_o cudzom_).
+- **All genders:** **-ých** (Hard stem) or **-ích** (Soft stem)
+  - _o dobrých ľuďoch, v cudzích mestách_
 
 </section>
 
@@ -143,13 +137,12 @@ Never stands alone. Often contrasts with accusative (motion vs. location).
 
 **Singular**
 
-- Masculine → _o tom mužovi_
-- Feminine → _o tej žene_
-- Neuter → _o tom meste_
+- Masculine/Neuter → **tom** (_o tom mužovi, v tom meste_)
+- Feminine → **tej** (_v tej škole_)
 
 **Plural**
 
-- _o tých mužoch, o tých ženách, o tých mestách_
+- All genders → **tých** (_v týchto dňoch, o tých ľuďoch_)
 
 </section>
 
@@ -157,23 +150,21 @@ Never stands alone. Often contrasts with accusative (motion vs. location).
 
 ### Pronouns — locative
 
+Locative pronouns are **always used with prepositions**. They do not have "short" vs. "long" forms.
+
 **Singular**
 
-- 1st: _o mne_
-- 2nd: _o tebe_
-- 3rd masculine: _o ňom_
-- 3rd feminine: _o nej_
-- 3rd neuter: _o ňom_
+- 1st: **mne** (_o mne_)
+- 2nd: **tebe** (_o tebe_)
+- 3rd masculine: **ňom** (_o ňom_)
+- 3rd feminine: **nej** (_o nej_)
+- 3rd neuter: **ňom** (_o ňom_)
 
 **Plural**
 
-- 1st: _o nás_
-- 2nd: _o vás_
-- 3rd: _o nich_
-
-**Notes**
-
-- Always used with prepositions: _o mne, v tebe, na ňom_.
+- 1st: **nás** (_o nás_)
+- 2nd: **vás** (_o vás_)
+- 3rd: **nich** (_o nich_)
 
 </section>
 
@@ -181,22 +172,15 @@ Never stands alone. Often contrasts with accusative (motion vs. location).
 
 ### Frequently used verbs with locative objects
 
-These verbs require a **locative complement with a preposition**:
+These verbs require the preposition **o** + Locative:
 
 - _rozprávať o_ — to talk about
-  - _Rozprávame o knihe._
-- _myslieť na_ — to think about
-  - _Myslím na teba._
-- _pracovať na_ — to work on
-  - _Pracujem na projekte._
-- _záležať na_ — to depend on
-  - _Záleží na výsledku._
-- _byť v/na_ — to be in/on
-  - _Som v škole, na stole._
+- _písať o_ — to write about
+- _premýšľať o_ — to ponder about
+- _snívať o_ — to dream about
+- _dozvedieť sa o_ — to find out about
 
-**Notes**
-
-- Locative **never appears without a preposition**.
+**Note:** _Myslieť na_ (to think about) usually takes the **Accusative** in Slovak.
 
 </section>
 
@@ -204,131 +188,18 @@ These verbs require a **locative complement with a preposition**:
 
 ### Prepositions governing the locative
 
-These prepositions require the locative (static location or topic):
+Used for static location or topic:
 
-- _v / vo_ — in
-  - _Som v meste._
-- _na_ — on, at
-  - _Na stole, na univerzite._
-- _o_ — about
-  - _Rozprávame o knihe._
-- _po_ — after, around
-  - _Po vojne, po meste._
-- _pri_ — near, by
-  - _Pri škole._
-- _medzi_ — among, between
-  - _Medzi ľuďmi._
+- _v / vo_ — in (_v meste_)
+- _na_ — on / at (_na univerzite_)
+- _o_ — about (_o filme_)
+- _po_ — after / along (_po práci, po ceste_)
+- _pri_ — near / by (_pri lese_)
 
 **Notes / exceptions**
 
-- _na, po, medzi_ take **accusative** when they express motion.
-- Locative is only for static location or topic.
-
-</section>
-
-</section>
-<section id="pronouns">
-<section id="pronouns-introduction">
-
-### Pronouns — locative
-
-Locative pronouns are **always used with prepositions** (e.g., _v, na, o, pri, medzi_) to indicate **location, state, or topic**.  
-They **never appear alone**.
-
----
-
-</section>
-<section id="pronouns-short-forms">
-
-#### **Locative Pronouns — Short Forms (unstressed)**
-
-Short forms are **unstressed pronouns** used in everyday speech.  
-They appear **immediately after the governing preposition** and are common in neutral contexts.
-
-**Key points:**
-
-- Used with prepositions (_v, na, o, pri, medzi_)
-- Neutral, casual, unstressed
-- Not used for emphasis
-
-**Examples:**
-
-- \*Som **v mne\*** — I am inside (myself)
-- \*Myslím **o tebe\*** — I think about you
-- \*Prišiel som **pri ňom\*** — I came near him
-
-**Notes:**  
-Short forms = **unstressed, casual, immediately follow the preposition.**
-
-</section>
-
-<section id="pronouns-long-forms">
-
-#### **Locative Pronouns — Long Forms (stressed/emphatic)**
-
-Long forms emphasize the pronoun or are used for contrast.  
-They may appear **later in the sentence** or in **formal writing**.
-
-**Key points:**
-
-- Flexible placement in the sentence
-- Emphasizes the object/location/topic
-- Always used with a preposition
-
-**Examples:**
-
-- _Myslím **o tebe**, nie o ňom._ — I think about **you**, not him
-- _Som spokojný **v mne**, nie v tebe._ — I am satisfied **with myself**, not you
-
-**Notes:**  
-Long forms = stressed/emphatic pronouns for locative objects.
-
-</section>
-
-<section id="pronouns-after-prep">
-
-#### **Locative Pronouns — After Preposition Forms**
-
-After-preposition forms are **required for correctness** in formal or written Slovak.  
-They **always follow the governing preposition** (_v, na, o, pri, medzi_).
-
-**Key points:**
-
-- Short forms cannot be used in formal/written contexts after a preposition
-- Placement is directly after the preposition
-- Required for grammatical accuracy
-
-**Examples:**
-
-- \*v **mne\*** — in me
-- \*na **tebe\*** — on you
-- \*o **ňom\*** — about him
-- \*pri **nej\*** — near her
-- \*medzi **nimi\*** — among them
-
-**Notes:**  
-After-prep forms = **mandatory after prepositions governing locative**.
-
-</section>
-
-<section id="pronouns-sentence-order">
-
-#### **Locative Pronouns — Sentence Order and Usage Notes**
-
-Sentence order depends on the form:
-
-- **Short forms:** directly after the preposition  
-  \*Myslím o **tebe\*** — neutral/unstressed
-- **Long forms:** later in the sentence, for emphasis  
-  _Myslím o **tebe**, nie o ňom._ — I think about **you**, not him
-- **After-prep forms:** always follow the preposition  
-  \*Som v **mne\*** — grammatically correct form
-
-**Summary:**
-
-- Short → unstressed, casual, immediately after preposition
-- Long → stressed/emphatic, flexible placement
-- After-prep → mandatory after preposition for formal/written Slovak
+- _na_ and _po_ take **Accusative** when expressing motion toward a destination.
+- _medzi_ (between/among) takes the **Instrumental** case.
 
 </section>
 

@@ -5,6 +5,13 @@ import DerivedWord from '../../DerivedWord';
 import type Adjective from '../Adjective';
 import type Noun from '../Noun';
 import { STANDARD_SECTIONS } from '@/documents/DocumentLoader';
+import { standardNominalSections } from '@/documents/DocumentBuilder';
+import { CASE_TYPE } from '../../WordTypes';
+
+const CASE = CASE_TYPE.ACCUSATIVE;
+const schema = 'adjective';
+const STD_DOC_SINGULAR = standardNominalSections(schema, CASE);
+const STD_DOC_PLURAL = standardNominalSections(schema, CASE, true);
 
 function accusativeAdjectiveSingular(adjective: string, noun: Noun) {
   const { gender, animate } = noun;
@@ -48,8 +55,8 @@ function accusativeAdjectiveSingular(adjective: string, noun: Noun) {
 
 function accusativeAdjectivePlural(adj, noun: Noun) {
   const { gender, animate } = noun;
-  let derived;
-  let explanation;
+  let derived: string;
+  let explanation: string;
   const base = adj.slice(0, -1); // dobr-
   switch (gender) {
     // ---------- MASCULINE ----------

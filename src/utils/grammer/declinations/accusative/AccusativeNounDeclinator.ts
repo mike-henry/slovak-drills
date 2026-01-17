@@ -2,9 +2,15 @@ import { NominativeNounDeclinator } from '../nominative/NominativeNounDeclinator
 import { genitiveNounDeriver } from '../genative/GenitiveNounDerivations.js';
 
 import DerivedWord from '../../DerivedWord.js';
-import { Gender } from '@/utils/grammer/WordTypes.js';
+import { CASE_TYPE, Gender } from '@/utils/grammer/WordTypes.js';
 import type Noun from '../Noun.js';
 import type { NounDeclinator } from '../Noun.js';
+import { standardNominalSections } from '@/documents/DocumentBuilder.js';
+
+const CASE = CASE_TYPE.ACCUSATIVE;
+const schema = 'noun';
+const STD_DOC_SINGULAR = standardNominalSections(schema, CASE);
+const STD_DOC_PLURAL = standardNominalSections(schema, CASE, true);
 
 /**
  * Get the accusative singular form of a Slovak noun
@@ -70,14 +76,10 @@ export const AccusativeNounDeclinator: NounDeclinator = {
     // noun.gender = M/F/N
     // noun.animate = boolean (only meaningful for masculine)
     const derivation = accusativeSingular(noun);
-    return new DerivedWord(derivation.derived, derivation.explanation, [
-      'noun://accusative?noun-introduction&noun-stems&noun-endings-singular',
-    ]);
+    return new DerivedWord(derivation.derived, derivation.explanation, STD_DOC_SINGULAR);
   },
   plural: (noun: Noun) => {
     const derivation = accusativePlural(noun);
-    return new DerivedWord(derivation.derived, derivation.explanation, [
-      'noun://accusative?noun-introduction&noun-stems&noun-endings-plural',
-    ]);
+    return new DerivedWord(derivation.derived, derivation.explanation, STD_DOC_PLURAL);
   },
 };

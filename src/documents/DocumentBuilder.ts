@@ -68,7 +68,7 @@ export function parseDocURI(input: string): DocURI {
   };
 }
 
-export function standardNominalSections(caseType: CASE_TYPE, scheme: Scheme, plural: boolean = false): string[] {
+export function standardNominalSections(scheme: Scheme, caseType: CASE_TYPE, plural: boolean = false): string[] {
   const plurality = plural ? 'plural' : 'singular';
   return [`${scheme}://${caseType}?${scheme}-introduction&${scheme}-stems&${scheme}-endings-${plurality}`];
 }

@@ -41,6 +41,11 @@ const IRREGULAR_STEMS = {
   // ... more later
 };
 
+function removeSecondToLastLetter(word: string): string {
+  if (word.length < 2) return word;
+  return word.slice(0, -2) + word.slice(-1);
+}
+
 function masculineStem(noun: Noun): string {
   const word = noun.sk.toLowerCase();
 
@@ -51,11 +56,8 @@ function masculineStem(noun: Noun): string {
   }
 
   // Consonant-ending masculine → unchanged stem
-  if (endsWithConsonant(word)) {
-    if (word.endsWith('ec')) {
-      return word.slice(0, -2) + 'c';
-    }
-    return word;
+  if (word.endsWith('ec') || word.endsWith('ok')) {
+    return removeSecondToLastLetter(word);
   }
 
   return word;
@@ -88,7 +90,8 @@ function neuterStem(noun: Noun) {
 
   // -ie → replace with -i
   if (word.endsWith('ie')) {
-    return word.slice(0, noun.plural ? -1 : -2);
+    //return word.slice(0, noun.plural ? -1 : -2);
+    return word.slice(0, -2);
   }
 
   // -o or -e → remove vowel

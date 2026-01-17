@@ -1,7 +1,13 @@
 import type Noun from '../Noun.js';
-//import { deriveVocalStem } from '../../vocalGrammer.js';
 import DerivedWord from '../../DerivedWord';
 import type { NounDeclinator } from '../Noun.js';
+import { CASE_TYPE } from '../../WordTypes.js';
+import { standardNominalSections } from '@/documents/DocumentBuilder.js';
+
+const CASE = CASE_TYPE.INSTRUMENTAL;
+const schema = 'noun';
+const STD_DOC_SINGULAR = standardNominalSections(schema, CASE);
+const STD_DOC_PLURAL = standardNominalSections(schema, CASE, true);
 
 /**
  * Instrumental singular
@@ -47,9 +53,7 @@ function instrumentalSingular(noun: Noun) {
       throw new Error('Invalid gender');
   }
 
-  return new DerivedWord(derived, explanation, [
-    'noun://instrumental?noun-introduction&noun-stems&noun-endings-singular',
-  ]);
+  return new DerivedWord(derived, explanation, STD_DOC_SINGULAR);
 }
 
 /**
@@ -82,12 +86,11 @@ export function instrumentalPlural(noun: Noun): DerivedWord {
     }
   } else if (noun.gender === 'N') {
     // ----- NEUTER -----
-    derived = stem + (noun.sk.endsWith('nie') || noun.sk.endsWith('tie') ? 'iami' : 'ami');
-    explanation = `neuter instrumental plural = stem (${stem}) + ami`;
+    const ending = noun.sk.endsWith('nie') || noun.sk.endsWith('tie') ? 'iami' : 'ami';
+    derived = stem + ending;
+    explanation = `neuter instrumental plural = stem (${stem}) + ${ending}}`;
   } else throw new Error('Invalid gender for instrumental plural');
-  return new DerivedWord(derived, explanation, [
-    'noun://instrumental?noun-introduction&noun-stems&noun-endings-plural',
-  ]);
+  return new DerivedWord(derived, explanation, STD_DOC_PLURAL);
 }
 
 export const InstrumentalNounDeriver: NounDeclinator = {

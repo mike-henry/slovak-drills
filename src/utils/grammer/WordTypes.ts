@@ -4,19 +4,17 @@ export class WORD {
 }
 
 export enum Gender {
-  Masculine = "M",
-  Femenine = "F",
-  Neutral = "N",
+  Masculine = 'M',
+  Femenine = 'F',
+  Neutral = 'N',
 }
 
 export enum CASE_TYPE {
-  NOMINATIVE = "nominative",
-  GENITIVE = "genitive",
-  DATIVE = "dative",
-  ACCUSATIVE = "accusative",
-  INSTRUMENTAL = "instrumental",
-  LOCATIVE = "locative",
-  VOCATIVE = "vocative",
+  NOMINATIVE = 'nominative',
+  GENITIVE = 'genitive',
+  DATIVE = 'dative',
+  ACCUSATIVE = 'accusative',
+  INSTRUMENTAL = 'instrumental',
+  LOCATIVE = 'locative',
+  VOCATIVE = 'vocative',
 }
-
-

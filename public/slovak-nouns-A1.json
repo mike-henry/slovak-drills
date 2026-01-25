@@ -1672,12 +1672,14 @@
   {
     "en": "butter",
     "gender": "N",
-    "sk": "maslo"
+    "sk": "maslo",
+    "labels": ["food"]
   },
   {
     "en": "lard",
     "gender": "F",
-    "sk": "masť"
+    "sk": "masť",
+    "labels": ["food"]
   },
   {
     "animate": true,
@@ -1703,7 +1705,8 @@
   {
     "en": "melon",
     "gender": "M",
-    "sk": "melón"
+    "sk": "melón",
+    "labels": ["food", "fruit"]
   },
   {
     "en": "name day",
@@ -1791,7 +1794,8 @@
   {
     "en": "milk",
     "gender": "N",
-    "sk": "mlieko"
+    "sk": "mlieko",
+    "labels": ["drink"]
   },
   {
     "en": "mobile phone",
@@ -1856,7 +1860,8 @@
   {
     "en": "carrot",
     "gender": "F",
-    "sk": "mrkva"
+    "sk": "mrkva",
+    "labels": ["food", "vegetable"]
   },
   {
     "en": "frost",
@@ -2377,7 +2382,8 @@
   {
     "en": "fruit",
     "gender": "N",
-    "sk": "ovocie"
+    "sk": "ovocie",
+    "labels": ["food", "fruit"]
   },
   {
     "en": "announcement",
@@ -2430,7 +2436,8 @@
   {
     "en": "tomato",
     "gender": "F",
-    "sk": "paradajka"
+    "sk": "paradajka",
+    "labels": ["food", "vegetable"]
   },
   {
     "en": "perfume",
@@ -2469,11 +2476,6 @@
     "en": "toothpaste",
     "gender": "F",
     "sk": "pasta"
-  },
-  {
-    "en": "money",
-    "gender": "F",
-    "sk": "peniaze"
   },
   {
     "en": "money",
@@ -2682,11 +2684,7 @@
     "gender": "M",
     "sk": "pokrok"
   },
-  {
-    "en": "progress",
-    "gender": "M",
-    "sk": "pokrok"
-  },
+
   {
     "en": "shelf",
     "gender": "F",
@@ -2801,11 +2799,7 @@
     "gender": "M",
     "sk": "počítač"
   },
-  {
-    "en": "computer",
-    "gender": "M",
-    "sk": "počítač"
-  },
+
   {
     "animate": true,
     "en": "worker",
@@ -2827,11 +2821,7 @@
     "gender": "N",
     "sk": "pravidlo"
   },
-  {
-    "en": "rule",
-    "gender": "N",
-    "sk": "pravidlo"
-  },
+
   {
     "en": "sale",
     "gender": "M",
@@ -2948,16 +2938,6 @@
     "en": "processor",
     "gender": "M",
     "sk": "procesor"
-  },
-  {
-    "en": "product",
-    "gender": "M",
-    "sk": "produkt"
-  },
-  {
-    "en": "product",
-    "gender": "M",
-    "sk": "produkt"
   },
   {
     "en": "product",
@@ -3621,7 +3601,8 @@
   {
     "en": "salt",
     "gender": "F",
-    "sk": "soľ"
+    "sk": "soľ",
+    "labels": ["food"]
   },
   {
     "en": "statuette",
@@ -3672,11 +3653,6 @@
     "en": "female classmate",
     "gender": "F",
     "sk": "spolužiačka"
-  },
-  {
-    "en": "stove",
-    "gender": "M",
-    "sk": "sporák"
   },
   {
     "en": "stove",
@@ -3871,7 +3847,8 @@
   {
     "en": "biscuit",
     "gender": "F",
-    "sk": "sušienka"
+    "sk": "sušienka",
+    "labels": ["food"]
   },
   {
     "en": "wedding",
@@ -3924,7 +3901,8 @@
   {
     "en": "cheese",
     "gender": "M",
-    "sk": "syr"
+    "sk": "syr",
+    "labels": ["food"]
   },
   {
     "en": "system",
@@ -4417,7 +4395,8 @@
   {
     "en": "wine",
     "gender": "N",
-    "sk": "víno"
+    "sk": "víno",
+    "labels": ["drink"]
   },
   {
     "en": "exit",
@@ -4543,7 +4522,8 @@
   {
     "en": "potato",
     "gender": "M",
-    "sk": "zemiak"
+    "sk": "zemiak",
+    "labels": ["food"]
   },
   {
     "en": "winter",
@@ -4569,7 +4549,8 @@
   {
     "en": "ice cream",
     "gender": "F",
-    "sk": "zmrzlina"
+    "sk": "zmrzlina",
+    "labels": ["food"]
   },
   {
     "en": "brand",
@@ -4581,11 +4562,7 @@
     "gender": "F",
     "sk": "značka"
   },
-  {
-    "en": "brand",
-    "gender": "F",
-    "sk": "značka"
-  },
+
   {
     "en": "grade",
     "gender": "F",
@@ -4661,12 +4638,6 @@
     "en": "garden",
     "gender": "F",
     "sk": "záhrada"
-  },
-  {
-    "animate": true,
-    "en": "customer",
-    "gender": "M",
-    "sk": "zákazník"
   },
   {
     "animate": true,
@@ -4791,11 +4762,7 @@
     "gender": "M",
     "sk": "úspech"
   },
-  {
-    "en": "success",
-    "gender": "M",
-    "sk": "úspech"
-  },
+
   {
     "en": "success",
     "gender": "M",
@@ -4831,7 +4798,8 @@
   {
     "en": "tea",
     "gender": "M",
-    "sk": "čaj"
+    "sk": "čaj",
+    "labels": ["drink"]
   },
   {
     "en": "cap",
@@ -4928,7 +4896,8 @@
   {
     "en": "blueberry",
     "gender": "F",
-    "sk": "čučoriedka"
+    "sk": "čučoriedka",
+    "labels": ["food", "fruit"]
   },
   {
     "en": "number",
@@ -4979,7 +4948,8 @@
   {
     "en": "spinach",
     "gender": "M",
-    "sk": "špenát"
+    "sk": "špenát",
+    "labels": ["food", "vegetable"]
   },
   {
     "en": "jewelry",

@@ -1,31 +1,18 @@
 <template>
-  <div
-    class="min-h-screen bg-slate-900 text-slate-100 
-           dark:bg-slate-100 dark:text-slate-900
-           flex flex-col items-center p-6"
-  >
+  <div class="min-h-screen bg-slate-900 text-slate-100 dark:bg-slate-100 dark:text-slate-900 flex flex-col p-6">
     <!-- HEADER -->
-    <header class="w-full max-w-4xl mb-6">
-       <h1 class="text-xl font-bold">Slovak Drills</h1>
+    <header class="w-full max-w-4xl mb-6 mx-auto">
+      <h1 class="text-xl font-bold">Slovak Drills</h1>
       <div class="flex justify-between items-center">
-        <!-- Title -->
-       
-
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex gap-6">
-          <!-- One group -->
           <div class="relative group" v-for="group in menu" :key="group.label">
             <button class="hover:underline flex items-center gap-1">
               {{ group.label }}
               <span>▾</span>
             </button>
-
             <div
-              class="absolute left-0 mt-2 bg-slate-800 dark:bg-slate-200
-                     border border-slate-700 dark:border-slate-300
-                     rounded-md shadow-lg opacity-0 invisible 
-                     group-hover:opacity-100 group-hover:visible 
-                     transition-all z-50"
+              class="absolute left-0 mt-2 bg-slate-800 dark:bg-slate-200 border border-slate-700 dark:border-slate-300 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50"
             >
               <RouterLink
                 v-for="item in group.items"
@@ -51,9 +38,7 @@
           </button>
 
           <!-- Mobile Menu Button -->
-          <button class="md:hidden" @click="mobileOpen = !mobileOpen">
-            ☰
-          </button>
+          <button class="md:hidden" @click="mobileOpen = !mobileOpen">☰</button>
         </div>
       </div>
 
@@ -61,21 +46,14 @@
       <transition name="fade">
         <div
           v-if="mobileOpen"
-          class="md:hidden mt-4 bg-slate-800 dark:bg-slate-200
-                 border border-slate-700 dark:border-slate-300 
-                 rounded-md p-4 space-y-4"
+          class="md:hidden mt-4 bg-slate-800 dark:bg-slate-200 border border-slate-700 dark:border-slate-300 rounded-md p-4 space-y-4"
         >
           <div v-for="(group, index) in menu" :key="group.label">
-            <!-- Group heading -->
-            <button
-              @click="toggle(index)"
-              class="w-full text-left font-semibold flex justify-between items-center"
-            >
+            <button @click="toggle(index)" class="w-full text-left font-semibold flex justify-between items-center">
               {{ group.label }}
               <span :class="{ 'rotate-180': openIndex === index }" class="transition-transform">▾</span>
             </button>
 
-            <!-- Items -->
             <div v-if="openIndex === index" class="mt-2 ml-4 space-y-1">
               <RouterLink
                 v-for="item in group.items"
@@ -92,98 +70,105 @@
       </transition>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main
-      class="w-full max-w-4xl bg-slate-800 dark:bg-slate-200
-             rounded-xl shadow-lg p-6"
-    >
-      <RouterView :key="$route.fullPath" />
-    </main>
+    <!-- MAIN + TOOLS container -->
+
+    <Toolable>
+      <template #main>
+        <div class="p-6 bg-slate-800 dark:bg-slate-200 rounded-lg shadow">
+          <RouterView />
+        </div>
+      </template>
+
+      <template #tools>
+        <div class="p-4">
+          <Tools />
+        </div>
+      </template>
+    </Toolable>
   </div>
+  <!-- </div> -->
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
+import { ref, onMounted } from 'vue';
+import { RouterLink, RouterView } from 'vue-router';
+import Tools from './views/Tools.vue';
+import Toolable from './views/Toolable.vue';
 
-/* ----------------------------------------
-   MOBILE NAV STATE
----------------------------------------- */
-const mobileOpen = ref(false)
-const openIndex = ref(null)
-
-function toggle(i) {
-  openIndex.value = openIndex.value === i ? null : i
-}
-
-/* ----------------------------------------
-   DARK / LIGHT THEME
----------------------------------------- */
-const isDark = ref(false)
+/* ----------------------------
+   Theme toggle
+---------------------------- */
+const isDark = ref(false);
 
 function applyTheme() {
   if (isDark.value) {
-    document.documentElement.classList.add('dark')
-    localStorage.setItem('theme', 'dark')
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
   } else {
-    document.documentElement.classList.remove('dark')
-    localStorage.setItem('theme', 'light')
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
   }
 }
 
 function toggleTheme() {
-  isDark.value = !isDark.value
-  applyTheme()
+  isDark.value = !isDark.value;
+  applyTheme();
 }
 
 onMounted(() => {
-  const saved = localStorage.getItem('theme')
+  const saved = localStorage.getItem('theme');
+  isDark.value = saved ? saved === 'dark' : true;
+  applyTheme();
+});
 
-  // If nothing saved, default to dark mode (your current design)
-  isDark.value = saved ? saved === 'dark' : true
+/* ----------------------------
+   Mobile nav
+---------------------------- */
+const mobileOpen = ref(false);
+const openIndex = ref(null);
 
-  applyTheme()
-})
+function toggle(i) {
+  openIndex.value = openIndex.value === i ? null : i;
+}
 
-/* ----------------------------------------
-   MENU STRUCTURE
----------------------------------------- */
+/* ----------------------------
+   Menu structure
+---------------------------- */
 const menu = [
   {
-    label: "Accusative",
+    label: 'Accusative',
     items: [
-      { label: "Noun", to: "/noun-accusative-case" },
-      { label: "Adjective", to: "/adjective-accusative-case" },
-      { label: "Adjective noun", to: "/adjective-noun-accusative-case" },
-    ]
+      { label: 'Noun', to: '/noun-accusative-case' },
+      { label: 'Adjective', to: '/adjective-accusative-case' },
+      { label: 'Adjective noun', to: '/adjective-noun-accusative-case' },
+    ],
   },
   {
-    label: "Instrumental",
+    label: 'Instrumental',
     items: [
-      { label: "Noun", to: "/noun-instrumental-case" },
-      { label: "Adjective", to: "/adjective-instrumental-case" },
-      { label: "Adjective noun", to: "/adjective-noun-instrumental-case" }
-    ]
+      { label: 'Noun', to: '/noun-instrumental-case' },
+      { label: 'Adjective', to: '/adjective-instrumental-case' },
+      { label: 'Adjective noun', to: '/adjective-noun-instrumental-case' },
+    ],
   },
   {
-    label: "Locative",
+    label: 'Locative',
     items: [
-      { label: "Noun", to: "/noun-localative-case" },
-      { label: "Adjective", to: "/adjective-localative-case" },
-      { label: "Adjective noun", to: "/adjective-noun-localative-case" }
-    ]
+      { label: 'Noun', to: '/noun-localative-case' },
+      { label: 'Adjective', to: '/adjective-localative-case' },
+      { label: 'Adjective noun', to: '/adjective-noun-localative-case' },
+    ],
   },
   {
-    label: "Other Drills",
+    label: 'Other Drills',
     items: [
-      { label: "Noun Gender", to: "/noun-gender" },
-      { label: "Verb Conjugation", to: "/present-tense-verb" },
-      { label: "Verb Conjugation + subject", to: "/present-tense-verb-subject" },
-      { label: "Preposition + Adjective + Noun", to: "/proposition-adjective-noun" }
-      
-    ]
-  }
-]
+      { label: 'Noun Gender', to: '/noun-gender' },
+      { label: 'Verb Conjugation', to: '/present-tense-verb' },
+      { label: 'Verb Conjugation + subject', to: '/present-tense-verb-subject' },
+      { label: 'Preposition + Adjective + Noun', to: '/proposition-adjective-noun' },
+    ],
+  },
+];
 </script>
 
 <style>

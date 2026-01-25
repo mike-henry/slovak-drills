@@ -19,7 +19,7 @@
 <script setup>
 import { ref } from 'vue';
 import { nextTick } from 'vue';
-import { computed, defineProps } from 'vue';
+import { computed } from 'vue';
 
 const specialChars = ['á', 'ä', 'č', 'ď', 'é', 'í', 'ĺ', 'ľ', 'ň', 'ó', 'ô', 'ŕ', 'š', 'ť', 'ú', 'ý', 'ž'];
 

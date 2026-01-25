@@ -22,6 +22,8 @@ export default class Noun extends WORD {
   plural?: boolean;
   stem?: string;
   singularForm?: string;
+  labels: string[];
+  static allLabels: Set<string> = new Set();
 
   private constructor(
     sk: string,
@@ -31,6 +33,7 @@ export default class Noun extends WORD {
     en = '',
     stem?: string,
     singularForm?: string,
+    labels?: string[],
   ) {
     super();
     this.sk = sk;
@@ -40,6 +43,7 @@ export default class Noun extends WORD {
     this.plural = plural;
     this.stem = stem;
     this.singularForm = singularForm;
+    this.labels = labels ? labels : [];
   }
 
   declinate(caseType: CASE_TYPE, plural = false): DerivedWord {
@@ -66,7 +70,9 @@ export default class Noun extends WORD {
     plural?: boolean;
     stem?: string;
     singularForm?: string;
+    labels?: string[];
   }): Noun {
+    params.labels?.forEach((value) => Noun.allLabels.add(value));
     return new Noun(
       params.sk,
       params.gender,
@@ -75,6 +81,7 @@ export default class Noun extends WORD {
       params.en,
       params.stem,
       params.singularForm,
+      params.labels,
     );
   }
 }

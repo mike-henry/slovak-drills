@@ -15,7 +15,6 @@
 import GenericDrill from '@/components/GenericDrill.vue';
 import { ref, type Ref } from 'vue';
 import { getRandomProposition, randomBoolean } from '@/views/drillUtils';
-
 import { declinatePropositionAdjectiveWithNoun } from '@/utils/grammer/declinations/DeclinationUtils';
 import type Proposition from '../utils/grammer/Proposition';
 import Adjective from '@/utils/grammer/declinations/Adjective';

@@ -1,10 +1,7 @@
 import { ref, type Ref } from 'vue';
 import Verb from './verbs/Verb';
 
-import Adjective from './declinations/Adjective';
 import Proposition from '@/utils/grammer/Proposition';
-
-const DEFAULT_ADJECTIVES: Adjective[] = [];
 
 const DEFAULT_PROPOSITIONS: Proposition[] = [];
 
@@ -13,16 +10,14 @@ const DEFAULT_VERBS: Verb[] = [];
 /* --------------------------------------------
    Reactive store state
    -------------------------------------------- */
-//export const nouns: Ref<Noun[]> = ref(DEFAULT_NOUNS);
-//export const adjectives: Ref<Adjective[]> = ref(DEFAULT_ADJECTIVES);
+
 export const propositions: Ref<Proposition[]> = ref(DEFAULT_PROPOSITIONS);
 export const verbs: Ref<Verb[]> = ref();
 export const nounsLoaded = ref(false);
 export const adjectivesLoaded = ref(false);
 export const propositionsLoaded = ref(false);
 export const verbsLoaded = ref(false);
-// const NOUNS = 'slovak-nouns-A1.json';
-const ADJECTIVES = 'slovak-adjectives-A1.json';
+
 const PROPOSITIONS = 'slovak-propositions-A1.json';
 const VERBS = 'slovak-verbs-A1.json';
 
@@ -104,6 +99,5 @@ export const loadPropositions = () => {
 
 export const loadVocabulary = async () => {
   loadVerbs();
-
   loadPropositions();
 };

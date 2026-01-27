@@ -118,41 +118,6 @@ export interface NounDeclinator {
    -------------------------------------------- */
 const DEFAULT_NOUNS: Noun[] = [
   Noun.fromRaw({
-    sk: 'žena',
-    en: 'woman',
-    gender: Gender.Femenine,
-  }),
-  Noun.fromRaw({
-    sk: 'chlap',
-    en: 'man',
-    gender: Gender.Masculine,
-  }),
-  Noun.fromRaw({
-    sk: 'auto',
-    en: 'car',
-    gender: Gender.Neutral,
-  }),
-  Noun.fromRaw({
-    sk: 'pes',
-    en: 'dog',
-    gender: Gender.Masculine,
-  }),
-  Noun.fromRaw({
-    sk: 'mačka',
-    en: 'cat',
-    gender: Gender.Femenine,
-  }),
-  Noun.fromRaw({
-    sk: 'strom',
-    en: 'tree',
-    gender: Gender.Masculine,
-  }),
-  Noun.fromRaw({
-    sk: 'mesto',
-    en: 'city',
-    gender: Gender.Neutral,
-  }),
-  Noun.fromRaw({
     sk: 'dieťa',
     en: 'child',
     gender: Gender.Neutral,
@@ -162,59 +127,10 @@ const DEFAULT_NOUNS: Noun[] = [
     en: 'man (adult male)',
     gender: Gender.Masculine,
   }),
-  Noun.fromRaw({
-    sk: 'učiteľ',
-    en: 'teacher',
-    gender: Gender.Masculine,
-  }),
-  Noun.fromRaw({
-    sk: 'stôl',
-    en: 'table',
-    gender: Gender.Masculine,
-  }),
-  Noun.fromRaw({
-    sk: 'mama',
-    en: 'mother',
-    gender: Gender.Femenine,
-  }),
+
   Noun.fromRaw({
     sk: 'sestra',
     en: 'sister',
-    gender: Gender.Femenine,
-  }),
-  Noun.fromRaw({
-    sk: 'chlapec',
-    en: 'boy',
-    gender: Gender.Masculine,
-  }),
-  Noun.fromRaw({
-    sk: 'kniha',
-    en: 'book',
-    gender: Gender.Femenine,
-  }),
-  Noun.fromRaw({
-    sk: 'okno',
-    en: 'window',
-    gender: Gender.Neutral,
-  }),
-  Noun.fromRaw({
-    sk: 'list',
-    en: 'letter',
-    gender: Gender.Masculine,
-  }),
-  Noun.fromRaw({
-    sk: 'vlak',
-    en: 'train',
-    gender: Gender.Masculine,
-  }),
-  Noun.fromRaw({
-    sk: 'ruka',
-    en: 'hand',
-    gender: Gender.Femenine,
-  }),
-  Noun.fromRaw({
-    sk: 'hlava',
-    en: 'head',
     gender: Gender.Femenine,
   }),
 ];

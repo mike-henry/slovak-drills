@@ -14,13 +14,6 @@ export default interface HistoryEntry {
   drillPath?: string; // for later reference
 }
 
-// readPersistentState<T extends object>({
-//   key,
-//   persistance,
-//   create,
-//   debounceMs = 50,
-// }: {
-
 const historyPersitance = new LocalStoragePersistance<HistoryEntry[]>();
 export const globalHistory: Ref<HistoryEntry[]> = ref(
   readPersistentState({

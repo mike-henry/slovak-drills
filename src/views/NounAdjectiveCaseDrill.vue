@@ -15,7 +15,7 @@
 import { declinateAdjectiveWithNoun } from '@/utils/grammer/declinations/DeclinationUtils.js';
 import { capitalizeFirstOnly, getRandomNoun, getRandomAdjective, randomBoolean } from './drillUtils.js';
 import { CASE_TYPE } from '@/utils/grammer/WordTypes';
-import type Noun from '@/utils/grammer/declinations/Noun.js';
+import Noun from '@/utils/grammer/declinations/Noun.js';
 import GenericDrill from '@/components/GenericDrill.vue';
 import type Adjective from '@/utils/grammer/declinations/Adjective.js';
 
@@ -31,7 +31,7 @@ class Item {
 }
 
 const buildNextItem: () => Item = () => ({
-  noun: getRandomNoun(),
+  noun: Noun.getRandom(),
   isPlural: randomBoolean(),
   adjective: getRandomAdjective(),
 });

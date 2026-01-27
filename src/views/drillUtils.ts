@@ -1,6 +1,6 @@
 import { computed, ref, type Ref } from 'vue';
-import { nouns, adjectives, propositions, verbs } from '@/utils/grammer/wordStore.js';
-import type Noun from '@/utils/grammer/declinations/Noun';
+import { adjectives, propositions, verbs } from '@/utils/grammer/wordStore.js';
+import Noun from '@/utils/grammer/declinations/Noun';
 
 import type Verb from '@/utils/grammer/verbs/Verb';
 import { Pronoun } from '@/utils/grammer/Pronoun';
@@ -22,17 +22,17 @@ export const resetStreak = () => {
   streakCount.value = 0;
 };
 
-const shuffleArray = (array: any[]) => {
+export function shuffleArray<T>(array: readonly T[]): T[] {
   const a = array.slice();
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
-};
+}
 
-export const getRandomNoun = (): Noun => {
-  const shuffled = shuffleArray(nouns.value);
+export const getRandomNoun = () => {
+  const shuffled = shuffleArray(Noun.nouns);
   return shuffled[Math.floor(Math.random() * shuffled.length)];
 };
 

@@ -12,12 +12,11 @@
 </template>
 
 <script setup lang="ts">
-import { capitalizeFirstOnly, getRandomPronoun, getRandomVerb } from './drillUtils.js';
 import { CASE_TYPE } from '@/utils/grammer/WordTypes';
 
 import GenericDrill from '@/components/GenericDrill.vue';
-import type Verb from '@/utils/grammer/verbs/Verb.js';
-import { type Pronoun, getPronounDeclension } from '@/utils/grammer/Pronoun.js';
+import Verb from '@/utils/grammer/verbs/Verb.js';
+import { type Pronoun, getPronounDeclension, getRandomPronoun } from '@/utils/grammer/Pronoun.js';
 
 const getCaseName = () => CASE_TYPE.NOMINATIVE;
 
@@ -27,7 +26,7 @@ class Item {
 }
 
 const buildNextItem: () => Item = () => ({
-  verb: getRandomVerb(),
+  verb: Verb.getRandom(),
   pronoun: getRandomPronoun(),
 });
 

@@ -141,5 +141,5 @@ loadWords(NOUNS, Noun.nouns, DEFAULT_NOUNS, Noun.fromRaw).then((result) => {
   LOADED = true;
   Noun.nouns = result;
   bus.emit('noun-all-labels-updated', Noun.getLabels());
-  console.info(`✅ Nouns loaded: ${Noun.nouns.length}`);
+  console.info(`✅ Nouns loaded: ${Noun.nouns.length} from ${NOUNS}`);
 });

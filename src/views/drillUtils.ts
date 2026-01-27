@@ -1,7 +1,5 @@
 import { computed, ref } from 'vue';
-import { propositions, verbs } from '@/utils/grammer/wordStore.js';
 
-import type Verb from '@/utils/grammer/verbs/Verb';
 import { Pronoun } from '@/utils/grammer/Pronoun';
 
 export const STREAK_TARGET = 10; // Number to win streak
@@ -20,31 +18,6 @@ export const showStreakDialog = ref(false);
 export const resetStreak = () => {
   streakCount.value = 0;
 };
-
-export function shuffleArray<T>(array: readonly T[]): T[] {
-  const a = array.slice();
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-export const getRandomProposition = () => {
-  const shuffled = shuffleArray(propositions.value);
-  return shuffled[Math.floor(Math.random() * shuffled.length)];
-};
-
-export const getRandomVerb = (): Verb => {
-  const shuffled = shuffleArray(verbs.value);
-  return shuffled[Math.floor(Math.random() * shuffled.length)];
-};
-
-export function getRandomPronoun(): Pronoun {
-  const values = Object.values(Pronoun);
-  const index = Math.floor(Math.random() * values.length);
-  return values[index];
-}
 
 export const randomBoolean = () => Math.random() < 0.5;
 

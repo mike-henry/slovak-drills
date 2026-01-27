@@ -64,9 +64,13 @@ const DEFAULT_ADJECTIVES: Adjective[] = [
 ];
 let filter: string[] = [];
 let LOADED = false;
+
+bus.on('adjective-active-labels-updated', (labels) => {
+  filter = labels;
+});
 loadWords(ADJECTIVES, Adjective.adjectives, DEFAULT_ADJECTIVES, Adjective.fromRaw).then((result) => {
   LOADED = true;
   Adjective.adjectives = result;
   bus.emit('adjective-all-labels-updated', Adjective.getLabels());
-  console.info(`✅ Adjectives loaded: ${Adjective.adjectives.length}`);
+  console.info(`✅ Adjectives loaded: ${Adjective.adjectives.length} from ${ADJECTIVES}`);
 });

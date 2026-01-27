@@ -1,6 +1,7 @@
 import DerivedWord from './DerivedWord';
 import { CASE_TYPE } from './WordTypes';
 
+//TODO create a class Pronoun that extends WORD All this  Logic should be internal to that class
 export enum Pronoun {
   I = 'I',
   YOU = 'YOU',
@@ -11,6 +12,12 @@ export enum Pronoun {
   WE = 'WE',
   YOU_PL = 'YOU_PL',
   THEY = 'THEY',
+}
+
+export function getRandomPronoun(): Pronoun {
+  const values = Object.values(Pronoun);
+  const index = Math.floor(Math.random() * values.length);
+  return values[index];
 }
 
 export interface PronounDeclension {

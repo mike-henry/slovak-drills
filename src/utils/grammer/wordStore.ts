@@ -1,24 +1,16 @@
 import { ref, type Ref } from 'vue';
 import Verb from './verbs/Verb';
 
-import Proposition from '@/utils/grammer/Proposition';
-
-const DEFAULT_PROPOSITIONS: Proposition[] = [];
-
 const DEFAULT_VERBS: Verb[] = [];
 
 /* --------------------------------------------
    Reactive store state
    -------------------------------------------- */
 
-export const propositions: Ref<Proposition[]> = ref(DEFAULT_PROPOSITIONS);
-export const verbs: Ref<Verb[]> = ref();
-export const nounsLoaded = ref(false);
-export const adjectivesLoaded = ref(false);
-export const propositionsLoaded = ref(false);
+const verbs: Ref<Verb[]> = ref();
+
 export const verbsLoaded = ref(false);
 
-const PROPOSITIONS = 'slovak-propositions-A1.json';
 const VERBS = 'slovak-verbs-A1.json';
 
 /* --------------------------------------------
@@ -57,14 +49,6 @@ const loadWords = async (
   return wordsReference.value;
 };
 
-export const loadPropistions = async () => {
-  //TODO fix this !!!
-  // const includedCases = ["instrumental","localative","accusative"]
-  const includedCases = ['locative'];
-  const filterFn = (item) => includedCases.includes(item.case);
-  return loadWords(PROPOSITIONS, propositions, propositionsLoaded, DEFAULT_PROPOSITIONS, filterFn);
-};
-
 // Generic loader
 export async function loadTypedWords<T>(
   key: string,
@@ -82,22 +66,4 @@ export async function loadTypedWords<T>(
     });
 }
 
-export const loadVerbs = () => loadTypedWords(VERBS, verbs, verbsLoaded, DEFAULT_VERBS, Verb.fromRaw);
-
-export const loadPropositions = () => {
-  const includedCases = ['locative'];
-  const filterFn = (raw: any): boolean => includedCases.includes(raw.case);
-  return loadTypedWords(
-    PROPOSITIONS,
-    propositions,
-    propositionsLoaded,
-    DEFAULT_PROPOSITIONS,
-    Proposition.fromRaw,
-    filterFn,
-  );
-};
-
-export const loadVocabulary = async () => {
-  loadVerbs();
-  loadPropositions();
-};
+export const loadVocabulary = async () => {};

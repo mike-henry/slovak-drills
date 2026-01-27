@@ -14,15 +14,12 @@
 <script setup lang="ts">
 import GenericDrill from '@/components/GenericDrill.vue';
 import { ref, type Ref } from 'vue';
-import { getRandomAdjective, getRandomNoun, getRandomProposition, randomBoolean } from '@/views/drillUtils';
+import { getRandomAdjective, getRandomProposition, randomBoolean } from '@/views/drillUtils';
 
-import {
-  declinateAdjectiveWithNoun,
-  declinatePropositionAdjectiveWithNoun,
-} from '@/utils/grammer/declinations/DeclinationUtils';
+import { declinatePropositionAdjectiveWithNoun } from '@/utils/grammer/declinations/DeclinationUtils';
 import type Proposition from '../utils/grammer/Proposition';
 import type Adjective from '@/utils/grammer/declinations/Adjective';
-import type Noun from '@/utils/grammer/declinations/Noun';
+import Noun from '@/utils/grammer/declinations/Noun';
 
 class Item {
   noun: Noun;
@@ -39,7 +36,7 @@ const item: Ref<Item> = ref();
 
 const buildNextItem: () => Item = () => {
   item.value = {
-    noun: getRandomNoun(),
+    noun: Noun.getRandom(),
     adjective: getRandomAdjective(),
     proposition: getRandomProposition(),
     isPlural: randomBoolean(),

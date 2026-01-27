@@ -22,5 +22,3 @@ export const globalHistory: Ref<HistoryEntry[]> = ref(
     create: () => [],
   }),
 ); // New history format
-
-// export const globalHistory: Ref<HistoryEntry[]> = ref([]);

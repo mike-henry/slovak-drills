@@ -92,8 +92,8 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
-import Tools from './views/Tools.vue';
-import Toolable from './views/Toolable.vue';
+import Tools from './views/tools/Tools.vue';
+import Toolable from './components/Toolable.vue';
 
 /* ----------------------------
    Theme toggle

@@ -14,7 +14,7 @@ const DEFAULT_VERBS: Verb[] = [];
    Reactive store state
    -------------------------------------------- */
 //export const nouns: Ref<Noun[]> = ref(DEFAULT_NOUNS);
-export const adjectives: Ref<Adjective[]> = ref(DEFAULT_ADJECTIVES);
+//export const adjectives: Ref<Adjective[]> = ref(DEFAULT_ADJECTIVES);
 export const propositions: Ref<Proposition[]> = ref(DEFAULT_PROPOSITIONS);
 export const verbs: Ref<Verb[]> = ref();
 export const nounsLoaded = ref(false);
@@ -87,10 +87,6 @@ export async function loadTypedWords<T>(
     });
 }
 
-// Usage examples
-export const loadAdjectives = () =>
-  loadTypedWords(ADJECTIVES, adjectives, adjectivesLoaded, DEFAULT_ADJECTIVES, Adjective.fromRaw);
-
 export const loadVerbs = () => loadTypedWords(VERBS, verbs, verbsLoaded, DEFAULT_VERBS, Verb.fromRaw);
 
 export const loadPropositions = () => {
@@ -108,6 +104,6 @@ export const loadPropositions = () => {
 
 export const loadVocabulary = async () => {
   loadVerbs();
-  loadAdjectives();
+
   loadPropositions();
 };

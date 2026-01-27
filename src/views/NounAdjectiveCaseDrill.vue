@@ -13,11 +13,11 @@
 
 <script setup lang="ts">
 import { declinateAdjectiveWithNoun } from '@/utils/grammer/declinations/DeclinationUtils.js';
-import { capitalizeFirstOnly, getRandomNoun, getRandomAdjective, randomBoolean } from './drillUtils.js';
+import { capitalizeFirstOnly, randomBoolean } from './drillUtils.js';
 import { CASE_TYPE } from '@/utils/grammer/WordTypes';
 import Noun from '@/utils/grammer/declinations/Noun.js';
 import GenericDrill from '@/components/GenericDrill.vue';
-import type Adjective from '@/utils/grammer/declinations/Adjective.js';
+import Adjective from '@/utils/grammer/declinations/Adjective.js';
 
 const properties = defineProps<{ caseName: CASE_TYPE }>();
 const caseName = properties.caseName;
@@ -33,7 +33,7 @@ class Item {
 const buildNextItem: () => Item = () => ({
   noun: Noun.getRandom(),
   isPlural: randomBoolean(),
-  adjective: getRandomAdjective(),
+  adjective: Adjective.getRandom(),
 });
 const sk = (item: Item) => `${item.adjective.sk} ${item.noun.sk}`;
 const en = (item: Item) => `${item.adjective.en} ${item.noun.en}`;

@@ -13,11 +13,11 @@
 </template>
 
 <script setup lang="ts">
-import { capitalizeFirstOnly, getRandomNoun, getRandomAdjective, randomBoolean } from './drillUtils.js';
+import { capitalizeFirstOnly, randomBoolean } from './drillUtils.js';
 import { CASE_TYPE } from '@/utils/grammer/WordTypes';
-import type Noun from '@/utils/grammer/declinations/Noun.js';
+import Noun from '@/utils/grammer/declinations/Noun.js';
 import GenericDrill from '@/components/GenericDrill.vue';
-import type Adjective from '@/utils/grammer/declinations/Adjective.js';
+import Adjective from '@/utils/grammer/declinations/Adjective.js';
 
 const properties = defineProps<{ caseName: CASE_TYPE }>();
 const caseName = properties.caseName;
@@ -38,8 +38,8 @@ const currentGenderText = (item: Item) => {
 };
 
 const buildNextItem: () => Item = () => ({
-  adjective: getRandomAdjective(),
-  noun: getRandomNoun(),
+  adjective: Adjective.getRandom(),
+  noun: Noun.getRandom(),
   plural: randomBoolean(),
 });
 

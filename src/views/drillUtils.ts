@@ -1,6 +1,5 @@
-import { computed, ref, type Ref } from 'vue';
-import { adjectives, propositions, verbs } from '@/utils/grammer/wordStore.js';
-import Noun from '@/utils/grammer/declinations/Noun';
+import { computed, ref } from 'vue';
+import { propositions, verbs } from '@/utils/grammer/wordStore.js';
 
 import type Verb from '@/utils/grammer/verbs/Verb';
 import { Pronoun } from '@/utils/grammer/Pronoun';
@@ -30,16 +29,6 @@ export function shuffleArray<T>(array: readonly T[]): T[] {
   }
   return a;
 }
-
-export const getRandomNoun = () => {
-  const shuffled = shuffleArray(Noun.nouns);
-  return shuffled[Math.floor(Math.random() * shuffled.length)];
-};
-
-export const getRandomAdjective = () => {
-  const shuffled = shuffleArray(adjectives.value);
-  return shuffled[Math.floor(Math.random() * shuffled.length)];
-};
 
 export const getRandomProposition = () => {
   const shuffled = shuffleArray(propositions.value);

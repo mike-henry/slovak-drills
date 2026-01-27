@@ -5,6 +5,8 @@ import { AccusativeAdjectiveDeriver } from './accusative/AccusativeAdjectiveDeri
 import { InstrumentalAdjectiveDeriver } from './instrumental/InstrumentalAdjectiveDerivations';
 import { LocativeAdjectiveDeriver } from './locative/LocativeAdjectiveDerivations';
 import { NominativeAdjectiveDeriver } from './nominative/NominativeAdjectiveDerivations';
+import { loadWords } from '../LoadingUtil';
+import { bus } from '@/events/bus';
 
 const DeclinatorsByCase: Record<CASE_TYPE, AdjectiveDeclinator> = {
   [CASE_TYPE.LOCATIVE]: LocativeAdjectiveDeriver,
@@ -17,15 +19,30 @@ const DeclinatorsByCase: Record<CASE_TYPE, AdjectiveDeclinator> = {
 };
 
 export default class Adjective extends WORD {
-  private constructor(sk: string, en: string) {
+  private constructor(sk: string, en: string, labels?: string[]) {
     super();
     this.sk = sk;
     this.en = en;
+    this.labels = labels ? labels : [];
   }
 
-  static fromRaw(params: { sk: string; en: string }): Adjective {
-    return new Adjective(params.sk, params.en);
+  static allLabels: Set<string> = new Set();
+  static adjectives: Adjective[] = [];
+  static fromRaw(params: { sk: string; en: string; labels?: string[] }): Adjective {
+    return new Adjective(params.sk, params.en, params.labels ? params.labels : []);
   }
+  static getLabels(): string[] {
+    return Adjective.allLabels.values().toArray().sort();
+  }
+  static getRandom = (): Adjective => {
+    while (!LOADED) {
+      /* wait */
+    } // no better way for now
+
+    const filterFn: (item: Adjective) => boolean =
+      filter.length == 0 ? (n) => true : (item: Adjective) => filter.some((label) => item.labels.includes(label));
+    return WORD.getRandomWord<Adjective>(Adjective.adjectives, filterFn);
+  };
 
   declinate(caseType: CASE_TYPE, noun: Noun, plural = false): DerivedWord {
     if (noun.plural) return this.declinate(caseType, noun.createSingular(), true);
@@ -39,3 +56,17 @@ export interface AdjectiveDeclinator {
   singular(adjective: Adjective, noun: Noun): DerivedWord;
   plural(adjective: Adjective, noun: Noun): DerivedWord;
 }
+
+const ADJECTIVES = 'slovak-adjectives-A1.json';
+const DEFAULT_ADJECTIVES: Adjective[] = [
+  Adjective.fromRaw({ sk: 'dobrý', en: 'good' }),
+  Adjective.fromRaw({ sk: 'nový', en: 'new' }),
+];
+let filter: string[] = [];
+let LOADED = false;
+loadWords(ADJECTIVES, Adjective.adjectives, DEFAULT_ADJECTIVES, Adjective.fromRaw).then((result) => {
+  LOADED = true;
+  Adjective.adjectives = result;
+  bus.emit('adjective-all-labels-updated', Adjective.getLabels());
+  console.info(`✅ Adjectives loaded: ${Adjective.adjectives.length}`);
+});

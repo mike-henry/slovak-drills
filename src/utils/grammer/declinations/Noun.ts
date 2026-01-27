@@ -25,7 +25,6 @@ export default class Noun extends WORD {
   plural?: boolean;
   stem?: string;
   singularForm?: string;
-  labels: string[];
   static allLabels: Set<string> = new Set();
   static nouns: Noun[] = [];
 
@@ -77,9 +76,7 @@ export default class Noun extends WORD {
 
     const filterFn: (item: Noun) => boolean =
       nounFilter.length == 0 ? (n) => true : (item: Noun) => nounFilter.some((label) => item.labels.includes(label));
-
-    const shuffled = shuffleArray(Noun.nouns).filter(filterFn);
-    return shuffled[Math.floor(Math.random() * shuffled.length)];
+    return WORD.getRandomWord<Noun>(Noun.nouns, filterFn);
   };
 
   static fromRaw(params: {
@@ -114,15 +111,6 @@ bus.on('noun-active-labels-updated', (labels) => {
 export interface NounDeclinator {
   singular(noun: Noun): DerivedWord;
   plural(noun: Noun): DerivedWord;
-}
-
-function shuffleArray<T>(array: readonly T[]): T[] {
-  const a = array.slice();
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
 }
 
 /* --------------------------------------------

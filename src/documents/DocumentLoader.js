@@ -1,8 +1,5 @@
 // Loads ALL markdown files inside /src/docs/
 
-import { adjectives } from '@/utils/grammer/wordStore';
-
-// const mdFiles = import.meta.glob("./*.md", { as: "raw" });
 const mdFiles = import.meta.glob('./*.md', { query: '?raw', import: 'default' });
 
 /**

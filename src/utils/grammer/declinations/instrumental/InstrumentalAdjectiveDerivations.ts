@@ -4,8 +4,6 @@ import { Gender } from '@/utils/grammer/WordTypes';
 
 import type Noun from '../Noun';
 
-import { adjectives } from '../../wordStore';
-
 import DerivedWord from '../../DerivedWord';
 import { STANDARD_SECTIONS } from '@/documents/DocumentLoader';
 import type { AdjectiveDeclinator } from '../Adjective';

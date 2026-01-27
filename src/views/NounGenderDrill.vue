@@ -34,18 +34,10 @@
               <span v-if="awaitingContinue && history[0] && !history[0].wasRight">
                 Wrong — {{ history[0].word }} is {{ history[0].correct }}. {{ history[0].rule }}
               </span>
-              <span v-else>
-                Pick a gender to continue.
-              </span>
+              <span v-else> Pick a gender to continue. </span>
             </div>
 
-            <button
-              v-if="awaitingContinue"
-              class="start-btn mt-2"
-              @click="continueQuiz"
-            >
-              Continue
-            </button>
+            <button v-if="awaitingContinue" class="start-btn mt-2" @click="continueQuiz">Continue</button>
           </div>
         </div>
 
@@ -107,81 +99,72 @@
  * - Wrong → explanation + Continue button
  */
 
-import { ref, computed, onMounted } from 'vue'
-import { createGenderQuestion, GENDER_RULES } from '../utils/grammer/nounGenderRules.js'
-import { loadNouns, nouns } from '@/utils/grammer/wordStore.js'
-
-
+import { ref, computed, onMounted } from 'vue';
+import { createGenderQuestion, GENDER_RULES } from '../utils/grammer/nounGenderRules.js';
 
 // ============ STATE ============
 
-const quizPool = ref([])              // Shuffled copy of nounList
-const usedWords = ref(new Set())      // Track used words
-const currentQuestion = ref(null)     // Current noun question
-const hasStarted = ref(false)         // Quiz started flag
-const showCongrats = ref(false)       // Show congrats modal
-const streakCount = ref(0)            // Current streak
-const totalAttempts = ref(0)          // Total attempts
-const totalCorrect = ref(0)           // Total correct
-const history = ref([])               // History of answers
-const awaitingContinue = ref(false)   // True if user must click Continue after wrong
+const quizPool = ref([]); // Shuffled copy of nounList
+const usedWords = ref(new Set()); // Track used words
+const currentQuestion = ref(null); // Current noun question
+const hasStarted = ref(false); // Quiz started flag
+const showCongrats = ref(false); // Show congrats modal
+const streakCount = ref(0); // Current streak
+const totalAttempts = ref(0); // Total attempts
+const totalCorrect = ref(0); // Total correct
+const history = ref([]); // History of answers
+const awaitingContinue = ref(false); // True if user must click Continue after wrong
 
-const STREAK_TARGET = 20              // Number to win streak
-
+const STREAK_TARGET = 20; // Number to win streak
 
 // ============ HELPERS ============
 const shuffle = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[array[i], array[j]] = [array[j], array[i]]
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
-  return array
-}
+  return array;
+};
 
-
-onMounted(() => loadNouns())
+onMounted(() => loadNouns());
 
 // ============ QUIZ LOGIC ============
 
 /** Start the quiz */
 const startQuiz = () => {
- 
-  hasStarted.value = true
-  showCongrats.value = false
-  streakCount.value = 0
-  totalAttempts.value = 0
-  totalCorrect.value = 0
-  history.value = []
-  usedWords.value = new Set()
-  quizPool.value = shuffle(nouns.value.slice())
+  hasStarted.value = true;
+  showCongrats.value = false;
+  streakCount.value = 0;
+  totalAttempts.value = 0;
+  totalCorrect.value = 0;
+  history.value = [];
+  usedWords.value = new Set();
+  quizPool.value = shuffle(nouns.value.slice());
 
-  nextQuestion()
-}
+  nextQuestion();
+};
 
 /** Select next question from pool */
 const nextQuestion = () => {
-  
-  let next = quizPool.value.find(w => !usedWords.value.has(w.sk))
+  let next = quizPool.value.find((w) => !usedWords.value.has(w.sk));
   if (!next) {
-    usedWords.value.clear()
-    next = quizPool.value[Math.floor(Math.random() * quizPool.value.length)]
+    usedWords.value.clear();
+    next = quizPool.value[Math.floor(Math.random() * quizPool.value.length)];
   }
 
-  usedWords.value.add(next.sk)
-  currentQuestion.value = createGenderQuestion(next)
-  awaitingContinue.value = false
-}
+  usedWords.value.add(next.sk);
+  currentQuestion.value = createGenderQuestion(next);
+  awaitingContinue.value = false;
+};
 
 /** Add an attempt to history with feedback */
 const addToHistory = (isCorrect, selectedGender) => {
-  if (!currentQuestion.value) return
+  if (!currentQuestion.value) return;
 
-  let feedbackRule = ''
+  let feedbackRule = '';
   if (!isCorrect) {
-    const matchedRule = GENDER_RULES.find(rule => rule.pattern.test(currentQuestion.value.word))
-    feedbackRule = matchedRule
-      ? matchedRule.text
-      : 'This is an exception to the usual rules.'
+    const matchedRule = GENDER_RULES.find((rule) => rule.pattern.test(currentQuestion.value.word));
+    feedbackRule = matchedRule ? matchedRule.text : 'This is an exception to the usual rules.';
   }
 
   history.value.unshift({
@@ -190,50 +173,48 @@ const addToHistory = (isCorrect, selectedGender) => {
     selected: selectedGender,
     correct: currentQuestion.value.correctGender,
     wasRight: isCorrect,
-    rule: feedbackRule
-  })
-}
+    rule: feedbackRule,
+  });
+};
 
 /** Handle user answer */
 const handleAnswer = (selectedGender) => {
-  if (!currentQuestion.value) return
-  if (awaitingContinue.value) return
+  if (!currentQuestion.value) return;
+  if (awaitingContinue.value) return;
 
-  totalAttempts.value++
-  const isCorrect = selectedGender === currentQuestion.value.correctGender
+  totalAttempts.value++;
+  const isCorrect = selectedGender === currentQuestion.value.correctGender;
 
   if (isCorrect) {
-    streakCount.value++
-    totalCorrect.value++
-    addToHistory(true, selectedGender)
+    streakCount.value++;
+    totalCorrect.value++;
+    addToHistory(true, selectedGender);
 
-    if (streakCount.value >= STREAK_TARGET) showCongrats.value = true
-    nextQuestion() // immediate next if correct
+    if (streakCount.value >= STREAK_TARGET) showCongrats.value = true;
+    nextQuestion(); // immediate next if correct
   } else {
-    streakCount.value = 0
-    addToHistory(false, selectedGender)
-    awaitingContinue.value = true
+    streakCount.value = 0;
+    addToHistory(false, selectedGender);
+    awaitingContinue.value = true;
   }
-}
+};
 
 /** Continue quiz after wrong answer */
-const continueQuiz = () => nextQuestion()
+const continueQuiz = () => nextQuestion();
 
 /** Reset quiz completely */
 const resetQuiz = () => {
-  hasStarted.value = false
-  showCongrats.value = false
-  streakCount.value = 0
-  totalAttempts.value = 0
-  totalCorrect.value = 0
-  history.value = []
-  usedWords.value = new Set()
-  currentQuestion.value = null
-  awaitingContinue.value = false
-}
+  hasStarted.value = false;
+  showCongrats.value = false;
+  streakCount.value = 0;
+  totalAttempts.value = 0;
+  totalCorrect.value = 0;
+  history.value = [];
+  usedWords.value = new Set();
+  currentQuestion.value = null;
+  awaitingContinue.value = false;
+};
 
 // ============ COMPUTED ============
-const progressPercent = computed(() =>
-  Math.min(100, (streakCount.value / STREAK_TARGET) * 100)
-)
+const progressPercent = computed(() => Math.min(100, (streakCount.value / STREAK_TARGET) * 100));
 </script>

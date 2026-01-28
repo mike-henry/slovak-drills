@@ -66,11 +66,8 @@ import DrillProgress from './DrillProgress.vue';
 import { computed, ref } from 'vue';
 import HistoryList from '@/components/HistoryList.vue';
 import { resetStreak, STREAK_TARGET, streakCount, totalAttempts, showStreakDialog } from '@/views/drillUtils';
-import { loadVocabulary } from '@/utils/grammer/wordStore';
-import { onMounted } from 'vue';
-import type DerivedWord from '@/utils/grammer/DerivedWord';
 
-onMounted(() => loadVocabulary());
+import type DerivedWord from '@/utils/grammer/DerivedWord';
 
 interface DrillProps<T> {
   subjectArea: () => string | CASE_TYPE;

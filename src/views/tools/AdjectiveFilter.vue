@@ -13,7 +13,6 @@
 <script setup lang="ts">
 import { bus } from '@/events/bus';
 import Adjective from '@/utils/grammer/declinations/Adjective';
-import Noun from '@/utils/grammer/declinations/Noun';
 import { LocalStoragePersistance } from '@/utils/grammer/persistance/LocalStoragePersistance';
 import { readPersistentState } from '@/utils/grammer/persistance/StateReader';
 import { ref, type Ref } from 'vue';

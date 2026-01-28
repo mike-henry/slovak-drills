@@ -5,6 +5,7 @@
       <h3 class="font-semibold mb-2">Tools</h3>
     </div>
     <NounFilter />
+    <AdjectiveFilter />
     <!-- Grab  toggle handle -->
     <div class="flex items-center justify-center cursor-pointer bg-slate-600 dark:bg-slate-400" @click="toggle">
       <div class="w-8 h-1.5 my-2 bg-slate-400 rounded"></div>
@@ -15,6 +16,7 @@
 <script setup>
 import { ref } from 'vue';
 import NounFilter from './NounFilter.vue';
+import AdjectiveFilter from './AdjectiveFilter.vue';
 
 const open = ref(true); // start open
 function toggle() {

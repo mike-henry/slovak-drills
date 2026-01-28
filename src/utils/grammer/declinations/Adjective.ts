@@ -29,6 +29,7 @@ export default class Adjective extends WORD {
   static allLabels: Set<string> = new Set();
   static adjectives: Adjective[] = [];
   static fromRaw(params: { sk: string; en: string; labels?: string[] }): Adjective {
+    params.labels?.forEach((value) => Adjective.allLabels.add(value));
     return new Adjective(params.sk, params.en, params.labels ? params.labels : []);
   }
   static getLabels(): string[] {

@@ -17,14 +17,17 @@
   },
   {
     "en": "big",
+    "labels": ["size"],
     "sk": "veľký"
   },
   {
     "en": "black",
+    "labels": ["color"],
     "sk": "čierny"
   },
   {
     "en": "blue",
+    "labels": ["color"],
     "sk": "modrý"
   },
   {
@@ -53,6 +56,7 @@
   },
   {
     "en": "brown",
+    "labels": ["color"],
     "sk": "hnedý"
   },
   {
@@ -69,6 +73,7 @@
   },
   {
     "en": "cloudy",
+    "labels": ["weather"],
     "sk": "zamračený"
   },
   {
@@ -77,6 +82,7 @@
   },
   {
     "en": "cold",
+    "labels": ["weather"],
     "sk": "chladný"
   },
   {
@@ -137,11 +143,11 @@
   },
   {
     "en": "different",
-    "sk": "odlišný"
+    "sk": "iný"
   },
   {
     "en": "different",
-    "sk": "iný"
+    "sk": "odlišný"
   },
   {
     "en": "difficult",
@@ -205,6 +211,7 @@
   },
   {
     "en": "far",
+    "labels": ["position"],
     "sk": "ďaleký"
   },
   {
@@ -217,6 +224,7 @@
   },
   {
     "en": "first",
+    "labels": ["order", "position", "number"],
     "sk": "prvý"
   },
   {
@@ -249,15 +257,18 @@
   },
   {
     "en": "green",
+    "labels": ["color"],
     "sk": "zelený"
   },
   {
     "en": "grey",
-    "sk": "šedý"
+    "labels": ["color"],
+    "sk": "sivý"
   },
   {
     "en": "grey",
-    "sk": "sivý"
+    "labels": ["color"],
+    "sk": "šedý"
   },
   {
     "en": "grilled",
@@ -265,11 +276,11 @@
   },
   {
     "en": "happy",
-    "sk": "šťastný"
+    "sk": "veselý"
   },
   {
     "en": "happy",
-    "sk": "veselý"
+    "sk": "šťastný"
   },
   {
     "en": "hard",
@@ -281,6 +292,7 @@
   },
   {
     "en": "high",
+    "labels": ["position"],
     "sk": "vysoký"
   },
   {
@@ -337,6 +349,7 @@
   },
   {
     "en": "last",
+    "labels": ["order", "position"],
     "sk": "minulý"
   },
   {
@@ -357,10 +370,12 @@
   },
   {
     "en": "long",
+    "labels": ["size"],
     "sk": "dlhý"
   },
   {
     "en": "low",
+    "labels": ["position"],
     "sk": "nízky"
   },
   {
@@ -373,7 +388,13 @@
   },
   {
     "en": "narrow",
+    "labels": ["size"],
     "sk": "úzky"
+  },
+  {
+    "en": "near",
+    "labels": ["position"],
+    "sk": "blízky"
   },
   {
     "en": "necessary",
@@ -409,6 +430,7 @@
   },
   {
     "en": "orange",
+    "labels": ["color"],
     "sk": "oranžový"
   },
   {
@@ -433,6 +455,7 @@
   },
   {
     "en": "pink",
+    "labels": ["color"],
     "sk": "ružový"
   },
   {
@@ -461,6 +484,7 @@
   },
   {
     "en": "purple",
+    "labels": ["color"],
     "sk": "fialový"
   },
   {
@@ -473,6 +497,7 @@
   },
   {
     "en": "rainy",
+    "labels": ["weather"],
     "sk": "daždivý"
   },
   {
@@ -485,6 +510,7 @@
   },
   {
     "en": "red",
+    "labels": ["color"],
     "sk": "červený"
   },
   {
@@ -521,6 +547,7 @@
   },
   {
     "en": "short",
+    "labels": ["size"],
     "sk": "krátky"
   },
   {
@@ -545,6 +572,7 @@
   },
   {
     "en": "small",
+    "labels": ["size"],
     "sk": "malý"
   },
   {
@@ -597,6 +625,7 @@
   },
   {
     "en": "sunny",
+    "labels": ["weather"],
     "sk": "slnečný"
   },
   {
@@ -609,10 +638,12 @@
   },
   {
     "en": "thick",
+    "labels": ["size"],
     "sk": "tlstý"
   },
   {
     "en": "thin",
+    "labels": ["size"],
     "sk": "tenký"
   },
   {
@@ -621,6 +652,7 @@
   },
   {
     "en": "tiny",
+    "labels": ["size"],
     "sk": "maličký"
   },
   {
@@ -661,6 +693,7 @@
   },
   {
     "en": "white",
+    "labels": ["color"],
     "sk": "biely"
   },
   {
@@ -673,6 +706,7 @@
   },
   {
     "en": "yellow",
+    "labels": ["color"],
     "sk": "žltý"
   },
   {
